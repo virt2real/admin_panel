@@ -18,6 +18,13 @@ body {
   padding:10px;
 }
 
+#wifistatus {
+  text-align: center;
+  width: 100px;
+  color: #ffffff;
+  padding:10px;
+}
+
 #menu {
   font-size:14px;
 }
@@ -53,6 +60,7 @@ body {
   font-weight: bold;
 }
 
+
 #maincontent {
   height: 100%;
 }
@@ -68,4 +76,79 @@ body {
 
 input {
   padding: 4px;
+}
+
+
+#filemanager td {
+  width: 80%;
+}
+
+#filemanager td {
+  padding: 6px;
+}
+
+#filemanager .col1 {
+  background-color: #202020;
+  font-size: 16px;
+}
+
+#filemanager a {
+  text-decoration: none;
+}
+
+#filemanager td:hover {
+  background-color: #0380ea;
+}
+
+#filemanager .col2 {
+  background-color: #252525;
+  text-align: center;
+  width: 550px;
+}
+
+#filemanager .col3 {
+  background-color: #202020;
+  text-align: right;
+  width: 350px;
+}
+
+#fmcurrentdir {
+  width: 100%;
+  text-align: right;
+  font-size: 1.6em;
+}
+
+#moveup {
+  width: 100%;
+  height: 20px;
+}
+
+#editfileblock {
+  width: 95%;
+  height: 400px;
+}
+
+#accordion textarea {
+  height: 600px;
+  width: 95%;
+  font-size: 1.4em;
+  background-color: #121212;
+  color: #fff;
+  padding: 10px;
+
+  word-wrap:break-word;  
+  white-space:pre-wrap;
+  overflow-x: auto;
+
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+#accordion .textinput {
+  width: 95%;
+  font-size: 1.4em;
+  background-color: #121212;
+  color: #fff;
+  padding: 10px;
+
+  font-family: "Lucida Console", Monaco, monospace;
 }

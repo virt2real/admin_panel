@@ -26,7 +26,7 @@
 	}
 
 	function reboot(){
-		$("#resetStatus").load("modules/{module_name}/reboot.php", function(response, status, xhr) {});
+		$("#resetStatus").load("modules/{module_name}/reboot.php");
 	}
 </script>
 

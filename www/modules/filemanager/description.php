@@ -1,15 +1,15 @@
 <?php
 
 /*****************************************************
-* modules/reboot/description.php
+* modules/filemanager/description.php
 * module description file
 *(c)virt2real.ru 2013
 * draft, by Gol
 /*****************************************************/
 
-$module_params['name'] = 'reboot';
-$module_params['title'] = 'Перезагрузка';
+$module_params['name'] = 'filemanager';
+$module_params['title'] = 'Файл-менеджер';
 $module_params['menu_part'] = 2;
-$module_params['position'] = 5;
+$module_params['position'] = 1;
 
 ?>

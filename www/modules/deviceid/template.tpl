@@ -23,9 +23,9 @@
 	<h3><a href="#">Описание устройства</a></h3>
 	<div>
 					<p>Идентификатор устройства</p>
-					<p><input type="text" id="deviceid" style="width: 100%; color: #ffffff; background-color: #000000;" value="{deviceID}"></p>
+					<p><input type="text" id="deviceid" value="{deviceID}" class="textinput"></p>
 					<p>Описание устройства</p>
-					<p><textarea id="devicedescription" style="width: 100%; height: 100px; color: #ffffff; background-color: #000000;">{deviceDescription}</textarea></p>
+					<p><textarea id="devicedescription">{deviceDescription}</textarea></p>
 					<p>
 						<input type="button" onclick="var text1 = $('#deviceid').val(); var text2 = $('#devicedescription').val(); SaveSettings(text1, text2); return false;" value="Сохранить">
 						<span id="savestatus"></span>

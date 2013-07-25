@@ -27,7 +27,7 @@
 	<h3><a href="#">Автозапуск</a></h3>
 	<div>
 					<p>Автозапуск управляющего скрипта /etc/virt2real/autostart.sh</p>
-					<p><textarea id="autostartscript" style="width: 100%; height: 400px; color: #ffffff; background-color: #000000;">{autostartscript}</textarea></p>
+					<p><textarea id="autostartscript">{autostartscript}</textarea></p>
 					<p>
 						<input type="button" onclick="var text = $('#autostartscript').val(); SaveAutostartScript(text); return false;" value="Сохранить">
 						<span id="saveautostartscriptstatus"></span>

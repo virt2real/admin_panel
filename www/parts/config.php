@@ -1,17 +1,12 @@
 <?php
 
 /*****************************************************
-* modules/reboot/reboot.php
-* reboot command file
+* config.php
+*
 *(c)virt2real.ru 2013
 * draft, by Gol
 /*****************************************************/
 
-// common include
-include('../../parts/global.php');
-
-shell_exec ("reboot -f &");
-
-echo "ok";
+$WLAN_IFACE_MONITOR = "wlan0";
 
 ?>

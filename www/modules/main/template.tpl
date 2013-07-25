@@ -16,7 +16,10 @@
 			<p>&nbsp;</p>
 			<p>&nbsp;</p>
 
-			<hr/>
+	</div>
+
+	<h3><a href="#">Информация о ядре</a></h3>
+	<div>
 
 			<div>{linuxversion}</div>
 			<br>

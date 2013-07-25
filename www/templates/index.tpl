@@ -14,17 +14,31 @@
 
 	<title>{deviceID}</title>
 </head>
-<body onload="LoadContent('{onload}'); update_uptime();">
+<body onload="LoadContent('{onload}'); update_status();">
     <script>
 	var timer;
 
-	function update_uptime(){		$("#uptime").load("parts/uptime.php?" + Math.random(), function(response, status, xhr) {			if (status == "success") {
-				$("#uptime").html(response);
+	function update_status(){		$("#uptime").load("parts/status.php?" + Math.random(), function(response, status, xhr) {			if (status == "success") {
+				var status_json;
+				try {
+					status_json = JSON.parse(response);
+
+					// show uptime
+					$("#uptime").html(status_json["uptime"]);
+
+					// show wi-fi status
+					if (parseInt(status_json["wifilink"])) {
+						$("#linkstatus").html(status_json["wifilink"] + "/70 " + status_json["wifilevel"] + " dBm");
+						$("#wifistatus").css("display", "block");
+					} else {						$("#wifistatus").css("display", "none");					}
+
+				} catch (e) {}
 			}
 			if (status == "error") {
 				$("#uptime").html(":-(");
+				$("#wifistatus").html("");
 			}
-			timer = setTimeout("update_uptime()", 1000);
+			timer = setTimeout("update_status()", 1000);
 		});
 	}
 
@@ -48,6 +62,12 @@
 				</td>
 				<td width="400" align="right">
 					<div id="uptime"></div>
+					<p></p>
+					<p></p>
+					<div id="wifistatus" style="display: none;">
+						<div><img src="/imgs/wifi.png"></div>
+						<div id="linkstatus"></div>
+					</div>
 				</td>
 			</tr>
 		</table>
@@ -58,6 +78,9 @@
 					<div id="menu" style="margin:0; padding:0;">
 							{menu}
 					</div>
+
+					<p style="text-align: center;"><a href="http://virt2real.ru" target="_blank" style="font-size: 20px; color:#000; text-decoration: none;">&copy; virt2real.ru 2013</a></p>
+
 				</td>
 				<td>
 					<div id="content">
@@ -68,18 +91,5 @@
 		</table>
 
 	</div>
-
-    <div style="margin-left: 40px; margin-right: 40px;">
-    	<table width="100%">
-    		<tr>
-    			<td width="50%">
-    				<p><a href="http://virt2real.ru" target="_blank" style="font-size: 20px; color:#000; text-decoration: none;">&copy; virt2real.ru 2013</a></p>
-    			</td>
-    			<td>
-    				&nbsp;
-    			</td>
-    		</tr>
-    	</table>
-    </div>
 
 </body>
