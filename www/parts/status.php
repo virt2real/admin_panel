@@ -9,7 +9,7 @@
 
 require_once("config.php");
 
-$status["uptime"] = substr(shell_exec ("/usr/bin/uptime"), 1, 8);
+$status["uptime"] = shell_exec ("/usr/bin/uptime");
 $status["wifilink"] = "0";
 $status["wifilevel"] = "0";
 
