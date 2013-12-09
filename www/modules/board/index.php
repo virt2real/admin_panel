@@ -27,8 +27,22 @@ require_once('pins.php');
 
 $pins = GetPinArray();
 
+$pintable = "";
+
 foreach ($pins as $key => $value) {
-	$pintable .= "<tr><td>$value[0]</td><td>$value[1]</td><td width=200>&nbsp;</td><td>$value[2]</td><td>$value[3]</td></tr>";
+	$str = "<tr>
+				<td class='pintitle' id='title{key}_0' row='{key}' col='0'>{val0}</td>
+				<td class='pintitle' id='title{key}_1' row='{key}' col='1'>{val1}</td>
+				<td width=200 class='nobg'>&nbsp;</td>
+				<td class='pintitle' id='title{key}_2' row='{key}' col='2'>{val2}</td>
+				<td class='pintitle' id='title{key}_3' row='{key}' col='3'>{val3}</td>
+			</tr>";
+	$str = str_replace("{key}", $key, $str);
+	$str = str_replace("{val0}", $value[0], $str);
+	$str = str_replace("{val1}", $value[1], $str);
+	$str = str_replace("{val2}", $value[2], $str);
+	$str = str_replace("{val3}", $value[3], $str);
+	$pintable .= $str;
 }
 
 $module_content = str_replace("{pintable}", $pintable, $module_content);

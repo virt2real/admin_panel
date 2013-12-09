@@ -27,7 +27,7 @@
 
 		valueStr = "0x" + valueStr;
 
-		$("#updateresult").html("updating...");
+		$("#updateresult").html('<img src="/imgs/loader.gif">');
 		$("#updateresult").load("modules/{module_name}/set.php?base=" + encodeURIComponent(base) + "&reg=" + encodeURIComponent(reg) + "&value=" + encodeURIComponent(valueStr),
 			function(response, status, xhr) {
 			if (status == "success") {
@@ -46,7 +46,7 @@
 		var regInt = parseInt(reg, 16);
 		reg = "0x" + regInt.toString(16);
 
-		$("#updateresult").html("reading...");
+		$("#updateresult").html('<img src="/imgs/loader.gif">');
 		$("#updateresult").load("modules/{module_name}/get.php?base=" + encodeURIComponent(base) + "&reg=" + encodeURIComponent(reg), function(response, status, xhr) {
 			if (status == "success") {
 				$("#regvalhex").val(response);
@@ -60,7 +60,7 @@
 
 	function Scan(){
 
-		$("#scanresult").html("scanning...");
+		$("#scanresult").html('<img src="/imgs/loader.gif">');
 		$("#scanresult").load("modules/{module_name}/scan.php", function(response, status, xhr) {
 			if (status == "success") {
 				$("#scanresult").html(response);
@@ -81,45 +81,40 @@
 
 		<div id="scanresult"></div>
 
-        <br><br>
-		<hr/>
+        	<p style="height: 20px;"></p>
+
 
 		<p>Изменение регистров I2C</p>
 		<form onSubmit="var base=$('#regbase').val(); var reg=$('#regnum').val(); var valueHex=$('#regvalhex').val(); var valueBin=$('#regvalbin').val(); SetValue(base, reg, valueHex, valueBin); return false;">
 		<p>
-			<table colspan=10 cellspacing=5 cellpadding=5>
-				<tr>
-					<td colspan="2">Регистр</td>
-				</tr>
-				<tr>
-					<td align=right>база</td>
-					<td><input type="text" id="regbase" value="21" style="width:100px;"></td>
-				</tr>
-				<tr>
-					<td align=right>параметр</td>
-					<td><input type="text" id="regnum" value="0a" style="width:100px;"></td>
-				</tr>
-				<tr>
-					<td colspan="2">Значение</td>
-				</tr>
-				<tr>
-					<td align=right>hex</td>
-					<td><input type="text" id="regvalhex" onKeyup='UpdateField($("#regvalbin"), this.value, 16, 2);'  style="width:100px;"></td>
-				</tr>
-				<tr>
-					<td align=right>bin</td>
-					<td><input type="text" id="regvalbin" onKeyup='UpdateField($("#regvalhex"), this.value, 2, 16);'  style="width:100px;"></td>
-				</tr>
-				<tr>
-					<td colspan="2">
-						<p><input type="submit" value="Установить"> <input type="button" value="Прочитать" onclick="var base=$('#regbase').val(); var reg=$('#regnum').val(); GetValue(base, reg); return false;"></p>
-						<div id="updateresult"></div>
-					<td>
-				</tr>
-			</table>
 
+
+		<p class="bluetitle">Регистр</p>
+		<div style="display:inline-block; padding-left:40px; min-width:40px;">база</div>
+		<div style="display:inline;">
+			<input type="text" id="regbase" value="30" style="width:40px; background-color:#b0b0b0; border: none;">
+		</div>
+		<div style="display:inline-block; padding-left:20px; min-width:40px;">параметр</div>
+		<div style="display:inline; padding-left: 10px;">
+			<input type="text" id="regnum" value="0a" style="width:40px; background-color:#b0b0b0; border: none;">
+		</div>
+		<p class="bluetitle">Значение</p>
+		<div style="display:inline-block; padding-left:40px; min-width:40px;">hex</div>
+		<div style="display:inline;">
+			<input type="text" id="regvalhex" onKeyup='UpdateField($("#regvalbin"), this.value, 16, 2);' style="width:40px; background-color:#b0b0b0; border: none;">
+		</div>
+		<div style="display:inline-block; padding-left:20px; min-width:40px;">bin</div>
+		<div style="display:inline;">
+			<input type="text" id="regvalbin" onKeyup='UpdateField($("#regvalhex"), this.value, 2, 16);' style="width:70px; background-color:#b0b0b0; border: none;">
+		</div>
+
+		<p>
+			<a href="#" class="buttonlink" onclick="var base=$('#regbase').val(); var reg=$('#regnum').val(); var valueHex=$('#regvalhex').val(); var valueBin=$('#regvalbin').val(); SetValue(base, reg, valueHex, valueBin); return false;">[ Установить ]</a>
+			<a href="#" class="buttonlink" onclick="var base=$('#regbase').val(); var reg=$('#regnum').val(); GetValue(base, reg); return false;">[ Прочитать ]</a>
+			<p><div id="updateresult"></div></p>
 		</p>
 		</form>
+
 	</div>
 
 </div>

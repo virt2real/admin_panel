@@ -22,12 +22,12 @@
 
 	<h3><a href="#">Описание устройства</a></h3>
 	<div>
-					<p>Идентификатор устройства</p>
+					<p class="bluetitle">Идентификатор устройства</p>
 					<p><input type="text" id="deviceid" value="{deviceID}" class="textinput"></p>
-					<p>Описание устройства</p>
-					<p><textarea id="devicedescription">{deviceDescription}</textarea></p>
+					<p class="bluetitle">Описание устройства</p>
+					<p><textarea id="devicedescription" style="height: 300px;">{deviceDescription}</textarea></p>
 					<p>
-						<input type="button" onclick="var text1 = $('#deviceid').val(); var text2 = $('#devicedescription').val(); SaveSettings(text1, text2); return false;" value="Сохранить">
+						<p><a class="buttonlink" href="#" onclick="var text1 = $('#deviceid').val(); var text2 = $('#devicedescription').val(); SaveSettings(text1, text2); return false;">[ Сохранить ]</a></p>
 						<span id="savestatus"></span>
 					</p>
 

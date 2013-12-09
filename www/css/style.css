@@ -20,7 +20,7 @@ body {
 
 #wifistatus {
   text-align: center;
-  width: 100px;
+  width: 130px;
   color: #ffffff;
   padding:10px;
 }
@@ -33,6 +33,9 @@ body {
 
 #menu a:hover {text-decoration: underline; }
 
+.hardlink {
+  float: right;
+}
 
 #accordion {
   font-size:12px;
@@ -151,4 +154,58 @@ input {
   padding: 10px;
 
   font-family: "Lucida Console", Monaco, monospace;
+}
+
+#pinstable td:hover {
+  background-color: #0380ea;
+}
+
+#pinstable .nobg:hover {
+  background-color: #121212;
+}
+ 
+.pinbox {
+  position: absolute;
+  width:15px;
+  height:15px;
+}
+
+.blueback {
+  background-color: #0380ea;
+}
+
+#dmesg_status pre {
+  style="font-family: "Lucida Console", Monaco, monospace; 
+  font-size:1.3em;"
+}
+
+.buttonlink {
+  text-decoration: none;
+  font-size:1.4em;
+}
+
+#currentgpiostate {
+  style="font-family: "Lucida Console", Monaco, monospace; 
+  font-size:1.3em;"
+}
+
+#scanresult {
+  style="font-family: "Lucida Console", Monaco, monospace; 
+  font-size:1.3em;"
+}
+
+select {
+  background-color:#000000;
+  color: #777777;
+  border: #aaaaaa;
+}
+
+#uenvparams {
+  style="font-family: "Lucida Console", Monaco, monospace; 
+  font-size:1.2em;"
+  color: #777777;
+}
+
+.bluetitle {
+  color: #0380ea;
 }

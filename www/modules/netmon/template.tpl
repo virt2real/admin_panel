@@ -13,15 +13,17 @@
 	var old;
 	var ifaces;
 
-	function update_interfaces(){		$.getScript("modules/{module_name}/ifget.php?" + Math.random(), function(response, status, xhr) {			if (status == "success") {
+	function update_interfaces(){		$.getScript("modules/{module_name}/ifget.php?" + Math.random(), function(response, status, xhr) {//$("#if_traf").html(response); return;			if (status == "success") {
 				var if_json = JSON.parse(response);
 				var value = "";
 				var rspeed = "", tspeed = "";
 				if (!old) old = if_json;
 
-				for (var i in if_json) {
+				for (var i in if_json) { 
 					var rcv_speed = if_json[i].rcv_bytes - old[i].rcv_bytes;
 					var trsm_speed = if_json[i].trsm_bytes - old[i].trsm_bytes;
+					old[i].rcv_bytes = if_json[i].rcv_bytes;
+					old[i].trsm_bytes = if_json[i].trsm_bytes;
 
 					if (rcv_speed > 1024) {
 						rspeed = (rcv_speed/1024).toFixed(3) + " KBytes/sec";
@@ -39,9 +41,9 @@
 						tspeed = trsm_speed + " Bytes/sec";
 					}
 
-					value += "<b>" + if_json[i].if_name + " :</b><br>";
-					value += "приём: " + tspeed + "</b><br>";
-					value += "передача: " + rspeed + "<p></p><p></p>";
+					value += '<p class="bluetitle">' + if_json[i].if_name + " :</p>";
+					value += "передача: " + tspeed + "</b><br>";
+					value += "приём: " + rspeed + "<br><br><br>";
 
 				}
 				old = if_json;
@@ -61,6 +63,7 @@
 
 	<h3><a href="#">Мониторинг сетевых интерфейсов</a></h3>
 	<div>
+		<p class="bluetitle">Служит для примерной оценки загруженности интерфейсов, информация неточная</p>
 		<div id="if_traf"></div>
 	</div>
 

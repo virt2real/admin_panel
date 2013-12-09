@@ -40,7 +40,12 @@
 
 	<h3><a href="#">Выйти из админки</a></h3>
 	<div>
-		<p><input type="button" onclick="tryQuit(); return false;" value="Выйти">  <span id="resetStatus"></span></p>
+		<p>
+			<a href="" class="buttonlink" onclick="tryQuit(); return false;">[ выйти ]</a>
+			<span id="resetStatus"></span>
+		</p>
+
+		
 	</div>
 
 </div>

@@ -1,53 +1,54 @@
 <?php
-	/*
-		save.php
-		Save device ID and description
-		(c)virt2real.ru 2012
-	*/
+/*****************************************************
+* modules/deviceid/save.php
+* deviceid save file
+*(c)virt2real.ru 2013
+* draft, by Gol
+/*****************************************************/
 
-	$id_filename = '/etc/virt2real/deviceid';
-	$descr_filename = '/etc/virt2real/devicedescription';
+// common include
+include('../../parts/global.php');
 
-	$device_id = $_GET['id'];
-	$device_descr = $_GET['descr'];
+$id_filename = '/etc/virt2real/deviceid';
+$descr_filename = '/etc/virt2real/devicedescription';
 
-	$success = true;
+$device_id = $_GET['id'];
+$device_descr = $_GET['descr'];
 
-	if (is_writable($id_filename)) {
-	    if (!$handle = fopen($id_filename, 'w')) {
-			$success &= false;
-		}
+$success = true;
 
-    	if (fwrite($handle, $device_id) === FALSE) {
-        	$success &= false;
-	    }
-
-	    fclose($handle);
-
-	} else {
+if (is_writable($id_filename)) {
+	if (!$handle = fopen($id_filename, 'w')) {
 		$success &= false;
-
+	}
+	if (fwrite($handle, $device_id) === FALSE) {
+		$success &= false;
 	}
 
-	if (is_writable($descr_filename)) {
-	    if (!$handle = fopen($descr_filename, 'w')) {
-			$success &= false;
-		}
+	fclose($handle);
+
+} else {
+	$success &= false;
+}
+
+if (is_writable($descr_filename)) {
+	if (!$handle = fopen($descr_filename, 'w')) {
+		$success &= false;
+	}
 
     	if (fwrite($handle, $device_descr) === FALSE) {
         	$success &= false;
-	    }
-
-	    fclose($handle);
-
-	} else {
-		$success &= false;
-
 	}
 
-	if ($success)
-		echo 'success';
-	else
-		echo 'error';
+	fclose($handle);
+
+} else {
+	$success &= false;
+}
+
+if ($success)
+	echo 'success';
+else
+	echo 'error';
 
 ?>

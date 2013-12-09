@@ -16,12 +16,12 @@ function GetPinArray() {
 
 	$pinArray [1][] = "4. UART0 TXD";
 	$pinArray [1][] = "3. LINE OUT";
-	$pinArray [1][] = "4. SPEAKER";
+	$pinArray [1][] = "4. SPEAKER +";
 	$pinArray [1][] = "3. +3.3V";
 
 	$pinArray [2][] = "6. UART0 RXD";
 	$pinArray [2][] = "5. GPIO1";
-	$pinArray [2][] = "6. SPEAKER";
+	$pinArray [2][] = "6. SPEAKER -";
 	$pinArray [2][] = "5. PWR_VIN";
 
 	$pinArray [3][] = "8. A_GND";
@@ -84,7 +84,7 @@ function GetPinArray() {
 	$pinArray [14][] = "30. GPIO8";
 	$pinArray [14][] = "29. GPIO44";
 
-	$pinArray [15][] = "32. GPIO90";
+	$pinArray [15][] = "32. GPIO90 / PWM2";
 	$pinArray [15][] = "31. GPIO2";
 	$pinArray [15][] = "32. GPIO9";
 	$pinArray [15][] = "31. GPIO35";

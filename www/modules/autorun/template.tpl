@@ -9,15 +9,16 @@
 
 <script>
 	function SaveAutostartScript(text){
-		$("#saveautostartscriptstatus").html("saving...");
-		$("#saveautostartscriptstatus").load("modules/{module_name}/save.php?text=" + encodeURIComponent(text), function(response, status, xhr) {
+		$("#saveautostartscriptstatus").html('<img src="/imgs/loader.gif">');
+		$.post("modules/{module_name}/save.php?rnd=" + Math.random(), {text: text}, function(response, status, xhr) {
 			if (status == "success") {
-				$("#saveautostartscriptstatus").html("success");
+				$("#saveautostartscriptstatus").html(response);
 			}
-			if (status == "error") {
-				$("#saveautostartscriptstatus").html("error");
+			if (savestatus == "error") {
+				$("#saveautostartscriptstatus").html(":-(");
 			}
 		});
+
 	}
 
 </script>
@@ -26,17 +27,17 @@
 
 	<h3><a href="#">Автозапуск</a></h3>
 	<div>
-					<p>Автозапуск управляющего скрипта /etc/virt2real/autostart.sh</p>
+					<p class="bluetitle">Автозапуск управляющего скрипта /etc/virt2real/autostart.sh</p>
 					<p><textarea id="autostartscript">{autostartscript}</textarea></p>
 					<p>
-						<input type="button" onclick="var text = $('#autostartscript').val(); SaveAutostartScript(text); return false;" value="Сохранить">
+						<p><a class="buttonlink" href="#" onclick="var text = $('#autostartscript').val(); SaveAutostartScript(text); return false;">[ Сохранить ]</a></p>
 						<span id="saveautostartscriptstatus"></span>
 					</p>
 
-					<p>Так как железка, в первую очередь, предназначена для установки на различных девайсах вроде танков, самолётов, тележек, роботов, и т.д., и т.п.,
+					<p class="bluetitle">Так как железка, в первую очередь, предназначена для установки на различных девайсах вроде танков, самолётов, тележек, роботов, и т.д., и т.п.,
 					требуется автономная работа.</p>
-					<p>При включении железки начинает выполнение какого-то конкретного пользовательского управляющего скрипта. Запуск реализован с помощью командного файла с фиксированным именем /etc/virt2real/autostart.sh</p>
-					<p>Содержимое именно этого файла доступно для редактирования в текстовом поле слева.</p>
+					<p class="bluetitle">При включении железки начинает выполнение какого-то конкретного пользовательского управляющего скрипта. Запуск реализован с помощью командного файла с фиксированным именем /etc/virt2real/autostart.sh</p>
+					<p class="bluetitle">Содержимое именно этого файла доступно для редактирования в текстовом поле слева.</p>
 
 	</div>
 

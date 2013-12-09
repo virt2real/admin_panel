@@ -10,6 +10,6 @@
 $module_params['name'] = 'network';
 $module_params['title'] = 'Сеть';
 $module_params['menu_part'] = 1;
-$module_params['position'] = 0;
+$module_params['position'] = 1;
 
 ?>

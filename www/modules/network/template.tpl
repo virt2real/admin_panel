@@ -6,15 +6,16 @@
 
 <script>
 	function SaveInterfaces(text){
-		$("#saveinterfaces").html("saving...");
-		$("#saveinterfaces").load("modules/{module_name}/saveinterfaces.php?text=" + encodeURIComponent(text), function(response, status, xhr) {
+		$("#saveinterfaces").html('<img src="/imgs/loader.gif">');
+		$.post("modules/{module_name}/saveinterfaces.php?rnd=" + Math.random(), {text: text}, function(response, status, xhr) {
 			if (status == "success") {
-				$("#saveinterfaces").html("success");
+				$("#saveinterfaces").html(response);
 			}
-			if (status == "error") {
-				$("#saveinterfaces").html("error");
+			if (savestatus == "error") {
+				$("#saveinterfaces").html(":-(");
 			}
 		});
+
 	}
 
 
@@ -24,15 +25,15 @@
 
 	<h3><a href="#">Сеть</a></h3>
 	<div>
-		<p>Настройка сетевых интерфейсов</p>
+		<p class="bluetitle">Активные сетевые интерфейсы</p>
 		<div id="currentlanconnection">
 		{currentstate}
 		</div>
 
-		<p>Активные сетевые интерфейсы</p>
+		<p class="bluetitle">Настройка сетевых интерфейсов</p>
 		<p><textarea id="interfaces">{interfaces}</textarea></p>
 		<p>
-			<input type="button" onclick="var text = $('#interfaces').val(); SaveInterfaces(text); return false;" value="Сохранить">
+			<p><a href="#" class="buttonlink" onclick="var text = $('#interfaces').val(); SaveInterfaces(text); return false;">[ Сохранить ]</a></p>
 			<span id="saveinterfaces"></span>
 		</p>
 

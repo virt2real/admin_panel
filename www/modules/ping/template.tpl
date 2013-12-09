@@ -34,13 +34,12 @@
 
 	<h3><a href="#">Ping</a></h3>
 	<div>
-		<p>Пингуемый хост</p>
+		<p class="bluetitle">Пингуемый хост</p>
 		<form onSubmit="var host=$('#pinghost').val(); PingHost(host); return false;">
 		<p>
 			<input type="text" id="pinghost" style="width: 300px;">
-			&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="submit" value="Ping">
-			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="buttonlink" onclick="var host=$('#pinghost').val(); PingHost(host); return false;" style="padding-left:20px;">[ Ping! ]</a>
+			<p></p>
 			<span id="pingStatus"></span>
 		</p>
 		</form>

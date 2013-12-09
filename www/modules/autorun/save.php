@@ -11,7 +11,7 @@
 include('../../parts/global.php');
 
 $filename = '/etc/virt2real/autostart.sh';
-$somecontent = $_GET['text'];
+$somecontent = $_POST['text'];
 
 if (is_writable($filename)) {
 	if (!$handle = fopen($filename, 'w')) {

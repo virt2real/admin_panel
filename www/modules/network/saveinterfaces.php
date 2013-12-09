@@ -1,28 +1,34 @@
 <?php
-	/*
-		saveinterfaces.php
-		Save interfaces settings
-		(c)virt2real.ru 2012
-	*/
+/*****************************************************
+* modules/network/saveinterfaces.php
+* network interfaces save file
+*(c)virt2real.ru 2013
+* draft, by Gol
+/*****************************************************/
 
-	$filename = '/etc/network/interfaces';
-	$somecontent = $_GET['text'];
 
-	if (is_writable($filename)) {
-	    if (!$handle = fopen($filename, 'w')) {
-			die("can not access file $filename");
-		}
+// common include
+include('../../parts/global.php');
 
-    	if (fwrite($handle, $somecontent) === FALSE) {
+
+$filename = '/etc/network/interfaces';
+$somecontent = $_POST['text'];
+
+if (is_writable($filename)) {
+	if (!$handle = fopen($filename, 'w')) {
+		die("can not access file $filename");
+	}
+
+	if (fwrite($handle, $somecontent) === FALSE) {
         	die("can not write $filename");
-	    }
+	}
 
     	echo "successfully saved";
 
 	    fclose($handle);
 
-	} else {
-		echo "no access to $filename";
-	}
+} else {
+	echo "no access to $filename";
+}
 
 ?>

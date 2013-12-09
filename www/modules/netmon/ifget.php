@@ -10,15 +10,14 @@
 // common include
 include('../../parts/global.php');
 
-$callback = $_GET['callback'];
-
 $ifaces = file_get_contents("/proc/net/dev");
 $arr_ifaces = explode("\n", $ifaces);
 
 // skip first three strings (it's a header and a loopback device)
-for ($i = 3; $i < sizeof($arr_ifaces); $i++) {
+for ($i = 2; $i < sizeof($arr_ifaces); $i++) {
 	$arr_ifaces[$i] = str_replace(":", " ", $arr_ifaces[$i]);
 	$arr_ifaces[$i] = preg_replace("/\s+/", " ", $arr_ifaces[$i]); // delete multiple spaces
+	if (!$arr_ifaces[$i]) continue;
 	$arr_parts = explode(" ", $arr_ifaces[$i]); // explode string by space
 	if (!$arr_parts[1]) continue; // skipping strings with empty if_name
 	$newif['if_name'] = $arr_parts[1];

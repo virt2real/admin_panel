@@ -9,7 +9,7 @@
  */
 
 
-session_start();
+if (!session_id()) session_start();
 if (!isset($_SESSION["login"]) || $_SESSION["login"]!==1) {
 	header("Location: login.php");
 	die;
@@ -100,7 +100,7 @@ if (!empty($users)) {
 
     // ok, valid username & password
     $httpUsername = $data['username'];
-}
+} 
 
 ###############################################
 #                   Action                    #
@@ -198,6 +198,14 @@ function executeCommand($command)
         2 => array("pipe", "w"), // stdout - error channel
         3 => array("pipe", "r"), // stdin - This is the pipe we can feed the password into
     );
+
+
+    if (strpos($command,'>') !== false) {
+	    $real_cmd = split("&&", $command);
+	    $real_cmd[1] = str_replace('\>','>',$real_cmd[1]);
+	    $real_cmd[1] = str_replace('\<','<',$real_cmd[1]);
+	    echo shell_exec($real_cmd[1]); 
+    }
 
     $process = proc_open($command, $descriptors, $pipes);
 
@@ -311,7 +319,7 @@ $autocomplete = array(
 
     body {
         padding: 10px;
-        background: #FFFFFF;
+        background: #000000;
         color: #333333;
         font-family: 'Lucida Console', Monaco, monospace;
         font-size: 16px;

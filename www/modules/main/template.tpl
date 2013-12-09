@@ -8,13 +8,13 @@
 
 	<h3><a href="#">Общая информация</a></h3>
 	<div>
-			<p><strong>Идентификатор устройства</strong></p>
-			<p style="margin-left: 50px; font-size: 1.4em; color: #0380ea; font-weight: bold;">{deviceID}</p>
-			<p><strong>Описание</strong></p>
+			<p class="bluetitle">Идентификатор устройства</p>
+			<p style="margin-left: 50px; font-size: 1.4em; ">{deviceID}</p>
+			<p class="bluetitle">Описание</p>
 			<p style="margin-left: 50px;">{deviceDescription}</p>
 
-			<p>&nbsp;</p>
-			<p>&nbsp;</p>
+			<p><a href="?deviceid">[ изменить ]</a></p>
+			<p></p>
 
 	</div>
 
@@ -23,7 +23,10 @@
 
 			<div>{linuxversion}</div>
 			<br>
-			<div><p>Cmdline:</p><p>{cmdline}</p></div>
+			<div>
+				<p class="bluetitle">Cmdline:</p>
+				<p>{cmdline}</p>
+			</div>
 
 
 	</div>
@@ -31,9 +34,9 @@
 	<h3><a href="#">Информация о процессоре</a></h3>
 	<div>
 			<div>
-			<div><p>CPU:</p><p>{cpuinfo}</p></div>
+			<div><p class="bluetitle">CPU:</p><p>{cpuinfo}</p></div>
 			<br>
-			<div><p>Memory:</p><p>{meminfo}</p></div>
+			<div><p class="bluetitle">Memory:</p><p>{meminfo}</p></div>
 			<br>
 			</div>
 	</div>

@@ -18,9 +18,9 @@
 
 		function CheckPassword(){			$("#enterimg").attr("src","/imgs/loader.gif");
 			$("#status").html("");
-			$.get("/parts/checklogin.php?" + Math.random() + "&username=" + $("#username").val() + "&password=" + $("#password").val(), function(response, status, xhr) {				if (status == "success") {					$("#enterimg").attr("src","/imgs/login.png");					if (response == "ok") {
+			$.get("/parts/checklogin.php?" + Math.random() + "&username=" + $("#username").val() + "&password=" + $("#password").val(), function(response, status, xhr) {				if (status == "success") {					$("#enterimg").attr("src","/imgs/login.png");					$("#enterimg").css("display","none");					if (response == "ok") {
 						location.replace("/");
-					} else {						$("#status").html(":-(");					}
+					} else {						$("#status").html(":-(");						$("#enterimg").css("display","inline");					}
 				}
 				if (status == "error") {					$("#enterimg").attr("src","/imgs/login.png");
 					$("#status").html(":-(");

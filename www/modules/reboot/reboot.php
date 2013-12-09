@@ -10,8 +10,6 @@
 // common include
 include('../../parts/global.php');
 
-shell_exec ("reboot -f &");
-
-echo "ok";
+shell_exec("reboot -f -d 1 &");
 
 ?>

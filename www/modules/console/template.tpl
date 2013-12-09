@@ -12,7 +12,7 @@
 
 	<h3><a href="#">Консоль</a></h3>
 	<div style="text-align: center;">
-		<iframe src="modules/{module_name}/console.php" style="width: 99%; height: 800px; border: none;">
+	    <iframe src="modules/{module_name}/console.php" style="background-color:#000000; width: 99%; height: 800px; border: none;">
 	</div>
 
 </div>

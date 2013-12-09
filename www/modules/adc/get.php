@@ -18,7 +18,7 @@ $handle = fopen($filename, "r");
 
 $contents = fread($handle, 6);
 
-for ($i = 0; $i < 6; $i++) {	$value = ord($contents[$i]) + ord($contents[$i+1])*256;	$volts = $value * $vref / $max_raw;	$result[] = round($volts, 3);}
+for ($i = 0; $i < 6; $i++) {	@$value = ord($contents[$i]) + ord($contents[$i+1])*256;	$volts = $value * $vref / $max_raw;	$result[] = round($volts, 3);}
 
 fclose($handle);
 

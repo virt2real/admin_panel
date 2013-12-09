@@ -27,6 +27,7 @@
 
 	function reboot(){
 		$("#resetStatus").load("modules/{module_name}/reboot.php");
+		document.location.href = "/";
 	}
 </script>
 
@@ -41,7 +42,10 @@
 
 	<h3><a href="#">Управление девайсом</a></h3>
 	<div>
-		<p><input type="button" onclick="tryReboot(); return false;" value="Перезагрузить устройство">  <span id="resetStatus"></span></p>
+		<p>
+			<a href="" class="buttonlink" onclick="tryReboot(); return false;">[ Перезагрузить устройство ]</a>
+			<span id="resetStatus"></span>
+		</p>
 	</div>
 
 </div>

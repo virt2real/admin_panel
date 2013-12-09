@@ -60,7 +60,7 @@
 				<td align="left">
 					<h1> <img id="logo2" src="imgs/logo2.png"></h1>
 				</td>
-				<td width="400" align="right">
+				<td width="100%" align="right">
 					<div id="uptime"></div>
 					<p></p>
 					<p></p>

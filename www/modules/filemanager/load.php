@@ -59,8 +59,8 @@ clearstatcache ();
 closedir($dir);
 
 // Сортируем всё
-usort ($ARR, "_PriceCmp");
-usort ($ARR2, "_PriceCmp");
+@usort ($ARR, "_PriceCmp");
+@usort ($ARR2, "_PriceCmp");
 
 
 $content = '';
