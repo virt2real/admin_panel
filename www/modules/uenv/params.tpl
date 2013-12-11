@@ -18,7 +18,7 @@
 
 <script>
 	function SaveChanges() {
-		var result = "bootargs=";
+		var result = "bootargs= ";
 
 		if( $("#btn10v1").attr("checked") == "checked") result += "davinci_enc_mngr.ch0_output=COMPOSITE";
 		if( $("#btn10v2").attr("checked") == "checked") result += "davinci_enc_mngr.ch0_output=LCD";
