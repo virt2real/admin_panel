@@ -12,7 +12,7 @@
 	var swfVersionStr = "11.1.0";
 	var xiSwfUrlStr = "playerProductInstall.swf";
 	var flashvars = {};
-	flashvars.host = "rtmp://192.168.1.128/live";
+	flashvars.host = "rtmp://{deviceHost}/live";
 	flashvars.stream = "v2r";
 	flashvars.width = 640;
 	flashvars.height = 480;
