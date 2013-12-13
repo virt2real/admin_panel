@@ -8,7 +8,7 @@
 /*****************************************************/
 
 $module_params['name'] = 'gphoto';
-$module_params['title'] = 'GPhoto';
-$module_params['menu_part'] = 5;
-$module_params['position'] = 3;
+$module_params['title'] = 'GPhoto2';
+$module_params['menu_part'] = 6;
+$module_params['position'] = 1;
 ?>

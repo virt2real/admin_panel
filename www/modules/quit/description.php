@@ -9,7 +9,7 @@
 
 $module_params['name'] = 'quit';
 $module_params['title'] = 'Выход';
-$module_params['menu_part'] = 6;
+$module_params['menu_part'] = 7;
 $module_params['position'] = 1;
 
 ?>

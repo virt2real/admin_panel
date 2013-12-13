@@ -14,7 +14,7 @@
 			<p class="bluetitle">Описание</p>
 			<p style="margin-left: 50px;">{deviceDescription}</p>
 
-			<p><a href="?deviceid">[ изменить ]</a></p>
+			<p style="text-align: right; text-decoration: none;"><a href="?deviceid">[ изменить ]</a></p>
 			<p></p>
 
 	</div>
