@@ -7,13 +7,8 @@
 * draft, by Gol
 /*****************************************************/
 
-// check session
-session_start();
-if ($_SERVER["PHP_SELF"]!=="/login.php")
-if (!isset($_SESSION["login"]) || $_SESSION["login"]!==1) {
-	header("Location: login.php");
-	die;
-}
+// common include
+include('../../parts/global.php');
 
 $filename = $_POST['file'];
 $text = $_POST['text'];

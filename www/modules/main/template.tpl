@@ -8,6 +8,7 @@
 
 	<h3><a href="#">Общая информация</a></h3>
 	<div>
+			<p style="text-align: right;">Версия админки: {admin_version}</p>
 			<p class="bluetitle">Идентификатор устройства</p>
 			<p style="margin-left: 50px; font-size: 1.4em; ">{deviceID}</p>
 			<p class="bluetitle">Описание</p>

@@ -17,6 +17,7 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"]!==1) {	header("Location: l
 $globalVars['deviceID'] = file_get_contents('/etc/virt2real/deviceid');
 $globalVars['deviceDescription'] = file_get_contents('/etc/virt2real/devicedescription');
 $globalVars['deviceHost'] = $_SERVER["HTTP_HOST"];
+$globalVars['document_root'] = $_SERVER["DOCUMENT_ROOT"];
 
 function GlobalReplace($template){
 	// global replaces for templates

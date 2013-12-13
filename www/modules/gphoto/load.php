@@ -1,7 +1,7 @@
 <?php
 
 /*****************************************************
-* modules/filemanager/load.php
+* modules/gphoto/load.php
 * load directory listing
 *(c)virt2real.ru 2013
 * draft, by Gol
