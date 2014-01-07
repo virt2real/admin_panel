@@ -14,6 +14,11 @@ $status["wifilink"] = "0";
 $status["wifilevel"] = "0";
 
 $wlanstatusfile = file("/proc/net/wireless");
+
+$systemmessage = @file_get_contents("/tmp/systemmessage");
+$ssid = @file_get_contents("/tmp/ssid");
+$ssid = str_replace("\n", "", $ssid);
+
 foreach ($wlanstatusfile as $key => $value){
 
 	// remove many spaces
@@ -26,7 +31,10 @@ foreach ($wlanstatusfile as $key => $value){
 	// if here - wi-fi interface record found
 	$status["wifilink"] = str_replace('.', '', $statusstring[2]);
 	$status["wifilevel"] = str_replace('.', '', $statusstring[3]);
-	//$status["wifinoise"] = str_replace('.', '', $statusstring[4]);
+	$status["wifinoise"] = str_replace('.', '', $statusstring[4]);
+
+	$status["message"] = "&nbsp;".$systemmessage;
+	$status["ssid"] = $ssid;
 
 }
 

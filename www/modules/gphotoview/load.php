@@ -1,7 +1,7 @@
 <?php
 
 /*****************************************************
-* modules/filemanager/load.php
+* modules/gphotoview/load.php
 * load directory listing
 *(c)virt2real.ru 2013
 * draft, by Gol
@@ -61,10 +61,10 @@ closedir($dir);
 $content = '';
 
 // показываем текущий каталог
-$content .= '<div id="fmcurrentdir">'.$parent.$dirname.'</div>';
+//$content .= '<div id="fmcurrentdir">'.$parent.$dirname.'</div>';
 
 // показываем ссылку "На уровень выше"
-$content .= '<p id="moveup" onclick="LoadDir(\'\', \''.makeparent($parent).'\'); return false;"><a href="#" onclick="LoadDir(\'\', \''.makeparent($parent).'\'); return false;">[ Наверх ]</a></p>';
+//$content .= '<p id="moveup" onclick="LoadDir(\'\', \''.makeparent($parent).'\'); return false;"><a href="#" onclick="LoadDir(\'\', \''.makeparent($parent).'\'); return false;">[ Наверх ]</a></p>';
 
 $content .= '<table cellspacing=1 cellpadding=2 border=0 id="filemanager">';
 
@@ -79,7 +79,22 @@ for ($i=0; $i<$lines; $i++) {
 	$size = $ARR[$i]["name"][2];
 	$dir_parent = $ARR[$i]["name"][3];
 	if (substr($dir_parent, -1) != "/") $dir_parent .= "/";
-	$file_list .= '<tr><td class="col1"><a href="#" title="'.$dir_parent.$file_name.'" onclick="EditFile(\''.$file_name.'\', \''.$dir_parent.'\'); return false;">'.$file_name.'</a>&nbsp;</td><td class="col2">'.$date.'&nbsp;</td><td class="col3">'.$size .'&nbsp;</td></tr>';
+
+	$img_path = str_replace($_SERVER["DOCUMENT_ROOT"], "", $dir_parent.$file_name);
+
+	//$file_list .= '<img src="'.$img_path.'"><br> <tr><td class="col1"><a href="#" title="'.$dir_parent.$file_name.'" onclick="EditFile(\''.$file_name.'\', \''.$dir_parent.'\'); return false;">'.$file_name.'</a>&nbsp;</td><td class="col2">'.$date.'&nbsp;</td><td class="col3">'.$size .'&nbsp;</td></tr>';
+
+	$type = mime_content_type ($dir_parent.$file_name);
+	if ($type == "application/octet-stream") {
+
+		$file_list .= '
+			<div style="width:170px; height:150px; text-align: center; margin:10px; float: left;">
+				<a href="'.$img_path.'" target="_blank"><img src="'.$img_path.'" width="160"></a>
+				<p style="color: #7c7c7c; margin: 0px;">'.$file_name.'</p>
+			</div>
+		';
+	} else 
+		$file_list .= '<tr><td class="col1"><a href="#" title="'.$dir_parent.$file_name.'" onclick="EditFile(\''.$file_name.'\', \''.$dir_parent.'\'); return false;">'.$file_name.'</a>&nbsp;</td><td class="col2">'.$date.'&nbsp;</td><td class="col3">'.$size .'&nbsp;</td></tr>';
 }
 
 $lines = count ($ARR2);

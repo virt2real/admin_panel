@@ -10,15 +10,21 @@
 // common include
 include('../../parts/global.php');
 
-$vref = 14.3;
+$vref = 3.6;
 $max_raw = 1 << 10;
+
+if (isset($_GET["vref"])) $vref = $_GET["vref"];
 
 $filename = "/dev/v2r_adc";
 $handle = fopen($filename, "r");
 
-$contents = fread($handle, 6);
+$contents = fread($handle, 12);
 
-for ($i = 0; $i < 6; $i++) {	@$value = ord($contents[$i]) + ord($contents[$i+1])*256;	$volts = $value * $vref / $max_raw;	$result[] = round($volts, 3);}
+for ($i = 0; $i < 6; $i++) {
+        @$value = ord($contents[2 * $i]) + ord($contents[(2 * $i) + 1]) * 256;
+        $volts = $value * $vref / $max_raw;
+        $result[] = round($volts, 3);
+}
 
 fclose($handle);
 

@@ -21,9 +21,10 @@ body {
 }
 
 #wifistatus {
-  text-align: center;
-  width: 130px;
+  text-align: right;
+  width: 300px;
   color: #ffffff;
+  font-size: 0.8em;
   padding:10px;
 }
 
@@ -83,18 +84,20 @@ input {
   padding: 4px;
 }
 
+#filemanager {
+  width: 100%;
+}
 
 #filemanager td {
   width: 80%;
-}
-
-#filemanager td {
   padding: 6px;
 }
+
 
 #filemanager .col1 {
   background-color: #202020;
   font-size: 16px;
+  width: auto;
 }
 
 #filemanager a {
@@ -103,24 +106,26 @@ input {
 
 #filemanager td:hover {
   background-color: #0380ea;
+  background-color: #000000;
 }
 
 #filemanager .col2 {
   background-color: #252525;
   text-align: center;
-  width: 550px;
+  width: 100px;
 }
 
 #filemanager .col3 {
   background-color: #202020;
   text-align: right;
-  width: 350px;
+  width: 80px;
 }
 
 #fmcurrentdir {
   width: 100%;
   text-align: right;
-  font-size: 1.6em;
+  font-size: 1em;
+  color: #0380ea;
 }
 
 #moveup {
@@ -210,4 +215,36 @@ select {
 
 .bluetitle {
   color: #0380ea;
+}
+
+.gphotoctrl .bluetitle {
+  color: #0380ea;
+  display: none;
+}
+
+.gphotoctrl .control {
+  padding-left: 0px;
+  font-size: 1.2em;
+}
+
+.selectbox {
+  width: 100%;
+  max-width: 200px;
+  height: 100%;
+  line-height: 100%;
+  color: #ffffff;
+}
+
+.previewfiles {
+  display: none;
+  float: right;
+  padding-right: 20px;
+}
+
+#systemmessages {
+  text-align: right;
+  font-size: 0.8em;
+  color: #7c7c7c;
+  line-height: 10px;
+  height: 10px;
 }

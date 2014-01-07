@@ -24,7 +24,7 @@
 
 	}
 
-	function load_adc(){		$.get("modules/{module_name}/get.php", function(response, status, xhr) {			if (status == "success") {
+	function load_adc(){		var max_voltage = $("#max_voltage").val();		$.get("modules/{module_name}/get.php?" + Math.random() + "&vref=" + max_voltage, function(response, status, xhr) {			if (status == "success") {
 
 				var adc_json = JSON.parse(response);
 				var value = "";
@@ -57,16 +57,22 @@
 
 			<form onSubmit="updateTimer(); return false;">
 
-			<div style="display:inline-block; padding-left:40px; min-width:150px;">показывать значений</div>
+			<div style="display:inline-block; padding-left:40px; min-width:200px;">показывать значений</div>
 			<div style="display:inline;">
-				<input type="text" id="adc_max_count" value="100" style="width:50px; background-color:#b0b0b0; border: none;">
+				<input type="text" id="adc_max_count" value="100" style="width:30px; background-color:#b0b0b0; border: none; text-align: right;">
 			</div>
 			<p></p>
-			<div style="display:inline-block; padding-left:40px; min-width:150px;">Частота обновления </div>
+			<div style="display:inline-block; padding-left:40px; min-width:200px;">Частота обновления </div>
 			<div style="display:inline;">
-				<input type="text" id="adc_timer_period" value="1000"  style="width:50px; background-color:#b0b0b0; border: none;">
+				<input type="text" id="adc_timer_period" value="1000"  style="width:30px; background-color:#b0b0b0; border: none; text-align: right;">
 			</div>
-			<div style="display:inline;">(мс)</div>
+			<div style="display:inline;"> мс</div>
+			<p></p>
+			<div style="display:inline-block; padding-left:40px; min-width:200px;">Максимальное напряжение </div>
+			<div style="display:inline;">
+				<input type="text" id="max_voltage" value="3.6"  style="width:30px; background-color:#b0b0b0; border: none; text-align: right;">
+			</div>
+			<div style="display:inline;"> Вольт</div>
 			</form>
 
 			<p>
