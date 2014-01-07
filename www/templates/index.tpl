@@ -40,7 +40,9 @@
 
 					// show wi-fi status
 					if (parseInt(status_json["wifilink"])) {
-						$("#linkstatus").html('"' + status_json["ssid"] + '" ' + status_json["wifilink"] + "/70 " + status_json["wifilevel"] + " dBm");
+						var ssid = "";
+						if (status_json["ssid"]) ssid = '"' + status_json["ssid"] + '" ';
+						$("#linkstatus").html(ssid + status_json["wifilink"] + "/70 " + status_json["wifilevel"] + " dBm");
 						$("#wifistatus").css("display", "block");
 					} else {						$("#wifistatus").css("display", "none");					}
 
