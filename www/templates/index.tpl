@@ -39,7 +39,7 @@
 					$("#systemmessages").html(status_json["message"]);					
 
 					// show wi-fi status
-					if (parseInt(status_json["wifilink"])) {
+					if (status_json["wifilink"]) {
 						var ssid = "";
 						if (status_json["ssid"]) ssid = '"' + status_json["ssid"] + '" ';
 						$("#linkstatus").html(ssid + status_json["wifilink"] + "/70 " + status_json["wifilevel"] + " dBm");
@@ -51,6 +51,7 @@
 			if (status == "error") {
 				$("#uptime").html(":-(");
 				$("#wifistatus").html("");
+				$("#wifistatus").css("display", "none");
 			}
 			timer = setTimeout("update_status()", 1000);
 		});
