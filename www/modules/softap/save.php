@@ -10,6 +10,8 @@
 // common include
 include('../../parts/global.php');
 
+if (!isset($_POST['ssid']) || !isset($_POST['passphrase'])) die ();
+
 $ssid = $_POST['ssid'];
 $passphrase = $_POST['passphrase'];
 $text = "SSID=$ssid\nPASSPHRASE=$passphrase\n";

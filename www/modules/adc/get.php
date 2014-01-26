@@ -10,25 +10,13 @@
 // common include
 include('../../parts/global.php');
 
-$vref = 3.6;
-$max_raw = 1 << 10;
+if (!isset($_GET["vref"]))  die("wrong vref");
 
-if (isset($_GET["vref"])) $vref = $_GET["vref"];
+$vref = $_GET["vref"];
 
-$filename = "/dev/v2r_adc";
-$handle = fopen($filename, "r");
+include "common.php";
+$adc_list = read_adc($vref);
 
-$contents = fread($handle, 12);
-
-for ($i = 0; $i < 6; $i++) {
-        @$value = ord($contents[2 * $i]) + ord($contents[(2 * $i) + 1]) * 256;
-        $volts = $value * $vref / $max_raw;
-        $result[] = round($volts, 3);
-}
-
-fclose($handle);
-
-$json = json_encode($result);
-echo $json;
+echo $adc_list;
 
 ?>

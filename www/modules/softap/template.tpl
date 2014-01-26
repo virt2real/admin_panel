@@ -16,10 +16,25 @@
 			if (status == "success") {				$("#softap_status").html(response);
 			}
 			if (savestatus == "error") {
-				$("#softap_status").html(":-)");
+				$("#softap_status").html(":-(");
 			}
 		});
 	}
+
+	function SaveSettings2(text){
+
+		$("#softap_status2").html('<img src="/imgs/loader.gif">');
+
+		$.post("modules/{module_name}/save2.php?rnd=" + Math.random(), {text: text}, function(response, status, xhr) {
+			if (status == "success") {
+				$("#softap_status2").html(response);
+			}
+			if (savestatus == "error") {
+				$("#softap_status2").html(":-(");
+			}
+		});
+	}
+
 </script>
 
 <div id="accordion" style="margin:0; padding:0;">
@@ -31,6 +46,13 @@
 		<p>Включение/выключение режима "Точка доступа" можно произвести в разделе <a href="?uenv">uEnv</a></p>
 		<p>Настройку IP адреса можно произвести в разделе <a href="?network">Сеть</a></p>
 
+	</div>
+
+	<h3><a href="#">Настройка для Virt2real Wi-Fi модуля</a></h3>
+	<div>
+
+	        <p>Файл /etc/softap.conf</p>
+		
 		<p class="bluetitle">Параметры</p>
 
 		<div style="display:inline-block; padding-left:40px; min-width:150px;">Имя сети</div>
@@ -47,6 +69,25 @@
 		<div id="softap_status"></div>
 
 	</div>
+
+	<h3><a href="#">Настройка для USB Wi-Fi модуля</a></h3>
+	<div>
+
+	        <p>Файл /etc/hostapd/hostapd.conf</p>
+
+		<p class="bluetitle">Параметры</p>
+
+		<p><textarea id="hostapd" style="width: 90%; height: 300px;">{hostapd}</textarea></p>
+		<p>
+			<p><a class="buttonlink" href="#" onclick="var text = $('#hostapd').val(); SaveSettings2(text); return false;">[ Сохранить ]</a></p>
+		</p>
+
+
+		<div id="softap_status2"></div>
+
+	</div>
+
+
 </div>
 
 </div>

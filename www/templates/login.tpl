@@ -32,7 +32,7 @@
 	<div style="position: absolute; top: 1px; left: 1px; z-index: 0;">
 		<table width="100%">
 			<tr valign=top>
-				<td width=150>
+				<td width=100>
 					<a href="/"><img src="imgs/logo.png"></a>
 				</td>
 				<td align="left">

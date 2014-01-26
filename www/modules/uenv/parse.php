@@ -22,6 +22,7 @@ function ParseParams($cmdline, $template){
 		$option5 = '';
 		$option6 = '';
 		switch ($element[0]) {
+
 			case "wifi":
 				if ($element[1] == "on") $option1 = "checked"; else $option2 = "checked"; 
 				$template = str_replace('{wifiselected1}', $option1, $template);
@@ -109,6 +110,9 @@ function ParseParams($cmdline, $template){
 			break;
 			case "1wirepullup": 
 				$template = str_replace('{w1val2}', $element[1], $template);
+			break;
+			case "coherent_pool": 
+				$template = str_replace('{coherent_pool}', $element[1], $template);
 			break;
 			case "davinci_enc_mngr.ch0_output": 
 				if (strtoupper($element[1]) == "COMPOSITE") $option1 = "checked";

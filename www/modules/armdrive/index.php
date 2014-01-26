@@ -1,9 +1,9 @@
 <?php
 
 /*****************************************************
-* modules/imu/index.php
-* IMU index file
-*(c)virt2real.ru 2013
+* modules/armdrive/index.php
+* Arm Drive index file
+* (c)virt2real.ru 2014
 * draft, by Gol
 /*****************************************************/
 
@@ -23,11 +23,6 @@ $module_content = GlobalReplace($module_content);
 
 /***************** module specific part **************/
 
-$ctrlname = shell_exec ("i2cdetect -l");
-
-$module_content = str_replace('{i2c_name}', $ctrlname, $module_content);
-
 echo $module_content;
-
 
 ?>

@@ -10,5 +10,5 @@
 $module_params['name'] = 'softap';
 $module_params['title'] = 'Точка доступа';
 $module_params['menu_part'] = 1;
-$module_params['position'] = 2;
+$module_params['position'] = 3;
 ?>

@@ -54,7 +54,7 @@
 	<h3><a href="#">Макет платы реле</a></h3>
 	<div>
 		<div style="position: relative;">
-			<img src="modules/{module_name}/relay_shield.png">
+			<img src="modules/{module_name}/relay_shield.png" style="box-shadow:0px 0px 15px #555555;">
 
 			<!-- J1 -->
 			<div class="relayswitch" id="relay_j1_gr1" row="1" state="1" style="top:150px; left:58px;"></div>

@@ -39,6 +39,8 @@ foreach ($softapparams as $k => $v) {
 $module_content = str_replace('{ssid_value}', $ssid, $module_content);
 $module_content = str_replace('{passphrase_value}', $passphrase, $module_content);
 
+$hostapdparams = file_get_contents("/etc/hostapd/hostapd.conf");
+$module_content = str_replace('{hostapd}', $hostapdparams, $module_content);
 
 echo $module_content;
 

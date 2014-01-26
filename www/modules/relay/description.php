@@ -9,7 +9,7 @@
 
 $module_params['name'] = 'relay';
 $module_params['title'] = 'Макет реле';
-$module_params['menu_part'] = 3;
-$module_params['position'] = 0;
+$module_params['menu_part'] = 4;
+$module_params['position'] = 2;
 
 ?>

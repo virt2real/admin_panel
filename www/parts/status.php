@@ -9,13 +9,16 @@
 
 require_once("config.php");
 
-$status["uptime"] = shell_exec ("/usr/bin/uptime");
+$status["date"] = shell_exec ("date");
+$status["uptime"] = "";
+
 $status["wifilink"] = "0";
 $status["wifilevel"] = "0";
 
 $wlanstatusfile = file("/proc/net/wireless");
+$systemmessages = file("/var/log/messages");
+$systemmessage = $systemmessages[sizeof($systemmessages)-1];
 
-$systemmessage = @file_get_contents("/tmp/systemmessage");
 $ssid = @file_get_contents("/tmp/ssid");
 $ssid = str_replace("\n", "", $ssid);
 

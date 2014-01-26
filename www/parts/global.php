@@ -7,6 +7,10 @@
 * draft, by Gol
 /*****************************************************/
 
+$TOTAL_PWM = 4;
+$TOTAL_GPIO = 104;
+$TOTAL_PINS = 87;
+
 session_start();
 
 if ($_SERVER["PHP_SELF"]!=="/login.php")

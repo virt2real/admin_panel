@@ -19,6 +19,7 @@
 		var text = $("#title" + row + "_" + col).text();
 		$("#pininfo").html(text);
 		$("#title" + row + "_" + col).addClass("blueback");
+		$("#title" + row + "_" + col).addClass("whitetext");
 		$(this).css("background-image","url('/imgs/pinarea.png')");
 	});
 
@@ -26,6 +27,7 @@
 		var col = $(this).attr("col");
 		$("#pininfo").html("&nbsp;");
 		$("#title" + row + "_" + col).removeClass("blueback");
+		$("#title" + row + "_" + col).removeClass("whitetext");
 		$(this).css("background-image","none");
 	});
 
@@ -39,25 +41,97 @@
 		var row = $(this).attr("row");
 		var col = $(this).attr("col");
 		$("#pin"+row+"_"+col).css("background-image","url('/imgs/pinarea.png')");
-		$("#pininfo").html($(this).text());
+		$(this).addClass("whitetext");
+		var text = "&nbsp;";
+		if ($(this).text())  text = $(this).text();
+		$("#pininfo").html(text);
 	});
 
 	$(".pintitle").mouseout(function(){
 		var row = $(this).attr("row");
 		var col = $(this).attr("col");
 		$("#pin"+row+"_"+col).css("background-image","none");
-		$("#pininfo").html($(this).text());
+		$(this).removeClass("whitetext");
+		var text = "&nbsp;";
+		if ($(this).text())  text = $(this).text();
+		$("#pininfo").html(text);
+	});
+
+	$(".leds").mouseover(function(){
+		var num = $(this).attr("num");
+		var text = "LED " + num;
+		$("#pininfo").html(text);
+		//$(this).addClass("active")
+	});
+
+	$(".leds").mouseout(function(){
+		var num = $(this).attr("num");
+		$("#pininfo").html("&nbsp;");
+		//$(this).removeClass("active")
 	});
 
 
 </script>
+
+<style>
+
+#pininfo {
+  display: inline;
+  line-height: 20px;
+  height: 20px;
+}
+
+.pinbox {
+  position: absolute;
+  width:15px;
+  height:15px;
+}
+
+.pintitle {
+  color: #7c7c7c;
+}
+
+.whitetext {
+  color: #ffffff;
+}
+
+.lighttext {
+  color: #dddddd;
+}
+
+.leds {
+  position: absolute;
+  width:17px;
+  height:8px;
+}
+
+#led0.leds.active {
+  background: #2b85f5;
+}
+
+#led1.leds.active {
+  background: #ff0000;
+}
+
+#led2.leds.active {
+  background: #00ff00;
+}
+
+</style>
 
 <div id="accordion" style="margin:0; padding:0;">
 
 	<h3><a href="#">Макет платы</a></h3>
 	<div>
 		<div style="position: relative;">
-			<img src="modules/{module_name}/board_scheme.png">
+			<img src="modules/{module_name}/board_scheme.png" style="box-shadow:0px 0px 15px #555555;">
+
+			<!-- LEDS -->
+			<div class="leds {led0active}" id="led0" num="0" style="top:55px; left:5px;"></div>
+			<div class="leds {led1active}" id="led1" num="1" style="top:67px; left:5px;"></div>
+			<div class="leds {led2active}" id="led2" num="2" style="top:79px; left:5px;"></div>
+
+			<!-- PINS -->
 			<div class="pinbox" id="pin21_0" row="21" col="0" style="top:4px; left:66px;"></div>
 			<div class="pinbox" id="pin20_0" row="20" col="0" style="top:4px; left:87px;"></div>
 			<div class="pinbox" id="pin19_0" row="19" col="0" style="top:4px; left:108px;"></div>
@@ -148,7 +222,8 @@
 			<div class="pinbox" id="pin1_3" row="1" col="3" style="top:360px; left:475px;"></div>
 			<div class="pinbox" id="pin0_3" row="0" col="3" style="top:360px; left:496px;"></div>
 
-			<div id="pininfo" style="display: inline;">pininfo</div>
+			<p></p>
+			<div id="pininfo">&nbsp;</div>
 		</div>
 
 		<p></p>

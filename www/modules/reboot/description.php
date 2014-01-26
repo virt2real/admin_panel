@@ -9,7 +9,7 @@
 
 $module_params['name'] = 'reboot';
 $module_params['title'] = 'Перезагрузка';
-$module_params['menu_part'] = 7;
+$module_params['menu_part'] = 8;
 $module_params['position'] = 2;
 
 ?>

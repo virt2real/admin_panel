@@ -9,7 +9,7 @@
 
 $module_params['name'] = 'gphotoctrl2';
 $module_params['title'] = 'Управление камерой2';
-$module_params['menu_part'] = 6;
+$module_params['menu_part'] = 7;
 $module_params['position'] = 0;
 $module_params['depend'] = array("node", "gphoto2");
 $module_params['depend_descr'] = array("NodeJS", "GPhoto2 for NodeJS", "libgphoto2", "libgphoto2_port");

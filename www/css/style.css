@@ -15,17 +15,24 @@ body {
 }
 
 #uptime {
-  color: #ffffff;
+  margin-top:10px;
+  color: #7c7c7c;
   font-size: 12px;
-  padding:10px;
+  display: inline;
 }
 
-#wifistatus {
+#date {
+  margin-top:10px;
+  color: #7c7c7c;
+  font-size: 12px;
+}
+
+.wifistatus {
   text-align: right;
-  width: 300px;
   color: #ffffff;
   font-size: 0.8em;
   padding:10px;
+  padding-top:0px;
 }
 
 #menu {
@@ -171,19 +178,13 @@ input {
   background-color: #121212;
 }
  
-.pinbox {
-  position: absolute;
-  width:15px;
-  height:15px;
-}
-
 .blueback {
   background-color: #0380ea;
 }
 
 #dmesg_status pre {
-  style="font-family: "Lucida Console", Monaco, monospace; 
-  font-size:1.3em;"
+  font-family: "Lucida Console", Monaco, monospace; 
+  font-size:1.3em;
 }
 
 .buttonlink {
@@ -192,13 +193,13 @@ input {
 }
 
 #currentgpiostate {
-  style="font-family: "Lucida Console", Monaco, monospace; 
-  font-size:1.3em;"
+  font-family: "Lucida Console", Monaco, monospace; 
+  font-size:1.3em;
 }
 
 #scanresult {
-  style="font-family: "Lucida Console", Monaco, monospace; 
-  font-size:1.3em;"
+  font-family: "Lucida Console", Monaco, monospace; 
+  font-size:1.3em;
 }
 
 select {
@@ -208,8 +209,8 @@ select {
 }
 
 #uenvparams {
-  style="font-family: "Lucida Console", Monaco, monospace; 
-  font-size:1.2em;"
+  font-family: "Lucida Console", Monaco, monospace; 
+  font-size:1.2em;
   color: #777777;
 }
 
@@ -217,6 +218,9 @@ select {
   color: #0380ea;
 }
 
+.graytext {
+ color: #7c7c7c;
+}
 .gphotoctrl .bluetitle {
   color: #0380ea;
   display: none;
@@ -241,10 +245,23 @@ select {
   padding-right: 20px;
 }
 
-#systemmessages {
-  text-align: right;
+#systemmessages a {
+  text-align: left;
   font-size: 0.8em;
   color: #7c7c7c;
   line-height: 10px;
   height: 10px;
+  text-decoration: none;
+}
+
+#systemmessages a:hover {
+  color: #000000;
+}
+
+.gray_titles, .gray_titles a {
+  color: #7c7c7c;
+}
+
+.inline {
+  display: inline;
 }

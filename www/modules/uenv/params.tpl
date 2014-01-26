@@ -48,6 +48,8 @@
 		result += " ";
 		result += "rootfstype=" + $("#fsval").val();
 		result += " ";
+		result += "coherent_pool=" + $("#coherent_pool").val();
+		result += " ";
 		if( $("#btn4v1").attr("checked") == "checked") result += "pwrled=on";
 		if( $("#btn4v2").attr("checked") == "checked") result += "pwrled=off";
 		result += " ";
@@ -106,25 +108,26 @@
 
 	<p class="bluetitle">Беспроводная связь</p>
 
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">Wi-Fi модуль </div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">V2R Wi-Fi модуль </div>
 	<div id="btn1" style="display:inline;">
 	    <input type="radio" id="btn1v1" name="btn1" {wifiselected1}><label for="btn1v1">Вкл</label>
 	    <input type="radio" id="btn1v2" name="btn1" {wifiselected2}><label for="btn1v2">Выкл</label>
 	</div>
-	<p class="bluetitle" style="display: inline; padding-left: 20px;"> родной модуль virt2real Wi-Fi</p>
-	<p></p>
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">Точка доступа </div>
-	<div id="btn2" style="display:inline;">
-	    <input type="radio" id="btn2v1" name="btn2" {apselected1}><label for="btn2v1">Вкл</label>
-	    <input type="radio" id="btn2v2" name="btn2" {apselected2}><label for="btn2v2">Выкл</label>
-	</div>
-	<p class="bluetitle" style="display: inline; padding-left: 20px;"> только для родного модуля virt2real Wi-Fi</p>
+	<p class="bluetitle" style="display: inline; padding-left: 20px;"></p>
 	<p></p>
 	<div style="display:inline-block; padding-left:40px; min-width:150px;">USB Wi-Fi модуль </div>
 	<div id="btn14" style="display:inline;">
 	    <input type="radio" id="btn14v1" name="btn14" {usbwifiselected1}><label for="btn14v1">Вкл</label>
 	    <input type="radio" id="btn14v2" name="btn14" {usbwifiselected2}><label for="btn14v2">Выкл</label>
 	</div>
+	<p></p>
+
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">Точка доступа </div>
+	<div id="btn2" style="display:inline;">
+	    <input type="radio" id="btn2v1" name="btn2" {apselected1}><label for="btn2v1">Вкл</label>
+	    <input type="radio" id="btn2v2" name="btn2" {apselected2}><label for="btn2v2">Выкл</label>
+	</div>
+	<p class="bluetitle" style="display: inline; padding-left: 20px;">
 	<p></p>
 
 	<p class="bluetitle">Локальная сеть</p>
@@ -229,6 +232,13 @@
 		<input type="text" id="memval" value="{memval}" style="width:100px; background-color:#b0b0b0; border: none;">
 	</div>
 	<p></p>
+
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">Непрерывный пул</div>
+	<div style="display:inline;">
+		<input type="text" id="coherent_pool" value="{coherent_pool}" style="width:100px; background-color:#b0b0b0; border: none;">
+	</div>
+	<p></p>
+
 	<div style="display:inline-block; padding-left:40px; min-width:150px;">Корневой раздел</div>
 	<div style="display:inline;">
 		<input type="text" id="rootval" value="{rootval}" style="width:100px; background-color:#b0b0b0; border: none;">

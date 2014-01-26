@@ -9,6 +9,6 @@
 
 $module_params['name'] = 'rtmp';
 $module_params['title'] = 'RTMP';
-$module_params['menu_part'] = 5;
+$module_params['menu_part'] = 6;
 $module_params['position'] = 1;
 ?>

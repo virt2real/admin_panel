@@ -23,6 +23,14 @@ $module_content = GlobalReplace($module_content);
 
 /***************** module specific part **************/
 
+$vref = 3.6;
+
+include "common.php";
+$adc_list = load_adc_list($vref);
+$module_content = str_replace('{adc_status}', $adc_list, $module_content);
+
+$module_content = str_replace('{adc_vref}', $vref, $module_content);
+
 echo $module_content;
 
 ?>

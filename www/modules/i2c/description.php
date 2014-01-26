@@ -10,6 +10,6 @@
 $module_params['name'] = 'i2c';
 $module_params['title'] = 'I2C';
 $module_params['menu_part'] = 3;
-$module_params['position'] = 1;
+$module_params['position'] = 6;
 
 ?>

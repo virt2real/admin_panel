@@ -9,113 +9,115 @@
 
 function GetPinArray() {
 
-	$pinArray [0][] = "2. GND";
-	$pinArray [0][] = "1. RESET";
-	$pinArray [0][] = "2. TV OUT";
-	$pinArray [0][] = "1. A_GND";
+	include '../../parts/connectors.php';
 
-	$pinArray [1][] = "4. UART0 TXD";
-	$pinArray [1][] = "3. LINE OUT";
-	$pinArray [1][] = "4. SPEAKER +";
-	$pinArray [1][] = "3. +3.3V";
+	$pinArray [0][] = $PINS_ARRAY[1];
+	$pinArray [0][] = $PINS_ARRAY[23];
+	$pinArray [0][] = $PINS_ARRAY[45];
+	$pinArray [0][] = $PINS_ARRAY[66];
 
-	$pinArray [2][] = "6. UART0 RXD";
-	$pinArray [2][] = "5. GPIO1";
-	$pinArray [2][] = "6. SPEAKER -";
-	$pinArray [2][] = "5. PWR_VIN";
+	$pinArray [1][] = $PINS_ARRAY[2];
+	$pinArray [1][] = $PINS_ARRAY[24];
+	$pinArray [1][] = $PINS_ARRAY[46];
+	$pinArray [1][] = $PINS_ARRAY[67];
 
-	$pinArray [3][] = "8. A_GND";
-	$pinArray [3][] = "7. GPIO37";
-	$pinArray [3][] = "8. ADC0";
-	$pinArray [3][] = "7. DSP_GND";
+	$pinArray [2][] = $PINS_ARRAY[3];
+	$pinArray [2][] = $PINS_ARRAY[25];
+	$pinArray [2][] = $PINS_ARRAY[47];
+	$pinArray [2][] = $PINS_ARRAY[68];
 
-	$pinArray [4][] = "10. ETH_TXP";
-	$pinArray [4][] = "9. GPIO36";
-	$pinArray [4][] = "10. ADC1";
-	$pinArray [4][] = "9. I2C DATA";
+	$pinArray [3][] = $PINS_ARRAY[4];
+	$pinArray [3][] = $PINS_ARRAY[26];
+	$pinArray [3][] = $PINS_ARRAY[48];
+	$pinArray [3][] = $PINS_ARRAY[69];
 
-	$pinArray [5][] = "12. ETH_TXN";
-	$pinArray [5][] = "11. GPIO17";
-	$pinArray [5][] = "12. ADC2";
-	$pinArray [5][] = "11. I2C CLK";
+	$pinArray [4][] = $PINS_ARRAY[5];
+	$pinArray [4][] = $PINS_ARRAY[27];
+	$pinArray [4][] = $PINS_ARRAY[49];
+	$pinArray [4][] = $PINS_ARRAY[70];
 
-	$pinArray [6][] = "14. ETH_RXP";
-	$pinArray [6][] = "13. GPIO16";
-	$pinArray [6][] = "14. ADC3";
-	$pinArray [6][] = "13. CmpPR";
+	$pinArray [5][] = $PINS_ARRAY[6];
+	$pinArray [5][] = $PINS_ARRAY[28];
+	$pinArray [5][] = $PINS_ARRAY[50];
+	$pinArray [5][] = $PINS_ARRAY[71];
 
-	$pinArray [7][] = "16. ETH_COMMON";
-	$pinArray [7][] = "15. GPIO33";
-	$pinArray [7][] = "16. ADC4";
-	$pinArray [7][] = "15. CmpY";
+	$pinArray [6][] = $PINS_ARRAY[7];
+	$pinArray [6][] = $PINS_ARRAY[29];
+	$pinArray [6][] = $PINS_ARRAY[51];
+	$pinArray [6][] = $PINS_ARRAY[72];
 
-	$pinArray [8][] = "18. ETH_RXN";
-	$pinArray [8][] = "17. GPIO32";
-	$pinArray [8][] = "18. ADC5";
-	$pinArray [8][] = "17. CmpPB";
+	$pinArray [7][] = $PINS_ARRAY[8];
+	$pinArray [7][] = $PINS_ARRAY[30];
+	$pinArray [7][] = $PINS_ARRAY[52];
+	$pinArray [7][] = $PINS_ARRAY[73];
 
-	$pinArray [9][] = "20. GPIO15";
-	$pinArray [9][] = "19. GPIO31";
-	$pinArray [9][] = "20. GPIO3";
-	$pinArray [9][] = "19. GPIO49";
+	$pinArray [8][] = $PINS_ARRAY[9];
+	$pinArray [8][] = $PINS_ARRAY[31];
+	$pinArray [8][] = $PINS_ARRAY[53];
+	$pinArray [8][] = $PINS_ARRAY[74];
 
-	$pinArray [10][] = "22. GPIO14";
-	$pinArray [10][] = "21. GPIO30";
-	$pinArray [10][] = "22. GPIO4";
-	$pinArray [10][] = "21. GPIO48";
+	$pinArray [9][] = $PINS_ARRAY[10];
+	$pinArray [9][] = $PINS_ARRAY[32];
+	$pinArray [9][] = $PINS_ARRAY[54];
+	$pinArray [9][] = $PINS_ARRAY[75];
 
-	$pinArray [11][] = "24. GPIO13";
-	$pinArray [11][] = "23. GPIO29";
-	$pinArray [11][] = "24. GPIO5";
-	$pinArray [11][] = "23. GPIO47";
+	$pinArray [10][] = $PINS_ARRAY[11];
+	$pinArray [10][] = $PINS_ARRAY[33];
+	$pinArray [10][] = $PINS_ARRAY[55];
+	$pinArray [10][] = $PINS_ARRAY[76];
 
-	$pinArray [12][] = "26. GPIO12";
-	$pinArray [12][] = "25. GPIO28";
-	$pinArray [12][] = "26. GPIO6";
-	$pinArray [12][] = "25. GPIO46";
+	$pinArray [11][] = $PINS_ARRAY[12];
+	$pinArray [11][] = $PINS_ARRAY[34];
+	$pinArray [11][] = $PINS_ARRAY[56];
+	$pinArray [11][] = $PINS_ARRAY[77];
 
-	$pinArray [13][] = "28. GPIO11";
-	$pinArray [13][] = "27. GPIO27";
-	$pinArray [13][] = "28. GPIO7";
-	$pinArray [13][] = "27. GPIO45";
+	$pinArray [12][] = $PINS_ARRAY[13];
+	$pinArray [12][] = $PINS_ARRAY[35];
+	$pinArray [12][] = $PINS_ARRAY[57];
+	$pinArray [12][] = $PINS_ARRAY[78];
 
-	$pinArray [14][] = "30. GPIO10";
-	$pinArray [14][] = "29. GPIO26";
-	$pinArray [14][] = "30. GPIO8";
-	$pinArray [14][] = "29. GPIO44";
+	$pinArray [13][] = $PINS_ARRAY[14];
+	$pinArray [13][] = $PINS_ARRAY[36];
+	$pinArray [13][] = $PINS_ARRAY[58];
+	$pinArray [13][] = $PINS_ARRAY[79];
 
-	$pinArray [15][] = "32. GPIO90 / PWM2";
-	$pinArray [15][] = "31. GPIO2";
-	$pinArray [15][] = "32. GPIO9";
-	$pinArray [15][] = "31. GPIO35";
+	$pinArray [14][] = $PINS_ARRAY[15];
+	$pinArray [14][] = $PINS_ARRAY[37];
+	$pinArray [14][] = $PINS_ARRAY[59];
+	$pinArray [14][] = $PINS_ARRAY[80];
 
-	$pinArray [16][] = "34. GPIO89";
-	$pinArray [16][] = "33. GPIO24";
-	$pinArray [16][] = "34. GPIO82";
-	$pinArray [16][] = "33. GPIO84";
+	$pinArray [15][] = $PINS_ARRAY[16];
+	$pinArray [15][] = $PINS_ARRAY[38];
+	$pinArray [15][] = $PINS_ARRAY[60];
+	$pinArray [15][] = $PINS_ARRAY[81];
 
-	$pinArray [17][] = "36. GPIO88";
-	$pinArray [17][] = "35. GPIO23";
-	$pinArray [17][] = "36. GPIO79";
-	$pinArray [17][] = "35. GPIO83";
+	$pinArray [16][] = $PINS_ARRAY[17];
+	$pinArray [16][] = $PINS_ARRAY[39];
+	$pinArray [16][] = $PINS_ARRAY[61];
+	$pinArray [16][] = $PINS_ARRAY[82];
 
-	$pinArray [18][] = "38. GPIO87";
-	$pinArray [18][] = "37. GPIO22";
-	$pinArray [18][] = "38. GPIO86";
-	$pinArray [18][] = "37. GPIO25";
+	$pinArray [17][] = $PINS_ARRAY[18];
+	$pinArray [17][] = $PINS_ARRAY[40];
+	$pinArray [17][] = $PINS_ARRAY[62];
+	$pinArray [17][] = $PINS_ARRAY[83];
 
-	$pinArray [19][] = "40. GPIO50";
-	$pinArray [19][] = "39. GPIO80 / PWM3";
-	$pinArray [19][] = "40. GPIO85";
-	$pinArray [19][] = "39. GPIO34";
+	$pinArray [18][] = $PINS_ARRAY[19];
+	$pinArray [18][] = $PINS_ARRAY[41];
+	$pinArray [18][] = $PINS_ARRAY[63];
+	$pinArray [18][] = $PINS_ARRAY[84];
 
-	$pinArray [20][] = "42. PWR_VIN";
-	$pinArray [20][] = "41. GPIO92 / PWM0";
-	$pinArray [20][] = "42. GPIO81";
-	$pinArray [20][] = "41. GND";
+	$pinArray [19][] = $PINS_ARRAY[20];
+	$pinArray [19][] = $PINS_ARRAY[42];
+	$pinArray [19][] = $PINS_ARRAY[64];
+	$pinArray [19][] = $PINS_ARRAY[85];
 
-	$pinArray [21][] = "44. +3.3V";
-	$pinArray [21][] = "43. GPIO91 / PWM1";
+	$pinArray [20][] = $PINS_ARRAY[21];
+	$pinArray [20][] = $PINS_ARRAY[43];
+	$pinArray [20][] = $PINS_ARRAY[65];
+	$pinArray [20][] = $PINS_ARRAY[86];
+
+	$pinArray [21][] = $PINS_ARRAY[22];
+	$pinArray [21][] = $PINS_ARRAY[44];
 	$pinArray [21][] = "";
 	$pinArray [21][] = "";
 

@@ -31,6 +31,13 @@ $gpiolist = '<pre>' . shell_exec ("cat /sys/kernel/debug/gpio") . '</pre>';
 
 $module_content = str_replace('{gpiolist}', $gpiolist, $module_content);
 
+include "common.php";
+$gpiolist2 = load_gpio_list();
+$module_content = str_replace('{gpiolist2}', $gpiolist2, $module_content);
+
+$conlist = load_con_list();
+$module_content = str_replace('{conlist}', $conlist, $module_content);
+
 echo $module_content;
 
 ?>

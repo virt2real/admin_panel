@@ -31,6 +31,12 @@
 		});
 	}
 
+	function SetTimings (state) {
+
+		$.get("modules/{module_name}/settiming.php?state=" + state + "&" + Math.random(), function(response, status, xhr) {});
+	}
+		
+
 </script>
 
 <div id="accordion" style="margin:0; padding:0;">
@@ -39,12 +45,12 @@
 	<div>
 		<p class="bluetitle">Мониторинг сообщений ядра</p>
 		<div>
-			<form onSubmit="updateTimer(); return false;">
-			</form>
 
 			<a href="" class="buttonlink" onclick='load_dmesg(); return false;'>[ показать весь вывод dmesg ]</a>
 			<a href="" class="buttonlink" onclick='if (!dmesg_timer) dmesg_timer = setTimeout("update_dmesg()", 1); return false;'>[ Запустить опрос ]</a>
 			<a href="" class="buttonlink" onclick='clearInterval(dmesg_timer); dmesg_timer = false; $("#dmesgloader").css("display","none"); return false;'>[ Остановить опрос ]</a>
+
+			<p class="gray_titles"><a href="" class="buttonlink" onclick='SetTimings(1); return false;'>[ показывать тайминги ]</a> <a href="" class="buttonlink" onclick='SetTimings(0); return false;'>[ не показывать тайминги ]</a></p>
 
 			<p style="height:20px;"><img id="dmesgloader" src="/imgs/loader.gif" style="display: none;"></p>
 
