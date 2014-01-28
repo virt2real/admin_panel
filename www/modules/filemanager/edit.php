@@ -15,6 +15,7 @@ $parent = $_GET['parent'];
 
 // Открываем требуемый файл
 $file = file_get_contents($parent.$dirname);
+$file = htmlspecialchars($file);
 
 // шаблон редактирования
 $content = '
