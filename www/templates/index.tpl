@@ -45,14 +45,16 @@
 			type: 'GET',
 			timeout: 5000,
 			success: function(data){
+				$("#wifistatus").css("display", "block");
+				$("#mobile_status").css("display", "block");
 				ShowStatus(data);
-				if ($(".wifistatus").css("display") == "none") $(".wifistatus").css("display", "block");
 				if ($("#systemmessages").css("display") == "none") $("#systemmessages").css("display", "block");
 				timer = setTimeout("update_status()", 1000);
 			},
 			error: function(data, err){
+				$("#wifistatus").css("display", "none");
+				$("#mobile_status").css("display", "none");
 				$("#date").html("соединение потеряно :-(");
-				$(".wifistatus").css("display", "none");
 				$("#systemmessages").css("display", "none");
 				timer = setTimeout("update_status()", 5000);
 			}
@@ -65,24 +67,33 @@
 			status_json = JSON.parse(response);
 
 			// show uptime
-			$("#uptime").html(status_json["uptime"]);
-			$("#date").html(status_json["date"]);
+			$("#uptime").html(status_json.uptime);
+			$("#date").html(status_json.date);
 
 			// show system messages
-			if (status_json["message"])
-				$("#systemmessages").html('<a href="?systemmessages" title="системные сообщения">' + status_json["message"] + '</a>');
+			if (status_json.message)
+				$("#systemmessages").html('<a href="?systemmessages" title="системные сообщения">' + status_json.message + '</a>');
 			else
 				$("#systemmessages").html("&nbsp;");
 
 			// show wi-fi status
-			if (status_json["wifilink"]) {
+			if (parseInt(status_json.wifilink)) {
 				var ssid = "";
-				if (status_json["ssid"]) ssid = status_json["ssid"] + " ";
-				$("#linkstatus").html(ssid + status_json["wifilink"] + "/70 " + status_json["wifilevel"] + " dBm");
-				$(".wifistatus").css("display", "block");
+				if (status_json.ssid) ssid = status_json.ssid + " ";
+				$("#linkstatus").html(ssid + '<br>' + status_json.wifilink + "/70 " + status_json.wifilevel + " dBm");
+				$("#wifistatus").css("display", "block");
 			} else {
-				$(".wifistatus").css("display", "none");
+				$("#wifistatus").css("display", "none");
 			}
+
+			// show 3G status
+			if (status_json.mobile_status) {
+				$("#mobile_params").html(status_json.mobile_status);
+				$("#mobile_status").css("display", "block");
+			} else {
+				$("#mobile_status").css("display", "none");
+			}
+
 
 		} catch (e) {
 		}
@@ -102,28 +113,40 @@
 
 		<table width="100%" cellspacing="0" cellpadding="0" border="0">
 			<tr valign="top">
-				<td width="100">
-					<a href="/"><img id="logo" src="imgs/logo.png" width="100"></a>
-				</td>
-				<td align="left" width="300">
+				<td width="50%">
+					<a href="/"><img id="logo" src="imgs/logo.png" width="100" style="float: left; clear: left;"></a>
+
 					<h1><img id="logo2" src="imgs/logo2.png" width="200"></h1>
+					<br>
+					<br>
+
+					<div id="systemmessages" style="width: 400px; height: 15px; white-space: nowrap; overflow: hidden; clear: right; float: left; padding-bottom: 0px; min-width:100px; max-width: 100%;"></div>
+				
 				</td>
-				<td width="auto">
-					&nbsp;
-				</td>
-				<td width="300" align="right">
+				<td width="50%" align="right">
 					<div id="date"></div><div id="uptime"></div>
-					<p style="line-height:3px;">&nbsp;</p>
-					<div class="wifistatus" style="display: none;">
-						<div><img src="/imgs/wifi.png" style="padding-right: 30px; padding-bottom: 0px;"></div>
-					</div>
+
+					<table width="100%">
+						<tr valign="top">	
+							<td>&nbsp;</td>
+							<td width="90" align="center">&nbsp;
+								<div id="mobile_status">
+									<a href="?3g"><img src="/imgs/3g.png"></a>
+									<div id="mobile_params"></div>
+								</div>
+							</td>
+							<td width="130" align="center">&nbsp;
+								<div id="wifistatus">
+									<a href="?wlan"><img src="/imgs/wifi.png"></a>
+									<div id="linkstatus"></div>
+								</div>
+							</td>
+						</tr>
+					</table>
+
 				</td>
 			</tr>
 		</table>
-		<div style="width:100%;">
-			<div id="systemmessages" style="width: 48%; height: 15px; white-space: nowrap; clear: right; float: left; padding-bottom: 0px; overflow: hidden;"></div>
-			<div class="wifistatus" id="linkstatus" style="clear: right; float: right; padding-bottom: 0px;">&nbsp;</div>
-		</div>
 		<table width=100% cellspacing="0" cellpadding="5" border="0">
 			<tr valign="top">
 				<td width=230>

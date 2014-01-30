@@ -50,7 +50,7 @@
 			<a href="" class="buttonlink" onclick='if (!dmesg_timer) dmesg_timer = setTimeout("update_dmesg()", 1); return false;'>[ Запустить опрос ]</a>
 			<a href="" class="buttonlink" onclick='clearInterval(dmesg_timer); dmesg_timer = false; $("#dmesgloader").css("display","none"); return false;'>[ Остановить опрос ]</a>
 
-			<p class="gray_titles"><a href="" class="buttonlink" onclick='SetTimings(1); return false;'>[ показывать тайминги ]</a> <a href="" class="buttonlink" onclick='SetTimings(0); return false;'>[ не показывать тайминги ]</a></p>
+			<p class="gray_titles"><a href="" class="buttonlink" onclick='SetTimings(1); load_dmesg(20); return false;'>[ показывать тайминги ]</a> <a href="" class="buttonlink" onclick='SetTimings(0); load_dmesg(20); return false;'>[ не показывать тайминги ]</a></p>
 
 			<p style="height:20px;"><img id="dmesgloader" src="/imgs/loader.gif" style="display: none;"></p>
 

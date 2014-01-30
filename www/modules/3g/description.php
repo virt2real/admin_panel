@@ -1,15 +1,14 @@
 <?php
 
 /*****************************************************
-* modules/packages/description.php
+* modules/3g/description.php
 * module description file
 * (c)virt2real.ru 2014
 * draft, by Gol
 /*****************************************************/
 
-$module_params['name'] = 'packages';
-$module_params['title'] = 'Пакеты';
+$module_params['name'] = '3g';
+$module_params['title'] = '3G';
 $module_params['menu_part'] = 1;
-$module_params['position'] = 12;
-
+$module_params['position'] = 3;
 ?>

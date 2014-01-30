@@ -27,8 +27,22 @@ body {
   font-size: 12px;
 }
 
-.wifistatus {
-  text-align: right;
+#wifistatus {
+  display: none;
+}
+
+#linkstatus {
+  color: #ffffff;
+  font-size: 0.8em;
+  padding:10px;
+  padding-top:0px;
+}
+
+#mobile_status {
+  display: none;
+}
+
+#mobile_params {
   color: #ffffff;
   font-size: 0.8em;
   padding:10px;
@@ -89,6 +103,9 @@ body {
 
 input {
   padding: 4px;
+  background-color: transparent;
+  border: 1px solid #7c7c7c;
+  color: #ffffff;
 }
 
 #filemanager {
@@ -180,11 +197,6 @@ input {
  
 .blueback {
   background-color: #0380ea;
-}
-
-#dmesg_status pre {
-  font-family: "Lucida Console", Monaco, monospace; 
-  font-size:1.3em;
 }
 
 .buttonlink {

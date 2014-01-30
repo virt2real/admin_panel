@@ -79,18 +79,18 @@
 
 			<div style="display:inline-block; padding-left:40px; min-width:200px;">показывать значений</div>
 			<div style="display:inline;">
-				<input type="text" id="adc_max_count" value="100" style="width:30px; background-color:#b0b0b0; border: none; text-align: right;">
+				<input type="text" id="adc_max_count" value="100" style="width:30px; text-align: right;">
 			</div>
 			<p></p>
 			<div style="display:inline-block; padding-left:40px; min-width:200px;">Частота обновления </div>
 			<div style="display:inline;">
-				<input type="text" id="adc_timer_period" value="1000"  style="width:30px; background-color:#b0b0b0; border: none; text-align: right;">
+				<input type="text" id="adc_timer_period" value="1000"  style="width:30px; text-align: right;">
 			</div>
 			<div style="display:inline;"> мс</div>
 			<p></p>
 			<div style="display:inline-block; padding-left:40px; min-width:200px;">Максимальное напряжение </div>
 			<div style="display:inline;">
-				<input type="text" id="max_voltage" value="{adc_vref}"  style="width:30px; background-color:#b0b0b0; border: none; text-align: right;">
+				<input type="text" id="max_voltage" value="{adc_vref}"  style="width:30px; text-align: right;">
 			</div>
 			<div style="display:inline;"> Вольт</div>
 			</form>

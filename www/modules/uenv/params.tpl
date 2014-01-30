@@ -176,12 +176,12 @@
 	<p class="bluetitle">Консоль</p>
 	<div style="display:inline-block; padding-left:40px; min-width:150px;">Устройство</div>
 	<div style="display:inline;">
-		<input type="text" id="conval1" value="{conval1}" style="width:100px; background-color:#b0b0b0; border: none;">
+		<input type="text" id="conval1" value="{conval1}" style="width:100px;">
 	</div>
 	<p></p>
 	<div style="display:inline-block; padding-left:40px; min-width:150px;">Параметры</div>
 	<div style="display:inline;">
-		<input type="text" id="conval2" value="{conval2}" style="width:100px; background-color:#b0b0b0; border: none;">
+		<input type="text" id="conval2" value="{conval2}" style="width:100px;">
 	</div>
 	<p></p>
 
@@ -211,11 +211,11 @@
 
 	<div style="display:inline-block; padding-left:40px; min-width:150px;">1-wire пин</div>
 	<div style="display:inline;">
-		<input type="text" id="w1val1" value="{w1val1}" style="width:100px; background-color:#b0b0b0; border: none;">
+		<input type="text" id="w1val1" value="{w1val1}" style="width:100px;">
 	</div>
 	<div style="display:inline; padding-left:20px; padding-right:20px;"> пин питания</div>
 	<div style="display:inline;">
-		<input type="text" id="w1val2" value="{w1val2}" style="width:100px; background-color:#b0b0b0; border: none;">
+		<input type="text" id="w1val2" value="{w1val2}" style="width:100px;">
 	</div>
 
 </div>
@@ -229,29 +229,29 @@
 
 	<div style="display:inline-block; padding-left:40px; min-width:150px;">Память</div>
 	<div style="display:inline;">
-		<input type="text" id="memval" value="{memval}" style="width:100px; background-color:#b0b0b0; border: none;">
+		<input type="text" id="memval" value="{memval}" style="width:100px;">
 	</div>
 	<p></p>
 
 	<div style="display:inline-block; padding-left:40px; min-width:150px;">Непрерывный пул</div>
 	<div style="display:inline;">
-		<input type="text" id="coherent_pool" value="{coherent_pool}" style="width:100px; background-color:#b0b0b0; border: none;">
+		<input type="text" id="coherent_pool" value="{coherent_pool}" style="width:100px;">
 	</div>
 	<p></p>
 
 	<div style="display:inline-block; padding-left:40px; min-width:150px;">Корневой раздел</div>
 	<div style="display:inline;">
-		<input type="text" id="rootval" value="{rootval}" style="width:100px; background-color:#b0b0b0; border: none;">
+		<input type="text" id="rootval" value="{rootval}" style="width:100px;">
 	</div>
 	<p></p>
 	<div style="display:inline-block; padding-left:40px; min-width:150px;">Пауза загрузки</div>
 	<div style="display:inline;">
-		<input type="text" id="delayval" value="{delayval}" style="width:100px; background-color:#b0b0b0; border: none;">
+		<input type="text" id="delayval" value="{delayval}" style="width:100px;">
 	</div>
 	<p></p>
 	<div style="display:inline-block; padding-left:40px; min-width:150px;">Тип фс</div>
 	<div style="display:inline;">
-		<input type="text" id="fsval" value="{fsval}" style="width:100px; background-color:#b0b0b0; border: none;">
+		<input type="text" id="fsval" value="{fsval}" style="width:100px;">
 	</div>
 
 </div>
@@ -289,38 +289,38 @@
 
 	<div style="display:inline-block; padding-left:40px; min-width:150px;">OSD</div>
 	<div style="display:inline;">
-		<input type="text" id="osdval" value="{osdval}" style="width:350px; background-color:#b0b0b0; border: none;">
+		<input type="text" id="osdval" value="{osdval}" style="width:350px;">
 	</div>
 
 	<p></p>
 
 	<div style="display:inline-block; padding-left:40px; min-width:150px;">Интерфейс захвата</div>
 	<div style="display:inline;">
-		<input type="text" id="vpfeval" value="{vpfeval}" style="width:100px; background-color:#b0b0b0; border: none;">
+		<input type="text" id="vpfeval" value="{vpfeval}" style="width:100px;">
 	</div>
 
 	<p></p>
 
 	<div style="display:inline-block; padding-left:40px; min-width:150px;">Режим IPIPE</div>
 	<div style="display:inline;">
-		<input type="text" id="operval" value="{operval}" style="width:100px; background-color:#b0b0b0; border: none;">
+		<input type="text" id="operval" value="{operval}" style="width:100px;">
 	</div>
 
 	<p></p>
 
 	<div style="display:inline-block; padding-left:40px; min-width:150px;">Буфер cont2_bufsize</div>
 	<div style="display:inline;">
-		<input type="text" id="bufval1" value="{bufval1}" style="width:100px; background-color:#b0b0b0; border: none;">
+		<input type="text" id="bufval1" value="{bufval1}" style="width:100px;">
 	</div>
 	<p></p>
 	<div style="display:inline-block; padding-left:40px; min-width:150px;">bufoffset</div>
 	<div style="display:inline;">
-		<input type="text" id="bufval2" value="{bufval2}" style="width:100px; background-color:#b0b0b0; border: none;">
+		<input type="text" id="bufval2" value="{bufval2}" style="width:100px;">
 	</div>
 	<p></p>
 	<div style="display:inline-block; padding-left:40px; min-width:150px;">Буфер cont_bufsize</div>
 	<div style="display:inline;">
-		<input type="text" id="bufval3" value="{bufval3}" style="width:100px; background-color:#b0b0b0; border: none;">
+		<input type="text" id="bufval3" value="{bufval3}" style="width:100px;">
 	</div>
 
 </div>

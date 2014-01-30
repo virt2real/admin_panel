@@ -57,12 +57,12 @@
 
 		<div style="display:inline-block; padding-left:40px; min-width:150px;">Имя сети</div>
 		<div style="display:inline;">
-			<input type="text" id="ssid_value" value="{ssid_value}" style="width:100px; background-color:#b0b0b0; border: none;">
+			<input type="text" id="ssid_value" value="{ssid_value}" style="width:100px;">
 		</div>
 		<p></p>
 		<div style="display:inline-block; padding-left:40px; min-width:150px;">Пароль</div>
 		<div style="display:inline;">
-			<input type="text" id="passphrase_value" value="{passphrase_value}" style="width:100px; background-color:#b0b0b0; border: none;">
+			<input type="text" id="passphrase_value" value="{passphrase_value}" style="width:100px;">
 		</div>
 
 		<p><a class="buttonlink" href="#" onclick='SaveSettings(); return false;'>[ Сохранить ]</a></p>

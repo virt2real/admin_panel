@@ -92,20 +92,20 @@
 		<p class="bluetitle">Регистр</p>
 		<div style="display:inline-block; padding-left:40px; min-width:40px;">база</div>
 		<div style="display:inline;">
-			<input type="text" id="regbase" value="30" style="width:40px; background-color:#b0b0b0; border: none;">
+			<input type="text" id="regbase" value="30" style="width:40px;">
 		</div>
 		<div style="display:inline-block; padding-left:20px; min-width:40px;">параметр</div>
 		<div style="display:inline; padding-left: 10px;">
-			<input type="text" id="regnum" value="0a" style="width:40px; background-color:#b0b0b0; border: none;">
+			<input type="text" id="regnum" value="0a" style="width:40px;">
 		</div>
 		<p class="bluetitle">Значение</p>
 		<div style="display:inline-block; padding-left:40px; min-width:40px;">hex</div>
 		<div style="display:inline;">
-			<input type="text" id="regvalhex" onKeyup='UpdateField($("#regvalbin"), this.value, 16, 2);' style="width:40px; background-color:#b0b0b0; border: none;">
+			<input type="text" id="regvalhex" onKeyup='UpdateField($("#regvalbin"), this.value, 16, 2);' style="width:40px;">
 		</div>
 		<div style="display:inline-block; padding-left:20px; min-width:40px;">bin</div>
 		<div style="display:inline;">
-			<input type="text" id="regvalbin" onKeyup='UpdateField($("#regvalhex"), this.value, 2, 16);' style="width:70px; background-color:#b0b0b0; border: none;">
+			<input type="text" id="regvalbin" onKeyup='UpdateField($("#regvalhex"), this.value, 2, 16);' style="width:70px;">
 		</div>
 
 		<p>

@@ -85,17 +85,17 @@
 	<p class="bluetitle">Настройки</p>
 	<div style="display:inline-block; padding-left:40px; min-width:100px;">URL</div>
 	<div style="display:inline;">
-		<input type="text" id="location" value="rtmp://localhost/live/" style="width:200px; background-color:#b0b0b0; border: none;">
+		<input type="text" id="location" value="rtmp://localhost/live/" style="width:200px;">
 	</div>
 	<p></p>
 	<div style="display:inline-block; padding-left:40px; min-width:100px;">stream</div>
 	<div style="display:inline;">
-		<input type="text" id="playpath" value="v2r" style="width:200px; background-color:#b0b0b0; border: none;">
+		<input type="text" id="playpath" value="v2r" style="width:200px;">
 	</div>
 	<p></p>
 	<div style="display:inline-block; padding-left:40px; min-width:100px;">битрейт</div>
 	<div style="display:inline;">
-		<input type="text" id="bitrate" value="600000" style="width:200px; background-color:#b0b0b0; border: none;">
+		<input type="text" id="bitrate" value="600000" style="width:200px;">
 	</div>
 	<p></p>
 

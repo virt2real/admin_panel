@@ -97,6 +97,10 @@
 					<p><a href="#" class="buttonlink" onclick="SaveInterfaces(text); return false;">[ Сохранить ]</a></p>
 					<span id="saveinterfaces"></span>
 
+					<p>&nbsp;</p>
+					<div class="bluetitle">Список серверов DNS</div>
+					<p>{nameserverlist}</p>
+
 				</td>
 				<td width="250">
 					<p><div class="bluetitle">IP4 адрес</div> адрес, присваиваемый интерфейсу</p>
@@ -112,8 +116,6 @@
 			</tr>
 		</table>
 
-		<div class="bluetitle">Список серверов DNS</div>
-		<p>{nameserverlist}</p>
 
 	</div>
 

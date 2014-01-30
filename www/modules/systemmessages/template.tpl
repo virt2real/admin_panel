@@ -31,14 +31,6 @@
 
 </script>
 
-<style>
-
-#messages_status {
-  font-family: "Lucida Console", Monaco, monospace;
-  font-size: 1.2em;
-}
-</style>
-
 <div id="accordion" style="margin:0; padding:0;">
 
 	<h3><a href="#">Сообщения системы</a></h3>

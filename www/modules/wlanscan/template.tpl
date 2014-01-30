@@ -4,8 +4,19 @@
 	});
 
 	function init{module_name}(){
+		check_wlan();
 		scan_wlan();
 	}
+
+
+	function check_wlan(){
+		$.get("modules/{module_name}/check.php?" + Math.random(), function(response, status, xhr) {
+			if (status == "success") {
+				$("#wlanstate").html(response);
+			}
+		});
+	}
+
 
 	function scan_wlan(){
 		$("#scan_result").html('<img src="/imgs/loader.gif">');
@@ -25,8 +36,10 @@
 
 	<h3><a href="#">Сканирование Wi-Fi сетей</a></h3>
 	<div>
+		<p class="bluetitle">Текущее состояние подключения</a>  <a href="#" class="buttonlink" onclick='check_wlan(); return false;'>[ обновить ]</a>
+		<div id="wlanstate"></div>
 
-		<p><a href="#" class="buttonlink" onclick='scan_wlan(); return false;'>[ Сканировать сети ]</a> </p>
+		<p class="bluetitle">Найденные беспроводные сети</a>  <a href="#" class="buttonlink" onclick='check_wlan(); return false;'>[ обновить ]</a>
 		
 		<div id="scan_result" style="width: 90%;"></div>
 

@@ -15,8 +15,17 @@ $status["uptime"] = "";
 $status["wifilink"] = "0";
 $status["wifilevel"] = "0";
 
-$wlanstatusfile = file("/proc/net/wireless");
-$systemmessages = file("/var/log/messages");
+$wlanstatusfile = @file("/proc/net/wireless");
+
+/* 3G */
+$tmp = @file_get_contents("/tmp/pppstate");
+$mobile_status = "";
+if ($tmp) {
+	$mobilestatusfile = explode(" ", $tmp);
+	$mobile_status = $mobilestatusfile[5];
+}
+
+$systemmessages = @file("/var/log/messages");
 $systemmessage = $systemmessages[sizeof($systemmessages)-1];
 
 $ssid = @file_get_contents("/tmp/ssid");
@@ -31,6 +40,8 @@ foreach ($wlanstatusfile as $key => $value){
 	$statusstring[0] = str_replace(":", "", $statusstring[0]);
 	if ($statusstring[0] != $WLAN_IFACE_MONITOR) continue;
 
+	if (!$statusstring[2]) continue; // if "link" = 0 - not connected
+
 	// if here - wi-fi interface record found
 	$status["wifilink"] = str_replace('.', '', $statusstring[2]);
 	$status["wifilevel"] = str_replace('.', '', $statusstring[3]);
@@ -38,6 +49,8 @@ foreach ($wlanstatusfile as $key => $value){
 
 	$status["message"] = "&nbsp;".$systemmessage;
 	$status["ssid"] = $ssid;
+
+	$status["mobile_status"] = $mobile_status;
 
 }
 

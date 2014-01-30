@@ -53,10 +53,10 @@
 						<td>
 							<form method="post" onSubmit="Enter(); return false;">
 							<p>
-								<input type="text" name="username" id="username" style="width: 300px;">
+								<input type="text" name="username" id="username" placeholder="логин" style="width: 300px; background-color:#ffffff; color:#000000;">
 								<p></p>
-								<input type="password" name="password" id="password" style="width: 300px;">
-								<p style="text-align: right;"><input type="image" src="/imgs/login.png" alt="submit" id="enterimg"/></p>
+								<input type="password" name="password" id="password" placeholder="пароль" style="width: 300px;  background-color:#ffffff; color:#000000;">
+								<p style="text-align: right;"><input type="image" src="/imgs/login.png" alt="submit" id="enterimg"  style="border: none;" /></p>
 								<div id="status" style="color: #ff0000; height: 50px;"></div>
 							</p>
 							</form>
