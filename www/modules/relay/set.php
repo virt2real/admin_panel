@@ -32,7 +32,7 @@ switch ($relay) {
 	default: die("wrong relay number");
 }
 
-$cmd = "set con$con output:$real_state";
+$cmd = "set con $con output $real_state";
 echo $cmd;
 file_put_contents("/dev/v2r_pins", $cmd);
 
