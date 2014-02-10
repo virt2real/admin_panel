@@ -21,6 +21,11 @@
 
 	function NandWrite () {
 
+		if ("{intboottype}" == 2) {
+			$("#nandwritestatus").html('Прошивка NAND недоступна в режиме загрузки с NAND');
+			return;
+		}
+
 		var fs;
 
 		$("#nandwritestatus").html('<img src="/imgs/loader.gif">');
