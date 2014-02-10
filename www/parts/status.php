@@ -40,9 +40,14 @@ foreach ($wlanstatusfile as $key => $value){
 	$statusstring[0] = str_replace(":", "", $statusstring[0]);
 	if ($statusstring[0] != $WLAN_IFACE_MONITOR) continue;
 
-	if (!$statusstring[2]) continue; // if "link" = 0 - not connected
-
 	// if here - wi-fi interface record found
+
+	// check field "status" and "misc" in file "/proc/net/wireless"
+	if ($statusstring[1] > 0 || $statusstring[9] > 0)
+		$status["wificonnected"] = 1;
+	else
+		$status["wificonnected"] = 0;
+
 	$status["wifilink"] = str_replace('.', '', $statusstring[2]);
 	$status["wifilevel"] = str_replace('.', '', $statusstring[3]);
 	$status["wifinoise"] = str_replace('.', '', $statusstring[4]);

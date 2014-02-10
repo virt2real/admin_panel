@@ -75,7 +75,7 @@
 				$("#systemmessages").html("&nbsp;");
 
 			// show wi-fi status
-			if (parseInt(status_json.wifilink)) {
+			if (parseInt(status_json.wificonnected)) {
 				var ssid = "";
 				if (status_json.ssid) ssid = status_json.ssid + " ";
 				$("#linkstatus").html(ssid + '<br>' + status_json.wifilink + "/70 " + status_json.wifilevel + " dBm");
