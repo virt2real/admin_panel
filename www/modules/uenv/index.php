@@ -23,6 +23,14 @@ $module_content = GlobalReplace($module_content);
 
 /***************** module specific part **************/
 
+/* check boot type */
+
+if ($globalVars['intboottype'] == 2) {
+	$error_content = file_get_contents("../../templates/error.tpl");
+	$error_content = str_replace("{text}", 'Редактирование параметров загрузки в файле uEnv.txt возможно только при загрузке с SD карты', $error_content);
+	die ($error_content);
+}
+
 shell_exec("mount /dev/mmcblk0p1 /mnt");
 $uenvcontent = file("/mnt/uEnv.txt");
 shell_exec("umount /mnt");

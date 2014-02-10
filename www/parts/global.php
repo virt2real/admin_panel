@@ -34,13 +34,16 @@ $cmdline = file_get_contents("/proc/cmdline");
 	switch ($fstype) {
 		case "ext3":
 					$bootmode = "(SD boot)";
+					$intbootmode = 1;
 					break;
 		case "jffs2":
 		case "ubifs":
 					$bootmode = "(NAND boot)";
+					$intbootmode = 2;
 					break;
 	}
 
+$globalVars['intboottype'] = $intbootmode;
 $globalVars['boottype'] = $bootmode;
 
 
