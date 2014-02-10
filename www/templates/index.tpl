@@ -17,7 +17,7 @@
 	<script type="text/javascript" src="/js/fancybox/jquery.easing-1.3.pack.js"></script>
 	<script type="text/javascript" src="/js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
 
-	<title>{deviceID}</title>
+	<title>{deviceID} {boottype}</title>
 
 </head>
 

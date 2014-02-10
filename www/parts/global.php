@@ -23,6 +23,27 @@ $globalVars['deviceDescription'] = file_get_contents('/etc/virt2real/devicedescr
 $globalVars['deviceHost'] = $_SERVER["HTTP_HOST"];
 $globalVars['document_root'] = $_SERVER["DOCUMENT_ROOT"];
 
+// check boot type
+$cmdline = file_get_contents("/proc/cmdline");
+
+	// find a "rootfstype=" param
+	$fstype = "";
+	preg_match_all('/rootfstype=(.{0,}?) /', $cmdline, $params, PREG_SET_ORDER);
+	if ($params) $fstype=$params[sizeof($params)-1][1];
+
+	switch ($fstype) {
+		case "ext3":
+					$bootmode = "(SD boot)";
+					break;
+		case "jffs2":
+		case "ubifs":
+					$bootmode = "(NAND boot)";
+					break;
+	}
+
+$globalVars['boottype'] = $bootmode;
+
+
 // check dependences
 $output = array();
 $dep_ok = 0;

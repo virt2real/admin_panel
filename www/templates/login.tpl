@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="shortcut icon" href="imgs/favicon.png" />
 	<script type="text/javascript" src="js/jquery.js"></script>
-	<title>Админка {deviceID}</title>
+	<title>Админка {deviceID} {boottype}</title>
 </head>
 <body onload='$("#username").focus();'>
 	<script>
