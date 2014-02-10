@@ -14,10 +14,10 @@
 					return;
 				}
 				if (json.last > json.current) {
-					message = "Имеется более свежая версия " + json.last;
+					message = "<p>Имеется более свежая версия " + json.last + " (текущая версия - " + json.current + " )</p>";
 					$("#updatebutton").css("display", "block");
 				} else  {
-					message = "обновление не требуется, однако, если очень хочется - можно обновить принудительно";
+					message = "<p>Ваша текущая версия - " + json.current + ", версия на сервере - " + json.last + "</p><p>Обновление не требуется, однако, если очень хочется - можно обновить принудительно</p>";
 					$("#updatebutton").css("display", "block");
 				}
 
