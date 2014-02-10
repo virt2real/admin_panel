@@ -48,14 +48,12 @@
 				$("#wifistatus").css("display", "block");
 				$("#mobile_status").css("display", "block");
 				ShowStatus(data);
-				if ($("#systemmessages").css("display") == "none") $("#systemmessages").css("display", "block");
 				timer = setTimeout("update_status()", 1000);
 			},
 			error: function(data, err){
 				$("#wifistatus").css("display", "none");
 				$("#mobile_status").css("display", "none");
 				$("#date").html("соединение потеряно :-(");
-				$("#systemmessages").css("display", "none");
 				timer = setTimeout("update_status()", 5000);
 			}
 		});

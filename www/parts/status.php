@@ -47,12 +47,11 @@ foreach ($wlanstatusfile as $key => $value){
 	$status["wifilevel"] = str_replace('.', '', $statusstring[3]);
 	$status["wifinoise"] = str_replace('.', '', $statusstring[4]);
 
-	$status["message"] = "&nbsp;".$systemmessage;
-	$status["ssid"] = $ssid;
-
-	$status["mobile_status"] = $mobile_status;
-
 }
+
+$status["message"] = "&nbsp;".$systemmessage;
+$status["ssid"] = $ssid;
+$status["mobile_status"] = $mobile_status;
 
 $json = json_encode($status);
 echo $json;
