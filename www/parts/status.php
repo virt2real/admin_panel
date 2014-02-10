@@ -43,7 +43,7 @@ foreach ($wlanstatusfile as $key => $value){
 	// if here - wi-fi interface record found
 
 	// check field "status" and "misc" in file "/proc/net/wireless"
-	if ($statusstring[1] > 0 || $statusstring[9] > 0)
+	if (intval($statusstring[2]) > 0 || intval($statusstring[9]) > 0)
 		$status["wificonnected"] = 1;
 	else
 		$status["wificonnected"] = 0;
