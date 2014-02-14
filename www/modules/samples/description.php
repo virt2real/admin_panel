@@ -9,6 +9,6 @@
 
 $module_params['name'] = 'samples';
 $module_params['title'] = 'Учебный модуль';
-$module_params['menu_part'] = 10;
+$module_params['menu_part'] = 11;
 $module_params['position'] = 5;
 ?>

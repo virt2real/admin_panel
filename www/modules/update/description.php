@@ -9,7 +9,7 @@
 
 $module_params['name'] = 'update';
 $module_params['title'] = 'Обновление';
-$module_params['menu_part'] = 8;
+$module_params['menu_part'] = 9;
 $module_params['position'] = 3;
 
 ?>

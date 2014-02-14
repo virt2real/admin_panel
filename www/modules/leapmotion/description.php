@@ -9,6 +9,6 @@
 
 $module_params['name'] = 'leapmotion';
 $module_params['title'] = 'Leap Motion';
-$module_params['menu_part'] = 9;
+$module_params['menu_part'] = 10;
 $module_params['position'] = 0;
 ?>
