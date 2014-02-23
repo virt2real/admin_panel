@@ -965,7 +965,7 @@ msgstr ""
 
 # modules/pwm/template.tpl:195
 msgid "Гц"
-msgstr ""
+msgstr "Hz"
 
 # modules/pwm/template.tpl:308
 msgid "Управление каналами PWM / PPM"
@@ -1001,7 +1001,7 @@ msgstr ""
 
 # modules/quit/template.tpl:16
 msgid "Да"
-msgstr ""
+msgstr "Ja"
 
 # modules/quit/template.tpl:19
 # modules/reboot/template.tpl:20
@@ -1064,7 +1064,7 @@ msgstr ""
 # modules/rtmp/template.tpl:96
 # modules/rtp/template.tpl:72
 msgid "битрейт"
-msgstr ""
+msgstr "bitrate"
 
 # modules/rtmp/template.tpl:104
 msgid "запустить трансляцию"
@@ -1177,7 +1177,7 @@ msgstr ""
 
 # modules/speech/template.tpl:143
 msgid "Язык"
-msgstr ""
+msgstr "Sprache"
 
 # modules/speech/template.tpl:145
 msgid "Русский"
@@ -1267,7 +1267,7 @@ msgstr ""
 
 # modules/uenv/params.tpl:223
 msgid "Ядро"
-msgstr ""
+msgstr "Kernel"
 
 # modules/uenv/params.tpl:230
 msgid "Память"
@@ -1532,4 +1532,4 @@ msgstr ""
 
 # templates/login.tpl:58
 msgid "пароль"
-msgstr ""
+msgstr "Kennwort"
