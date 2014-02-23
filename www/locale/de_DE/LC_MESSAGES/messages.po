@@ -1,0 +1,1535 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: virt2real\n"
+"POT-Creation-Date: 2014-02-15 20:54+0100\n"
+"PO-Revision-Date: 2014-02-22 23:14+0100\n"
+"Last-Translator: keios\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: .\n"
+"Language: ru_RU\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+# для начала всё общее (типа кнопок итд)
+# modules/autorun/template.tpl:113
+# modules/deviceid/template.tpl:30
+# modules/filemanager/template.tpl:65
+# modules/network/template.tpl:89
+# modules/network/template.tpl:97
+# modules/rtmp/template.tpl:122
+# modules/rtp/template.tpl:91
+# modules/softap/template.tpl:68
+# modules/softap/template.tpl:82
+# modules/speech/template.tpl:159
+# modules/uenv/params.tpl:106
+# modules/uenv/params.tpl:147
+# modules/uenv/params.tpl:227
+# modules/uenv/params.tpl:263
+# modules/wlan/template.tpl:62
+msgid "Сохранить"
+msgstr "Speichern"
+
+# modules/1wire/template.tpl:40
+# modules/adc/template.tpl:99
+# modules/dmesg/template.tpl:50
+# modules/gpio/template.tpl:349
+# modules/gpio/template.tpl:383
+# modules/gpio/template.tpl:418
+# modules/pwm/template.tpl:323
+# modules/pwm/template.tpl:339
+# modules/systemmessages/template.tpl:41
+msgid "Запустить опрос"
+msgstr "Abfragen"
+
+# modules/1wire/template.tpl:41
+# modules/adc/template.tpl:100
+# modules/dmesg/template.tpl:51
+# modules/gpio/template.tpl:350
+# modules/gpio/template.tpl:384
+# modules/gpio/template.tpl:419
+# modules/pwm/template.tpl:324
+# modules/pwm/template.tpl:340
+# modules/systemmessages/template.tpl:42
+msgid "Остановить опрос"
+msgstr "Abfrage stoppen"
+
+# modules/3g/template.tpl:103
+# modules/armdrive/template.tpl:291
+# modules/uenv/params.tpl:113
+# modules/uenv/params.tpl:120
+# modules/uenv/params.tpl:127
+# modules/uenv/params.tpl:137
+# modules/uenv/params.tpl:154
+# modules/uenv/params.tpl:190
+# modules/uenv/params.tpl:198
+# modules/uenv/params.tpl:206
+msgid "Вкл"
+msgstr "Ein"
+
+# modules/3g/template.tpl:104
+# modules/armdrive/template.tpl:292
+# modules/uenv/params.tpl:114
+# modules/uenv/params.tpl:121
+# modules/uenv/params.tpl:128
+# modules/uenv/params.tpl:138
+# modules/uenv/params.tpl:155
+# modules/uenv/params.tpl:160
+# modules/uenv/params.tpl:169
+# modules/uenv/params.tpl:191
+# modules/uenv/params.tpl:199
+# modules/uenv/params.tpl:207
+# modules/uenv/params.tpl:268
+msgid "Выкл"
+msgstr "Aus"
+
+# modules/motorshield/template.tpl:336
+# modules/motorshield/template.tpl:424
+# modules/rtmp/template.tpl:85
+# modules/rtp/template.tpl:61
+# parts/menu.php:11
+msgid "Настройки"
+msgstr "Einstellungen"
+
+# modules/filemanager/load.php:67
+# modules/gphotofs/load.php:74
+# modules/gphotoview/load.php:67
+msgid "Наверх"
+msgstr "Hoch"
+
+# modules/i2c/template.tpl:112
+# modules/gpio/template.tpl:370
+# modules/gpio/template.tpl:404
+msgid "Установить"
+msgstr "Setzen"
+
+# ####################
+# modules/1wire/template.tpl:47
+msgid "Найденные устройства 1-Wire"
+msgstr ""
+
+# modules/3g/template.tpl:49
+msgid "интерфейс:"
+msgstr ""
+
+# modules/3g/template.tpl:50
+msgid "устройство:"
+msgstr ""
+
+# modules/3g/template.tpl:51
+msgid "скорость:"
+msgstr ""
+
+# modules/3g/template.tpl:52
+msgid "локальный ip:"
+msgstr ""
+
+# modules/3g/template.tpl:53
+msgid "удалённый ip:"
+msgstr ""
+
+# modules/3g/template.tpl:54
+msgid "оператор:"
+msgstr ""
+
+# modules/3g/template.tpl:96
+msgid "Подключение и отключение связи через 3G USB модем"
+msgstr ""
+
+# modules/3g/template.tpl:98
+msgid "Предварительно необходимо настроить подключение через USB 3G модем"
+msgstr ""
+
+# modules/3g/template.tpl:109
+msgid "Процесс подключения может занимать 10-20 секунд"
+msgstr ""
+
+# modules/adc/template.tpl:75
+msgid "Мониторинг состояния аналоговых входов (ADC)"
+msgstr ""
+
+# modules/adc/template.tpl:80
+msgid "показывать значений"
+msgstr ""
+
+# modules/adc/template.tpl:85
+msgid "Частота обновления"
+msgstr ""
+
+# modules/adc/template.tpl:89
+msgid "мс"
+msgstr ""
+
+# modules/adc/template.tpl:91
+msgid "Максимальное напряжение"
+msgstr ""
+
+# modules/adc/template.tpl:95
+msgid "Вольт"
+msgstr ""
+
+# modules/armdrive/template.tpl:75
+msgid "подключено"
+msgstr ""
+
+# modules/armdrive/template.tpl:86
+msgid "отключено"
+msgstr ""
+
+# modules/armdrive/template.tpl:260
+msgid "Подключение:"
+msgstr ""
+
+# modules/armdrive/template.tpl:261
+msgid "Напряжение:"
+msgstr ""
+
+# modules/armdrive/template.tpl:284
+msgid "Скорость:"
+msgstr ""
+
+# modules/armdrive/template.tpl:289
+msgid "Свет:"
+msgstr ""
+
+# modules/armdrive/template.tpl:295
+msgid "Направление:"
+msgstr ""
+
+# modules/autorun/description.php:11
+msgid "Автозапуск"
+msgstr ""
+
+# modules/autorun/template.tpl:84
+msgid "Системные скрипты загрузки"
+msgstr ""
+
+# modules/autorun/template.tpl:91
+msgid "Активные скрипты"
+msgstr ""
+
+# modules/autorun/template.tpl:92
+msgid "Неактивные скрипты"
+msgstr ""
+
+# modules/autorun/template.tpl:100
+msgid ""
+"Левый столбец - активные скрипты в каталоге /etc/init.d, выполняются в "
+"алфавитном порядке при старте системы."
+msgstr ""
+"Левый столбец - активные скрипты в каталоге /etc/init.d, выполняются в "
+"алфавитном порядке при старте системы."
+
+# modules/autorun/template.tpl:101
+msgid ""
+"Правый столбец - неактивные скрипты в каталоге /etc/init.d.sample, при "
+"запуске системы НЕ выполняются, но хранятся на всякий случай."
+msgstr ""
+"Правый столбец - неактивные скрипты в каталоге /etc/init.d.sample, при "
+"запуске системы НЕ выполняются, но хранятся на всякий случай."
+
+# modules/autorun/template.tpl:102
+msgid ""
+"Путём перемещения файлов из одного списка в другой можно настраивать запуск "
+"нужных компонентов при загрузке системы."
+msgstr ""
+"Путём перемещения файлов из одного списка в другой можно настраивать запуск "
+"нужных компонентов при загрузке системы."
+
+# modules/autorun/template.tpl:109
+msgid "Скрипт автозапуска virt2real"
+msgstr ""
+
+# modules/board/description.php:11
+# modules/board/template.tpl:124
+# modules/motorshield/template.tpl:310
+msgid "Макет платы"
+msgstr ""
+
+# modules/console/description.php:11
+# modules/console/template.tpl:13
+# modules/uenv/params.tpl:176
+msgid "Консоль"
+msgstr ""
+
+# modules/deviceid/description.php:11:$module_params['title'] = 'ID девайса';
+msgid "ID девайса"
+msgstr ""
+
+# modules/deviceid/template.tpl:25
+# modules/main/template.tpl:12
+msgid "Идентификатор устройства"
+msgstr ""
+
+# modules/deviceid/template.tpl:23
+# modules/deviceid/template.tpl:27
+msgid "Описание устройства"
+msgstr ""
+
+# modules/dmesg/description.php:11
+# modules/dmesg/template.tpl:44
+msgid "Сообщения ядра"
+msgstr ""
+
+# modules/dmesg/template.tpl:46
+msgid "Мониторинг сообщений ядра"
+msgstr ""
+
+# modules/dmesg/template.tpl:49
+msgid "показать весь вывод dmesg"
+msgstr ""
+
+# modules/dmesg/template.tpl:53
+msgid "показывать тайминги"
+msgstr ""
+
+# modules/dmesg/template.tpl:53
+msgid "не показывать тайминги"
+msgstr ""
+
+# modules/filemanager/description.php:11
+msgid "Файл-менеджер"
+msgstr ""
+
+# modules/filemanager/template.tpl:39
+msgid "Файл успешно сохранён"
+msgstr ""
+
+# modules/filemanager/template.tpl:56
+msgid "Файл-менеджер и редактор файлов"
+msgstr ""
+
+# modules/filemanager/template.tpl:61
+msgid "Назад"
+msgstr ""
+
+# modules/filemanager/template.tpl:66
+msgid "Вернуться"
+msgstr ""
+
+# modules/gphotoctrl/description.php:11
+# modules/gphotoctrl/template.tpl:241
+msgid "Управление камерой"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:176
+# modules/gphotoctrl2/template.tpl:62
+msgid "Информация о камере"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:184
+msgid "Производитель"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:187
+msgid "Модель"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:190
+msgid "Серийный номер"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:193
+msgid "Версия устройства"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:196
+msgid "Срабатываний затвора"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:199
+msgid "Заряд батареи"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:202
+msgid "Дата и время"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:209
+msgid "Оптика"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:212
+msgid "Серийный номер EOS"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:215
+msgid "Ещё влезет снимков"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:220
+msgid "Владелец"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:222
+msgid "Автор"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:224
+msgid "Копирайт"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:250
+msgid "предпросмотр"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:251
+msgid "сфотать"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:261
+msgid "Выдержка"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:264
+msgid "Диафрагма"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:274
+msgid "Режим фокусировки"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:277
+msgid "Баланс белого"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:280
+msgid "Стиль изображения"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:283
+msgid "Тип замера"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:286
+msgid "Режим привода"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:294
+msgid "Текущий режим экспозиции"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:297
+msgid "Брэкетинг экспозиции"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:307
+msgid "Остальные настройки"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:310
+msgid "Другие настройки"
+msgstr ""
+
+# modules/gphotoctrl/template.tpl:315
+msgid "показать полный конфиг медиаустройства"
+msgstr ""
+
+# modules/gphotoctrl2/description.php:11
+msgid "Управление камерой2"
+msgstr ""
+
+# modules/gphotoctrl2/template.tpl:41
+msgid "Найден"
+msgstr ""
+
+# modules/gphotofs/description.php:11
+msgid "Медиаустройства"
+msgstr ""
+
+# modules/gphotofs/load.php:116
+msgid "Мбайт"
+msgstr ""
+
+# modules/gphotofs/template.tpl:50
+msgid "Просмотр фотографий на USB медиаустройствах"
+msgstr ""
+
+# modules/gphotofs/template.tpl:55
+msgid "подключить накопитель"
+msgstr ""
+
+# modules/gphotofs/template.tpl:56
+msgid "отключить накопитель"
+msgstr ""
+
+# modules/gphotoview/description.php:11
+msgid "Просмотр миниатюр"
+msgstr ""
+
+# modules/gphotoview/template.tpl:46
+msgid "Просмотр фотографий на камере"
+msgstr ""
+
+# modules/gphotoview/template.tpl:51
+msgid "загрузить превью"
+msgstr ""
+
+# modules/gphotoview/template.tpl:52
+msgid "удалить все превью"
+msgstr ""
+
+# modules/gpio/description.php:11
+msgid "GPIO и CON"
+msgstr ""
+
+# modules/gpio/template.tpl:346
+msgid "Пины CON через драйвер /dev/v2r_pins"
+msgstr ""
+
+# modules/gpio/template.tpl:360
+msgid "Выбранные CON:"
+msgstr ""
+
+# modules/gpio/template.tpl:360
+# modules/gpio/template.tpl:394
+msgid "снять выделение"
+msgstr ""
+
+# modules/gpio/template.tpl:364
+# modules/gpio/template.tpl:398
+msgid "Установить направление как Output и значение"
+msgstr ""
+
+# modules/gpio/template.tpl:369
+# modules/gpio/template.tpl:403
+msgid "Установить направление как Input"
+msgstr ""
+
+# modules/gpio/template.tpl:374
+msgid "Лог изменений состояния пинов CON"
+msgstr ""
+
+# modules/gpio/template.tpl:380
+msgid "GPIO через драйвер /dev/v2r_gpio"
+msgstr ""
+
+# modules/gpio/template.tpl:394
+msgid "Выбранные GPIO:"
+msgstr ""
+
+# modules/gpio/template.tpl:409
+msgid "Лог изменений состояния GPIO"
+msgstr ""
+
+# modules/gpio/template.tpl:414
+msgid "GPIO в debug_fs"
+msgstr ""
+
+# modules/hls/template.tpl:56 #TODO
+# msgid "Для просмотра HLS необходимо запустить <a href="?rtmp">трансляцию RTMP</a> на localhost</p>"
+# msgstr "Для просмотра HLS необходимо запустить <a href="?rtmp">трансляцию RTMP</a> на localhost</p>"
+# modules/hls/template.tpl:58
+msgid "Доступные потоки:"
+msgstr ""
+
+# modules/hls/template.tpl:59
+msgid "Неполные потоки:"
+msgstr ""
+
+# modules/i2c/template.tpl:87
+msgid "Изменение регистров I2C"
+msgstr ""
+
+# modules/i2c/template.tpl:92
+msgid "Регистр"
+msgstr ""
+
+# modules/i2c/template.tpl:93
+msgid "база"
+msgstr ""
+
+# modules/i2c/template.tpl:97
+msgid "параметр"
+msgstr ""
+
+# modules/i2c/template.tpl:101
+msgid "Значение"
+msgstr ""
+
+# modules/i2c/template.tpl:113
+msgid "Прочитать"
+msgstr ""
+
+# modules/leapmotion/template.tpl:72
+msgid "Вижу пальцев"
+msgstr ""
+
+# modules/main/description.php:11
+msgid "Сведения"
+msgstr ""
+
+# modules/main/template.tpl:9
+msgid "Общая информация"
+msgstr ""
+
+# modules/main/template.tpl:11
+msgid "Версия админки:"
+msgstr ""
+
+# modules/main/template.tpl:14
+# modules/packages/template.tpl:21
+msgid "Описание"
+msgstr ""
+
+# modules/main/template.tpl:17
+msgid "изменить"
+msgstr ""
+
+# modules/main/template.tpl:22
+msgid "Информация о ядре"
+msgstr ""
+
+# modules/main/template.tpl:35
+msgid "Информация о процессоре"
+msgstr ""
+
+# modules/main/template.tpl:45
+msgid "Активные модули"
+msgstr ""
+
+# modules/motorshield/description.php:11
+msgid "Моторшилд"
+msgstr ""
+
+# modules/motorshield/template.tpl:32
+# modules/motorshield/template.tpl:39
+msgid "Мотор J"
+msgstr ""
+
+# modules/motorshield/template.tpl:314
+msgid "Двуполярные выходы"
+msgstr ""
+
+# modules/motorshield/template.tpl:325
+msgid "Направление"
+msgstr ""
+
+# modules/motorshield/template.tpl:326 #TODO: 326-333
+msgid "пин направления  для мотора"
+msgstr ""
+
+# modules/motorshield/template.tpl:326
+msgid "пин"
+msgstr ""
+
+# modules/motorshield/template.tpl:338
+msgid "период"
+msgstr ""
+
+# modules/motorshield/template.tpl:339
+msgid "период для PWM материнской платы"
+msgstr ""
+
+# modules/motorshield/template.tpl:351 #TODO: 351-358
+msgid "мотор"
+msgstr ""
+
+# modules/motorshield/template.tpl:370
+# modules/motorshield/template.tpl:373
+msgid "выбор питания для серв"
+msgstr ""
+
+# modules/motorshield/template.tpl:376 #TODO: 376-385
+msgid "выбор питания для моторов 7 и 8"
+msgstr ""
+
+# modules/motorshield/template.tpl:388 #TODO: 388-397
+msgid "выбор питания для однополярых выходов 7 и 8"
+msgstr ""
+
+# modules/motorshield/template.tpl:400 #TODO: 400-407
+msgid "однополярный"
+msgstr ""
+
+# modules/motorshield/template.tpl:410 #TODO: 410-417
+msgid "серво"
+msgstr ""
+
+# modules/motorshield/template.tpl:420
+msgid "Внешнее напряжение"
+msgstr ""
+
+# modules/motorshield/template.tpl:425
+msgid "адрес i2c"
+msgstr ""
+
+# modules/motorshield/template.tpl:426
+msgid "адрес i2c (hex)"
+msgstr ""
+
+# modules/motorshield/template.tpl:428
+msgid "делитель"
+msgstr ""
+
+# modules/motorshield/template.tpl:429
+msgid "делитель частоты"
+msgstr ""
+
+# modules/motorshield/template.tpl:431
+msgid "частота"
+msgstr ""
+
+# modules/motorshield/template.tpl:432
+msgid "частота, Hz"
+msgstr ""
+
+# modules/motorshield/template.tpl:434
+msgid "инициализировать pwm чип"
+msgstr ""
+
+# modules/motorshield/template.tpl:434
+msgid "инит"
+msgstr ""
+
+# modules/motorshield/template.tpl:442
+msgid "Однополярные выходы"
+msgstr ""
+
+# modules/motorshield/template.tpl:453
+msgid "Сервы"
+msgstr ""
+
+# modules/motorshield/template.tpl:453
+msgid "выключить все"
+msgstr ""
+
+# modules/motorshield/template.tpl:464
+msgid "минимальное положение сервы (в миллисекундах)"
+msgstr ""
+
+# modules/motorshield/template.tpl:464
+msgid "min"
+msgstr ""
+
+# modules/motorshield/template.tpl:466
+msgid "max"
+msgstr ""
+
+# modules/motorshield/template.tpl:466
+msgid "максимальное положение сервы (в миллисекундах)"
+msgstr ""
+
+# modules/nand/template.tpl:25
+msgid "Прошивка NAND недоступна в режиме загрузки с NAND"
+msgstr ""
+
+# modules/nand/template.tpl:56
+msgid "Информация о разделах и устройствах"
+msgstr ""
+
+# modules/nand/template.tpl:61
+msgid "Прошивка NAND"
+msgstr ""
+
+# modules/nand/template.tpl:68
+msgid "Прошить"
+msgstr ""
+
+# modules/nand/template.tpl:72
+msgid "Рекомендуемый тип файловой системы - UBI (выбран по умолчанию)"
+msgstr ""
+
+# modules/nand/template.tpl:74
+msgid ""
+"После нажатия кнопки 'Прошить' возможно пропадание связи, по окончании "
+"процесса прошивки коннект восстановится"
+msgstr ""
+"После нажатия кнопки 'Прошить' возможно пропадание связи, по окончании "
+"процесса прошивки коннект восстановится"
+
+# modules/netmon/description.php:11
+msgid "Мониторинг сети"
+msgstr ""
+
+# modules/netmon/template.tpl:45
+msgid "передача:"
+msgstr ""
+
+# modules/netmon/template.tpl:46
+msgid "приём:"
+msgstr ""
+
+# modules/netmon/template.tpl:64
+msgid "Мониторинг сетевых интерфейсов"
+msgstr ""
+
+# modules/netmon/template.tpl:66
+msgid ""
+"Служит для примерной оценки загруженности интерфейсов, информация неточная"
+msgstr ""
+"Служит для примерной оценки загруженности интерфейсов, информация неточная"
+
+# modules/network/description.php:11
+msgid "Сеть"
+msgstr ""
+
+# modules/network/iface.tpl:2
+msgid "тип"
+msgstr ""
+
+# modules/network/iface.tpl:5
+msgid "статический"
+msgstr ""
+
+# modules/network/iface.tpl:12
+# modules/network/template.tpl:106
+msgid "IP4 адрес"
+msgstr ""
+
+# modules/network/iface.tpl:17
+# modules/network/template.tpl:107
+msgid "маска"
+msgstr ""
+
+# modules/network/iface.tpl:22
+# modules/network/template.tpl:108
+msgid "шлюз"
+msgstr ""
+
+# modules/network/iface.tpl:26
+msgid "расширенная настройка"
+msgstr ""
+
+# modules/network/index.php:169
+msgid "Интерфейс"
+msgstr ""
+
+# modules/network/template.tpl:83
+msgid "Настройка интерфейсов и DNS"
+msgstr ""
+
+# modules/network/template.tpl:91
+msgid "Список интерфейсов"
+msgstr ""
+
+# modules/network/template.tpl:101
+msgid "Список серверов DNS"
+msgstr ""
+
+# modules/network/template.tpl:106
+msgid "адрес, присваиваемый интерфейсу"
+msgstr ""
+
+# modules/network/template.tpl:107
+msgid "маска подсети"
+msgstr ""
+
+# modules/network/template.tpl:108
+msgid "используемый по умолчанию адрес шлюза подсети"
+msgstr ""
+
+# modules/network/template.tpl:109
+msgid "pre-up"
+msgstr ""
+
+# modules/network/template.tpl:109
+msgid "скрипт, выполняемый перед поднятием интерфейса"
+msgstr ""
+
+# modules/network/template.tpl:110
+msgid "up"
+msgstr ""
+
+# modules/network/template.tpl:110
+msgid "скрипт, выполняемый при поднятии интерфейса"
+msgstr ""
+
+# modules/network/template.tpl:111
+msgid "post-up"
+msgstr ""
+
+# modules/network/template.tpl:111
+msgid "скрипт, выполняемый после поднятия интерфейса"
+msgstr ""
+
+# modules/network/template.tpl:112
+msgid "pre-down"
+msgstr ""
+
+# modules/network/template.tpl:112
+msgid "скрипт, выполняемый перед отключением интерфейса"
+msgstr ""
+
+# modules/network/template.tpl:113
+msgid "down"
+msgstr ""
+
+# modules/network/template.tpl:113
+msgid "скрипт, выполняемый во время отключения интерфейса"
+msgstr ""
+
+# modules/network/template.tpl:114
+msgid "post-down"
+msgstr ""
+
+# modules/network/template.tpl:114
+msgid "скрипт, выполняемый после отключения интерфейса"
+msgstr ""
+
+# modules/network/template.tpl:123
+msgid "Активные интерфейсы"
+msgstr ""
+
+# modules/network/template.tpl:125
+msgid "Активные сетевые интерфейсы"
+msgstr ""
+
+# modules/ov2643/template.tpl:52
+msgid "Настройки регистров камеры OV2643"
+msgstr ""
+
+# modules/ov2643/template.tpl:55
+msgid "Контраст"
+msgstr ""
+
+# modules/ov2643/template.tpl:58
+msgid "Яркость"
+msgstr ""
+
+# modules/ov2643/template.tpl:61
+msgid "Насыщенность SAT_U"
+msgstr ""
+
+# modules/ov2643/template.tpl:64
+msgid "Насыщенность SAT_V"
+msgstr ""
+
+# modules/ov2643/template.tpl:100
+msgid "Резкость? Пиксели? 0xa6"
+msgstr ""
+
+# modules/ov2643/template.tpl:103
+msgid "Резкость? Пиксели? 0xa7"
+msgstr ""
+
+# modules/ov2643/template.tpl:106
+msgid "Резкость? Пиксели? 0xa8"
+msgstr ""
+
+# modules/ov2643/template.tpl:109
+msgid "Ещё Резкость 0xa1"
+msgstr ""
+
+# modules/ov2643/template.tpl:112
+msgid "Сглаживание 0xa9"
+msgstr ""
+
+# modules/packages/description.php:11
+msgid "Пакеты"
+msgstr ""
+
+# modules/packages/template.tpl:21
+msgid "Название"
+msgstr ""
+
+# modules/packages/template.tpl:21
+msgid "Версия"
+msgstr ""
+
+# modules/packages/template.tpl:21
+msgid "Установленная версия"
+msgstr ""
+
+# modules/packages/template.tpl:32
+# modules/packages/template.tpl:34
+msgid "установить"
+msgstr ""
+
+# modules/packages/template.tpl:87
+msgid "Установка пакетов"
+msgstr ""
+
+# modules/packages/template.tpl:90
+msgid "Список пакетов, доступных для установки"
+msgstr ""
+
+# modules/ping/template.tpl:16
+msgid "не указан пингуемый адрес"
+msgstr ""
+
+# modules/ping/template.tpl:20
+msgid "пингуем..."
+msgstr ""
+
+# modules/ping/template.tpl:37
+msgid "Пингуемый хост"
+msgstr ""
+
+# modules/pwm/template.tpl:190
+msgid "к"
+msgstr ""
+
+# modules/pwm/template.tpl:195
+msgid "Гц"
+msgstr ""
+
+# modules/pwm/template.tpl:308
+msgid "Управление каналами PWM / PPM"
+msgstr ""
+
+# modules/pwm/template.tpl:309
+msgid "PWM (ШИМ) - для управления регуляторами коллекторных моторов"
+msgstr ""
+
+# modules/pwm/template.tpl:310
+msgid ""
+"PPM - для управления сервомашинками, регуляторами бесколлекторных моторов "
+"(ESC)"
+msgstr ""
+"PPM - для управления сервомашинками, регуляторами бесколлекторных моторов "
+"(ESC)"
+
+# modules/pwm/template.tpl:313
+msgid ""
+"Сначала необходимо назначить функцию PWM/PPM для определённого пина (список "
+"в правом столбце)."
+msgstr ""
+"Сначала необходимо назначить функцию PWM/PPM для определённого пина (список "
+"в правом столбце)."
+
+# modules/pwm/template.tpl:314
+msgid "Серый цвет - функция не назначена, белый цвет - назначена."
+msgstr ""
+
+# modules/quit/description.php:11
+msgid "Выход"
+msgstr ""
+
+# modules/quit/template.tpl:16
+msgid "Да"
+msgstr ""
+
+# modules/quit/template.tpl:19
+# modules/reboot/template.tpl:20
+# modules/update/template.tpl:62
+msgid "Я передумал"
+msgstr ""
+
+# modules/quit/template.tpl:33
+msgid "Выйти из админки?"
+msgstr ""
+
+# modules/quit/template.tpl:34
+msgid ""
+"Ваша сессия будет стёрта, потребуется новая авторизация пользователя. Вы "
+"уверены что хотите этого?"
+msgstr ""
+"Ваша сессия будет стёрта, потребуется новая авторизация пользователя. Вы "
+"уверены что хотите этого?"
+
+# modules/quit/template.tpl:41
+msgid "Выйти из админки"
+msgstr ""
+
+# modules/quit/template.tpl:44
+msgid "выйти"
+msgstr ""
+
+# modules/reboot/description.php:11
+msgid "Перезагрузка"
+msgstr ""
+
+# modules/reboot/template.tpl:16
+msgid "Да, ребут"
+msgstr ""
+
+# modules/reboot/template.tpl:35
+msgid "Перезагрузить?"
+msgstr ""
+
+# modules/reboot/template.tpl:36
+msgid "Устройство будет перезагружено. Вы уверены что хотите этого?"
+msgstr ""
+
+# modules/reboot/template.tpl:43
+msgid "Управление девайсом"
+msgstr ""
+
+# modules/reboot/template.tpl:46
+msgid "Перезагрузить устройство"
+msgstr ""
+
+# modules/relay/description.php:11
+msgid "Макет реле"
+msgstr ""
+
+# modules/relay/template.tpl:54
+msgid "Макет платы реле"
+msgstr ""
+
+# modules/rtmp/template.tpl:96
+# modules/rtp/template.tpl:72
+msgid "битрейт"
+msgstr ""
+
+# modules/rtmp/template.tpl:104
+msgid "запустить трансляцию"
+msgstr ""
+
+# modules/rtmp/template.tpl:105
+# modules/rtp/template.tpl:80
+# modules/rtp/template.tpl:81
+msgid "остановить трансляцию"
+msgstr ""
+
+# modules/rtmp/template.tpl:118
+# modules/rtp/template.tpl:87
+msgid "Скрипт трансляции"
+msgstr ""
+
+# ###########################################
+# TODO: modules/samples/* full translation #
+# ###########################################
+# modules/softap/description.php:11
+# modules/softap/template.tpl:42
+# modules/uenv/params.tpl:125
+msgid "Точка доступа"
+msgstr ""
+
+# modules/softap/template.tpl:45
+msgid ""
+"В данном разделе можно произвести настройки параметров точки доступа "
+"контроллера virt2real"
+msgstr ""
+"В данном разделе можно произвести настройки параметров точки доступа "
+"контроллера virt2real"
+
+# modules/softap/template.tpl:46 #TODO
+# msgid "Включение/выключение режима 'Точка доступа' можно произвести в разделе <a href="?uenv">uEnv</a></p>"
+# msgstr "Включение/выключение режима 'Точка доступа' можно произвести в разделе <a href="?uenv">uEnv</a></p>"
+# modules/softap/template.tpl:47 #TODO
+# msgid "Настройку IP адреса можно произвести в разделе <a href="?network">Сеть</a></p>"
+# msgstr "Настройку IP адреса можно произвести в разделе <a href="?network">Сеть</a></p>"
+# modules/softap/template.tpl:51
+msgid "Настройка для Virt2real Wi-Fi модуля"
+msgstr ""
+
+# modules/softap/template.tpl:54
+msgid "Файл /etc/softap.conf"
+msgstr ""
+
+# modules/softap/template.tpl:56
+# modules/softap/template.tpl:78
+# modules/uenv/params.tpl:182
+msgid "Параметры"
+msgstr ""
+
+# modules/softap/template.tpl:58
+msgid "Имя сети"
+msgstr ""
+
+# modules/softap/template.tpl:63
+msgid "Пароль"
+msgstr ""
+
+# modules/softap/template.tpl:73
+msgid "Настройка для USB Wi-Fi модуля"
+msgstr ""
+
+# modules/softap/template.tpl:76
+msgid "Файл /etc/hostapd/hostapd.conf"
+msgstr ""
+
+# modules/speech/description.php:11
+# modules/speech/template.tpl:105
+msgid "Речь"
+msgstr ""
+
+# modules/speech/template.tpl:15
+msgid "Не указан текст"
+msgstr ""
+
+# modules/speech/template.tpl:57
+msgid "Результаты:"
+msgstr ""
+
+# modules/speech/template.tpl:111
+msgid "Произнести фразу"
+msgstr ""
+
+# modules/speech/template.tpl:116
+msgid "Произнести"
+msgstr ""
+
+# modules/speech/template.tpl:125
+msgid ""
+"Для чтения текста из консоли можно воспользоваться командой<br>/etc/"
+"virt2real/speech/speak.php text [ en|ru ] [ 0|1 ]<br>Первый параметр - текст "
+"для воспроизведения<br>Второй параметр - язык (en, ru)<br>Третий параметр - "
+"движок синтезатора ( 0 - eSpeak, 1 - Google)"
+msgstr ""
+"Для чтения текста из консоли можно воспользоваться командой<br>/etc/"
+"virt2real/speech/speak.php text [ en|ru ] [ 0|1 ]<br>Первый параметр - текст "
+"для воспроизведения<br>Второй параметр - язык (en, ru)<br>Третий параметр - "
+"движок синтезатора ( 0 - eSpeak, 1 - Google)"
+
+# modules/speech/template.tpl:130
+msgid "Режим распознавания голоса"
+msgstr ""
+
+# modules/speech/template.tpl:134
+msgid "Запустить"
+msgstr ""
+
+# modules/speech/template.tpl:143
+msgid "Язык"
+msgstr ""
+
+# modules/speech/template.tpl:145
+msgid "Русский"
+msgstr ""
+
+# modules/speech/template.tpl:151
+msgid "Синтезатор голоса"
+msgstr ""
+
+# modules/systemmessages/description.php:11
+# modules/systemmessages/template.tpl:36
+msgid "Сообщения системы"
+msgstr ""
+
+# modules/systemmessages/template.tpl:38
+msgid "Мониторинг сообщений"
+msgstr ""
+
+# modules/uenv/index.php:30
+msgid ""
+"Редактирование параметров загрузки в файле uEnv.txt возможно только при "
+"загрузке с SD карты"
+msgstr ""
+"Редактирование параметров загрузки в файле uEnv.txt возможно только при "
+"загрузке с SD карты"
+
+# modules/uenv/params.tpl:103
+msgid "Сетевые интерфейсы"
+msgstr ""
+
+# modules/uenv/params.tpl:109
+msgid "Беспроводная связь"
+msgstr ""
+
+# modules/uenv/params.tpl:111
+msgid "V2R Wi-Fi модуль "
+msgstr ""
+
+# modules/uenv/params.tpl:118
+msgid "USB Wi-Fi модуль"
+msgstr ""
+
+# modules/uenv/params.tpl:133
+msgid "Локальная сеть"
+msgstr ""
+
+# modules/uenv/params.tpl:143
+# parts/menu.php:13
+msgid "Периферия"
+msgstr ""
+
+# modules/uenv/params.tpl:150
+msgid "Светодиоды"
+msgstr ""
+
+# modules/uenv/params.tpl:152
+msgid "Синий"
+msgstr ""
+
+# modules/uenv/params.tpl:158
+msgid "Зелёный"
+msgstr ""
+
+# modules/uenv/params.tpl:167
+msgid "Красный"
+msgstr ""
+
+# modules/uenv/params.tpl:177
+msgid "Устройство"
+msgstr ""
+
+# modules/uenv/params.tpl:188
+msgid "Вывод ядра"
+msgstr ""
+
+# modules/uenv/params.tpl:194
+msgid "Порты"
+msgstr ""
+
+# modules/uenv/params.tpl:212
+msgid "1-wire пин"
+msgstr ""
+
+# modules/uenv/params.tpl:216
+msgid "пин питания"
+msgstr ""
+
+# modules/uenv/params.tpl:223
+msgid "Ядро"
+msgstr ""
+
+# modules/uenv/params.tpl:230
+msgid "Память"
+msgstr ""
+
+# modules/uenv/params.tpl:236
+msgid "Непрерывный пул"
+msgstr ""
+
+# modules/uenv/params.tpl:242
+msgid "Корневой раздел"
+msgstr ""
+
+# modules/uenv/params.tpl:247
+msgid "Пауза загрузки"
+msgstr ""
+
+# modules/uenv/params.tpl:252
+msgid "Тип фс"
+msgstr ""
+
+# modules/uenv/params.tpl:259
+# parts/menu.php:16
+msgid "Видео"
+msgstr ""
+
+# modules/uenv/params.tpl:266
+msgid "Камера"
+msgstr ""
+
+# modules/uenv/params.tpl:274
+msgid "Видеовыход"
+msgstr ""
+
+# modules/uenv/params.tpl:276
+msgid "Композит"
+msgstr ""
+
+# modules/uenv/params.tpl:282
+msgid "Видеорежим"
+msgstr ""
+
+# modules/uenv/params.tpl:297
+msgid "Интерфейс захвата"
+msgstr ""
+
+# modules/uenv/params.tpl:304
+msgid "Режим IPIPE"
+msgstr ""
+
+# modules/uenv/params.tpl:311
+msgid "Буфер cont2_bufsize"
+msgstr ""
+
+# modules/uenv/params.tpl:321
+msgid "Буфер cont_bufsize"
+msgstr ""
+
+# modules/update/description.php:11
+msgid "Обновление"
+msgstr ""
+
+# modules/update/template.tpl:7
+msgid "проверка наличия обновлений..."
+msgstr ""
+
+# modules/update/template.tpl:13
+msgid "не могу проверить наличие обновлений"
+msgstr ""
+
+# modules/update/template.tpl:17
+msgid "Имеется более свежая версия"
+msgstr ""
+
+# modules/update/template.tpl:17
+msgid "текущая версия"
+msgstr ""
+
+# modules/update/template.tpl:20 #TODO
+# msgid "message = "Ваша текущая версия - " + json.current + ", версия на сервере - " + json.last + "Обновление не требуется, однако, если очень хочется - можно обновить принудительно</p>";"
+# msgstr "message = "Ваша текущая версия - " + json.current + ", версия на сервере - " + json.last + "Обновление не требуется, однако, если очень хочется - можно обновить принудительно</p>";"
+# modules/update/template.tpl:34
+msgid "обновление..."
+msgstr ""
+
+# modules/update/template.tpl:39
+msgid "успешно обновлено, перезагрузите страницу"
+msgstr ""
+
+# modules/update/template.tpl:41
+msgid "что-то пошло не так с обновлением"
+msgstr ""
+
+# modules/update/template.tpl:58
+msgid "Да, обновить"
+msgstr ""
+
+# modules/update/template.tpl:76
+msgid "Обновление модулей адмики"
+msgstr ""
+
+# modules/update/template.tpl:82
+msgid "Мягкое обновление - будут перезаписаны только более новые файлы"
+msgstr ""
+
+# modules/update/template.tpl:83 #TODO
+msgid ""
+"Жёсткое обновление - полное удаление имеющегося содержимого {document_root} "
+"и запись нового"
+msgstr ""
+"Жёсткое обновление - полное удаление имеющегося содержимого {document_root} "
+"и запись нового"
+
+# modules/update/template.tpl:85
+msgid "мягкое обновление"
+msgstr ""
+
+# modules/update/template.tpl:85
+msgid "жёсткое обновление"
+msgstr ""
+
+# modules/update/template.tpl:92
+msgid "Действительно обновить?"
+msgstr ""
+
+# modules/update/template.tpl:93 #TODO
+msgid ""
+"Внимание, все содержимое каталога {document_root} будет стёрто. Вы уверены "
+"что хотите этого?"
+msgstr ""
+"Внимание, все содержимое каталога {document_root} будет стёрто. Вы уверены "
+"что хотите этого?"
+
+# modules/usbmon/description.php:11
+msgid "USB устройства"
+msgstr ""
+
+# modules/usbmon/template.tpl:26
+msgid "Обнаружение USB устройств"
+msgstr ""
+
+# modules/usbmon/template.tpl:29
+msgid "Обновить список устройств"
+msgstr ""
+
+# modules/wlan/template.tpl:45
+msgid "Настройка Wi-Fi"
+msgstr ""
+
+# modules/wlan/template.tpl:48
+msgid "Подключение и отключение Wi-Fi"
+msgstr ""
+
+# modules/wlan/template.tpl:52
+msgid "Подключить"
+msgstr ""
+
+# modules/wlan/template.tpl:53
+msgid "Отключить"
+msgstr ""
+
+# modules/wlan/template.tpl:58
+msgid "Настройки подключения Wi-Fi к точкам доступа"
+msgstr ""
+
+# modules/wlanscan/template.tpl:37
+msgid "Сканирование Wi-Fi сетей"
+msgstr ""
+
+# modules/wlanscan/template.tpl:39
+# modules/wlanscan/template.tpl:42
+msgid "обновить"
+msgstr ""
+
+# modules/wlanscan/template.tpl:39
+msgid "Текущее состояние подключения"
+msgstr ""
+
+# modules/wlanscan/template.tpl:42
+msgid "Найденные беспроводные сети"
+msgstr ""
+
+# parts/menu.php:10
+msgid "Основное"
+msgstr ""
+
+# parts/menu.php:12
+msgid "Мониторинг"
+msgstr ""
+
+# parts/menu.php:14
+msgid "Макеты"
+msgstr ""
+
+# parts/menu.php:15
+msgid "Камеры"
+msgstr ""
+
+# parts/menu.php:17
+msgid "Фото"
+msgstr ""
+
+# parts/menu.php:18
+msgid "Аудио"
+msgstr ""
+
+# parts/menu.php:19
+msgid "Администрирование"
+msgstr ""
+
+# parts/menu.php:20
+msgid "Эксперименты"
+msgstr ""
+
+# parts/menu.php:21
+msgid "Учебные"
+msgstr ""
+
+# templates/error.tpl:10
+msgid "Ошибка"
+msgstr ""
+
+# templates/error.tpl:12
+msgid "Ошибка!"
+msgstr ""
+
+# templates/error_dep.tpl:10
+msgid "Ошибка зависимостей"
+msgstr ""
+
+# templates/error_dep.tpl:12
+msgid "Для корректной работы модуля необходимы следующие файлы"
+msgstr ""
+
+# templates/error_dep.tpl:15
+msgid "Для решения проблемы попробуйте установить"
+msgstr ""
+
+# templates/index.tpl:56
+msgid "соединение потеряно :-("
+msgstr ""
+
+# templates/index.tpl:73
+msgid "системные сообщения"
+msgstr ""
+
+# templates/login.tpl:9
+msgid "Админка"
+msgstr ""
+
+# templates/login.tpl:13
+msgid "С пустым логином не войти"
+msgstr ""
+
+# templates/login.tpl:14
+msgid "С пустым паролем тоже не войти"
+msgstr ""
+
+# templates/login.tpl:56
+msgid "логин"
+msgstr ""
+
+# templates/login.tpl:58
+msgid "пароль"
+msgstr ""
