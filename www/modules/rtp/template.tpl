@@ -58,13 +58,17 @@
 	<h3><a href="#">RTP</a></h3>
 	<div>
 
+	<table width="100%">
+	<tr valign="top">
+	<td width="700">
+
 	<p class="bluetitle">Настройки</p>
-	<div style="display:inline-block; padding-left:40px; min-width:100px;">URL</div>
+	<div style="display:inline-block; padding-left:40px; min-width:100px;">хост</div>
 	<div style="display:inline;">
-		<input type="text" id="host" value="192.168.1.10" style="width:200px;">
+		<input type="text" id="host" value="{host}" style="width:200px;">
 	</div>
 	<p></p>
-	<div style="display:inline-block; padding-left:40px; min-width:100px;">stream</div>
+	<div style="display:inline-block; padding-left:40px; min-width:100px;">порт</div>
 	<div style="display:inline;">
 		<input type="text" id="port" value="3000" style="width:200px;">
 	</div>
@@ -82,6 +86,18 @@
 		</div>
 		<p></p>
       		<div id="rtp_status"></div>
+
+	</td>
+	<td>
+		<p class="bluetitle">Описание</p>
+		<p class="graytext">В этом разделе можно запустить трансляцию RTP с использованием UDP транспорта на указанный хост и порт. </p>
+		<p>&nbsp;</p>
+		<p>Подробнее про передачу и приём видео можно прочитать в <a href="http://wiki.virt2real.ru/wiki/Примеры_цепочек_GStreamer" target="_blank">этом разделе Wiki</a></p>
+	</td>
+	</tr>
+	</table>
+
+
 	</div>
 
 	<h3><a href="#">Скрипт трансляции</a></h3>

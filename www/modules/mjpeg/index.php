@@ -1,8 +1,8 @@
 <?php
 
 /*****************************************************
-* modules/rtp/index.php
-* rtp index file
+* modules/rtmp/index.php
+* rtmp index file
 *(c)virt2real.ru 2013
 * draft, by Gol
 /*****************************************************/
@@ -23,10 +23,14 @@ $module_content = GlobalReplace($module_content);
 
 /***************** module specific part **************/
 
-$rtptemplate = file_get_contents('rtp.sh');
-$module_content = str_replace('{rtptemplate}', $rtptemplate, $module_content);
+//$rtmptemplate = file_get_contents('rtmp.sh');
+//$module_content = str_replace('{rtmptemplate}', $rtmptemplate, $module_content);
 
-$module_content = str_replace('{host}', $_SERVER["REMOTE_ADDR"], $module_content);
+$port = "8888";
+$module_content = str_replace('{mjpeg_port}', $port, $module_content);
+
+$mjpegtemplate = file_get_contents('mjpeg.sh');
+$module_content = str_replace('{mjpegtemplate}', $mjpegtemplate, $module_content);
 
 echo $module_content;
 

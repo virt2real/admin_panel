@@ -18,7 +18,7 @@ $pos = intval($_POST['pos']);
 
 /* get address */
 $addr = @file_get_contents("addr");
-if (!$addr) $addr = "40";
+if (!$addr) $addr = "70";
 
 
 switch ($action) {
