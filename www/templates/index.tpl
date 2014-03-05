@@ -53,7 +53,7 @@
 			error: function(data, err){
 				$("#wifistatus").css("display", "none");
 				$("#mobile_status").css("display", "none");
-				$("#date").html("соединение потеряно :-(");
+				$("#date").html("%L_CONNECTION_LOST%");
 				timer = setTimeout("update_status()", 5000);
 			}
 		});
@@ -70,7 +70,7 @@
 
 			// show system messages
 			if (status_json.message)
-				$("#systemmessages").html('<a href="?systemmessages" title="системные сообщения">' + status_json.message + '</a>');
+				$("#systemmessages").html('<a href="?systemmessages" title="%L_SYSTEM_MESSAGES%">' + status_json.message + '</a>');
 			else
 				$("#systemmessages").html("&nbsp;");
 
@@ -119,13 +119,13 @@
 					<br>
 
 					<div id="systemmessages" style="width: 400px; height: 15px; white-space: nowrap; overflow: hidden; clear: right; float: left; padding-bottom: 0px; min-width:100px; max-width: 100%;"></div>
-				
+
 				</td>
 				<td width="50%" align="right">
 					<div id="date"></div><div id="uptime"></div>
 
 					<table width="100%">
-						<tr valign="top">	
+						<tr valign="top">
 							<td>&nbsp;</td>
 							<td width="90" align="center">&nbsp;
 								<div id="mobile_status">

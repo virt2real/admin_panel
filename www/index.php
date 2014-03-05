@@ -7,8 +7,19 @@
 * draft, by Gol
 /*****************************************************/
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 // turn off errors
-error_reporting(0);
+//error_reporting(0);
+
+// init translation
+if ($_POST['lang']) {
+    $set_language = $_POST['lang'];
+}else{
+    $set_language = 'de';
+}
+require_once('parts/language.php');
 
 // common global include
 require_once('parts/global.php');
@@ -72,6 +83,9 @@ if (!$onload) {
 $template = str_replace('{menu}', $menulist, $template);
 $template = str_replace('{content}', $module_content, $template);
 $template = str_replace('{onload}', $onload, $template);
+
+// translate content
+$template = lang_translate($template);
 
 // show content
 echo $template;

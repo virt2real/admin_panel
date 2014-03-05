@@ -6,27 +6,41 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="shortcut icon" href="imgs/favicon.png" />
 	<script type="text/javascript" src="js/jquery.js"></script>
-	<title>Админка {deviceID} {boottype}</title>
+	<title>%L_ADMIN_INTERFACE% {deviceID} {boottype}</title>
 </head>
 <body onload='$("#username").focus();'>
 	<script>
-		function Enter(){			if (!$("#username").val()) { ShowError("С пустым логином не войти"); return false; }
-			if (!$("#password").val()) { ShowError("С пустым паролем тоже не войти"); return false; }
+		function Enter(){
+			if (!$("#username").val()) { ShowError("%L_ERR_EMPTY_LOGIN%"); return false; }
+			if (!$("#password").val()) { ShowError("%L_ERR_EMPTY_PASS%"); return false; }
 			CheckPassword($("#username").val(), $("#password").val());
 		}
-		function ShowError(text){			$("#status").html(text);		}
+		function ShowError(text){
+			$("#status").html(text);
+		}
 
-		function CheckPassword(){			$("#enterimg").attr("src","/imgs/loader.gif");
+		function CheckPassword(){
+			$("#enterimg").attr("src","/imgs/loader.gif");
 			$("#status").html("");
-			$.get("/parts/checklogin.php?" + Math.random() + "&username=" + $("#username").val() + "&password=" + $("#password").val(), function(response, status, xhr) {				if (status == "success") {					$("#enterimg").attr("src","/imgs/login.png");					$("#enterimg").css("display","none");					if (response == "ok") {
+			$.get("/parts/checklogin.php?" + Math.random() + "&username=" + $("#username").val() + "&password=" + $("#password").val(), function(response, status, xhr) {
+				if (status == "success") {
+					$("#enterimg").attr("src","/imgs/login.png");
+					$("#enterimg").css("display","none");
+
+					if (response == "ok") {
 						location.replace("/");
-					} else {						$("#status").html(":-(");						$("#enterimg").css("display","inline");					}
+					} else {
+						$("#status").html(":-(");
+						$("#enterimg").css("display","inline");
+					}
 				}
-				if (status == "error") {					$("#enterimg").attr("src","/imgs/login.png");
+				if (status == "error") {
+					$("#enterimg").attr("src","/imgs/login.png");
 					$("#status").html(":-(");
 				}
 			});
-		}
+
+		}
 	</script>
 
 	<div style="position: absolute; top: 1px; left: 1px; z-index: 0;">
@@ -53,9 +67,9 @@
 						<td>
 							<form method="post" onSubmit="Enter(); return false;">
 							<p>
-								<input type="text" name="username" id="username" placeholder="логин" style="width: 300px; background-color:#ffffff; color:#000000;">
+								<input type="text" name="username" id="username" placeholder="%L_LOGIN_USER%" style="width: 300px; background-color:#ffffff; color:#000000;">
 								<p></p>
-								<input type="password" name="password" id="password" placeholder="пароль" style="width: 300px;  background-color:#ffffff; color:#000000;">
+								<input type="password" name="password" id="password" placeholder="%L_LOGIN_PASS%" style="width: 300px;  background-color:#ffffff; color:#000000;">
 								<p style="text-align: right;"><input type="image" src="/imgs/login.png" alt="submit" id="enterimg"  style="border: none;" /></p>
 								<div id="status" style="color: #ff0000; height: 50px;"></div>
 							</p>
