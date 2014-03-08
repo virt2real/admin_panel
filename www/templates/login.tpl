@@ -41,7 +41,20 @@
 			});
 
 		}
-	</script>
+
+        function GetUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        function ChangeLang(lang){
+                window.location = window.location.protocol+'//'+window.location.host+"/login.php?lang="+lang;
+        }
+
+    </script>
 
 	<div style="position: absolute; top: 1px; left: 1px; z-index: 0;">
 		<table width="100%">
@@ -65,6 +78,11 @@
 				<table width="300" align="center">
 					<tr>
 						<td>
+                            <form action="#">
+                                <input type="radio" name="lang" id="langRu" onClick="ChangeLang('ru');" />ru</input>
+                                <input type="radio" name="lang" id="langDe" onClick="ChangeLang('de');" />de</input>
+                                <input type="radio" name="lang" id="langEn" onClick="ChangeLang('en');" />en</input>
+                            </form>
 							<form method="post" onSubmit="Enter(); return false;">
 							<p>
 								<input type="text" name="username" id="username" placeholder="%L_LOGIN_USER%" style="width: 300px; background-color:#ffffff; color:#000000;">
@@ -80,5 +98,11 @@
 			</td>
 		</tr>
 	</table>
-
+    <script>
+        var checkButton = GetUrlVars()["lang"];
+        if (typeof checkButton === "undefined" ) document.getElementById('langRu').checked = true;
+        if (checkButton == "ru" ) document.getElementById('langRu').checked = true;
+        if (checkButton == "de" ) document.getElementById('langDe').checked = true;
+        if (checkButton == "en" ) document.getElementById('langEn').checked = true;
+    </script>
 </body>

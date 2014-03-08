@@ -101,8 +101,8 @@
 		$( "#menu" ).accordion({ fillSpace: false, autoHeight: false, navigation: false});
 	});
 
-	function LoadContent(link){
-		$("#content").load("modules/" + link + "/index.php");
+	function LoadContent(link,locale){
+		$("#content").load("modules/" + link + "/index.php?lang="+locale);
 	}
 
 	</script>
