@@ -7,18 +7,18 @@
 * draft, by Gol
 /*****************************************************/
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
 
 // turn off errors
-//error_reporting(0);
+error_reporting(0);
 
 // init translation
 require_once('parts/language.php');
 if ($_GET['lang']) {
     lang_setlang($_GET['lang']);
 }else{
-    lang_setlang('de');
+    lang_setlang('ru');
 }
 
 // common global include

@@ -8,8 +8,11 @@
 /*****************************************************/
 
 function lang_getmoddesc($module){
+    // get module description from translation file
     global $set_language;
     $fname = dirname(dirname(__FILE__)) . "/modules/$module/loc/module.$set_language.php";
+    //fallback to russian
+    file_exists($fname) ? : $fname = dirname(dirname(__FILE__)) . "/modules/$module/loc/module.ru.php";
     if (file_exists($fname)){
         $fhandle = @fopen($fname, 'r');
         while (!feof($fhandle)){
@@ -22,6 +25,11 @@ function lang_getmoddesc($module){
             }
         }
     }else{
+        // temporary fix for untranslated modules
+        if (file_exists("modules/$module/description.php")){
+            require("modules/$module/description.php");
+            return $module_params['title'];
+        }
         return 'no translation';
     }
 }
@@ -29,12 +37,14 @@ function lang_getmoddesc($module){
 function lang_swapmod($module){
     global $set_language;
     global $language;
+    // retain main translation keys
     $lpart = array();
     foreach ($language as $key => $value){
         if (strpos($key, 'L_') === 0){
             $lpart[$key] = $value;
         }
     }
+    // but load new module keys
     $fname = dirname(dirname(__FILE__)) . "/modules/$module/loc/module.$set_language.php";
     if(file_exists($fname)){
         include $fname;
@@ -48,6 +58,7 @@ function lang_setlang($newlang){
     global $set_language;
     global $language;
     $set_language = $newlang;
+    // load language files
     $fname = dirname(dirname(__FILE__)) . "/loc/common.$set_language.php";
     if(file_exists($fname)){
         include $fname;

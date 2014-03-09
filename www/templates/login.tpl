@@ -28,15 +28,20 @@
 					$("#enterimg").css("display","none");
 
 					if (response == "ok") {
-						location.replace("/");
+                        var chosenLang = GetUrlVars()["lang"];
+                        if (typeof chosenLang === "undefined" )	{
+                            location.replace("/?lang=ru");
+                        } else {
+                            location.replace("/?lang="+chosenLang);
+                        }
 					} else {
-						$("#status").html(":-(");
+						$("#status").html("%L_FAIL%");
 						$("#enterimg").css("display","inline");
 					}
 				}
 				if (status == "error") {
 					$("#enterimg").attr("src","/imgs/login.png");
-					$("#status").html(":-(");
+					$("#status").html("%L_FAIL%");
 				}
 			});
 

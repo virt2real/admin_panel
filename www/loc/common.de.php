@@ -40,6 +40,7 @@ $lang = array(// common items
               'L_ADMIN_INTERFACE'    => 'Administration',
               'L_ERR_EMPTY_LOGIN'    => 'Mit leerem Login kommt man nicht rein',
               'L_ERR_EMPTY_PASS'     => 'Mit leerem Passwort kommt man auch nicht rein',
+              'L_FAIL'               => ':-(',
               'L_LOGIN_USER'         => 'Login',
               'L_LOGIN_PASS'         => 'Passwort',
               );
