@@ -15,11 +15,11 @@ $text = $_POST['text'];
 
 if (is_writable($filename)) {
     if (!$handle = fopen($filename, 'w')) {
-		die("can not access file $filename");
+		die("cannot access file $filename");
 	}
 
    	if (fwrite($handle, $text) === FALSE) {
-       	die("can not write $filename");
+       	die("cannot write $filename");
     }
 
    	echo "successfully saved";
