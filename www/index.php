@@ -7,11 +7,11 @@
 * draft, by Gol
 /*****************************************************/
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
 
 // turn off errors
-//error_reporting(0);
+error_reporting(0);
 
 // init translation
 require_once('parts/language.php');
@@ -71,7 +71,7 @@ foreach ($main_menu as $key => $value) {
 
 // if we here, but modules not loaded - it mean that main module is active
 if (!$onload) {
-		$onload = 'main';
+    $onload = 'main';
 }
 
 // make global replaces

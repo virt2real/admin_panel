@@ -20,7 +20,7 @@ function lang_getmoddesc($module){
         while (!feof($fhandle)){
             $line = fgets($fhandle);
             $items = explode("'",$line);
-            if ($items[1] == 'M_DESC'){
+            if (isset($items[1]) && $items[1] == 'M_DESC'){
                 // this won't work if the modules name contains an apostrophe
                 fclose($fhandle);
                 return $items[3];

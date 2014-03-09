@@ -6,7 +6,8 @@
 
 <script>
 
-	$(".pinbox").click(function(){		var row = $(this).attr("row");
+	$(".pinbox").click(function(){
+		var row = $(this).attr("row");
 		var col = $(this).attr("col");
 		var text = $("#title" + row + "_" + col).text();
 		$("#pininfo").html(text);
@@ -23,7 +24,8 @@
 		$(this).css("background-image","url('/imgs/pinarea.png')");
 	});
 
-	$(".pinbox").mouseout(function(){		var row = $(this).attr("row");
+	$(".pinbox").mouseout(function(){
+		var row = $(this).attr("row");
 		var col = $(this).attr("col");
 		$("#pininfo").html("&nbsp;");
 		$("#title" + row + "_" + col).removeClass("blueback");
@@ -31,7 +33,8 @@
 		$(this).css("background-image","none");
 	});
 
-	$(".pintitle").click(function(){		var row = $(this).attr("row");
+	$(".pintitle").click(function(){
+		var row = $(this).attr("row");
 		var col = $(this).attr("col");
 		$("#pin"+row+"_"+col).css("background-image","url('/imgs/pinarea.png')");
 		$("#pininfo").html($(this).text());
@@ -121,7 +124,7 @@
 
 <div id="accordion" style="margin:0; padding:0;">
 
-	<h3><a href="#">Макет платы</a></h3>
+	<h3><a href="#">%M_DESC%</a></h3>
 	<div>
 		<div style="position: relative;">
 			<img src="modules/{module_name}/board_scheme.png" style="box-shadow:0px 0px 15px #555555;">
