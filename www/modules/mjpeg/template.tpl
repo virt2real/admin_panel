@@ -126,6 +126,7 @@
 	<h3><a href="#">Скрипт сервера</a></h3>
 	<div>
 		<p><textarea id="mjpegtemplate" style="height: 300px;">{mjpegtemplate}</textarea></p>
+		<p style="float:right;"><a href="#" onclick="noWrap($('#mjpegtemplate')); return false;">переносы строк</a></p>
 		<p>
 			<p><a class="buttonlink" href="#" onclick="var text = $('#mjpegtemplate').val(); SaveMJPEGSettings(text); return false;">[ Сохранить ]</a></p>
 			<span id="mjpegsavestatus"></span>

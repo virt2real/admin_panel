@@ -44,12 +44,13 @@ foreach ($rawlist as $k => $v) {
 	$arr = explode(" ", $v);
 
 	if ($arr[0] == "auto") {
-		$ifaces[$arr[1]]['name'] = $arr[1];
-		$current_iface = $arr[1];
-		$configured_ifaces [] = $arr[1];
+		$ifaces[$arr[1]]['auto'] = "checked";
 	}
 
-	if ($arr[0] == "iface" && $arr[1] == $current_iface) {
+	if ($arr[0] == "iface") {
+		$configured_ifaces [] = $arr[1];
+		$current_iface = $arr[1];
+		$ifaces[$current_iface]['name'] = $arr[1];
 		$ifaces[$current_iface]['type'] = $arr[2];
 		$ifaces[$current_iface]['static'] = $arr[3];
 	}
@@ -139,6 +140,8 @@ foreach ($ifaces as $k=>$v) {
 	if ($v['name'] == "lo") continue; // skip loopback
 
 	$tpl = $ifacetpl;
+
+	$tpl = str_replace('{autochecked}', isset($v['auto'])?$v['auto']:"", $tpl);
 	$tpl = str_replace('{name}', isset($v['name'])?$v['name']:"", $tpl);
 	$tpl = str_replace('{address}', isset($v['address'])?$v['address']:"", $tpl);
 	$tpl = str_replace('{netmask}', isset($v['netmask'])?$v['netmask']:"", $tpl);

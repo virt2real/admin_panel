@@ -109,6 +109,7 @@
 	<h3><a href="#">Скрипт трансляции</a></h3>
 	<div>
 		<p><textarea id="mjpeg_udptemplate" style="height: 300px;">{mjpeg_udptemplate}</textarea></p>
+		<p style="float:right;"><a href="#" onclick="noWrap($('#mjpeg_udptemplate')); return false;">переносы строк</a></p>
 		<p>
 			<p><a class="buttonlink" href="#" onclick="var text = $('#mjpeg_udptemplate').val(); SaveMJPEG_UDPSettings(text); return false;">[ Сохранить ]</a></p>
 			<span id="mjpeg_udp_savestatus"></span>

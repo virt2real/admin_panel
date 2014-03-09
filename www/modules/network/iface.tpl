@@ -1,4 +1,5 @@
 <div class="interfaceblock" name="{name}">
+	<p><input type="checkbox" id="{name}_auto" {autochecked}> поднимать при старте</p>
 	<div style="width:100px; float: left;">тип</div>
 	<div style="float: left;">
 		<select id="{name}_static" onchange='changeType("params_{name}",$(this).val());' style="height: 22px; line-height: 22px; width:150px; margin-bottom: 10px; color: #ffffff; border:1px solid #7c7c7c;">

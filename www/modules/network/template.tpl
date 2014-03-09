@@ -27,6 +27,7 @@
 		var nslist = "";
 		$(".interfaceblock").each(function(i, elem) {			var ifacename = $(elem).attr("name");
 
+			var auto = $("#" + ifacename + "_auto").attr("checked");
 			var static = $("#" + ifacename + "_static").val();
 			var address = $("#" + ifacename + "_address").val();
 			var netmask = $("#" + ifacename + "_netmask").val();
@@ -38,7 +39,8 @@
 			var down = $("#" + ifacename + "_down").val();
 			var postdown = $("#" + ifacename + "_postdown").val();
 
-			var tmp = "auto " + ifacename + "\n";
+			var tmp = "";
+			if (auto == "checked") tmp += "auto " + ifacename + "\n";
 			if (static) tmp += "iface " + ifacename + " inet " + static + "\n";
 			if (address) tmp += "  address " + address + "\n";
 			if (netmask) tmp += "  netmask " + netmask + "\n";

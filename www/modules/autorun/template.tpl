@@ -109,6 +109,7 @@
 	<h3><a href="#">%M_V2R_AUTOSTART%</a></h3>
 	<div>
 		<p><textarea id="autostartscript">{autostartscript}</textarea></p>
+		<p style="float:right;"><a href="#" onclick="noWrap($('#autostartscript')); return false;">переносы строк</a></p>
 		<p>
 			<p><a class="buttonlink" href="#" onclick="var text = $('#autostartscript').val(); SaveAutostartScript(text); return false;">[ %L_SAVE% ]</a></p>
 			<span id="saveautostartscriptstatus"></span>
