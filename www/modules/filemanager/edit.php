@@ -20,7 +20,8 @@ $file = htmlspecialchars($file);
 // шаблон редактирования
 $content = '
 <div id="filename">'.$parent.$dirname.'</div>
-<pre><textarea wrap="off" id="filecontent" onkeydown="MakeSaveButtonActive();">'.$file.'</textarea></pre>
+<pre><textarea id="filecontent" onkeydown="MakeSaveButtonActive();">'.$file.'</textarea></pre>
+<p style="float:right;"><a href="#" onclick="noWrap($(\'#filecontent\')); return false;">переносы строк</a></p>
 ';
 
 echo $content;

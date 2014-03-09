@@ -118,6 +118,7 @@
 	<h3><a href="#">Скрипт трансляции</a></h3>
 	<div>
 		<p><textarea id="rtmptemplate" style="height: 300px;">{rtmptemplate}</textarea></p>
+		<p style="float:right;"><a href="#" onclick="noWrap($('#rtmptemplate')); return false;">переносы строк</a></p>
 		<p>
 			<p><a class="buttonlink" href="#" onclick="var text = $('#rtmptemplate').val(); SaveRTMPSettings(text); return false;">[ Сохранить ]</a></p>
 			<span id="rtmpsavestatus"></span>
