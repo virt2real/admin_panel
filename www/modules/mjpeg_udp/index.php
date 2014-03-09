@@ -1,9 +1,9 @@
 <?php
 
 /*****************************************************
-* modules/rtp/index.php
-* rtp index file
-*(c)virt2real.ru 2013
+* modules/mjpeg_udp/index.php
+* mjpeg_udp index file
+* (c)virt2real.ru 2013
 * draft, by Gol
 /*****************************************************/
 
@@ -23,8 +23,8 @@ $module_content = GlobalReplace($module_content);
 
 /***************** module specific part **************/
 
-$rtptemplate = file_get_contents('rtp.sh');
-$module_content = str_replace('{rtptemplate}', $rtptemplate, $module_content);
+$mjpeg_udptemplate = file_get_contents('mjpeg_udp.sh');
+$module_content = str_replace('{mjpeg_udptemplate}', $mjpeg_udptemplate, $module_content);
 
 $module_content = str_replace('{host}', $_SERVER["REMOTE_ADDR"], $module_content);
 

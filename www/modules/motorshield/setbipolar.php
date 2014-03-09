@@ -73,7 +73,7 @@ switch ($action) {
 
 		/* get i2c address */
 		$addr = @file_get_contents("addr");
-		if (!$addr) $addr = "40";
+		if (!$addr) $addr = "70";
 
 		switch ($num) {
 			case 1: $channel = 0; $type = 1; $con = 43;

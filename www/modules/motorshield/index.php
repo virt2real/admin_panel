@@ -26,7 +26,7 @@ $module_content = GlobalReplace($module_content);
 /* get settings */
 
 $addr = intval(@file_get_contents("addr"));
-if (!$addr) $addr = "40";
+if (!$addr) $addr = "70";
 
 $divider = intval(@file_get_contents("/sys/bus/i2c/devices/1-00$addr/freq"));
 

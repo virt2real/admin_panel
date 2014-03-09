@@ -1,8 +1,8 @@
 <?php
 
 /*****************************************************
-* modules/motorshield/setinit.php
-* send init command for Motorshield
+* modules/mjpeg_udp/save.php
+* mjpeg_udp settings save file
 * (c)virt2real.ru 2014
 * draft, by Gol
 /*****************************************************/
@@ -10,10 +10,10 @@
 // common include
 include('../../parts/global.php');
 
-/* get address */
-$addr = @file_get_contents("addr");
-if (!$addr) $addr = "70";
+$text = $_POST['text'];
+$filename = 'mjpeg_udp.sh';
 
-file_put_contents("/sys/bus/i2c/devices/1-00$addr/init", "1");
+if (file_put_contents($filename, $text)) echo "success"; else echo "error";
+
 
 ?>

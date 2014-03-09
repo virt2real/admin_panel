@@ -16,7 +16,7 @@ $divider = intval($_POST['divider']);
 
 /* get address */
 $addr = @file_get_contents("addr");
-if (!$addr) $addr = "40";
+if (!$addr) $addr = "70";
 
 /* at first - stop all channels */
 file_put_contents("/sys/bus/i2c/devices/1-00$addr/all", "0 0");

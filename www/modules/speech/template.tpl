@@ -49,6 +49,8 @@
 
 				var json;
 				var result = "";
+
+
 				
 				try {
 
@@ -68,6 +70,8 @@
 				} catch (err) {}
 
 				$("#recognition_status").html(result);
+
+$("#recognition_status").html(response);
 
 			}
 			if (savestatus == "error") {

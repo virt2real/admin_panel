@@ -1,8 +1,8 @@
 <?php
 
 /*****************************************************
-* modules/motorshield/setinit.php
-* send init command for Motorshield
+* modules/mjpeg/run.php
+* mjpeg run command file
 * (c)virt2real.ru 2014
 * draft, by Gol
 /*****************************************************/
@@ -10,10 +10,10 @@
 // common include
 include('../../parts/global.php');
 
-/* get address */
-$addr = @file_get_contents("addr");
-if (!$addr) $addr = "70";
+$port = $_POST['port'];
+$quality = $_POST['quality'];
 
-file_put_contents("/sys/bus/i2c/devices/1-00$addr/init", "1");
+shell_exec("./mjpeg.sh $port $quality");
+echo 'MJPEG server started';
 
 ?>

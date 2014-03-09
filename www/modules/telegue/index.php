@@ -1,9 +1,9 @@
 <?php
 
 /*****************************************************
-* modules/rtp/index.php
-* rtp index file
-*(c)virt2real.ru 2013
+* modules/telegue/index.php
+* Telegue index file
+* (c)virt2real.ru 2014
 * draft, by Gol
 /*****************************************************/
 
@@ -22,11 +22,6 @@ $module_content = str_replace('{module_title}', $module_params['title'], $module
 $module_content = GlobalReplace($module_content);
 
 /***************** module specific part **************/
-
-$rtptemplate = file_get_contents('rtp.sh');
-$module_content = str_replace('{rtptemplate}', $rtptemplate, $module_content);
-
-$module_content = str_replace('{host}', $_SERVER["REMOTE_ADDR"], $module_content);
 
 echo $module_content;
 
