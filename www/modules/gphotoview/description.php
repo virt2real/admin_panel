@@ -8,7 +8,7 @@
 /*****************************************************/
 
 $module_params['name'] = 'gphotoview';
-$module_params['title'] = 'Просмотр миниатюр';
+$module_params['title'] = '%M_DESC%';
 $module_params['menu_part'] = 7;
 $module_params['position'] = 2;
 $module_params['depend'] = array("gphoto2");

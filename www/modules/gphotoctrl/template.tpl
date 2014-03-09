@@ -9,13 +9,16 @@
 
 	function gphoto_get_cmd(obj, cmd, id, value){
 		$("#" + obj).html('<img src="/imgs/loader.gif">');
-		$.post("modules/{module_name}/get.php?rnd=" + Math.random(), {obj: obj, cmd: cmd, id: id, value: value}, function(response, status, xhr) {			$("#" + obj).html('');			if (status == "success") {
+		$.post("modules/{module_name}/get.php?rnd=" + Math.random(), {obj: obj, cmd: cmd, id: id, value: value}, function(response, status, xhr) {
+
+			$("#" + obj).html('');
+			if (status == "success") {
 				var json = JSON.parse(response);
 				if (json.status == 0)
 					$("#" + json.obj).html("<pre>" + json.text + "</pre>");
 				else
-					$("#" + json.obj).html(":-(");
-				
+					$("#" + json.obj).html("%L_FAIL%");
+
 			}
 		});
 
@@ -31,8 +34,8 @@
 				if (json.status == 0)
 					$("#" + json.obj).html("<pre>" + json.text + "</pre>");
 				else
-					$("#" + json.obj).html(":-(");
-				
+					$("#" + json.obj).html("%L_FAIL%");
+
 			}
 		});
 
@@ -55,7 +58,7 @@
 	}
 
 	function ParseControls(element){
-		
+
 		$("#gphotoscanresult").html("");
 
 		if (element['name'] == "/end") return;
@@ -73,7 +76,7 @@
 					var newDiv = document.createElement('div');
 					newDiv.id = el_name;
 					$("#othercontrols").append(newDiv);
-					
+
 					$("#" + el_name).append(element['label'] + ": ");
 
 				} else {
@@ -96,7 +99,7 @@
 					var newDiv = document.createElement('div');
 					newDiv.id = el_name;
 					$("#othercontrols").append(newDiv);
-					
+
 					$("#" + el_name).append(element['label'] + ": ");
 
 				} else {
@@ -121,7 +124,7 @@
 					var newDiv = document.createElement('div');
 					newDiv.id = el_name;
 					$("#othercontrols").append(newDiv);
-					
+
 					$("#" + el_name).append("<p>" + element['label'] + ":</p>");
 
 				} else {
@@ -147,7 +150,7 @@
 				});
 
 			break;
-		
+
 
 			default:
 				$("#gphotoresult").append(res + "<br>");
@@ -165,7 +168,7 @@
 
 		// send value to camera
 		gphoto_get_cmd('gphotoresultconfig', 1, id, value);
-		                                        
+
 	}
 
 </script>
@@ -173,7 +176,7 @@
 
 <div id="accordion" style="margin:0; padding:0;">
 
-	<h3><a href="#">Информация о камере</a></h3>
+	<h3><a href="#">%M_CAMERA_INFO%</a></h3>
 	<div class="gphotoctrl">
 
 		<div id="gphotoscanresult"></div>
@@ -181,47 +184,47 @@
 		<table width=100% align=left>
 			<tr valign=top>
 				<td width=300>&nbsp;
-					<p id="_main_status_manufacturer_title" class="bluetitle">Производитель</p>
+					<p id="_main_status_manufacturer_title" class="bluetitle">%M_MANUFACTURER%</p>
 					<div id="_main_status_manufacturer" class="control"></div>
 
-					<p id="_main_status_cameramodel_title" class="bluetitle">Модель</p>
+					<p id="_main_status_cameramodel_title" class="bluetitle">%M_MODEL%</p>
 					<div id="_main_status_cameramodel" class="control"></div>
 
-					<p id="_main_status_serialnumber_title" class="bluetitle">Серийный номер</p>
+					<p id="_main_status_serialnumber_title" class="bluetitle">%M_SERIAL_NUMBER%</p>
 					<div id="_main_status_serialnumber" class="control"></div>
 
-					<p id="_main_status_deviceversion_title" class="bluetitle">Версия устройства</p>
+					<p id="_main_status_deviceversion_title" class="bluetitle">%M_DEV_VERSION%</p>
 					<div id="_main_status_deviceversion" class="control"></div>
 
-					<p id="_main_status_shuttercounter_title" class="bluetitle">Срабатываний затвора</p>
+					<p id="_main_status_shuttercounter_title" class="bluetitle">%M_SHUTTER_COUNTER%</p>
 					<div id="_main_status_shuttercounter" class="control"></div>
 
-					<p id="_main_status_batterylevel_title" class="bluetitle">Заряд батареи</p>
+					<p id="_main_status_batterylevel_title" class="bluetitle">%M_BATTERY_LEVEL%</p>
 					<div id="_main_status_batterylevel" class="control"></div>
 
-					<p id="_main_settings_datetime_title" class="bluetitle">Дата и время</p>
+					<p id="_main_settings_datetime_title" class="bluetitle">%M_DATE_TIME%</p>
 					<div id="_main_settings_datetime" class="control"></div>
 
-					
+
 				</td>
 				<td width=300>&nbsp;
 
-					<p id="_main_status_lensname_title" class="bluetitle">Оптика</p>
+					<p id="_main_status_lensname_title" class="bluetitle">%M_LENS_NAME%</p>
 					<div id="_main_status_lensname" class="control"></div>
 
-					<p id="_main_status_eosserialnumber_title" class="bluetitle">Серийный номер EOS</p>
+					<p id="_main_status_eosserialnumber_title" class="bluetitle">%M_EOS_SERIAL_NUMBER%</p>
 					<div id="_main_status_eosserialnumber" class="control"></div>
 
-					<p id="_main_status_availableshots_title" class="bluetitle">Ещё влезет снимков</p>
+					<p id="_main_status_availableshots_title" class="bluetitle">%M_SHOTS_AVAIL%</p>
 					<div id="_main_status_availableshots" class="control"></div>
 
 				</td>
 				<td width=300>&nbsp;
-					<p id="_main_settings_ownername_title" class="bluetitle">Владелец</p>
+					<p id="_main_settings_ownername_title" class="bluetitle">%M_OWNER%</p>
 					<div id="_main_settings_ownername" class="control"></div>
-					<p id="_main_settings_artist_title" class="bluetitle">Автор</p>
+					<p id="_main_settings_artist_title" class="bluetitle">%M_AUTHOR%</p>
 					<div id="_main_settings_artist" class="control"></div>
-					<p id="_main_settings_copyright_title" class="bluetitle">Копирайт</p>
+					<p id="_main_settings_copyright_title" class="bluetitle">%M_COPYRIGHT%</p>
 					<div id="_main_settings_copyright" class="control"></div>
 				</td>
 				<td>&nbsp;
@@ -238,7 +241,7 @@
 
 	</div>
 
-	<h3><a href="#">Управление камерой</a></h3>
+	<h3><a href="#">%M_DESC%</a></h3>
 	<div class="gphotoctrl">
 
 		<table width=100% align=left>
@@ -247,8 +250,8 @@
 					<img src="/" width=160>
 				</td>
 				<td>
-					<p><a href="#" class="buttonlink" onclick="gphoto_shoot('gphotoresultconfig', 1); return false;">[ предпросмотр ]</a></p>
-					<p><a href="#" class="buttonlink" onclick="gphoto_shoot('gphotoresultconfig', 2); return false;">[ сфотать ]</a></p>
+					<p><a href="#" class="buttonlink" onclick="gphoto_shoot('gphotoresultconfig', 1); return false;">[ %M_PREVIEW% ]</a></p>
+					<p><a href="#" class="buttonlink" onclick="gphoto_shoot('gphotoresultconfig', 2); return false;">[ %M_TAKE_PIC% ]</a></p>
 				</td>
 			</tr>
 		</table>
@@ -258,32 +261,32 @@
 			<tr valign=top>
 				<td width=200>&nbsp;
 
-					<p id="_main_capturesettings_shutterspeed_title" class="bluetitle">Выдержка</p>
+					<p id="_main_capturesettings_shutterspeed_title" class="bluetitle">%M_EXPOSURE%</p>
 					<div id="_main_capturesettings_shutterspeed" style="width: 100px; height: 25px; font-size: 1.2em;"></div>
 
-					<p id="_main_capturesettings_aperture_title" class="bluetitle">Диафрагма</p>
+					<p id="_main_capturesettings_aperture_title" class="bluetitle">%M_DIAPHRAGM%</p>
 					<div id="_main_capturesettings_aperture" style="width: 100px; height: 25px; font-size: 1.2em;"></div>
 
-					<p id="_main_imgsettings_iso_title" class="bluetitle">ISO</p>
+					<p id="_main_imgsettings_iso_title" class="bluetitle">%M_ISO%</p>
 					<div id="_main_imgsettings_iso" style="width: 100px; height: 25px; font-size: 1.2em;"></div>
 
 
 				</td>
 				<td width=250>&nbsp;
 
-					<p id="_main_capturesettings_focusmode_title" class="bluetitle">Режим фокусировки</p>
+					<p id="_main_capturesettings_focusmode_title" class="bluetitle">%M_FOCUS_MODE%</p>
 					<div id="_main_capturesettings_focusmode" style="width: 170px; height: 25px; font-size: 1.2em;"></div>
 
-					<p id="_main_imgsettings_whitebalance_title" class="bluetitle">Баланс белого</p>
+					<p id="_main_imgsettings_whitebalance_title" class="bluetitle">%M_WHITE_BALANCE%</p>
 					<div id="_main_imgsettings_whitebalance" style="width: 170px; height: 25px; font-size: 1.2em;"></div>
 
-					<p id="_main_capturesettings_picturestyle_title" class="bluetitle">Стиль изображения</p>
+					<p id="_main_capturesettings_picturestyle_title" class="bluetitle">%M_PIC_STYLE%</p>
 					<div id="_main_capturesettings_picturestyle" style="width: 170px; height: 25px; font-size: 1.2em;"></div>
 
-					<p id="_main_capturesettings_meteringmode_title" class="bluetitle">Тип замера</p>
+					<p id="_main_capturesettings_meteringmode_title" class="bluetitle">%M_METERING_MODE%</p>
 					<div id="_main_capturesettings_meteringmode" style="width: 170px; height: 25px; font-size: 1.2em;"></div>
 
-					<p id="_main_capturesettings_drivemode_title" class="bluetitle">Режим привода</p>
+					<p id="_main_capturesettings_drivemode_title" class="bluetitle">%M_DRIVE_MODE%</p>
 					<div id="_main_capturesettings_drivemode" style="width: 170px; height: 25px; font-size: 1.2em;"></div>
 
 
@@ -291,10 +294,10 @@
 
 				<td>&nbsp;
 
-					<p id="_main_capturesettings_autoexposuremode_title" class="bluetitle">Текущий режим экспозиции</p>
+					<p id="_main_capturesettings_autoexposuremode_title" class="bluetitle">%M_AUTO_EXP_MODE%</p>
 					<div id="_main_capturesettings_autoexposuremode" style="width: 150px; height: 25px; font-size: 1.2em;"></div>
 
-					<p id="_main_capturesettings_aeb_title" class="bluetitle">Брэкетинг экспозиции</p>
+					<p id="_main_capturesettings_aeb_title" class="bluetitle">%M_EXP_BRACKETING%</p>
 					<div id="_main_capturesettings_aeb" style="width: 150px; height: 25px; font-size: 1.2em;"></div>
 
 				</td>
@@ -304,15 +307,15 @@
 		</table>
 	</div>
 
-	<h3><a href="#">Остальные настройки</a></h3>
+	<h3><a href="#">%M_OTHER_SETTINGS%</a></h3>
 	<div class="gphotoctrl">
 
-		<p class="bluetitle">Другие настройки</p>
+		<p class="bluetitle">%M_OTHER_CONTROLS%</p>
 		<div id="othercontrols"></div>
 
 
 		<p>
-			<a href="#" class="buttonlink" onclick="gphoto_get_cmd('gphotoresultconfig', '--list-all-config'); return false;">[ показать полный конфиг медиаустройства]</a>
+			<a href="#" class="buttonlink" onclick="gphoto_get_cmd('gphotoresultconfig', '--list-all-config'); return false;">[ %M_SHOW_FULL_CONFIG% ]</a>
 		</p>
 
 		<div id="gphotoresultconfig"></div>

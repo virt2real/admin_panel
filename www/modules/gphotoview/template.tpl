@@ -13,15 +13,15 @@
 		$.post("modules/{module_name}/preview.php?rnd=" + Math.random(), {cmd: cmd}, function(response, status, xhr) {
 			if (status == "success") {
 
-			$("#gphotoviewstatus").html(response); 
+			$("#gphotoviewstatus").html(response);
 				var json = JSON.parse(response);
 				if (json.status == 0) {
 					LoadDir("", "{document_root}/modules/{module_name}/thumbnails");
 					$("#gphotoviewstatus").html();
 				}
 				else
-					$("#gphotoviewstatus").html(":-(");
-				
+					$("#gphotoviewstatus").html("%L_FAIL%");
+
 			}
 		});
 
@@ -43,13 +43,13 @@
 
 <div id="accordion" style="margin:0; padding:0;">
 
-	<h3><a href="#">Просмотр фотографий на камере</a></h3>
+	<h3><a href="#">%M_VIEW_PHOTOS%</a></h3>
 	<div>
 
 		<div>
 			<p>
-				<a href="#" class="buttonlink" onclick="gphoto_preview(1); return false;">[ загрузить превью ]</a>
-				<a href="#" class="buttonlink" onclick="gphoto_preview(2); return false;">[ удалить все превью ]</a>
+				<a href="#" class="buttonlink" onclick="gphoto_preview(1); return false;">[ %M_LOAD_THUMBNAILS% ]</a>
+				<a href="#" class="buttonlink" onclick="gphoto_preview(2); return false;">[ %M_DELETE_THUMBNAILS% ]</a>
 			</p>
 			<div id="gphotoviewstatus" style="height:20px;"></div>
 			<div id="gphotoviewfilelist"></div>

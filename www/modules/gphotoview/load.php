@@ -9,6 +9,7 @@
 
 // common include
 include('../../parts/global.php');
+require_once('../../parts/language.php');
 
 $dirname = $_GET['dir'];
 $parent = $_GET['parent'];
@@ -93,7 +94,7 @@ for ($i=0; $i<$lines; $i++) {
 				<p style="color: #7c7c7c; margin: 0px;">'.$file_name.'</p>
 			</div>
 		';
-	} else 
+	} else
 		$file_list .= '<tr><td class="col1"><a href="#" title="'.$dir_parent.$file_name.'" onclick="EditFile(\''.$file_name.'\', \''.$dir_parent.'\'); return false;">'.$file_name.'</a>&nbsp;</td><td class="col2">'.$date.'&nbsp;</td><td class="col3">'.$size .'&nbsp;</td></tr>';
 }
 

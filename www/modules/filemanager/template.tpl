@@ -14,7 +14,7 @@
 				$("#status").html("");
 			}
 			if (status == "error") {
-				$("#status").html(":-(");
+				$("#status").html("%L_FAIL%");
 			}
 		});
 	}
@@ -30,7 +30,7 @@
 				$("#savestatus").html("");
 			}
 			if (status == "error") {
-				$("#status").html(":-(");
+				$("#status").html("%L_FAIL%");
 			}
 		});
 	}
@@ -44,7 +44,7 @@
 				$("#savebutton").prop("disabled", true);
 			}
 			if (savestatus == "error") {
-				$("#status").html(":-(");
+				$("#status").html("%L_FAIL%");
 			}
 		});
 	}

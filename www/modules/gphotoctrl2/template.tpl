@@ -8,7 +8,7 @@
 	function init{module_name}(){
 
 		if(typeof(WebSocket)=="undefined") {
-			alert("Your browser does not support WebSockets. Try to use Chrome or Safari.");
+			alert("%M_ERR_NO_WEBSOCKET%");
 		} else {
 			if (ws)  ws.close();
 			ws = new WebSocket("ws://{deviceHost}:9999");
@@ -18,7 +18,7 @@
 			ws.onopen = function(event) {
 				// connected to command server
 				// get camera settings list
-				$("#gphotoinfo").html("connected");
+				$("#gphotoinfo").html("%M_CONNECTED%");
 				ws.send('{"cmd": "list"}');
 			}
 		}
@@ -38,7 +38,7 @@
 			case "list":
 				var text = JSON.stringify(json.result);
 				for (var i in json.result) {
-					$("#gphotoinfo").html("Найден " + json.result[i].model + " on " + json.result[i].port);
+					$("#gphotoinfo").html("%M_FOUND% " + json.result[i].model + " on " + json.result[i].port);
 				}
 
 				// if found at least one device - get params
@@ -48,10 +48,10 @@
 				var info = JSON.stringify(json.result.main);
 				//for (var i in json.result.main.window)
 					$("#gphotoinfo").append(info);
-				
+
 			break;
 		}
-		
+
 	}
 
 
@@ -59,7 +59,7 @@
 
 <div id="accordion" style="margin:0; padding:0;">
 
-	<h3><a href="#">Информация о камере</a></h3>
+	<h3><a href="#">%M_CAMERA_INFO%</a></h3>
 	<div class="gphotoctrl">
 
 		<div id="gphotoinfo"></div>

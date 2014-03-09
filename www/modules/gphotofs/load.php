@@ -9,6 +9,7 @@
 
 // common include
 include('../../parts/global.php');
+require_once('../../parts/language.php');
 
 $dirname = $_GET['dir'];
 $parent = $_GET['parent'];
@@ -71,7 +72,7 @@ $content = '';
 $content .= '<script>$("a.gallery").fancybox();</script><div id="fmcurrentdir">'.$parent.$dirname.'</div>';
 
 // показываем ссылку "На уровень выше"
-$content .= '<p id="moveup" onclick="LoadDir(\'\', \''.makeparent($parent).'\'); return false;"><a href="#" onclick="LoadDir(\'\', \''.makeparent($parent).'\'); return false;">[ Наверх ]</a></p>';
+$content .= '<p id="moveup" onclick="LoadDir(\'\', \''.makeparent($parent).'\'); return false;"><a href="#" onclick="LoadDir(\'\', \''.makeparent($parent).'\'); return false;">[ '.$language['L_UP'].' ]</a></p>';
 
 $content .= '<table cellspacing=1 cellpadding=2 border=0 id="filemanager">';
 
@@ -113,16 +114,16 @@ for ($i=0; $i<$lines; $i++) {
 			<div style="width:170px; height:200px; text-align: center; margin:10px; float: left;">
 				<a href="'.$real_img_path.'" class="gallery" rel="fotos"><img src="'.$img_path.'" width="160"></a>
 				<p style="text-align: left; color: #7c7c7c; margin: 0px;">'.$file_name.'</p>
-				<p style="text-align: left; color: #7c7c7c; margin: 0px;">'.$filesize.' Мбайт</p>
+				<p style="text-align: left; color: #7c7c7c; margin: 0px;">'.$filesize.' '.$language['M_MBYTE'].'</p>
 			</div>
 		';
-		
+
 	} else {
 		//$previewtemplate = $file_name;
 		$file_list .= '<tr><td class="col1"><a href="#" title="'.$dir_parent.$file_name.'" '.$previewtemplate.'>'.$file_name.'</a>&nbsp;<img src="" id="file'.$i.'" class="previewfiles"></td><td class="col2">'.$date.'&nbsp;</td><td class="col3">'.$size .'&nbsp;</td></tr>';
 	}
 
-	
+
 }
 
 $lines = count ($ARR2);

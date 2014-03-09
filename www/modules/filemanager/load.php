@@ -9,6 +9,7 @@
 
 // common include
 include('../../parts/global.php');
+require_once('../../parts/language.php');
 
 $dirname = $_GET['dir'];
 $parent = $_GET['parent'];
@@ -64,7 +65,7 @@ $content = '';
 $content .= '<div id="fmcurrentdir">'.$parent.$dirname.'</div>';
 
 // показываем ссылку "На уровень выше"
-$content .= '<p id="moveup" onclick="LoadDir(\'\', \''.makeparent($parent).'\'); return false;"><a href="#" onclick="LoadDir(\'\', \''.makeparent($parent).'\'); return false;">[ Наверх ]</a></p>';
+$content .= '<p id="moveup" onclick="LoadDir(\'\', \''.makeparent($parent).'\'); return false;"><a href="#" onclick="LoadDir(\'\', \''.makeparent($parent).'\'); return false;">[ '.$language['L_UP'].' ]</a></p>';
 
 $content .= '<table cellspacing=1 cellpadding=2 border=0 id="filemanager">';
 
