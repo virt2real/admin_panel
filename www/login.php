@@ -12,11 +12,6 @@ require_once('parts/global.php');
 
 // init translation
 require_once('parts/language.php');
-if ($_GET['lang']) {
-    lang_setlang($_GET['lang']);
-}else{
-    lang_setlang('ru');
-}
 
 // load main template
 $template = file_get_contents('templates/login.tpl');

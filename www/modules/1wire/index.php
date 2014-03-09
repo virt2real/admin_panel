@@ -13,11 +13,6 @@ require_once('description.php');
 // common include
 include('../../parts/global.php');
 require_once('../../parts/language.php');
-if ($_GET['lang']) {
-    lang_setlang($_GET['lang']);
-}else{
-    lang_setlang('ru');
-}
 
 // load module template
 $module_content = file_get_contents("template.tpl");

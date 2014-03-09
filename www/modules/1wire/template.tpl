@@ -33,7 +33,7 @@
 
 <div id="accordion" style="margin:0; padding:0;">
 
-	<h3><a href="#">1-wire</a></h3>
+	<h3><a href="#">%M_DESC%</a></h3>
 	<div>
 		<p>
 

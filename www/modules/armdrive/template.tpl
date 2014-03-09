@@ -19,14 +19,14 @@
 	var aliveTimer;
 
 	if(typeof(WebSocket)=="undefined") {
-		alert("Your browser does not support WebSockets. Try to use Chrome or Safari.");
+		alert("%M_ERR_NO_WEBSOCKET%");
 	} else {
 		var ws = new WebSocket("ws://{deviceHost}:8888");
 
 		ws.onmessage = function(event) {
 			try {
 				var json = JSON.parse(event.data);
-		
+
 				$("#speed").val(json.s);
 				speed = json.s;
 				$("#speedslider").slider("option", "value", speed);
@@ -38,13 +38,13 @@
 					$("#light_on").attr("checked", "checked");
 					$("#light_on").button("refresh");
 					$("#light_off").button("refresh");
-				} else { 
+				} else {
 					$("#light_on").attr("checked", "");
 					$("#light_off").attr("checked", "checked");
 					$("#light_on").button("refresh");
 					$("#light_off").button("refresh");
 				}
-				
+
 
 				switch (json.p) {
 					case 0:
@@ -72,7 +72,7 @@
 		}
 
 		ws.onopen = function(event) {
-			$("#connectionstatus").html("подключено");
+			$("#connectionstatus").html("%M_CONNECTED%");
 
 			/* stop all */
 			ws.send('{"act":"d","v":0}');
@@ -82,8 +82,8 @@
 		ws.onerror = function(e) {
 		};
 
-		ws.onclose = function() { 
-			$("#connectionstatus").html("отключено");
+		ws.onclose = function() {
+			$("#connectionstatus").html("%M_DISCONNECTED%");
 		};
 
 	}
@@ -254,11 +254,11 @@
 
 <div id="accordion" style="margin:0; padding:0;">
 
-	<h3><a href="#">Arm Drive</a></h3>
+	<h3><a href="#">%M_DESC%</a></h3>
 	<div>
 
-		<div><span class="bluetitle">Подключение:</span> <span id="connectionstatus"></span></div>
-		<div><span class="bluetitle">Напряжение:</span> <span id="voltage"></span></div>
+		<div><span class="bluetitle">%M_CONNECTION_STATUS%:</span> <span id="connectionstatus"></span></div>
+		<div><span class="bluetitle">%M_VOLTAGE%:</span> <span id="voltage"></span></div>
 
 		<div style="position: relative;">
 			<img src="modules/{module_name}/arm.png" usemap="#imgmap">
@@ -281,18 +281,18 @@
 		</map>
 
 
-		<div><span class="bluetitle">Скорость:</span> <input type="text" id="speed" value="" style="background: transparent; width: 20px; border: none; color: #ffffff;"></div>
+		<div><span class="bluetitle">%M_SPEED%:</span> <input type="text" id="speed" value="" style="background: transparent; width: 20px; border: none; color: #ffffff;"></div>
 		<div><div id="speedslider"></div></div>
 
 		<p></p>
 
-		<div><span class="bluetitle">Свет:</span> <span id="light"></span></div>
+		<div><span class="bluetitle">%M_LIGHT%:</span> <span id="light"></span></div>
 		<p><div id="lightstate">
-			<input type="radio" id="light_on" name="radio"><label for="light_on">вкл</label>
-			<input type="radio" id="light_off" name="radio"><label for="light_off">выкл</label>
+			<input type="radio" id="light_on" name="radio"><label for="light_on">%L_ON%</label>
+			<input type="radio" id="light_off" name="radio"><label for="light_off">%L_OFF%</label>
 		</div>
 		</p>
-		<div><span class="bluetitle">Направление:</span> <span id="direction"></span></div>
+		<div><span class="bluetitle">%M_DIRECTION%:</span> <span id="direction"></span></div>
 
 	</div>
 

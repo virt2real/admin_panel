@@ -28,12 +28,7 @@
 					$("#enterimg").css("display","none");
 
 					if (response == "ok") {
-                        var chosenLang = GetUrlVars()["lang"];
-                        if (typeof chosenLang === "undefined" )	{
-                            location.replace("/?lang=ru");
-                        } else {
-                            location.replace("/?lang="+chosenLang);
-                        }
+                            location.replace("/");
 					} else {
 						$("#status").html("%L_FAIL%");
 						$("#enterimg").css("display","inline");
@@ -47,16 +42,30 @@
 
 		}
 
-        function GetUrlVars() {
-            var vars = {};
-            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-                vars[key] = value;
-            });
-            return vars;
+        function CreateCookie(name,value,days) {
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime()+(days*24*60*60*1000));
+                var expires = "; expires="+date.toGMTString();
+            }
+            else var expires = "0";
+            document.cookie = name+"="+value+expires+"; path=/";
+        }
+
+        function ReadCookie(name) {
+            var nameEquals = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                    if (c.indexOf(nameEquals) == 0) return c.substring(nameEquals.length,c.length);
+            }
+            return null;
         }
 
         function ChangeLang(lang){
-                window.location = window.location.protocol+'//'+window.location.host+"/login.php?lang="+lang;
+                CreateCookie("language",lang,"90");
+                window.location.reload();
         }
 
     </script>
@@ -104,8 +113,11 @@
 		</tr>
 	</table>
     <script>
-        var checkButton = GetUrlVars()["lang"];
-        if (typeof checkButton === "undefined" ) document.getElementById('langRu').checked = true;
+        var checkButton = ReadCookie("language");
+        if (typeof(checkButton) == 'undefined' || checkButton == null) {
+            document.getElementById('langRu').checked = true;
+            ChangeLang("ru");
+        }
         if (checkButton == "ru" ) document.getElementById('langRu').checked = true;
         if (checkButton == "de" ) document.getElementById('langDe').checked = true;
         if (checkButton == "en" ) document.getElementById('langEn').checked = true;

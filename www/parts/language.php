@@ -7,9 +7,11 @@
 * draft, by keios
 /*****************************************************/
 
+lang_setlang(lang_readcookie());
+
 function lang_getmoddesc($module){
     // get module description from translation file
-    global $set_language;
+    $set_language = lang_readcookie();
     $fname = dirname(dirname(__FILE__)) . "/modules/$module/loc/module.$set_language.php";
     //fallback to russian
     file_exists($fname) ? : $fname = dirname(dirname(__FILE__)) . "/modules/$module/loc/module.ru.php";
@@ -35,8 +37,8 @@ function lang_getmoddesc($module){
 }
 
 function lang_swapmod($module){
-    global $set_language;
     global $language;
+    $set_language = lang_readcookie();
     // retain main translation keys
     $lpart = array();
     foreach ($language as $key => $value){
@@ -55,11 +57,9 @@ function lang_swapmod($module){
 }
 
 function lang_setlang($newlang){
-    global $set_language;
     global $language;
-    $set_language = $newlang;
     // load language files
-    $fname = dirname(dirname(__FILE__)) . "/loc/common.$set_language.php";
+    $fname = dirname(dirname(__FILE__)) . "/loc/common.$newlang.php";
     if(file_exists($fname)){
         include $fname;
         $language = array();
@@ -69,8 +69,19 @@ function lang_setlang($newlang){
     }
 }
 
+function lang_readcookie(){
+    if ($_COOKIE['language']){
+        $set_language = $_COOKIE['language'];
+    }else{
+        // fallback
+        $set_language = "ru";
+    }
+    return $set_language;
+}
+
 function lang_translate($template){
     global $language;
+    $set_language = lang_readcookie();
     foreach ($language as $key => $value){
 		$template = str_replace('%'.$key.'%', $value, $template);
 	}

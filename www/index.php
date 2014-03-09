@@ -7,19 +7,14 @@
 * draft, by Gol
 /*****************************************************/
 
-//error_reporting(E_ALL);
-//ini_set('display_errors', 1);
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 // turn off errors
-error_reporting(0);
+//error_reporting(0);
 
 // init translation
 require_once('parts/language.php');
-if ($_GET['lang']) {
-    lang_setlang($_GET['lang']);
-}else{
-    lang_setlang('ru');
-}
 
 // common global include
 require_once('parts/global.php');
@@ -63,7 +58,7 @@ $menu = "";
 
 foreach ($module_list as $key=>$value) {
 	$link = $value['name'];
-	$menu[$value['menu_part']] .= '<p><a href="#" onclick=\'LoadContent("'.$link.'","'.$set_language.'"); return false;\'>' . lang_getmoddesc($value['name']) . '</a></p>';
+	$menu[$value['menu_part']] .= '<p><a href="#" onclick=\'LoadContent("'.$link.'"); return false;\'>' . lang_getmoddesc($value['name']) . '</a></p>';
 }
 
 // load menu description
@@ -76,7 +71,7 @@ foreach ($main_menu as $key => $value) {
 
 // if we here, but modules not loaded - it mean that main module is active
 if (!$onload) {
-	$onload = 'main';
+		$onload = 'main';
 }
 
 // make global replaces

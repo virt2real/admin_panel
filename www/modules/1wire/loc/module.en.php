@@ -1,8 +1,8 @@
 <?php
 
 /*****************************************************
-* modules/1wire/loc/module.ru.php
-* module russian locale file
+* modules/1wire/loc/module.en.php
+* module english locale file
 *(c)virt2real.de 2014
 * draft, by keios
 /*****************************************************/

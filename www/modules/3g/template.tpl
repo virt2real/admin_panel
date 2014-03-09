@@ -30,7 +30,7 @@
 				$("#connection_status").html(response);
 			}
 			if (savestatus == "error") {
-				$("#connection_status").html(":-(");
+				$("#connection_status").html("%L_FAIL%");
 			}
 		});
 	}
@@ -46,22 +46,22 @@
 
 				try {
 					json = JSON.parse(response);
-					if (json[0]) result += '<p><span class="bluecaption">интерфейс:</span> ' + json[0] + '</p>';
-					if (json[1]) result += '<p><span class="bluecaption">устройство:</span> ' + json[1] + '</p>';
-					if (json[2]) result += '<p><span class="bluecaption">скорость:</span> ' + json[2] + '</p>';
-					if (json[3]) result += '<p><span class="bluecaption">локальный ip:</span> ' + json[3] + '</p>';
-					if (json[4]) result += '<p><span class="bluecaption">удалённый ip:</span> ' + json[4] + '</p>';
-					if (json[5]) result += '<p><span class="bluecaption">оператор:</span> ' + json[5] + '</p>';
+					if (json[0]) result += '<p><span class="bluecaption">%M_INTERFACE%:</span> ' + json[0] + '</p>';
+					if (json[1]) result += '<p><span class="bluecaption">%M_DEVICE%:</span> ' + json[1] + '</p>';
+					if (json[2]) result += '<p><span class="bluecaption">%M_SPEED%:</span> ' + json[2] + '</p>';
+					if (json[3]) result += '<p><span class="bluecaption">%M_LOCAL_IP%:</span> ' + json[3] + '</p>';
+					if (json[4]) result += '<p><span class="bluecaption">%M_REMOTE_IP%:</span> ' + json[4] + '</p>';
+					if (json[5]) result += '<p><span class="bluecaption">%M_CARRIER%:</span> ' + json[5] + '</p>';
 				} catch (err) {}
 
 				$("#connection_status").html(result);
 
-				if (result) {           
+				if (result) {
 					$("#3g_off").attr("checked", "checked");
 					$("#3g_off").button("refresh");
 					$("#3g_on").attr("checked", "");
 					$("#3g_on").button("refresh");
-				} else { 
+				} else {
 					$("#3g_on").attr("checked", "checked");
 					$("#3g_on").button("refresh");
 					$("#3g_off").attr("checked", "");
@@ -70,7 +70,7 @@
 
 			}
 			if (status == "error") {
-				$("#connection_status").html(":-(");
+				$("#connection_status").html("%L_FAIL%");
 			}
 
 			setTimeout("Check3G()", 1000);
@@ -91,22 +91,22 @@
 
 <div id="accordion" style="margin:0; padding:0;">
 
-	<h3><a href="#">3G</a></h3>
+	<h3><a href="#">%M_DESC%</a></h3>
 	<div>
-		<p class="bluetitle">Подключение и отключение связи через 3G USB модем</p>
+		<p class="bluetitle">%M_TOGGLE_CONNECTION%</p>
 
-		<p>Предварительно необходимо настроить подключение через USB 3G модем</p>
+		<p>%M_SETUP_MODEM_FIRST%</p>
 
 		<p>&nbsp;</p>
 
 		<div id="3gconnectionswitch">
-			<input type="radio" id="3g_on" name="radio"><label for="3g_on">вкл</label>
-			<input type="radio" id="3g_off" name="radio" checked><label for="3g_off">выкл</label>
+			<input type="radio" id="3g_on" name="radio"><label for="3g_on">%L_ON%</label>
+			<input type="radio" id="3g_off" name="radio" checked><label for="3g_off">%L_OFF%</label>
 		</div>
 
 		<p>&nbsp;</p>
 
-		<p>Процесс подключения может занимать 10-20 секунд</p>
+		<p>%M_WAIT_20_SECONDS%</p>
 
 		<p>&nbsp;</p>
 
