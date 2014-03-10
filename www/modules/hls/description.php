@@ -8,7 +8,7 @@
 /*****************************************************/
 
 $module_params['name'] = 'hls';
-$module_params['title'] = 'HLS';
+$module_params['title'] = '%M_DESC%';
 $module_params['menu_part'] = 6;
 $module_params['position'] = 2;
 ?>

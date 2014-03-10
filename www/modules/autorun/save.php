@@ -9,25 +9,27 @@
 
 // common include
 include('../../parts/global.php');
+include('../../parts/language.php');
+lang_swapmod('autorun');
 
 $filename = '/etc/virt2real/autostart.sh';
 $somecontent = $_POST['text'];
 
 if (is_writable($filename)) {
 	if (!$handle = fopen($filename, 'w')) {
-		die("can not access file $filename");
+		die($language['M_ERR_NO_ACCESS']." $filename");
 	}
 
 	if (fwrite($handle, $somecontent) === FALSE) {
-        	die("can not write $filename");
+        die($language['M_ERR_NO_WRITE']." $filename");
 	}
 
-    	echo "successfully saved";
+    echo $language['M_SAVE_SUCCESS'];
 
 	fclose($handle);
 
 } else {
-	echo "no access to $filename";
+	echo $language['M_ERR_NO_ACCESS']." $filename";
 }
 
 ?>

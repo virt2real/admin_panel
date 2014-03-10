@@ -18,6 +18,9 @@ $lang = array(// common items
               'M_MOVE_ITEMS'         => 'Durch Verschieben der Skripte zwischen den Listen kann der Start aller nötigen Komponenten konfiguriert werden.',
               'M_V2R_AUTOSTART'      => 'virt2real Autostart-Skript',
               'M_LINE_WRAPPING'      => 'Zeilenumbruch',
+              'M_ERR_NO_ACCESS'      => 'Kein Zugriff auf',
+              'M_ERR_NO_WRITE'       => 'Kein Schreibzugriff auf',
+              'M_SAVE_SUCCESS'       => 'Speichern erfolgreich',
               );
 
 ?>

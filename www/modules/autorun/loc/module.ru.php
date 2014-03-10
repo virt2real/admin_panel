@@ -18,6 +18,9 @@ $lang = array(// common items
               'M_MOVE_ITEMS'         => 'Путём перемещения файлов из одного списка в другой можно настраивать запуск нужных компонентов при загрузке системы.',
               'M_V2R_AUTOSTART'      => 'Скрипт автозапуска virt2real',
               'M_LINE_WRAPPING'      => 'переносы строк',
+              'M_ERR_NO_ACCESS'      => 'cannot access file',
+              'M_ERR_NO_WRITE'       => 'cannot write to',
+              'M_SAVE_SUCCESS'       => 'successfully saved',
               );
 
 ?>

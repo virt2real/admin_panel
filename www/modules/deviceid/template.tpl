@@ -6,13 +6,13 @@
 
 <script>
 	function SaveSettings(id, descr){
-		$("#savestatus").html("saving...");
+		$("#savestatus").html("%M_SAVING%");
 		$("#savestatus").load("modules/{module_name}/save.php?id=" + encodeURIComponent(id) + "&descr=" + encodeURIComponent(descr), function(response, status, xhr) {
 			if (status == "success") {
-				$("#savestatus").html(response);
+				$("#savestatus").html("%M_SUCCESS%");
 			}
 			if (status == "error") {
-				$("#savestatus").html("error");
+				$("#savestatus").html("%M_ERR%");
 			}
 		});
 	}

@@ -10,6 +10,7 @@
 // common include
 include('../../parts/global.php');
 require_once('../../parts/language.php');
+lang_swapmod('filemanager');
 
 $dirname = $_GET['dir'];
 $parent = $_GET['parent'];

@@ -9,25 +9,27 @@
 
 // common include
 include('../../parts/global.php');
+require_once('../../parts/language.php');
+lang_swapmod('filemanager');
 
 $filename = $_POST['file'];
 $text = $_POST['text'];
 
 if (is_writable($filename)) {
     if (!$handle = fopen($filename, 'w')) {
-		die("cannot access file $filename");
+		die($language['M_ERR_NO_ACCESS']." $filename");
 	}
 
    	if (fwrite($handle, $text) === FALSE) {
-       	die("cannot write $filename");
+       	die($language['M_ERR_NO_WRITE']." $filename");
     }
 
-   	echo "successfully saved";
+   	echo $language['M_SAVE_SUCCESS'];
 
     fclose($handle);
 
 } else {
-	echo "no access to $filename";
+	echo $language['M_ERR_NO_ACCESS']." $filename";
 }
 
 ?>

@@ -12,6 +12,9 @@ $lang = array(// common items
               // module-specific
               'M_DEV_DESCRIPT'       => 'Gerätebeschreibung',
               'M_DEV_IDENT'          => 'Geräteidentifikator',
+              'M_SAVING'             => 'Wird gespeichert…',
+              'M_ERR'                => 'Ein Fehler ist aufgetreten',
+              'M_SUCCESS'            => 'Speichern erfolgreich',
               );
 
 ?>

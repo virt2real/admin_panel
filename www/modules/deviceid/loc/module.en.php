@@ -12,6 +12,9 @@ $lang = array(// common items
               // module-specific
               'M_DEV_DESCRIPT'       => 'Описание устройства',
               'M_DEV_IDENT'          => 'Идентификатор устройства',
+              'M_SAVING'             => 'saving…',
+              'M_ERR'                => 'error',
+              'M_SUCCESS'            => 'success',
               );
 
 ?>

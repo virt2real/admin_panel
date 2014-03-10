@@ -15,15 +15,15 @@
 
 	var savegpiostate = "";
 	var saveconstate = "";
-	
+
 	function update_gpio(){
-		if (gpio_timer) 
+		if (gpio_timer)
 			$("#gpioloader").css("display","block");
 		else
 			$("#gpioloader").css("display","none");
-		
+
 		load_gpio();
-		
+
 	}
 
 	function load_gpio(){
@@ -32,7 +32,7 @@
 				$("#currentgpiostate").html(response);
 			}
 			if (status == "error") {
-				$("#currentgpiostate").html("error");
+				$("#currentgpiostate").html("%L_FAIL%");
 			}
 			if (gpio_run1) gpio_timer = setTimeout("update_gpio()", 1000);
 		});
@@ -44,11 +44,11 @@
 	<!-- **************************************************************-->
 
 	function update_gpio2(){
-		if (gpio_timer2) 
+		if (gpio_timer2)
 			$("#gpioloader2").css("display","block");
 		else
 			$("#gpioloader2").css("display","none");
-		
+
 		load_gpio2();
 		if (gpio_run2) gpio_timer2 = setTimeout("update_gpio2()", 1000);
 	}
@@ -70,7 +70,7 @@
 						}
 
 						savegpiostate = response;
-						
+
 					}
 				}
 
@@ -87,17 +87,17 @@
 				}
 			}
 			if (status == "error") {
-				$("#currentgpiostate2").html("error");
+				$("#currentgpiostate2").html("%L_FAIL%");
 			}
 		});
 	}
 
 
 	$(".gpiolist").click(function() {
-		
+
 		var result = "";
 		var emptylist = true;
-		
+
 		var gpio = $(this).attr("gpio");
 
 		if ($("#gpio" + gpio).hasClass("whiteback"))
@@ -176,17 +176,17 @@
 
 	function update_con(){
 
-		if (gpio_timer3) 
+		if (gpio_timer3)
 			$("#gpioloader3").css("display","block");
 		else
 			$("#gpioloader3").css("display","none");
-		
+
 		load_con();
-		
+
 	}
 
 
-	function load_con() { 
+	function load_con() {
 		$.get("modules/{module_name}/get3.php?" + Math.random(), function(response, status, xhr) {
 			if (status == "success") {
 
@@ -202,7 +202,7 @@
 						}
 
 						saveconstate = response;
-						
+
 					}
 				}
 
@@ -219,7 +219,7 @@
 				}
 			}
 			if (status == "error") {
-				$("#currentconstate").html("error");
+				$("#currentconstate").html("%L_FAIL%");
 			}
 
 			if (gpio_run3) gpio_timer3 = setTimeout("update_con()", 1000);
@@ -229,10 +229,10 @@
 
 
 	$(".conlist").click(function() {
-		
+
 		var result = "";
 		var emptylist = true;
-		
+
 		var con = $(this).attr("con");
 
 		if ($("#con" + con).hasClass("whiteback"))
@@ -311,7 +311,7 @@
 .conlist, .gpiolist {
   display: inline;
   margin-right: 15px;
-  font-family: "Lucida Console", Monaco, monospace; 
+  font-family: "Lucida Console", Monaco, monospace;
   font-size:1.2em;
   color: #7c7c7c;
   padding: 2px;
@@ -343,11 +343,11 @@
 <div id="accordion" style="margin:0; padding:0;">
 
 
-	<h3><a href="#">Пины CON через драйвер /dev/v2r_pins</a></h3>
+	<h3><a href="#">%M_CON_PINS%</a></h3>
 	<div>
 		<p>
-			<a href="" class="buttonlink" onclick='gpio_run3 = 1; if (!gpio_timer3) gpio_timer3 = setTimeout("update_con()", 1); return false;'>[ Запустить опрос ]</a>
-			<a href="" class="buttonlink" onclick='gpio_run3 = 0; clearTimeout(gpio_timer3); gpio_timer3 = false; $("#gpioloader3").css("display","none"); return false;'>[ Остановить опрос ]</a>
+			<a href="" class="buttonlink" onclick='gpio_run3 = 1; if (!gpio_timer3) gpio_timer3 = setTimeout("update_con()", 1); return false;'>[ %L_START_QUERY% ]</a>
+			<a href="" class="buttonlink" onclick='gpio_run3 = 0; clearTimeout(gpio_timer3); gpio_timer3 = false; $("#gpioloader3").css("display","none"); return false;'>[ %L_STOP_QUERY% ]</a>
 
 			<p style="height:20px;"><img id="gpioloader3" src="/imgs/loader.gif" style="display: none;"></p>
 		</p>
@@ -357,31 +357,31 @@
 		</div>
 
 		<div id="conselectedblock">
-			<p class="bluetitle" id="selectedcontitle">Выбранные CON: <span style="padding-left: 40px;"><a href="" class="buttonlink" onclick='clear_con_selection(); return false;'>[ снять выделение ]</a></span></p>
+			<p class="bluetitle" id="selectedcontitle">%M_CON_SELECTED%: <span style="padding-left: 40px;"><a href="" class="buttonlink" onclick='clear_con_selection(); return false;'>[ %M_UNSELECT% ]</a></span></p>
 			<div id="conselectedlist"></div>
 
 			<p></p>
-			<span class="bluetitle">Установить направление как Output и значение </span>
+			<span class="bluetitle">%M_SET_DIR_OUTPUT% </span>
 			<a href="" class="buttonlink" onclick='set_con(1, 0); return false;'>[ 0 ]</a>
 			<a href="" class="buttonlink" onclick='set_con(1, 1); return false;'>[ 1 ]</a>
 
 			<p></p>
-			<span class="bluetitle">Установить направление как Input </span>
-			<a href="" class="buttonlink" onclick='set_con(0, 0); return false;'>[ установить ]</a>
+			<span class="bluetitle">%M_SET_DIR_INPUT% </span>
+			<a href="" class="buttonlink" onclick='set_con(0, 0); return false;'>[ %L_SET% ]</a>
 
 		</div>
 
-		<p class="bluetitle">Лог изменений состояния пинов CON</p>
+		<p class="bluetitle">%M_CON_STATE_LOG%</p>
 		<div id="conhistory"></div>
 
 	</div>
 
 
-	<h3><a href="#">GPIO через драйвер /dev/v2r_gpio</a></h3>
+	<h3><a href="#">%M_GPIO_PINS%</a></h3>
 	<div>
 		<p>
-			<a href="" class="buttonlink" onclick='gpio_run2 = 1; if (!gpio_timer2) gpio_timer2 = setTimeout("update_gpio2()", 1); return false;'>[ Запустить опрос ]</a>
-			<a href="" class="buttonlink" onclick='gpio_run2 = 0; clearTimeout(gpio_timer2); gpio_timer2 = false; $("#gpioloader2").css("display","none"); return false;'>[ Остановить опрос ]</a>
+			<a href="" class="buttonlink" onclick='gpio_run2 = 1; if (!gpio_timer2) gpio_timer2 = setTimeout("update_gpio2()", 1); return false;'>[ %L_START_QUERY% ]</a>
+			<a href="" class="buttonlink" onclick='gpio_run2 = 0; clearTimeout(gpio_timer2); gpio_timer2 = false; $("#gpioloader2").css("display","none"); return false;'>[ %L_STOP_QUERY% ]</a>
 
 			<p style="height:20px;"><img id="gpioloader2" src="/imgs/loader.gif" style="display: none;"></p>
 		</p>
@@ -391,32 +391,32 @@
 		</div>
 
 		<div id="gpioselectedblock">
-			<p class="bluetitle" id="selectedtitle">Выбранные GPIO: <span style="padding-left: 40px;"><a href="" class="buttonlink" onclick='clear_gpio_selection(); return false;'>[ снять выделение ]</a></span></p>
+			<p class="bluetitle" id="selectedtitle">%M_GPIO_SELECTED%: <span style="padding-left: 40px;"><a href="" class="buttonlink" onclick='clear_gpio_selection(); return false;'>[ %M_UNSELECT% ]</a></span></p>
 			<div id="gpioselectedlist"></div>
 
 			<p></p>
-			<span class="bluetitle">Установить направление как Output и значение </span>
+			<span class="bluetitle">%M_SET_DIR_OUTPUT% </span>
 			<a href="" class="buttonlink" onclick='set_gpio(1, 0); return false;'>[ 0 ]</a>
 			<a href="" class="buttonlink" onclick='set_gpio(1, 1); return false;'>[ 1 ]</a>
 
 			<p></p>
-			<span class="bluetitle">Установить направление как Input </span>
-			<a href="" class="buttonlink" onclick='set_gpio(0, 0); return false;'>[ установить ]</a>
+			<span class="bluetitle">%M_SET_DIR_INPUT% </span>
+			<a href="" class="buttonlink" onclick='set_gpio(0, 0); return false;'>[ %L_SET% ]</a>
 
 		</div>
 
 
-		<p class="bluetitle">Лог изменений состояния GPIO</p>
+		<p class="bluetitle">%M_GPIO_STATE_LOG%</p>
 		<div id="gpiohistory"></div>
 
 	</div>
 
-	<h3><a href="#">GPIO в debug_fs</a></h3>
+	<h3><a href="#">%M_GPIO_DEBUGFS%</a></h3>
 	<div>
 		<p>
 
-			<a href="" class="buttonlink" onclick='gpio_run1 = 1; if (!gpio_timer) gpio_timer = setTimeout("update_gpio()", 1); return false;'>[ Запустить опрос ]</a>
-			<a href="" class="buttonlink" onclick='gpio_run1 = 1; clearTimeout(gpio_timer); gpio_timer = false; $("#gpioloader").css("display","none"); return false;'>[ Остановить опрос ]</a>
+			<a href="" class="buttonlink" onclick='gpio_run1 = 1; if (!gpio_timer) gpio_timer = setTimeout("update_gpio()", 1); return false;'>[ %L_START_QUERY% ]</a>
+			<a href="" class="buttonlink" onclick='gpio_run1 = 1; clearTimeout(gpio_timer); gpio_timer = false; $("#gpioloader").css("display","none"); return false;'>[ %L_STOP_QUERY% ]</a>
 
 			<p style="height:20px;"><img id="gpioloader" src="/imgs/loader.gif" style="display: none;"></p>
 
