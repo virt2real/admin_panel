@@ -21,6 +21,8 @@
 	var speed1 = 0, speed2 = 0;
 
 	var joystickactive = false;
+	var analogX = NEUTRAL, analogY = NEUTRAL;
+	var sendTimer;
 
 	var aliveTimer;
 
@@ -82,6 +84,11 @@
 
 	/* run alive timer */
 	aliveTimer = setInterval("updateUptime()", 1000);
+
+	if (sendTimer) clearInterval(sendTimer);
+
+	/* run send command timer */
+	sendTimer = setInterval("updateCommand()", 50);
 
 	function updateUptime() {
 		ws.send('{"cmd":"alive"}');
@@ -236,12 +243,16 @@
 
 		$("#jsstick").mouseup(function(e){
 			joystickactive = false;
+			analogX = NEUTRAL;
+			analogY = NEUTRAL;
+			ParseAnalog(analogX, analogY);
 		});
 
 		$("#jsstick").mouseout(function(e){
 			joystickactive = false;
-
-			ParseAnalog(NEUTRAL, NEUTRAL);
+			analogX = NEUTRAL;
+			analogY = NEUTRAL;
+			ParseAnalog(analogX, analogY);
 		});
 
 		$("#jsstick").mousemove(function(e){
@@ -254,11 +265,19 @@
 				oldX = x;
 				oldY = y;
 
-				ParseAnalog(x, y);
+				analogX = x;
+				analogY = y;
 
 				$('#jsstickvalue').html("X : " + x + " Y : " + y);
 			}
 		});
+
+		function updateCommand () {
+			if (!joystickactive) return;
+			$("#analogvalues").html("value: " + analogX + " " + analogY);
+			ParseAnalog(analogX, analogY);
+		}
+
 	}
 </script>
 
@@ -328,7 +347,7 @@
 		<div>
 			<div id="jsstick" style="width:255px;height:255px;background-color:#333333;"></div>
 		</div>
-
+		<p id="analogvalues"></p>
 
 		</td>
 		<td class="graytext" width="300">
