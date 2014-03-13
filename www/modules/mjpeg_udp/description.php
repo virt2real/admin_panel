@@ -8,7 +8,7 @@
 /*****************************************************/
 
 $module_params['name'] = 'mjpeg_udp';
-$module_params['title'] = 'MJPEG udp';
+$module_params['title'] = '%M_DESC%';
 $module_params['menu_part'] = 6;
 $module_params['position'] = 5;
 ?>

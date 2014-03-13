@@ -14,7 +14,8 @@
 
 <script>
 
-	$(".relayswitch").click(function(){		var row = $(this).attr("row");
+	$(".relayswitch").click(function(){
+		var row = $(this).attr("row");
 		var state = $(this).attr("state");
 		SetRelay(row, state);
 	});
@@ -26,7 +27,8 @@
 		$(this).css("background-color","#ff0000");
 	});
 
-	$(".relayswitch").mouseout(function(){		var row = $(this).attr("row");
+	$(".relayswitch").mouseout(function(){
+		var row = $(this).attr("row");
 		var state = $(this).attr("state");
 		$("#relaystatus").html("&nbsp;");
 		$(this).css("background-color","transparent");
@@ -41,7 +43,7 @@
 				$("#relaystatus").html(response);
 			}
 			if (savestatus == "error") {
-				$("#relaystatus").html(":-(");
+				$("#relaystatus").html("%L_FAIL%");
 			}
 		});
 
@@ -51,7 +53,7 @@
 
 <div id="accordion" style="margin:0; padding:0;">
 
-	<h3><a href="#">Макет платы реле</a></h3>
+	<h3><a href="#">%M_RELAY_LAYOUT%</a></h3>
 	<div>
 		<div style="position: relative;">
 			<img src="modules/{module_name}/relay_shield.png" style="box-shadow:0px 0px 15px #555555;">
@@ -77,7 +79,7 @@
 		</div>
 
 		<p></p>
-		
+
 		<div>
 			<p>J1</p>
 			<p>J2</p>

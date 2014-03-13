@@ -14,7 +14,7 @@ $lang = array(// common items
               'M_DEV_IDENT'          => 'Geräteidentifikator',
               'M_SAVING'             => 'Wird gespeichert…',
               'M_ERR'                => 'Ein Fehler ist aufgetreten',
-              'M_SUCCESS'            => 'Speichern erfolgreich',
+              'M_SUCCESS'            => 'Erfolgreich gespeichert',
               );
 
 ?>

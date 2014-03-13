@@ -12,6 +12,7 @@ require_once('description.php');
 
 // common include
 include('../../parts/global.php');
+require_once('../../parts/language.php');
 
 // load module template
 $module_content = file_get_contents("template.tpl");
@@ -169,7 +170,7 @@ foreach ($ifaces as $k=>$v) {
 	$tpl = str_replace('{dhcp_selected}', $dhcp, $tpl);
 	$tpl = str_replace('{hidden}', $hidden, $tpl);
 
-	$ifacelist .= '<h1 style="line-height:24px; margin-top: 4px;"><span style="margin-left: 30px;">Интерфейс ' . $v['name'] . '</span></h1><div>' . $tpl . '</div>';
+	$ifacelist .= '<h1 style="line-height:24px; margin-top: 4px;"><span style="margin-left: 30px;"> '. $v['name'] . '</span></h1><div>' . $tpl . '</div>';
 }
 
 
@@ -205,6 +206,9 @@ if ($num < 3) {
 
 $module_content = str_replace('{nameserverlist}', $nameserverlist, $module_content);
 
+// translate content
+lang_swapmod($module_params['name']);
+$module_content = lang_translate($module_content);
 
 echo $module_content;
 

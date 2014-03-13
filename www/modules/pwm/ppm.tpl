@@ -1,5 +1,5 @@
 <div class="col" style="height: 100px;">
-	<div class="bluetitle">PPM{num} <span id="position{num}" style="color: #7c7c7c;"></span></div>
+	<div class="bluetitle">%M_PPM%{num} <span id="position{num}" style="color: #7c7c7c;"></span></div>
 	<p></p>
 	<div class="ppmsliders" id="sliderppm{num}" pwmid="{num}"></div>
 </div>

@@ -15,11 +15,11 @@
 	var operate = false;
 
 	function update_pwm(){
-		if (pwm_timer) 
+		if (pwm_timer)
 			$(".pwmloader").css("display","block");
 		else
 			$(".pwmloader").css("display","none");
-		
+
 		load_pwm_state();
 
 	}
@@ -30,7 +30,7 @@
 			if (status == "success") {
 
 				$(".pwmpins").removeClass("whitetext");
-				
+
 				try {
 					var json = JSON.parse(response);
 					for (var i in json) {
@@ -58,7 +58,7 @@
 						if (parseInt(json[i].period) == 480000) {
 							duty_to_position(json[i].id, json[i].duty);
 						}
-						
+
 					}
 				} catch (err) {}
 
@@ -102,7 +102,7 @@
 		if (type == "period") {
 
 			var max_period = parseInt($("#sliderpwm" + pwmid + "period").slider("option", "max"));
-			if (val > max_period) { 
+			if (val > max_period) {
 				$("#sliderpwm" + pwmid + "period").slider("option", "max", val);
 				$("#sliderpwm" + pwmid + "duty").slider("option", "max", val);
 			}
@@ -113,7 +113,7 @@
 	});
 
 
-	/* create a PWM sliders */
+	/* create PWM sliders */
 
 	$(".pwmsliders" ).each(function() {
 
@@ -124,10 +124,10 @@
 			animate: true,
 			orientation: "horizontal"
 		});
-	
+
 	});
 
-	$(".pwmsliders").on("slidestop", function( event, ui ) { 
+	$(".pwmsliders").on("slidestop", function( event, ui ) {
 		var pwmid = parseInt($(this).attr("pwmid"));
 		var type = $(this).attr("type");
 		if (!type) return;
@@ -159,7 +159,7 @@
 		if (new_duty > new_period) {
 			new_duty = new_period;
 			$("#sliderpwm" + pwmid + "duty").slider("option", "value", new_duty);
-		} 
+		}
 
 		$("#sliderpwm" + pwmid + "period").slider("option", "value", new_period);
 
@@ -167,15 +167,15 @@
 		$("#pwm" + pwmid + "period").val(new_period);
 
 		set_pwm(pwmid, new_duty, new_period);
-	
+
 	}
 
 
 	$(".pwmpins").click(function () {
 		var state = 0;
-		if ($(this).hasClass("whitetext")) 
-			state = 0 ; 
-		else 
+		if ($(this).hasClass("whitetext"))
+			state = 0 ;
+		else
 			state = 1;
 		set_pin_pwm($(this).attr("conid"), $(this).attr("pwmid"), state)
 		return false;
@@ -187,12 +187,12 @@
 		if (!period) return;
 		var freq = 1 / (period * 0.000000042);
 		freqstr = parseInt(freq / 1000);
-		var lit = "к";
+		var lit = "%M_PREFIX%";
 		if (!freqstr) {
 			freqstr = parseInt(freq);
 			lit = "";
 		}
-		$("#freq" + pwmid).html(freqstr + lit + "Гц");
+		$("#freq" + pwmid).html(freqstr + lit + "%M_HZ%");
 	}
 
 
@@ -220,7 +220,7 @@
 	}
 
 
-	/* create a PPM sliders */
+	/* create PPM sliders */
 
 	$(".ppmsliders" ).each(function() {
 
@@ -231,17 +231,17 @@
 			animate: true,
 			orientation: "horizontal"
 		});
-	
+
 	});
 
 
-	$(".ppmsliders").on("slidestop", function( event, ui ) { 
+	$(".ppmsliders").on("slidestop", function( event, ui ) {
 		var pwmid = parseInt($(this).attr("pwmid"));
 		var position = $(this).slider("option", "value");
 		position_to_duty (pwmid, position);
 	});
 
-/*	$(".ppmsliders").on("slide", function( event, ui ) { 
+/*	$(".ppmsliders").on("slide", function( event, ui ) {
 		var pwmid = parseInt($(this).attr("pwmid"));
 		var position = $(this).slider("option", "value");
 		position_to_duty (pwmid, position);
@@ -257,14 +257,14 @@
   float:left;
   width:450px;
   color: #7c7c7c;
-  font-family: "Lucida Console", Monaco, monospace; 
+  font-family: "Lucida Console", Monaco, monospace;
   font-size:1.2em;
 }
 
 .pwmcon a {
   color: #7c7c7c;
   text-decoration: none;
-  font-family: "Lucida Console", Monaco, monospace; 
+  font-family: "Lucida Console", Monaco, monospace;
   font-size:1.2em;
   padding: 3px;
 }
@@ -292,7 +292,7 @@
 .ppmlist {
   color: #7c7c7c;
   text-decoration: none;
-  font-family: "Lucida Console", Monaco, monospace; 
+  font-family: "Lucida Console", Monaco, monospace;
   font-size:1.2em;
   padding: 3px;
 }
@@ -303,25 +303,25 @@
 
 <div id="accordion" style="margin:0; padding:0;">
 
-	<h3><a href="#">PWM / PPM</a></h3>
+	<h3><a href="#">%M_DESC%</a></h3>
 	<div>
-		<p class="bluetitle">Управление каналами PWM / PPM</p>
-		<p>PWM (ШИМ) - для управления регуляторами коллекторных моторов</p>
-		<p>PPM - для управления сервомашинками, регуляторами бесколлекторных моторов (ESC)</p>
+		<p class="bluetitle">%M_PWM_PPM_CONTROL%</p>
+		<p>%M_WHAT_PWM%</p>
+		<p>%M_WHAT_PPM%</p>
 		<p></p>
 		<p>
-			Сначала необходимо назначить функцию PWM/PPM для определённого пина (список в правом столбце).<br>
-			Серый цвет - функция не назначена, белый цвет - назначена.
+			%M_FIRST_BIND_PIN%<br>
+			%M_COLOUR_CODING%
 		</p>
 	</div>
 
-	
-	<h3><a href="#">PWM</a></h3>
+
+	<h3><a href="#">%M_PWM%</a></h3>
 	<div>
 
 		<p>
-			<a href="" class="buttonlink" style="color:#ffffff;" onclick='pwm_run = 1; if (!pwm_timer) pwm_timer = setTimeout("update_pwm()", 1); return false;'>[ Запустить опрос ]</a>
-			<a href="" class="buttonlink" onclick='pwm_run = 0; clearTimeout(pwm_timer); pwm_timer = false; $(".pwmloader").css("display","none"); return false;'>[ Остановить опрос ]</a>
+			<a href="" class="buttonlink" style="color:#ffffff;" onclick='pwm_run = 1; if (!pwm_timer) pwm_timer = setTimeout("update_pwm()", 1); return false;'>[ %L_START_QUERY% ]</a>
+			<a href="" class="buttonlink" onclick='pwm_run = 0; clearTimeout(pwm_timer); pwm_timer = false; $(".pwmloader").css("display","none"); return false;'>[ %L_STOP_QUERY% ]</a>
 			<p style="height:20px;"><img class="pwmloader" src="/imgs/loader.gif" style="display: none;"></p>
 		</p>
 
@@ -332,15 +332,15 @@
 
 	</div>
 
-	<h3><a href="#">PPM</a></h3>
+	<h3><a href="#">%M_PPM%</a></h3>
 	<div>
-		
+
 		<p>
-			<a href="" class="buttonlink" onclick='pwm_run = 1; if (!pwm_timer) pwm_timer = setTimeout("update_pwm()", 1); return false;'>[ Запустить опрос ]</a>
-			<a href="" class="buttonlink" onclick='pwm_run = 0; clearTimeout(pwm_timer); pwm_timer = false; $(".pwmloader").css("display","none"); return false;'>[ Остановить опрос ]</a>
+			<a href="" class="buttonlink" onclick='pwm_run = 1; if (!pwm_timer) pwm_timer = setTimeout("update_pwm()", 1); return false;'>[ %L_START_QUERY% ]</a>
+			<a href="" class="buttonlink" onclick='pwm_run = 0; clearTimeout(pwm_timer); pwm_timer = false; $(".pwmloader").css("display","none"); return false;'>[ %L_STOP_QUERY% ]</a>
 			<p style="height:20px;"><img class="pwmloader" src="/imgs/loader.gif" style="display: none;"></p>
 		</p>
-		
+
 		<div>
 			{ppmlist}
 		</div>

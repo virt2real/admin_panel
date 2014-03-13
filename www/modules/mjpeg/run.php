@@ -9,11 +9,13 @@
 
 // common include
 include('../../parts/global.php');
+require_once('../../parts/language.php');
+lang_swapmod('mjpeg');
 
 $port = $_POST['port'];
 $quality = $_POST['quality'];
 
 shell_exec("./mjpeg.sh $port $quality");
-echo 'MJPEG server started';
+echo $language['M_MJPEG_STARTED'];
 
 ?>

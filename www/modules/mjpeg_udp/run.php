@@ -9,6 +9,8 @@
 
 // common include
 include('../../parts/global.php');
+require_once('../../parts/language.php');
+lang_swapmod('mjpeg_udp');
 
 $host = $_POST['host'];
 $port = $_POST['port'];
@@ -17,6 +19,6 @@ $fps = $_POST['fps'];
 
 shell_exec("./mjpeg_udp.sh $host $port $quality $fps");
 
-echo 'MJPEG udp started stream to ' . $host . ':' . $port . ' at ' . $fps . ' fps ' . $quality .' % quality';
+sprintf($language['M_JPEG_UDP_START'], $host, $port, $fps, $quality);
 
 ?>

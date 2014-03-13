@@ -14,7 +14,7 @@
 				$("#nandstatus").html(response);
 			}
 			if (status == "error") {
-				$("#nandstatus").html(":-(");
+				$("#nandstatus").html("%L_FAIL%");
 			}
 		});
 	}
@@ -22,7 +22,7 @@
 	function NandWrite () {
 
 		if ("{intboottype}" == 2) {
-			$("#nandwritestatus").html('Прошивка NAND недоступна в режиме загрузки с NAND');
+			$("#nandwritestatus").html('%M_ERR_NO_NAND_BOOT%');
 			return;
 		}
 
@@ -51,27 +51,27 @@
 
 <div id="accordion" style="margin:0; padding:0;">
 
-	<h3><a href="#">NAND</a></h3>
+	<h3><a href="#">%M_DESC%</a></h3>
 	<div>
-		<p class="bluetitle">Информация о разделах и устройствах</p>
+		<p class="bluetitle">%M_DEV_PART_INFO%</p>
 		<span id="nandstatus"></span>
 
 		<p>&nbsp;</p>
 
-		<p class="bluetitle">Прошивка NAND</p>
+		<p class="bluetitle">%M_NAND_FLASH%</p>
 
 		<div id="nandtype" style="display:inline;">
-			<input type="radio" id="nand_ubi" name="radio" checked><label for="nand_ubi">UBI</label>
-			<input type="radio" id="nand_jffs" name="radio"><label for="nand_jffs">JFFS</label>
+			<input type="radio" id="nand_ubi" name="radio" checked><label for="nand_ubi">%M_UBI%</label>
+			<input type="radio" id="nand_jffs" name="radio"><label for="nand_jffs">%M_JFFS%</label>
 		</div>
 
-		<p style="display:inline;"><a href="#" class="buttonlink" onclick="NandWrite(); return false;" style="padding-left:20px;">[ Прошить ]</a></p>
-	
+		<p style="display:inline;"><a href="#" class="buttonlink" onclick="NandWrite(); return false;" style="padding-left:20px;">[ %M_FLASH% ]</a></p>
+
 		<p id="nandwritestatus"></p>
 
-		<p class="graytext">Рекомендуемый тип файловой системы - UBI (выбран по умолчанию)</p>
+		<p class="graytext">%M_REC_FS_DEFAULT%</p>
 
-		<p class="graytext">После нажатия кнопки "Прошить" возможно пропадание связи, по окончании процесса прошивки коннект восстановится</p>
+		<p class="graytext">%M_DC_DURING_FLASHING%</p>
 
 
 	</div>
