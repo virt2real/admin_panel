@@ -74,9 +74,10 @@
 	websockets
 	*************************************************************************/
 
-	if(typeof(WebSocket)=="undefined") {
+	if(typeof(WebSocket)=="undefined") {
+
 		/* no websockets in this browser */
-		alert("Your browser does not support WebSockets. Try to use Chrome or Safari.");
+		alert("%M_ERR_NO_WEBSOCKETS%");
 
 	} else {
 
@@ -88,18 +89,18 @@
 		}
 
 		ws.onopen = function(event) {
-			$("#connectionstatus").html("подключено");
+			$("#connectionstatus").html("%M_CONNECTED%");
 
 			/* stop all motors */
 			ParseSpeed();
 		}
 
 		ws.onerror = function(e) {
-			$("#connectionstatus").html("ошибка");
+			$("#connectionstatus").html("%M_ERROR%");
 		};
 
 		ws.onclose = function() {
-			$("#connectionstatus").html("отключено");
+			$("#connectionstatus").html("%M_DISCONNECTED%");
 		};
 	}
 
@@ -344,7 +345,8 @@
 	});
 
 	/* mouse button unpressed */
-	$("#jsstick").mouseup(function(e){		if (joystickactive) {
+	$("#jsstick").mouseup(function(e){
+		if (joystickactive) {
 			joystickactive = false;
 			analogX = NEUTRAL;
 			analogY = NEUTRAL;
@@ -450,36 +452,36 @@
 
 <div id="accordion" style="margin:0; padding:0;">
 
-	<h3><a href="#">Telegue</a></h3>
+	<h3><a href="#">%M_DESC%</a></h3>
 	<div>
 
 		<table width="100%">
 		<tr valign="top">
 		<td>
 
-		<div><span class="bluetitle">Подключение:</span> <span id="connectionstatus"></span></div>
-		<div><span class="bluetitle">Напряжение:</span> <span id="voltage"></span></div>
-		<div><span class="bluetitle">Сигнал Wi-Fi:</span> <span id="wifi"></span></div>
+		<div><span class="bluetitle">%M_CONNECTION%:</span> <span id="connectionstatus"></span></div>
+		<div><span class="bluetitle">%M_VOLTAGE%:</span> <span id="voltage"></span></div>
+		<div><span class="bluetitle">%M_WIFI_SIGNAL%:</span> <span id="wifi"></span></div>
 
-		<div><span class="bluetitle">Скорость:</span> <input type="text" id="speed" value="" style="background: transparent; width: 20px; border: none; color: #ffffff;"></div>
+		<div><span class="bluetitle">%M_SPEED%:</span> <input type="text" id="speed" value="" style="background: transparent; width: 20px; border: none; color: #ffffff;"></div>
 		<div><div id="speedslider"></div></div>
 
 		<p></p>
 
-		<div><span class="bluetitle">Свет:</span> <span id="light"></span></div>
+		<div><span class="bluetitle">%M_LIGHT%:</span> <span id="light"></span></div>
 		<p><div id="lightstate">
-			<input type="radio" id="light_on" name="radio"><label for="light_on">вкл</label>
-			<input type="radio" id="light_off" name="radio" checked="checked"><label for="light_off">выкл</label>
+			<input type="radio" id="light_on" name="radio"><label for="light_on">%L_ON%</label>
+			<input type="radio" id="light_off" name="radio" checked="checked"><label for="light_off">%L_OFF%</label>
 		</div>
 		</p>
 
 		<p></p>
 
-		<div><span class="bluetitle">Направление:</span> <span id="direction"></span></div>
+		<div><span class="bluetitle">%M_DIRECTION%:</span> <span id="direction"></span></div>
 
 		<p></p>
 
-		<div class="bluetitle">Пропорциональное управление: <span id="jsstickvalue" class="graytext">&nbsp;</span></div>
+		<div class="bluetitle">%M_PROPORTION_CONTROL%: <span id="jsstickvalue" class="graytext">&nbsp;</span></div>
 
 		<p></p>
 
@@ -494,31 +496,31 @@
 		<p style="clear:both;">&nbsp;</p>
 
 		<div>
-			<p><a href="#" onclick='$.post("modules/mjpeg/run.php?rnd=" + Math.random(), {port:8888, quality: 40}, null); return false;'>Запустить MJPEG сервер</a></p>
-			<p><a href="#" onclick='ShowVideoWindow(); return false;'>Показать плеер MJPEG</a></p>
+			<p><a href="#" onclick='$.post("modules/mjpeg/run.php?rnd=" + Math.random(), {port:8888, quality: 40}, null); return false;'>%M_START_MJPEG_SERVER%</a></p>
+			<p><a href="#" onclick='ShowVideoWindow(); return false;'>%M_SHOW_MJPEG_PLAYER%</a></p>
 		</div>
 
 		</td>
 		<td class="graytext" width="300">
-			<p class="bluetitle">Описание</p>
-			<p>Дискретное управление производится с клавиатуры</p>
-			<p>Клавиши:</p>
-			<p>Ввер, вниз, влево, вправо - соотвественно</p>
-			<p>"A" - уменьшить скорость</p>
-			<p>"S" - увеличить скорость</p>
-			<p>"Ctrl" - переключение состояния фар</p>
+			<p class="bluetitle">%M_DESCRIPTION%</p>
+			<p>%M_USE_KEYBOARD%</p>
+			<p>%M_KEYS%</p>
+			<p>%M_KEYS_2%</p>
+			<p>%M_KEYS_3%</p>
+			<p>%M_KEYS_4%</p>
+			<p>%M_KEYS_5%</p>
 			<p>&nbsp;</p>
-			<p>Пропорциональное управление производится с помощью мыши.</p>
-			<p>Нажать левую кнопку мыши на сером квадрате и водить курсором.</p>
-			<p>Пропорциональное управление приводами камеры производится тоже с помощью мыши, либо с помощью ползунков.</p>
-			<p>Нажать правую кнопку мыши на сером квадрате и водить курсором.</p>
+			<p>%M_MOUSE%</p>
+			<p>%M_MOUSE_2%</p>
+			<p>%M_MOUSE_3%</p>
+			<p>%M_MOUSE_4%</p>
 
-			<p>Середина квадрата - нейтраль. Ось X - вперёд/назад, ось Y - влево/вправо</p>
-			<p>При выходе за пределы квадрата - останов моторов</p>
+			<p>%M_SQUARE%</p>
+			<p>%M_SQUARE_2%</p>
 			<p>&nbsp;</p>
-			<p>Плеер видео будет показывать MJPEG поток, но для этого сначала надо запустить MJPEG сервер на порту 8888.</p>
-			<p>Сделать это можно в разделе <a href="?mjpeg">MJPEG сервер</a> или на этой странице, нажав ссылку "запустить MJPEG сервер"</p>
-			<p>Поток MJPEG довольно плотный, так что практическое применение нежелательно.</p>
+			<p>%M_MJPEG%</p>
+			<p>%M_MJPEG_2%</p>
+			<p>%M_MJPEG_3%</p>
 		</td>
 		</tr>
 		</table>

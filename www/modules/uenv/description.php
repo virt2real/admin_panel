@@ -8,7 +8,7 @@
 /*****************************************************/
 
 $module_params['name'] = 'uenv';
-$module_params['title'] = 'uEnv';
+$module_params['title'] = '%M_DESC%';
 $module_params['menu_part'] = 1;
 $module_params['position'] = 0;
 ?>

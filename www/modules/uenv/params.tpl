@@ -100,225 +100,225 @@
 </script>
 
 
-<h3><a href="#">Сетевые интерфейсы</a></h3>
+<h3><a href="#">%M_NETWORK_INTERFACES%</a></h3>
 <div>
 
-	<p><a class="buttonlink" href="#" onclick='SaveChanges(); return false;'>[ Сохранить ]</a></p>
+	<p><a class="buttonlink" href="#" onclick='SaveChanges(); return false;'>[ %L_SAVE% ]</a></p>
 	<div class="uenv_status"></div>
 
-	<p class="bluetitle">Беспроводная связь</p>
+	<p class="bluetitle">%M_WIFI%</p>
 
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">V2R Wi-Fi модуль </div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_WIFI_MODULE%</div>
 	<div id="btn1" style="display:inline;">
-	    <input type="radio" id="btn1v1" name="btn1" {wifiselected1}><label for="btn1v1">Вкл</label>
-	    <input type="radio" id="btn1v2" name="btn1" {wifiselected2}><label for="btn1v2">Выкл</label>
+	    <input type="radio" id="btn1v1" name="btn1" {wifiselected1}><label for="btn1v1">%L_ON%</label>
+	    <input type="radio" id="btn1v2" name="btn1" {wifiselected2}><label for="btn1v2">%L_OFF%</label>
 	</div>
 	<p class="bluetitle" style="display: inline; padding-left: 20px;"></p>
 	<p></p>
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">USB Wi-Fi модуль </div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_USB_WIFI%</div>
 	<div id="btn14" style="display:inline;">
-	    <input type="radio" id="btn14v1" name="btn14" {usbwifiselected1}><label for="btn14v1">Вкл</label>
-	    <input type="radio" id="btn14v2" name="btn14" {usbwifiselected2}><label for="btn14v2">Выкл</label>
+	    <input type="radio" id="btn14v1" name="btn14" {usbwifiselected1}><label for="btn14v1">%L_ON%</label>
+	    <input type="radio" id="btn14v2" name="btn14" {usbwifiselected2}><label for="btn14v2">%L_OFF%</label>
 	</div>
 	<p></p>
 
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">Точка доступа </div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_WLAN_AP%</div>
 	<div id="btn2" style="display:inline;">
-	    <input type="radio" id="btn2v1" name="btn2" {apselected1}><label for="btn2v1">Вкл</label>
-	    <input type="radio" id="btn2v2" name="btn2" {apselected2}><label for="btn2v2">Выкл</label>
+	    <input type="radio" id="btn2v1" name="btn2" {apselected1}><label for="btn2v1">%L_ON%</label>
+	    <input type="radio" id="btn2v2" name="btn2" {apselected2}><label for="btn2v2">%L_OFF%</label>
 	</div>
 	<p class="bluetitle" style="display: inline; padding-left: 20px;">
 	<p></p>
 
-	<p class="bluetitle">Локальная сеть</p>
+	<p class="bluetitle">%M_LOCAL_NET%</p>
 
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">LAN</div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_LAN%</div>
 	<div id="btn3" style="display:inline;">
-	    <input type="radio" id="btn3v1" name="btn3" {lanselected1}><label for="btn3v1">Вкл</label>
-	    <input type="radio" id="btn3v2" name="btn3" {lanselected2}><label for="btn3v2">Выкл</label>
+	    <input type="radio" id="btn3v1" name="btn3" {lanselected1}><label for="btn3v1">%L_ON%</label>
+	    <input type="radio" id="btn3v2" name="btn3" {lanselected2}><label for="btn3v2">%L_OFF%</label>
 	</div>
 
 </div>
 
-<h3><a href="#">Периферия</a></h3>
+<h3><a href="#">%L_PERIPHERY%</a></h3>
 
 <div>
 
-	<p><a href="#" class="buttonlink" onclick='SaveChanges(); return false;'>[ Сохранить ]</a></p>
+	<p><a href="#" class="buttonlink" onclick='SaveChanges(); return false;'>[ %L_SAVE% ]</a></p>
 	<div class="uenv_status"></div>
 
-	<p class="bluetitle">Светодиоды</p>
+	<p class="bluetitle">%M_LEDS%</p>
 
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">Синий</div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_BLUE%</div>
 	<div id="btn4" style="display:inline;">
-	    <input type="radio" id="btn4v1" name="btn4" {blueselected1}><label for="btn4v1">Вкл</label>
-	    <input type="radio" id="btn4v2" name="btn4" {blueselected2}><label for="btn4v2">Выкл</label>
+	    <input type="radio" id="btn4v1" name="btn4" {blueselected1}><label for="btn4v1">%L_ON%</label>
+	    <input type="radio" id="btn4v2" name="btn4" {blueselected2}><label for="btn4v2">%L_OFF%</label>
 	</div>
 	<p></p>
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">Зелёный </div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_GREEN%</div>
 	<div id="btn5" style="display:inline;">
-	    <input type="radio" id="btn5v1" name="btn5" {greenselected1}><label for="btn5v1">Выкл</label>
-	    <input type="radio" id="btn5v2" name="btn5" {greenselected2}><label for="btn5v2">heartbeat</label>
-	    <input type="radio" id="btn5v3" name="btn5" {greenselected3}><label for="btn5v3">mmc0</label>
-	    <input type="radio" id="btn5v4" name="btn5" {greenselected4}><label for="btn5v4">mmc1</label>
-	    <input type="radio" id="btn5v5" name="btn5" {greenselected5}><label for="btn5v5">cpu0</label>
+	    <input type="radio" id="btn5v1" name="btn5" {greenselected1}><label for="btn5v1">%L_OFF%</label>
+	    <input type="radio" id="btn5v2" name="btn5" {greenselected2}><label for="btn5v2">%M_HEARTBEAT%</label>
+	    <input type="radio" id="btn5v3" name="btn5" {greenselected3}><label for="btn5v3">%M_MMC0%</label>
+	    <input type="radio" id="btn5v4" name="btn5" {greenselected4}><label for="btn5v4">%M_MMC1%</label>
+	    <input type="radio" id="btn5v5" name="btn5" {greenselected5}><label for="btn5v5">%M_CPU0%</label>
 	</div>
 	<p></p>
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">Красный </div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_RED%</div>
 	<div id="btn6" style="display:inline;">
-	    <input type="radio" id="btn6v1" name="btn6" {redselected1}><label for="btn6v1">Выкл</label>
-	    <input type="radio" id="btn6v2" name="btn6" {redselected2}><label for="btn6v2">heartbeat</label>
-	    <input type="radio" id="btn6v3" name="btn6" {redselected3}><label for="btn6v3">mmc0</label>
-	    <input type="radio" id="btn6v4" name="btn6" {redselected4}><label for="btn6v4">mmc1</label>
-	    <input type="radio" id="btn6v5" name="btn6" {redselected5}><label for="btn6v5">cpu0</label>
+	    <input type="radio" id="btn6v1" name="btn6" {redselected1}><label for="btn6v1">%L_OFF%</label>
+	    <input type="radio" id="btn6v2" name="btn6" {redselected2}><label for="btn6v2">%M_HEARTBEAT%</label>
+	    <input type="radio" id="btn6v3" name="btn6" {redselected3}><label for="btn6v3">%M_MMC0%</label>
+	    <input type="radio" id="btn6v4" name="btn6" {redselected4}><label for="btn6v4">%M_MMC1%</label>
+	    <input type="radio" id="btn6v5" name="btn6" {redselected5}><label for="btn6v5">%M_CPU0%</label>
 	</div>
 
-	<p class="bluetitle">Консоль</p>
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">Устройство</div>
+	<p class="bluetitle">%M_CONSOLE%</p>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_DEVICE%</div>
 	<div style="display:inline;">
 		<input type="text" id="conval1" value="{conval1}" style="width:100px;">
 	</div>
 	<p></p>
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">Параметры</div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_PARAMETERS%</div>
 	<div style="display:inline;">
 		<input type="text" id="conval2" value="{conval2}" style="width:100px;">
 	</div>
 	<p></p>
 
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">Вывод ядра</div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_KERNEL_OUTPUT%</div>
 	<div id="btn9" style="display:inline;">
-	    <input type="radio" id="btn9v1" name="btn9" {quietselected1}><label for="btn9v1">Вкл</label>
-	    <input type="radio" id="btn9v2" name="btn9" {quietselected2}><label for="btn9v2">Выкл</label>
+	    <input type="radio" id="btn9v1" name="btn9" {quietselected1}><label for="btn9v1">%L_ON%</label>
+	    <input type="radio" id="btn9v2" name="btn9" {quietselected2}><label for="btn9v2">%L_OFF%</label>
 	</div>
 
-	<p class="bluetitle">Порты</p>
+	<p class="bluetitle">%M_PORTS%</p>
 
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">SPI0</div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_SPI0%</div>
 	<div id="btn8" style="display:inline;">
-	    <input type="radio" id="btn8v1" name="btn8" {spi0selected1}><label for="btn8v1">Вкл</label>
-	    <input type="radio" id="btn8v2" name="btn8" {spi0selected2}><label for="btn8v2">Выкл</label>
+	    <input type="radio" id="btn8v1" name="btn8" {spi0selected1}><label for="btn8v1">%L_ON%</label>
+	    <input type="radio" id="btn8v2" name="btn8" {spi0selected2}><label for="btn8v2">%L_OFF%</label>
 	</div>
 
 	<p></p>
 
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">UART1</div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_UART1%</div>
 	<div id="btn12" style="display:inline;">
-	    <input type="radio" id="btn12v1" name="btn12" {uart1selected1}><label for="btn12v1">Вкл</label>
-	    <input type="radio" id="btn12v2" name="btn12" {uart1selected2}><label for="btn12v2">Выкл</label>
+	    <input type="radio" id="btn12v1" name="btn12" {uart1selected1}><label for="btn12v1">%L_ON%</label>
+	    <input type="radio" id="btn12v2" name="btn12" {uart1selected2}><label for="btn12v2">%L_OFF%</label>
 	</div>
 
 	<p></p>
 
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">1-wire пин</div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_1WIRE_PIN%</div>
 	<div style="display:inline;">
 		<input type="text" id="w1val1" value="{w1val1}" style="width:100px;">
 	</div>
-	<div style="display:inline; padding-left:20px; padding-right:20px;"> пин питания</div>
+	<div style="display:inline; padding-left:20px; padding-right:20px;">%M_POWER_PIN%</div>
 	<div style="display:inline;">
 		<input type="text" id="w1val2" value="{w1val2}" style="width:100px;">
 	</div>
 
 </div>
 
-<h3><a href="#">Ядро</a></h3>
+<h3><a href="#">%M_KERNEL%</a></h3>
 
 <div>
 
-	<p><a href="#" class="buttonlink" onclick='SaveChanges(); return false;'>[ Сохранить ]</a></p>
+	<p><a href="#" class="buttonlink" onclick='SaveChanges(); return false;'>[ %L_SAVE% ]</a></p>
 	<div class="uenv_status"></div>
 
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">Память</div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_MEMORY%</div>
 	<div style="display:inline;">
 		<input type="text" id="memval" value="{memval}" style="width:100px;">
 	</div>
 	<p></p>
 
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">Непрерывный пул</div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_CONTINUOUS_POOL%</div>
 	<div style="display:inline;">
 		<input type="text" id="coherent_pool" value="{coherent_pool}" style="width:100px;">
 	</div>
 	<p></p>
 
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">Корневой раздел</div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_ROOT_DIRECTORY%</div>
 	<div style="display:inline;">
 		<input type="text" id="rootval" value="{rootval}" style="width:100px;">
 	</div>
 	<p></p>
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">Пауза загрузки</div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_BOOT_TIMEOUT%</div>
 	<div style="display:inline;">
 		<input type="text" id="delayval" value="{delayval}" style="width:100px;">
 	</div>
 	<p></p>
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">Тип фс</div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_FS_TYPE%</div>
 	<div style="display:inline;">
 		<input type="text" id="fsval" value="{fsval}" style="width:100px;">
 	</div>
 
 </div>
 
-<h3><a href="#">Видео</a></h3>
+<h3><a href="#">%L_VIDEO%</a></h3>
 
 <div>
 
-	<p><a href="#" class="buttonlink" onclick='SaveChanges(); return false;'>[ Сохранить ]</a></p>
+	<p><a href="#" class="buttonlink" onclick='SaveChanges(); return false;'>[ %L_SAVE% ]</a></p>
 	<div class="uenv_status"></div>
 
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">Камера</div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%L_CAMERAS%</div>
 	<div id="btn7" style="display:inline;">
-	    <input type="radio" id="btn7v1" name="btn7" {cameraselected1}><label for="btn7v1">Выкл</label>
-	    <input type="radio" id="btn7v2" name="btn7" {cameraselected2}><label for="btn7v2">OV2643</label>
+	    <input type="radio" id="btn7v1" name="btn7" {cameraselected1}><label for="btn7v1">%L_OFF%</label>
+	    <input type="radio" id="btn7v2" name="btn7" {cameraselected2}><label for="btn7v2">%M_OV2643%</label>
 	</div>
 
 	<p></p>
 
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">Видеовыход</div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_VIDEO_OUT%</div>
 	<div id="btn10" style="display:inline;">
-	    <input type="radio" id="btn10v1" name="btn10" {ch0val1}><label for="btn10v1">Композит</label>
-	    <input type="radio" id="btn10v2" name="btn10" {ch0val2}><label for="btn10v2">LCD</label>
+	    <input type="radio" id="btn10v1" name="btn10" {ch0val1}><label for="btn10v1">%M_COMPOSITE%</label>
+	    <input type="radio" id="btn10v2" name="btn10" {ch0val2}><label for="btn10v2">%M_LCD%</label>
 	</div>
 
 	<p></p>
 
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">Видеорежим</div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_VIDEO_MODE%</div>
 	<div id="btn11" style="display:inline;">
-	    <input type="radio" id="btn11v1" name="btn11" {btn11val1}><label for="btn11v1">PAL</label>
-	    <input type="radio" id="btn11v2" name="btn11" {btn11val2}><label for="btn11v2">NTSC</label>
+	    <input type="radio" id="btn11v1" name="btn11" {btn11val1}><label for="btn11v1">%M_PAL%</label>
+	    <input type="radio" id="btn11v2" name="btn11" {btn11val2}><label for="btn11v2">%M_NTSC%</label>
 	</div>
 
 	<p></p>
 
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">OSD</div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_OSD%</div>
 	<div style="display:inline;">
 		<input type="text" id="osdval" value="{osdval}" style="width:350px;">
 	</div>
 
 	<p></p>
 
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">Интерфейс захвата</div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_CAPTURE_INTERFACE%</div>
 	<div style="display:inline;">
 		<input type="text" id="vpfeval" value="{vpfeval}" style="width:100px;">
 	</div>
 
 	<p></p>
 
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">Режим IPIPE</div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_IPIPE_MODE%</div>
 	<div style="display:inline;">
 		<input type="text" id="operval" value="{operval}" style="width:100px;">
 	</div>
 
 	<p></p>
 
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">Буфер cont2_bufsize</div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_CONTSIZE_BUFFER_2%</div>
 	<div style="display:inline;">
 		<input type="text" id="bufval1" value="{bufval1}" style="width:100px;">
 	</div>
 	<p></p>
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">bufoffset</div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_BUFF_OFFSET%</div>
 	<div style="display:inline;">
 		<input type="text" id="bufval2" value="{bufval2}" style="width:100px;">
 	</div>
 	<p></p>
-	<div style="display:inline-block; padding-left:40px; min-width:150px;">Буфер cont_bufsize</div>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_CONTSIZE_BUFFER%</div>
 	<div style="display:inline;">
 		<input type="text" id="bufval3" value="{bufval3}" style="width:100px;">
 	</div>

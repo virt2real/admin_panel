@@ -13,6 +13,6 @@ require_once('../../parts/language.php');
 lang_swapmod('mjpeg');
 
 shell_exec("killall gst-launch-0.10");
-echo $language['M_MJPEG_STOPPED']';
+echo $language['M_MJPEG_STOPPED'];
 
 ?>

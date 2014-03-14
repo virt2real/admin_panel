@@ -8,7 +8,7 @@
 /*****************************************************/
 
 $module_params['name'] = 'usbmon';
-$module_params['title'] = 'USB устройства';
+$module_params['title'] = '%M_DESC%';
 $module_params['menu_part'] = 2;
 $module_params['position'] = 3;
 ?>

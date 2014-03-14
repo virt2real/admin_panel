@@ -1,7 +1,7 @@
 <?php
 
 /*****************************************************
-* modules/samples/run.php
+* modules/samples_de/run.php
 * sample run command file
 * (c)virt2real.ru 2013-2014
 * draft, by Gol, Realizator

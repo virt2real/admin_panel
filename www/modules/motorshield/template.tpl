@@ -329,7 +329,7 @@
 			<p class="directions"> <a href="#" id="dir5_1" num="5" pin="1" title="%M_DIRECTION_PIN% 1 %M_FOR_MOTOR% 5">%M_PIN% 1</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#" id="dir5_1" num="5" pin="2" title="%M_DIRECTION_PIN% 2 %M_FOR_MOTOR% 5">%M_PIN% 2</a> </p>
 			<p class="directions"> <a href="#" id="dir4_1" num="4" pin="1" title="%M_DIRECTION_PIN% 1 %M_FOR_MOTOR% 4">%M_PIN% 1</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#" id="dir4_1" num="4" pin="2" title="%M_DIRECTION_PIN% 2 %M_FOR_MOTOR% 4">%M_PIN% 2</a> </p>
 			<p class="directions"> <a href="#" id="dir3_1" num="3" pin="1" title="%M_DIRECTION_PIN% 1 %M_FOR_MOTOR% 3">%M_PIN% 1</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#" id="dir3_1" num="3" pin="2" title="%M_DIRECTION_PIN% 2 %M_FOR_MOTOR% 3">%M_PIN% 2</a> </p>
-			<p class="directions"> <a href="#" id="dir2_1" num="2" pin="1" title="%M_DIRECTION_PIN% 1 %M_FOR_MOTOR% 2">%M_PIN% 1</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#" id="dir2_1" num="2" pin="2" title="%M_DIRECTION_PIN% 2 %M_FOR_MOTOR% 2"">%M_PIN% 2</a> </p>
+			<p class="directions"> <a href="#" id="dir2_1" num="2" pin="1" title="%M_DIRECTION_PIN% 1 %M_FOR_MOTOR% 2">%M_PIN% 1</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#" id="dir2_1" num="2" pin="2" title="%M_DIRECTION_PIN% 2 %M_FOR_MOTOR% 2">%M_PIN% 2</a> </p>
 			<p class="directions"> <a href="#" id="dir1_1" num="1" pin="1" title="%M_DIRECTION_PIN% 1 %M_FOR_MOTOR% 1">%M_PIN% 1</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#" id="dir1_1" num="1" pin="2" title="%M_DIRECTION_PIN% 2 %M_FOR_MOTOR% 1">%M_PIN% 2</a> </p>
 		</div>
 		<div style="clear: right; float: left; margin-right: 50px; width: 100px;">

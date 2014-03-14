@@ -7,9 +7,9 @@
 
 <div id="accordion" style="margin:0; padding:0;">
 
-	<h3><a href="#">Ошибка</a></h3>
+	<h3><a href="#">%L_ERROR%</a></h3>
 	<div>
-		<p class="bluetitle">Ошибка!</p>
+		<p class="bluetitle">%L_ERROR%!</p>
 		<div>{text}</div>
 		<p>&nbsp;</p>
 	</div>

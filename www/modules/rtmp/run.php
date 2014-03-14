@@ -9,12 +9,14 @@
 
 // common include
 include('../../parts/global.php');
+include('../../parts/language.php');
+lang_swapmod('rtmp');
 
 $location = $_POST['location'];
 $playpath = $_POST['playpath'];
 $bitrate = $_POST['bitrate'];
 
 shell_exec("./rtmp.sh $location $playpath $bitrate");
-echo 'RTMP started stream to ' . $location . $playpath . ' at ' . $bitrate . ' kbps';
+sprintf($language['M_RTMP_STREAM_STARTED'], $location, $playpath, $bitrate);
 
 ?>

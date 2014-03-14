@@ -1,18 +1,19 @@
 <?php
 
 /*****************************************************
-* modules/samples/simplerun.php
+* modules/samples_ru/run.php
 * sample run command file
 * (c)virt2real.ru 2013-2014
 * draft, by Gol, Realizator
 /*****************************************************/
 
-
 // common include
 include('../../parts/global.php');
 
-echo "Script /var/www/modules/samples/test.sh started!";
+$script_path = $_POST['path'];
 
-echo "<pre>".shell_exec("/var/www/modules/samples/test.sh")."</pre>";
+echo "Script $script_path <br>";
+
+echo "<pre>".shell_exec("$script_path")."</pre>";
 
 ?>

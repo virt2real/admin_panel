@@ -4,7 +4,7 @@
 	});
 
 
-	$("#kb").keyup(function(e) { 
+	$("#kb").keyup(function(e) {
 		if (e.keyCode=='49')  $.post("modules/{module_name}/setgpio.php?num=73&dir=output&val=1&rnd=" + Math.random(), null, function(response, status, xhr) {});
 
 		if (e.keyCode=='50')  $.post("modules/{module_name}/setgpio.php?num=73&dir=output&val=0&rnd=" + Math.random(), null, function(response, status, xhr) {});
@@ -19,7 +19,7 @@
 
 	<div>
 		<p>
-		Подробности про этот обучающий модуль смотрите во <a href="http://wiki.virt2real.ru/wiki/Виртурилка_для_чайников_-_статья_вторая">"второй статье для чаников"</a>
+		Подробности про этот обучающий модуль смотрите во <a href="http://wiki.virt2real.ru/wiki/Виртурилка_для_чайников_-_статья_вторая">"второй статье для чайников"</a>
 		<br><br>
 		</p>
 

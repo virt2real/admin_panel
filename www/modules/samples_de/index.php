@@ -1,7 +1,7 @@
 <?php
 
 /*****************************************************
-* modules/samples/index.php
+* modules/samples_de/index.php
 * samples index file
 * (c)virt2real.ru 2014
 * draft, by Gol, Realizator

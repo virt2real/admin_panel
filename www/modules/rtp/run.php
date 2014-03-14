@@ -9,6 +9,8 @@
 
 // common include
 include('../../parts/global.php');
+require_once('../../parts/language.php');
+lang_swapmod('rtp');
 
 $host = $_POST['host'];
 $port = $_POST['port'];
@@ -16,6 +18,6 @@ $bitrate = $_POST['bitrate'];
 
 shell_exec("./rtp.sh $host $port $bitrate");
 
-echo 'RTP started stream to ' . $host . ':' . $port . ' at ' . $bitrate .' kbps';
+sprintf($language['M_RTP_STREAM_STARTED']);
 
 ?>

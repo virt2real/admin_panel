@@ -27,10 +27,10 @@ $lang = array(// common items
               'M_LENS_SHADING_0X4F'  => 'Lens shading 0x4f',
               'M_LENS_SHADING_0X50'  => 'Lens shading 0x50',
               'M_LENS_SHADING_0X57'  => 'Lens shading 0x57',
-              'M_CONTRAST_PIXEL_0XA6'=> 'Резкость? Пиксели? 0xa6',
-              'M_CONTRAST_PIXEL_0XA7'=> 'Резкость? Пиксели? 0xa7',
-              'M_CONTRAST_PIXEL_0XA8'=> 'Резкость? Пиксели? 0xa8',
-              'M_MORE_CONTRAST_0XA1' => 'Ещё Резкость 0xa1',
+              'M_SHARP_PIXEL_0XA6'   => 'Резкость? Пиксели? 0xa6',
+              'M_SHARP_PIXEL_0XA7'   => 'Резкость? Пиксели? 0xa7',
+              'M_SHARP_PIXEL_0XA8'   => 'Резкость? Пиксели? 0xa8',
+              'M_MORE_SHARP_0XA1'    => 'Ещё Резкость 0xa1',
               'M_SMOOTHING_0XA9'     => 'Сглаживание 0xa9',
               );
 

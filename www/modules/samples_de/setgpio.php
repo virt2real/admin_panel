@@ -1,10 +1,10 @@
 <?php
 
 /*****************************************************
-* modules/samples/setgpio.php
+* modules/samples_de/setgpio.php
 * set GPIO state
 * (c)virt2real.ru 2013-2014
-* draft, by Gol, Realizator
+* draft, by Gol, Realizator, keios
 /*****************************************************/
 
 // common include
@@ -25,7 +25,7 @@ foreach ($list as $k=>$v) {
 
 	$cmd = "set gpio $v $dir $val";
 	file_put_contents("/dev/v2r_gpio", $cmd);
-	echo 'GPIO no '.$num.' was set to \''.$dir.'\' and value '.$val;
+	echo 'GPIO Nummer '.$num.' wurde auf die Werte \''.$dir.'\' und '.$val.' gesetzt.';
 
 }
 
