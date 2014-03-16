@@ -37,6 +37,9 @@ switch ($LANG) {
 	case "ru":
 		$lang0_selected = ' checked="checked" ';
 		break;
+	case "de":
+		$lang2_selected = ' checked="checked" ';
+		break;
 	default  :
 		$lang1_selected = ' checked="checked" ';
 		break;
@@ -56,6 +59,7 @@ switch ($SPEECH_ENGINE) {
 
 $module_content = str_replace('{lang0_selected}', $lang0_selected, $module_content);
 $module_content = str_replace('{lang1_selected}', $lang1_selected, $module_content);
+$module_content = str_replace('{lang2_selected}', $lang2_selected, $module_content);
 
 $module_content = str_replace('{eng0_selected}', $eng0_selected, $module_content);
 $module_content = str_replace('{eng1_selected}', $eng1_selected, $module_content);

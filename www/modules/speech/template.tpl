@@ -18,6 +18,7 @@
 
 		if ($("#lang_0").attr("checked") == "checked") lang = "ru";
 		if ($("#lang_1").attr("checked") == "checked") lang = "en";
+		if ($("#lang_2").attr("checked") == "checked") lang = "de";
 
 		if ($("#engine_0").attr("checked") == "checked") engine = 0;
 		if ($("#engine_1").attr("checked") == "checked") engine = 1;
@@ -38,6 +39,7 @@
 
 		if ($("#lang_0").attr("checked") == "checked") lang = "ru";
 		if ($("#lang_1").attr("checked") == "checked") lang = "en";
+		if ($("#lang_2").attr("checked") == "checked") lang = "de";
 
 		if ($("#engine_0").attr("checked") == "checked") engine = 0;
 		if ($("#engine_1").attr("checked") == "checked") engine = 1;
@@ -143,11 +145,12 @@ $("#recognition_status").html(response);
 
 
 				</td>
-				<td width="150">
+				<td width="300" align=right>
 					<p class="bluetitle">%M_LANGUAGE%</p>
 					<div id="speech_lang">
 						<input type="radio" id="lang_0" name="lang" {lang0_selected}><label for="lang_0">%M_RUSSIAN%</label>
 						<input type="radio" id="lang_1" name="lang" {lang1_selected}><label for="lang_1">%M_ENGLISH%</label>
+						<input type="radio" id="lang_2" name="lang" {lang2_selected}><label for="lang_2">%M_GERMAN%</label>
 					</div>
 
 					<p>&nbsp;</p>
