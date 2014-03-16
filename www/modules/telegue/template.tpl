@@ -306,6 +306,23 @@
 				$("#speedslider").slider("option", "value", speed);
 				ParseSpeed();
 			break;
+
+			case 81:
+				// camera move fixed step down
+				ws.send('{"cmd":"cam","v1":0}');
+			break;
+			case 87:
+				// camera move fixed step up
+				ws.send('{"cmd":"cam","v1":1}');
+			break;
+			case 69:
+				// camera move fixed step left
+				ws.send('{"cmd":"cam","v1":2}');
+			break;
+			case 82:
+				// camera move fixed step right
+				ws.send('{"cmd":"cam","v1":3}');
+			break;		
 		}
 
 		/* make speed1 and speed2 for wheels from pressed arrows */
