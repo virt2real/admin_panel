@@ -281,6 +281,7 @@
 		prevKeyUp = null;
 
 		switch (e.keyCode) {
+
 			case 38: direction |= 1; /* UP */
 			break;
 			case 40: direction |= 2; /* DOWN */
@@ -304,6 +305,23 @@
 				if (speed > 127) speed = 127;
 				$("#speedslider").slider("option", "value", speed);
 				ParseSpeed();
+			break;
+
+			case 81:
+				// camera move fixed step down
+				ws.send('{"cmd":"cam","v1":0}');
+			break;
+			case 87:
+				// camera move fixed step up
+				ws.send('{"cmd":"cam","v1":1}');
+			break;
+			case 69:
+				// camera move fixed step left
+				ws.send('{"cmd":"cam","v1":2}');
+			break;
+			case 82:
+				// camera move fixed step right
+				ws.send('{"cmd":"cam","v1":3}');
 			break;
 		}
 
