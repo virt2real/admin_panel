@@ -2,8 +2,8 @@
 
 /*****************************************************
 * lang.php
-* russian language file
-*(c)virt2real.de 2014
+* english language file
+* (c)virt2real.de 2014
 * draft, by keios
 /*****************************************************/
 
@@ -41,8 +41,9 @@ $lang = array(// common items
               'L_ERR_EMPTY_LOGIN'    => 'С пустым логином не войти',
               'L_ERR_EMPTY_PASS'     => 'С пустым паролем тоже не войти',
               'L_FAIL'               => ':-(',
-              'L_LOGIN_USER'         => 'логин',
-              'L_LOGIN_PASS'         => 'пароль',
+              'L_LOGIN_USER'         => 'login',
+              'L_LOGIN_PASS'         => 'password',
+              'L_LOGIN_BUTTONTEXT'   => 'enter',
               );
 
 ?>

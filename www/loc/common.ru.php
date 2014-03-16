@@ -43,6 +43,7 @@ $lang = array(// common items
               'L_FAIL'               => ':-(',
               'L_LOGIN_USER'         => 'логин',
               'L_LOGIN_PASS'         => 'пароль',
+              'L_LOGIN_BUTTONTEXT'   => 'войти',
               );
 
 ?>
