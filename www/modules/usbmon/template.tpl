@@ -14,7 +14,7 @@
 				$("#scan_result").html(response);
 			}
 			if (status == "error") {
-				$("#scan_result").html(":-(");
+				$("#scan_result").html("%L_FAIL%");
 			}
 		});
 	}
@@ -23,11 +23,11 @@
 
 <div id="accordion" style="margin:0; padding:0;">
 
-	<h3><a href="#">Обнаружение USB устройств</a></h3>
+	<h3><a href="#">%M_DETECT_USB%</a></h3>
 	<div>
 
-		<p><a href="#" class="buttonlink" onclick='scan_wlan(); return false;'>[ Обновить список устройств ]</a> </p>
-		
+		<p><a href="#" class="buttonlink" onclick='scan_usb(); return false;'>[ %M_UPDATE_LIST% ]</a> </p>
+
 		<div id="scan_result" style="width: 90%;"></div>
 
 	</div>

@@ -9,6 +9,8 @@
 
 // common include
 include('../../parts/global.php');
+require_once('../../parts/language.php');
+lang_swapmod('filemanager');
 
 $dirname = $_GET['dir'];
 $parent = $_GET['parent'];
@@ -21,7 +23,7 @@ $file = htmlspecialchars($file);
 $content = '
 <div id="filename">'.$parent.$dirname.'</div>
 <pre><textarea id="filecontent" onkeydown="MakeSaveButtonActive();">'.$file.'</textarea></pre>
-<p style="float:right;"><a href="#" onclick="noWrap($(\'#filecontent\')); return false;">переносы строк</a></p>
+<p style="float:right;"><a href="#" onclick="noWrap($(\'#filecontent\')); return false;">'.$language['M_LINE_WRAPPING'].'</a></p>
 ';
 
 echo $content;

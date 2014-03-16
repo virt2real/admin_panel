@@ -44,7 +44,7 @@
 				$("#rtmp_status").html(response);
 			}
 			if (savestatus == "error") {
-				$("#rtmp_status").html(":-(");
+				$("#rtmp_status").html("%L_FAIL%");
 			}
 		});
 
@@ -56,19 +56,19 @@
 				$("#rtmp_status").html(response);
 			}
 			if (status == "error") {
-				$("#rtmp_status").html("error");
+				$("#rtmp_status").html("%L_FAIL%");
 			}
 		});
 	}
 
-	function SaveRTMPSettings(text){ 
+	function SaveRTMPSettings(text){
 		$("#rtmpsavestatus").html('<img src="/imgs/loader.gif">');
 		$.post("modules/{module_name}/save.php?rnd=" + Math.random(), {text: text}, function(response, status, xhr) {
 			if (status == "success") {
 				$("#rtmpsavestatus").html(response);
 			}
 			if (savestatus == "error") {
-				$("#rtmpsavestatus").html(":-(");
+				$("#rtmpsavestatus").html("%L_FAIL%");
 			}
 		});
 	}
@@ -79,11 +79,11 @@
 
 <div id="accordion" style="margin:0; padding:0;">
 
-	<h3><a href="#">RTMP</a></h3>
+	<h3><a href="#">%M_DESC%</a></h3>
 	<div>
 
-	<p class="bluetitle">Настройки</p>
-	<div style="display:inline-block; padding-left:40px; min-width:100px;">URL</div>
+	<p class="bluetitle">%L_SETTINGS%</p>
+	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_URL%</div>
 	<div style="display:inline;">
 		<input type="text" id="location" value="rtmp://localhost/live/" style="width:200px;">
 	</div>
@@ -93,7 +93,7 @@
 		<input type="text" id="playpath" value="v2r" style="width:200px;">
 	</div>
 	<p></p>
-	<div style="display:inline-block; padding-left:40px; min-width:100px;">битрейт</div>
+	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_BITRATE%</div>
 	<div style="display:inline;">
 		<input type="text" id="bitrate" value="600000" style="width:200px;">
 	</div>
@@ -101,26 +101,25 @@
 
 
 		<div>
-			<a href="" class="buttonlink" onclick='rtmp_run(); return false;'>[ запустить трансляцию ]</a>
-			<a href="" class="buttonlink" onclick='rtmp_stop(); return false;'>[ остановить трансляцию ]</a>
+			<a href="" class="buttonlink" onclick='rtmp_run(); return false;'>[ %M_START_BROADCAST% ]</a>
+			<a href="" class="buttonlink" onclick='rtmp_stop(); return false;'>[ %M_STOP_BROADCAST% ]</a>
 		</div>
 		<p></p>
 	        <div id="flashContent">
         	    <p>
-	                To view this page ensure that Adobe Flash Player version
-                	11.1.0 or greater is installed.
+	                %M_NO_FLASH%
         	    </p>
 	        </div>
 		<p></p>
       		<div id="rtmp_status"></div>
 	</div>
 
-	<h3><a href="#">Скрипт трансляции</a></h3>
+	<h3><a href="#">%M_BROADCAST_SCRIPT%</a></h3>
 	<div>
 		<p><textarea id="rtmptemplate" style="height: 300px;">{rtmptemplate}</textarea></p>
-		<p style="float:right;"><a href="#" onclick="noWrap($('#rtmptemplate')); return false;">переносы строк</a></p>
+		<p style="float:right;"><a href="#" onclick="noWrap($('#rtmptemplate')); return false;">%M_LINE_WRAPPING%</a></p>
 		<p>
-			<p><a class="buttonlink" href="#" onclick="var text = $('#rtmptemplate').val(); SaveRTMPSettings(text); return false;">[ Сохранить ]</a></p>
+			<p><a class="buttonlink" href="#" onclick="var text = $('#rtmptemplate').val(); SaveRTMPSettings(text); return false;">[ %L_SAVE% ]</a></p>
 			<span id="rtmpsavestatus"></span>
 		</p>
 	</div>

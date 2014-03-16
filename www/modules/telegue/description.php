@@ -8,7 +8,7 @@
 /*****************************************************/
 
 $module_params['name'] = 'telegue';
-$module_params['title'] = 'Telegue';
+$module_params['title'] = '%M_DESC%';
 $module_params['menu_part'] = 10;
 $module_params['position'] = 2;
 ?>

@@ -66,10 +66,10 @@ leapInit();
 
 <div id="accordion" style="margin:0; padding:0;">
 
-	<h3><a href="#">Leap Motion</a></h3>
+	<h3><a href="#">%M_DESC%</a></h3>
 	<div style='height: 400px;'>
 		<p>
-			<p class="bluetitle" style="display: inline;">Вижу пальцев </p>
+			<p class="bluetitle" style="display: inline;">%M_DETECTED% </p>
 			<div id="leapstatus" style="display: inline; padding-left: 10px;"></div>
 			<p></p>
 

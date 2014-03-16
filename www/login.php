@@ -10,6 +10,9 @@
 // common global include
 require_once('parts/global.php');
 
+// init translation
+require_once('parts/language.php');
+
 // load main template
 $template = file_get_contents('templates/login.tpl');
 
@@ -20,6 +23,9 @@ $template = GlobalReplace($template);
 $template = str_replace('{menu}', '', $template);
 $template = str_replace('{content}', '', $template);
 $template = str_replace('{onload}', '', $template);
+
+// translate content
+$template = lang_translate($template);
 
 // show content
 echo $template;

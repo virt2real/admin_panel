@@ -19,7 +19,7 @@
 				$("#mjpeg_udp_status").html(response);
 			}
 			if (savestatus == "error") {
-				$("#mjpeg_udp_status").html(":-(");
+				$("#mjpeg_udp_status").html("%L_FAIL%");
 			}
 		});
 
@@ -33,20 +33,20 @@
 				$("#mjpeg_udp_status").html(response);
 			}
 			if (status == "error") {
-				$("#mjpeg_udp_status").html("error");
+				$("#mjpeg_udp_status").html("%L_FAIL%");
 			}
 		});
 	}
 
 
-	function SaveMJPEG_UDPSettings(text){ 
+	function SaveMJPEG_UDPSettings(text){
 		$("#mjpeg_udp_savestatus").html('<img src="/imgs/loader.gif">');
 		$.post("modules/{module_name}/save.php?rnd=" + Math.random(), {text: text}, function(response, status, xhr) {
 			if (status == "success") {
 				$("#mjpeg_udp_savestatus").html(response);
 			}
 			if (savestatus == "error") {
-				$("#mjpeg_udp_savestatus").html(":-(");
+				$("#mjpeg_udp_savestatus").html("%L_FAIL%");
 			}
 		});
 	}
@@ -56,30 +56,30 @@
 
 <div id="accordion" style="margin:0; padding:0;">
 
-	<h3><a href="#">MJPEG udp</a></h3>
+	<h3><a href="#">%M_DESC%</a></h3>
 	<div>
 
 	<table width="100%">
 	<tr valign="top">
 	<td width="700">
 
-	<p class="bluetitle">Настройки</p>
-	<div style="display:inline-block; padding-left:40px; min-width:100px;">хост</div>
+	<p class="bluetitle">%L_SETTINGS%</p>
+	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_HOST%</div>
 	<div style="display:inline;">
 		<input type="text" id="host" value="{host}" style="width:200px;">
 	</div>
 	<p></p>
-	<div style="display:inline-block; padding-left:40px; min-width:100px;">порт</div>
+	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_PORT%</div>
 	<div style="display:inline;">
 		<input type="text" id="port" value="3000" style="width:200px;">
 	</div>
 	<p></p>
-	<div style="display:inline-block; padding-left:40px; min-width:100px;">качество</div>
+	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_QUALITY%</div>
 	<div style="display:inline;">
 		<input type="text" id="quality" value="40" style="width:200px;">
 	</div>
 	<p></p>
-	<div style="display:inline-block; padding-left:40px; min-width:100px;">кадров в секунду</div>
+	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_FPS%</div>
 	<div style="display:inline;">
 		<input type="text" id="fps" value="30" style="width:200px;">
 	</div>
@@ -87,31 +87,31 @@
 
 
 		<div>
-			<a href="" class="buttonlink" onclick='mjpeg_udp_run(); return false;'>[ запустить трансляцию ]</a>
-			<a href="" class="buttonlink" onclick='mjpeg_udp_stop(); return false;'>[ остановить трансляцию ]</a>
+			<a href="" class="buttonlink" onclick='mjpeg_udp_run(); return false;'>[ %M_START_BROADCAST% ]</a>
+			<a href="" class="buttonlink" onclick='mjpeg_udp_stop(); return false;'>[ %M_STOP_BROADCAST% ]</a>
 		</div>
 		<p></p>
       		<div id="mjpeg_udp_status"></div>
 
 	</td>
 	<td>
-		<p class="bluetitle">Описание</p>
-		<p class="graytext">В этом разделе можно запустить трансляцию MJPEG с использованием UDP транспорта на указанный хост и порт. </p>
+		<p class="bluetitle">%M_DESCRIPTION%</p>
+		<p class="graytext">%M_START_MJPEGUDP_HERE%</p>
 
 		<p>&nbsp;</p>
-		<p>Подробнее про передачу и приём видео можно прочитать в <a href="http://wiki.virt2real.ru/wiki/Примеры_цепочек_GStreamer" target="_blank">этом разделе Wiki</a></p>
+		<p>%M_READ_WIKI%</p>
 	</td>
 	</tr>
 	</table>
 
 	</div>
 
-	<h3><a href="#">Скрипт трансляции</a></h3>
+	<h3><a href="#">%M_BROADCAST_SCRIPT%</a></h3>
 	<div>
 		<p><textarea id="mjpeg_udptemplate" style="height: 300px;">{mjpeg_udptemplate}</textarea></p>
-		<p style="float:right;"><a href="#" onclick="noWrap($('#mjpeg_udptemplate')); return false;">переносы строк</a></p>
+		<p style="float:right;"><a href="#" onclick="noWrap($('#mjpeg_udptemplate')); return false;">%M_LINE_WRAPPING%</a></p>
 		<p>
-			<p><a class="buttonlink" href="#" onclick="var text = $('#mjpeg_udptemplate').val(); SaveMJPEG_UDPSettings(text); return false;">[ Сохранить ]</a></p>
+			<p><a class="buttonlink" href="#" onclick="var text = $('#mjpeg_udptemplate').val(); SaveMJPEG_UDPSettings(text); return false;">[ %L_SAVE% ]</a></p>
 			<span id="mjpeg_udp_savestatus"></span>
 		</p>
 	</div>

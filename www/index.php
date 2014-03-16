@@ -7,8 +7,14 @@
 * draft, by Gol
 /*****************************************************/
 
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+
 // turn off errors
 error_reporting(0);
+
+// init translation
+require_once('parts/language.php');
 
 // common global include
 require_once('parts/global.php');
@@ -52,7 +58,7 @@ $menu = "";
 
 foreach ($module_list as $key=>$value) {
 	$link = $value['name'];
-	$menu[$value['menu_part']] .= '<p><a href="#" onclick=\'LoadContent("'.$link.'"); return false;\'>' . $value['title'] . '</a></p>';
+	$menu[$value['menu_part']] .= '<p><a href="#" onclick=\'LoadContent("'.$link.'"); return false;\'>' . lang_getmoddesc($value['name']) . '</a></p>';
 }
 
 // load menu description
@@ -65,13 +71,16 @@ foreach ($main_menu as $key => $value) {
 
 // if we here, but modules not loaded - it mean that main module is active
 if (!$onload) {
-	$onload = 'main';
+    $onload = 'main';
 }
 
 // make global replaces
 $template = str_replace('{menu}', $menulist, $template);
 $template = str_replace('{content}', $module_content, $template);
 $template = str_replace('{onload}', $onload, $template);
+
+// translate content
+$template = lang_translate($template);
 
 // show content
 echo $template;

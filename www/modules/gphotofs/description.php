@@ -8,7 +8,7 @@
 /*****************************************************/
 
 $module_params['name'] = 'gphotofs';
-$module_params['title'] = 'Медиаустройства';
+$module_params['title'] = '%M_DESC%';
 $module_params['menu_part'] = 7;
 $module_params['position'] = 3;
 $module_params['depend'] = array("gphoto2", "mountptp.sh", "umountptp.sh");

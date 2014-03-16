@@ -13,7 +13,7 @@
 				$(".uenv_status").html(response);
 			}
 			if (savestatus == "error") {
-				$(".uenv_status").html(":-(");
+				$(".uenv_status").html("%L_FAIL%");
 			}
 		});
 	}

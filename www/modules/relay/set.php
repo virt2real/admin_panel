@@ -9,19 +9,21 @@
 
 // common include
 include('../../parts/global.php');
+include('../../parts/language.php');
+lang_swapmod('relay');
 
 $relay = intval($_POST["relay"]);
 $state = intval($_POST["state"]);
 
 // make state value
 
-if ($state == 1) 
+if ($state == 1)
 	$real_state = 0;
 else
-if ($state == 2) 
+if ($state == 2)
 	$real_state = 1;
-else 
-	die("wrong state");
+else
+	die($language['M_WRONG_STATE']);
 
 
 switch ($relay) {
@@ -29,7 +31,7 @@ switch ($relay) {
 	case 2:	$con = 35; break;
 	case 3:	$con = 33; break;
 	case 4:	$con = 32; break;
-	default: die("wrong relay number");
+	default: die($language['M_WRONG_RELAY']);
 }
 
 $cmd = "set con $con output $real_state";

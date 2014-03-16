@@ -12,6 +12,7 @@ require_once('description.php');
 
 // common include
 include('../../parts/global.php');
+require_once('../../parts/language.php');
 
 // load module template
 $module_content = file_get_contents("template.tpl");
@@ -20,6 +21,9 @@ $module_content = str_replace('{module_title}', $module_params['title'], $module
 
 // make global replaces
 $module_content = GlobalReplace($module_content);
+
+// translate content
+lang_swapmod($module_params['name']);
 
 /***************** module specific part **************/
 
@@ -66,6 +70,8 @@ for ($i = 0; $i < $TOTAL_PWM; $i++) {
 $module_content = str_replace('{pwmlist}', $pwmlist, $module_content);
 $module_content = str_replace('{ppmlist}', $ppmlist, $module_content);
 
+// translate content
+$module_content = lang_translate($module_content);
 echo $module_content;
 
 ?>

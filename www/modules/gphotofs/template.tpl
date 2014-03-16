@@ -20,7 +20,7 @@
 				if (json.status == 0) {
 					LoadDir("", "{document_root}/modules/{module_name}/camera");
 				}
-				
+
 			}
 		});
 
@@ -47,13 +47,13 @@
 
 <div id="accordion" style="margin:0; padding:0;">
 
-	<h3><a href="#">Просмотр фотографий на USB медиаустройствах</a></h3>
+	<h3><a href="#">%M_VIEW_PHOTOS%</a></h3>
 	<div>
 
 		<div>
 			<p>
-				<a href="#" class="buttonlink" onclick="gphoto_mount(1); return false;">[ подключить накопитель ]</a>
-				<a href="#" class="buttonlink" onclick="gphoto_mount(2); return false;">[ отключить накопитель ]</a>
+				<a href="#" class="buttonlink" onclick="gphoto_mount(1); return false;">[ %M_MOUNT_DEV% ]</a>
+				<a href="#" class="buttonlink" onclick="gphoto_mount(2); return false;">[ %M_UMOUNT_DEV% ]</a>
 			</p>
 			<div id="gphotofsstatus" style="height:20px;"></div>
 			<div id="gphotofsfilelist"></div>

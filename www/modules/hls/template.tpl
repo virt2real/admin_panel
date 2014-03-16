@@ -30,8 +30,8 @@
 				$("#streamlist").html(inactive);
 			}
 			if (savestatus == "error") {
-				$("#activestreamlist").html(":-(");
-				$("#streamlist").html(":-(");
+				$("#activestreamlist").html("%L_FAIL%");
+				$("#streamlist").html("%L_FAIL%");
 			}
 		});
 	}
@@ -42,7 +42,7 @@
 <style>
 
 #streamlist, #activestreamlist {
-  font-family: "Lucida Console", Monaco, monospace; 
+  font-family: "Lucida Console", Monaco, monospace;
   font-size:1.2em;
   color: #7c7c7c;
 }
@@ -51,12 +51,12 @@
 
 <div id="accordion" style="margin:0; padding:0;">
 
-	<h3><a href="#">HLS</a></h3>
+	<h3><a href="#">%M_DESC%</a></h3>
 	<div>
-		<p class="bluetitle">Для просмотра HLS необходимо запустить <a href="?rtmp">трансляцию RTMP</a> на localhost</p>
+		<p class="bluetitle">%M_START_RTMP_FIRST%</p>
 		<p></p>
-		<p class="bluetitle">Доступные потоки: <span id="activestreamlist"></span></p>
-		<p class="bluetitle">Неполные потоки: <span id="streamlist"></span></p>
+		<p class="bluetitle">%M_STREAMS_AVAIL%: <span id="activestreamlist"></span></p>
+		<p class="bluetitle">%M_STREAMS%: <span id="streamlist"></span></p>
 		<p></p>
 
 		<video id="hlsplayer" width="640" height="480" controls="1" autoplay="1" src=""></video>

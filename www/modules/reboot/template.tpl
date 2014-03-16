@@ -13,11 +13,11 @@
 				width: 400,
 				modal: true,
 				buttons: {
-					"Да, ребут": function() {
+					"%M_YES%": function() {
 						reboot();
 						$( this ).dialog( "close" );
 					},
-					"Я передумал": function() {
+					"%M_NO%": function() {
 						$( this ).dialog( "close" );
 					}
 				}
@@ -32,18 +32,18 @@
 </script>
 
 <!-- Dialog -->
-<div id="dialog-confirm" title="Перезагрузить?">
-	<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>Устройство будет перезагружено. Вы уверены что хотите этого?</p>
+<div id="dialog-confirm" title="%M_REBOOT%">
+	<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>%M_REALLY_REBOOT%</p>
 </div>
 <!-- End dialog -->
 
 
 <div id="accordion" style="margin:0; padding:0;">
 
-	<h3><a href="#">Управление девайсом</a></h3>
+	<h3><a href="#">%M_DEVICE_CONTROL%</a></h3>
 	<div>
 		<p>
-			<a href="" class="buttonlink" onclick="tryReboot(); return false;">[ Перезагрузить устройство ]</a>
+			<a href="" class="buttonlink" onclick="tryReboot(); return false;">[ %M_REBOOT_DEVICE% ]</a>
 			<span id="resetStatus"></span>
 		</p>
 	</div>

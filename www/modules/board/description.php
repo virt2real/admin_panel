@@ -8,7 +8,7 @@
 /*****************************************************/
 
 $module_params['name'] = 'board';
-$module_params['title'] = 'Макет платы';
+$module_params['title'] = '%M_DESC%';
 $module_params['menu_part'] = 4;
 $module_params['position'] = 0;
 

@@ -39,7 +39,7 @@
 
 			}
 			if (savestatus == "error") {
-				$("#autostartscriptlist").html(":-(");
+				$("#autostartscriptlist").html("%L_FAIL%");
 			}
 		});
 
@@ -63,7 +63,7 @@
 				$("#saveautostartscriptstatus").html(response);
 			}
 			if (savestatus == "error") {
-				$("#saveautostartscriptstatus").html(":-(");
+				$("#saveautostartscriptstatus").html("%L_FAIL%");
 			}
 		});
 
@@ -81,37 +81,37 @@
 </style>
 
 <div id="accordion" style="margin:0; padding:0;">
-	<h3><a href="#">Системные скрипты загрузки</a></h3>
+	<h3><a href="#">%M_BOOTSCRIPTS%</a></h3>
 	<div>
 		<div id="loadautostartscriptstatus" style="height:20px;"></div>
 
 
 		<table width="100%">
 			<tr valign=top>
-				<td width=200><p class="bluetitle">Активные скрипты</p></td>
-				<td width=200><p class="bluetitle">Неактивные скрипты</p></td>
+				<td width=200><p class="bluetitle">%M_ACTIVE_SCRIPTS%</p></td>
+				<td width=200><p class="bluetitle">%M_INACTIVE_SCRIPTS%</p></td>
 				<td>&nbsp;</td>
 			</tr>
 			<tr valign=top>
 				<td><div id="list"></div></td>
 				<td><div id="list2"></div></td>
-				
+
 				<td>
-					<p>Левый столбец - активные скрипты в каталоге /etc/init.d, выполняются в алфавитном порядке при старте системы.</p>
-					<p>Правый столбец - неактивные скрипты в каталоге /etc/init.d.sample, при запуске системы НЕ выполняются, но хранятся на всякий случай.</p>
-					<p>Путём перемещения файлов из одного списка в другой можно настраивать запуск нужных компонентов при загрузке системы. </p>
+					<p>%M_LEFT_COLUMN%</p>
+					<p>%M_RIGHT_COLUMN%</p>
+					<p>%M_MOVE_ITEMS%</p>
 				</td>
 			</tr>
 		</table>
 
 	</div>
 
-	<h3><a href="#">Скрипт автозапуска virt2real</a></h3>
+	<h3><a href="#">%M_V2R_AUTOSTART%</a></h3>
 	<div>
 		<p><textarea id="autostartscript">{autostartscript}</textarea></p>
-		<p style="float:right;"><a href="#" onclick="noWrap($('#autostartscript')); return false;">переносы строк</a></p>
+		<p style="float:right;"><a href="#" onclick="noWrap($('#autostartscript')); return false;">%M_LINE_WRAPPING%</a></p>
 		<p>
-			<p><a class="buttonlink" href="#" onclick="var text = $('#autostartscript').val(); SaveAutostartScript(text); return false;">[ Сохранить ]</a></p>
+			<p><a class="buttonlink" href="#" onclick="var text = $('#autostartscript').val(); SaveAutostartScript(text); return false;">[ %L_SAVE% ]</a></p>
 			<span id="saveautostartscriptstatus"></span>
 		</p>
 

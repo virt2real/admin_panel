@@ -12,7 +12,7 @@
 	function TextToSpeech(text){
 
 		if (!text) {
-			$("#speech_status").html('Не указан текст');
+			$("#speech_status").html('%M_ERR_NO_TEXT%');
 			return false;
 		}
 
@@ -29,7 +29,7 @@
 				$("#speech_status").html(response);
 			}
 			if (savestatus == "error") {
-				$("#speech_status").html(":-(");
+				$("#speech_status").html("%L_FAIL%");
 			}
 		});
 	}
@@ -51,14 +51,14 @@
 				var result = "";
 
 
-				
+
 				try {
 
 					json = JSON.parse(response);
 
-					result += '<p class="bluetitle">Результаты:</p>';
-					result += '<p><span class="graytext">status:</span> ' + json.status + '</p>';
-					result += '<p class="graytext">hypotheses:</p>';
+					result += '<p class="bluetitle">%M_RESULTS%:</p>';
+					result += '<p><span class="graytext">%M_STATUS%:</span> ' + json.status + '</p>';
+					result += '<p class="graytext">%M_HYPOTHESES%:</p>';
 
 					var hypotheses = "";
 					for (var i in json.hypotheses) {
@@ -75,12 +75,12 @@ $("#recognition_status").html(response);
 
 			}
 			if (savestatus == "error") {
-				$("#recognition_status").html(":-(");
+				$("#recognition_status").html("%L_FAIL%");
 			}
 		});
 	}
 
-	
+
 	function SaveSpeechSettings(){
 
 		if ($("#lang_0").attr("checked") == "checked") lang = "ru";
@@ -93,10 +93,10 @@ $("#recognition_status").html(response);
 
 		$.post("modules/{module_name}/save.php?rnd=" + Math.random(), {lang: lang, engine: engine}, function(response, status, xhr) {
 			if (status == "success") {
-				$("#save_status").html('ok');
+				$("#save_status").html("%M_OK%");
 			}
 			if (savestatus == "error") {
-				$("#save_status").html(":-(");
+				$("#save_status").html("%L_FAIL%");
 			}
 		});
 	}
@@ -106,18 +106,18 @@ $("#recognition_status").html(response);
 
 <div id="accordion" style="margin:0; padding:0;">
 
-	<h3><a href="#">Речь</a></h3>
+	<h3><a href="#">%M_DESC%</a></h3>
 	<div>
 
 		<table width="100%">
 			<tr valign="top">
 				<td>
-					<p class="bluetitle">Произнести фразу</p>
+					<p class="bluetitle">%M_SPEAK_PHRASE%</p>
 
 					<form onSubmit="TextToSpeech($('#texttospeech').val()); return false;">
 						<p>
 							<input type="text" id="texttospeech" style="width: 300px;">
-							<a href="#" class="buttonlink" onclick="TextToSpeech($('#texttospeech').val()); return false;" style="padding-left:20px;">[ Произнести ]</a>
+							<a href="#" class="buttonlink" onclick="TextToSpeech($('#texttospeech').val()); return false;" style="padding-left:20px;">[ %M_SPEAK% ]</a>
 							<p></p>
 							<span id="pingStatus"></span>
 						</p>
@@ -126,16 +126,16 @@ $("#recognition_status").html(response);
 					<div id="speech_status"></div>
 
 					<p class="graytext">
-						Для чтения текста из консоли можно воспользоваться командой<br>/etc/virt2real/speech/speak.php text [ en|ru ] [ 0|1 ]<br>Первый параметр - текст для воспроизведения<br>Второй параметр - язык (en, ru)<br>Третий параметр - движок синтезатора ( 0 - eSpeak, 1 - Google)
+						%M_USE_CLI_COMMAND%
 					</p>
 
 					<p>&nbsp;</p>
 
-					<p class="bluetitle">Режим распознавания голоса</p>
+					<p class="bluetitle">%M_VOICE_RECOGNITION%</p>
 
 					<div>
-						
-						<p><a href="#" class="buttonlink" onclick="RunRecognition(); return false;" style="padding-left:20px;">[ Запустить ]</a></p>
+
+						<p><a href="#" class="buttonlink" onclick="RunRecognition(); return false;" style="padding-left:20px;">[ %M_RUN% ]</a></p>
 
 						<div id="recognition_status"></div>
 
@@ -144,23 +144,23 @@ $("#recognition_status").html(response);
 
 				</td>
 				<td width="150">
-					<p class="bluetitle">Язык</p>
+					<p class="bluetitle">%M_LANGUAGE%</p>
 					<div id="speech_lang">
-						<input type="radio" id="lang_0" name="lang" {lang0_selected}><label for="lang_0">Русский</label>
-						<input type="radio" id="lang_1" name="lang" {lang1_selected}><label for="lang_1">English</label>
+						<input type="radio" id="lang_0" name="lang" {lang0_selected}><label for="lang_0">%M_RUSSIAN%</label>
+						<input type="radio" id="lang_1" name="lang" {lang1_selected}><label for="lang_1">%M_ENGLISH%</label>
 					</div>
 
 					<p>&nbsp;</p>
 
-					<p class="bluetitle">Синтезатор голоса</p>
+					<p class="bluetitle">%M_VOICE_SYNTH%</p>
 					<div id="speech_engine">
-						<input type="radio" id="engine_0" name="engine" {eng0_selected}><label for="engine_0">eSpeak</label>
-						<input type="radio" id="engine_1" name="engine" {eng1_selected}><label for="engine_1">Google</label>
+						<input type="radio" id="engine_0" name="engine" {eng0_selected}><label for="engine_0">%M_ESPEAK%</label>
+						<input type="radio" id="engine_1" name="engine" {eng1_selected}><label for="engine_1">%M_GOOGLE%</label>
 					</div>
 
 					<p>&nbsp;</p>
 
-					<p><a href="#" class="buttonlink" onclick="SaveSpeechSettings(); return false;" style="padding-left:20px;">[ Сохранить ]</a></p>
+					<p><a href="#" class="buttonlink" onclick="SaveSpeechSettings(); return false;" style="padding-left:20px;">[ %L_SAVE% ]</a></p>
 
 					<p id="save_status"></p>
 

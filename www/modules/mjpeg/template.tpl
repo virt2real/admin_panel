@@ -38,7 +38,7 @@
 				$("#mjpeg_status").html(response);
 			}
 			if (savestatus == "error") {
-				$("#mjpeg_status").html(":-(");
+				$("#mjpeg_status").html("%L_FAIL%");
 			}
 		});
 
@@ -50,19 +50,19 @@
 				$("#mjpeg_status").html(response);
 			}
 			if (status == "error") {
-				$("#mjpeg_status").html("error");
+				$("#mjpeg_status").html("%L_FAIL%");
 			}
 		});
 	}
 
-	function SaveMJPEGSettings(text){ 
+	function SaveMJPEGSettings(text){
 		$("#mjpegsavestatus").html('<img src="/imgs/loader.gif">');
 		$.post("modules/{module_name}/save.php?rnd=" + Math.random(), {text: text}, function(response, status, xhr) {
 			if (status == "success") {
 				$("#mjpegsavestatus").html(response);
 			}
 			if (savestatus == "error") {
-				$("#mjpegsavestatus").html(":-(");
+				$("#mjpegsavestatus").html("%L_FAIL%");
 			}
 		});
 	}
@@ -73,20 +73,20 @@
 
 <div id="accordion" style="margin:0; padding:0;">
 
-	<h3><a href="#">MJPEG</a></h3>
+	<h3><a href="#">%M_MJPEG%</a></h3>
 	<div>
 
 	<table width="100%">
 	<tr valign="top">
 	<td width="700">
 
-	<p class="bluetitle">Настройки</p>
-	<div style="display:inline-block; padding-left:40px; min-width:100px;">Порт</div>
+	<p class="bluetitle">%L_SETTINGS%</p>
+	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_PORT%</div>
 	<div style="display:inline;">
 		<input type="text" id="port" value="8888" style="width:100px;">
 	</div>
 	<p></p>
-	<div style="display:inline-block; padding-left:40px; min-width:100px;">Качество</div>
+	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_QUALITY%</div>
 	<div style="display:inline;">
 		<input type="text" id="quality" value="40" style="width:100px;">
 	</div>
@@ -94,16 +94,15 @@
 
 
 		<div>
-			<a href="" class="buttonlink" onclick='mjpeg_run(); return false;'>[ запустить сервер ]</a>
-			<a href="" class="buttonlink" onclick='mjpeg_stop(); return false;'>[ остановить сервер ]</a>
+			<a href="" class="buttonlink" onclick='mjpeg_run(); return false;'>[ %M_START_SERVER% ]</a>
+			<a href="" class="buttonlink" onclick='mjpeg_stop(); return false;'>[ %M_STOP_SERVER% ]</a>
 		</div>
 		<p></p>
-		<p class="graytext">После запуска сервера <a href="?mjpeg">обновите страницу</a></p>
+		<p class="graytext">%M_REFRESH_PAGE%</p>
 		<p></p>
 	        <div id="flashContent">
         	    <p>
-	                To view this page ensure that Adobe Flash Player version
-                	9.0.0 or greater is installed.
+	                %M_NO_FLASH%
         	    </p>
 	        </div>
 		<p></p>
@@ -111,10 +110,10 @@
 
 	</td>
 	<td>
-		<p class="bluetitle">Описание</p>
-		<p class="graytext">В этом разделе можно запустить видеосервер MJPEG на указанном порту. Для предварительного просмотра в страницу встроен flash-плеер, который берёт поток с фиксированного порта 8888, так что если хотите увидеть в нём видео - необходимо запустить сервер именно с указанием этого порта.  </p>
-		<p class="graytext">Flash-плеер используется из-за того что в браузерах MJPEG поток некорректно отображается (или не отображается вообще)</p>
-		<p class="graytext">Картинка может дёргаться, т.к. flash-плеер может пропускать кадры.</p>
+		<p class="bluetitle">%M_DESCRIPTION%</p>
+		<p class="graytext">%M_START_SERVER_HERE%</p>
+		<p class="graytext">%M_WHY_FLASH%</p>
+		<p class="graytext">%M_WHY_LAGGING%</p>
 	</td>
 	</tr>
 	</table>
@@ -123,12 +122,12 @@
 	</div>
 
 
-	<h3><a href="#">Скрипт сервера</a></h3>
+	<h3><a href="#">%M_SERVER_SCRIPT%</a></h3>
 	<div>
 		<p><textarea id="mjpegtemplate" style="height: 300px;">{mjpegtemplate}</textarea></p>
-		<p style="float:right;"><a href="#" onclick="noWrap($('#mjpegtemplate')); return false;">переносы строк</a></p>
+		<p style="float:right;"><a href="#" onclick="noWrap($('#mjpegtemplate')); return false;">%M_LINE_WRAPPING%</a></p>
 		<p>
-			<p><a class="buttonlink" href="#" onclick="var text = $('#mjpegtemplate').val(); SaveMJPEGSettings(text); return false;">[ Сохранить ]</a></p>
+			<p><a class="buttonlink" href="#" onclick="var text = $('#mjpegtemplate').val(); SaveMJPEGSettings(text); return false;">[ %L_SAVE% ]</a></p>
 			<span id="mjpegsavestatus"></span>
 		</p>
 	</div>

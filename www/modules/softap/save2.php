@@ -9,21 +9,23 @@
 
 // common include
 include('../../parts/global.php');
+require_once('../../parts/language.php');
+lang_swapmod('softap');
 
 if (!isset($_POST['text'])) die ();
 
 $text = $_POST['text'];
 $filename = "/etc/hostapd/hostapd.conf";
 if (!$handle = fopen($filename, 'w+')) {
-	die("can not access file $filename");
+	die($language['M_ERR_NO_ACCESS'] . "$filename");
 }
 if (fwrite($handle, $text) === FALSE) {
-	die("can not write $filename");
+	die($language['M_ERR_NO_WRITE'] . "$filename");
 }
 
 fclose($handle);
 
-echo "settings saved";
+echo $language['M_SAVE_SUCCESS'];
 
 
 ?>
