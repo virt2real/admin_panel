@@ -3,19 +3,19 @@
 /*****************************************************
 * modules/reboot/loc/module.en.php
 * module english locale file
-*(c)virt2real.de 2014
+* (c)virt2real.de 2014
 * draft, by keios
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'               => 'Перезагрузка',
+              'M_DESC'               => 'System reboot',
               // module-specific
-              'M_YES'                => 'Да',
-              'M_NO'                 => 'Я передумал',
-              'M_REBOOT'             => 'Перезагрузить?',
-              'M_REALLY_REBOOT'      => 'Устройство будет перезагружено. Вы уверены что хотите этого?',
-              'M_DEVICE_CONTROL'     => 'Управление девайсом',
-              'M_REBOOT_DEVICE'      => 'Перезагрузить устройство',
+              'M_YES'                => 'Yeah',
+              'M_NO'                 => 'Nope',
+              'M_REBOOT'             => 'Reboot device?',
+              'M_REALLY_REBOOT'      => 'Device will be rebooted. Are you sure?',
+              'M_DEVICE_CONTROL'     => 'Device control',
+              'M_REBOOT_DEVICE'      => 'Reboot device',
               );
 
 ?>

@@ -17,7 +17,7 @@
 					message = "<p>%M_NEW_VERSION% " + json.last + " (%M_CURRENT_VERSION% - " + json.current + " )</p>";
 					$("#updatebutton").css("display", "block");
 				} else  {
-					message = "<p>%M_YOUR_CURRENT_VERSION% - " + json.current + ", %M_SERVER_VERSION% - " + json.last + "</p><p>%M_UP_TO_DATE%</p>";
+					message = "<p>%M_YOUR_CURRENT_VER% - " + json.current + ", %M_SERVER_VERSION% - " + json.last + "</p><p>%M_UP_TO_DATE%</p>";
 					$("#updatebutton").css("display", "block");
 				}
 
