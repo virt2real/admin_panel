@@ -8,7 +8,7 @@
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'               => 'Thumbnail-Vorschau',
+              'M_DESC'               => 'Bilder-Vorschau',
               // module-specific
               'M_VIEW_PHOTOS'        => 'Vorschau von Bildern auf der Kamera',
               'M_LOAD_THUMBNAILS'    => 'Thumbnails laden',

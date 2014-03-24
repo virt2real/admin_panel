@@ -18,6 +18,6 @@ $bitrate = $_POST['bitrate'];
 
 shell_exec("./rtp.sh $host $port $bitrate");
 
-sprintf($language['M_RTP_STREAM_STARTED']);
+printf($language['M_RTP_STREAM_STARTED']);
 
 ?>

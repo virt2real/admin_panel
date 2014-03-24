@@ -8,16 +8,16 @@
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'               => 'Info',
+              'M_DESC'               => 'Overview',
               // module-specific
-              'M_GENERAL_INFORMATION'=> 'Common info',
-              'M_ADMIN_GUI_VERSION'  => 'Admin panel version',
-              'M_DEVICE_ID'          => 'Device id',
+              'M_GENERAL_INFORMATION'=> 'General Information',
+              'M_ADMIN_GUI_VERSION'  => 'Admin interface version',
+              'M_DEVICE_ID'          => 'Device ID',
               'M_DEVICE_DESCRIPTION' => 'Description',
               'M_CHANGE'             => 'change',
-              'M_KERNEL_INFO'        => 'Kernel info',
+              'M_KERNEL_INFO'        => 'Kernel Information',
               'M_CMDLINE'            => 'Cmdline',
-              'M_CPU_INFO'           => 'CPU info',
+              'M_CPU_INFO'           => 'CPU Information',
               'M_CPU'                => 'CPU',
               'M_MEMORY'             => 'Memory',
               'M_ACTIVE_MODULES'     => 'Active modules',
