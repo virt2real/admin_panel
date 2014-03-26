@@ -1,6 +1,4 @@
 admin_panel
 ===========
 
-Adminka for virt2real
-
-check username
+Administration interface for virt2real

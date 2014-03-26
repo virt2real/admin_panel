@@ -19,6 +19,6 @@ $fps = $_POST['fps'];
 
 shell_exec("./mjpeg_udp.sh $host $port $quality $fps");
 
-sprintf($language['M_JPEG_UDP_START'], $host, $port, $fps, $quality);
+printf($language['M_JPEG_UDP_START'], $host, $port, $fps, $quality);
 
 ?>

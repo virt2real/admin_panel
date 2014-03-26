@@ -17,6 +17,7 @@ $playpath = $_POST['playpath'];
 $bitrate = $_POST['bitrate'];
 
 shell_exec("./rtmp.sh $location $playpath $bitrate");
-sprintf($language['M_RTMP_STREAM_STARTED'], $location, $playpath, $bitrate);
+
+printf($language['M_RTMP_STREAM_STARTED'], $location, $playpath, $bitrate);
 
 ?>
