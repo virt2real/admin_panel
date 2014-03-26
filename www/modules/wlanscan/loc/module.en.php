@@ -8,12 +8,12 @@
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'               => 'Wi-Fi',
+              'M_DESC'               => 'WiFi',
               // module-specific
-              'M_WLAN_SCAN'          => 'Сканирование Wi-Fi сетей',
-              'M_CURRENT_STATUS'     => 'Текущее состояние подключения',
-              'M_UPDATE'             => 'обновить',
-              'M_FOUND_PILE_OF_WLANS'=> 'Найденные беспроводные сети',
+              'M_WLAN_SCAN'          => 'WiFi network scan',
+              'M_CURRENT_STATUS'     => 'Current connection status',
+              'M_UPDATE'             => 'update',
+              'M_FOUND_PILE_OF_WLANS'=> 'Discovered WiFi networks',
               );
 
 ?>

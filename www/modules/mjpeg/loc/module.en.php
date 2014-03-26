@@ -8,23 +8,23 @@
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'               => 'MJPEG сервер',
+              'M_DESC'               => 'MJPEG server',
               // module-specific
               'M_MJPEG_STARTED'      => 'MJPEG server started',
               'M_MJPEG_STOPPED'      => 'MJPEG server stopped',
               'M_MJPEG'              => 'MJPEG',
-              'M_PORT'               => 'Порт',
-              'M_QUALITY'            => 'Качество',
-              'M_START_SERVER'       => 'запустить сервер',
-              'M_STOP_SERVER'        => 'остановить сервер',
-              'M_REFRESH_PAGE'       => 'После запуска сервера <a href="?mjpeg">обновите страницу</a>',
+              'M_PORT'               => 'Port',
+              'M_QUALITY'            => 'Quality',
+              'M_START_SERVER'       => 'Start server',
+              'M_STOP_SERVER'        => 'Stop server',
+              'M_REFRESH_PAGE'       => 'You need to <a href="?mjpeg">reload the page</a> after you have started the server.',
               'M_NO_FLASH'           => 'To view this page ensure that Adobe Flash Player version 9.0.0 or greater is installed.',
-              'M_DESCRIPTION'        => 'Описание',
-              'M_START_SERVER_HERE'  => 'В этом разделе можно запустить видеосервер MJPEG на указанном порту. Для предварительного просмотра в страницу встроен flash-плеер, который берёт поток с фиксированного порта 8888, так что если хотите увидеть в нём видео - необходимо запустить сервер именно с указанием этого порта.',
-              'M_WHY_FLASH'          => 'Flash-плеер используется из-за того что в браузерах MJPEG поток некорректно отображается (или не отображается вообще)',
-              'M_WHY_LAGGING'        => 'Картинка может дёргаться, т.к. flash-плеер может пропускать кадры.',
-              'M_SERVER_SCRIPT'      => 'Скрипт сервера',
-              'M_LINE_WRAPPING'      => 'переносы строк',
+              'M_DESCRIPTION'        => 'Description',
+              'M_START_SERVER_HERE'  => 'In this section, you can run the MJPEG video server on the specified port. A flash player is embedded for previewing purposes, which reads from the fixed port 8888, so if you want to view the stream using it - start a server specifying this exact port.',
+              'M_WHY_FLASH'          => 'The flash player is used due to the fact that some browsers display a MJPEG stream incorrectly (or do not display it at all).',
+              'M_WHY_LAGGING'        => 'The stream might lag because the flash player is known to drop frames.',
+              'M_SERVER_SCRIPT'      => 'Server script',
+              'M_LINE_WRAPPING'      => 'Line wrapping',
               );
 
 ?>

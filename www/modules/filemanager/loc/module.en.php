@@ -8,13 +8,13 @@
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'              => 'Файл-менеджер',
+              'M_DESC'              => 'File manager',
               // module-specific
-              'M_SAVE_SUCCESS'      => 'Файл успешно сохранён',
-              'M_FILE_MANAGE_EDIT'  => 'Файл-менеджер и редактор файлов',
-              'M_BACK'              => 'Назад',
-              'M_RETURN'            => 'Вернуться',
-              'M_LINE_WRAPPING'     => 'переносы строк',
+              'M_SAVE_SUCCESS'      => 'File saved successfully',
+              'M_FILE_MANAGE_EDIT'  => 'File manager and editor',
+              'M_BACK'              => 'Back',
+              'M_RETURN'            => 'Return',
+              'M_LINE_WRAPPING'     => 'Line wrapping',
               'M_ERR_NO_ACCESS'     => 'cannot access file',
               'M_ERR_NO_WRITE'      => 'cannot write to',
               'M_SAVE_SUCCESS'      => 'successfully saved',

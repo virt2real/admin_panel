@@ -10,12 +10,12 @@
 $lang = array(// common items
               'M_DESC'                => 'ADC',
               // module-specific
-              'M_ADC_MONITORING'      => 'Мониторинг состояния аналоговых входов (ADC)',
-              'M_SHOW_VALUES'         => 'показывать значений',
-              'M_UPDATE_FREQUENCY'    => 'Частота обновления',
-              'M_MILLISECONDS'        => 'мс',
-              'M_MAX_VOLTAGE'         => 'Максимальное напряжение',
-              'M_VOLT'                => 'Вольт',
+              'M_ADC_MONITORING'      => 'Monitoring the analog inputs (ADC)',
+              'M_SHOW_VALUES'         => 'show values',
+              'M_UPDATE_FREQUENCY'    => 'update frequency',
+              'M_MILLISECONDS'        => 'ms',
+              'M_MAX_VOLTAGE'         => 'maximum voltage',
+              'M_VOLT'                => 'volt',
               );
 
 ?>

@@ -10,9 +10,9 @@
 $lang = array(// common items
               'M_DESC'               => 'Ping',
               // module-specific
-              'M_ERR_NO_ADDRESS'     => 'не указан пингуемый адрес',
-              'M_PING_IN_PROGRESS'   => 'пингуем…',
-              'M_TARGET_HOST'        => 'Пингуемый хост',
+              'M_ERR_NO_ADDRESS'     => 'Address is not specified',
+              'M_PING_IN_PROGRESS'   => 'ping in progress…',
+              'M_TARGET_HOST'        => 'Target host',
               'M_PING'               => 'Ping!',
               );
 

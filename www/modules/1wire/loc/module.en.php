@@ -10,7 +10,7 @@
 $lang = array(// common items
               'M_DESC'               => '1-Wire',
               // module-specific
-              'M_FOUND_DEVICES'      => 'Найденные устройства 1-Wire',
+              'M_FOUND_DEVICES'      => 'Found 1-Wire devices',
               );
 
 ?>

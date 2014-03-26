@@ -1,8 +1,8 @@
 <?php
 
 /*****************************************************
-* modules/i2c/set.php
-* i2c set command file
+* modules/ov2643/set.php
+* ov2643 set command file
 *(c)virt2real.ru 2013
 * draft, by Gol
 /*****************************************************/

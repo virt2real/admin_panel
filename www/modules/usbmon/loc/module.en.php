@@ -8,10 +8,10 @@
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'               => 'USB устройства',
+              'M_DESC'               => 'USB devices',
               // module-specific
-              'M_DETECT_USB'         => 'Обнаружение USB устройств',
-              'M_UPDATE_LIST'        => 'Обновить список устройств',
+              'M_DETECT_USB'         => 'Detection of USB devices',
+              'M_UPDATE_LIST'        => 'Update device list',
               );
 
 ?>

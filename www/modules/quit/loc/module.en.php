@@ -8,13 +8,13 @@
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'               => 'Logout',
+              'M_DESC'               => 'Log out',
               // module-specific
               'M_YES'                => 'Yes',
               'M_NO'                 => 'I\'d rather not',
               'M_LEAVE_INTERFACE'    => 'Leave admin interface',
-              'M_REALLY_LEAVE'       => 'Your session will be deleted, you\'ll need to login anew. Commence?',
-              'M_LEAVE'              => 'logout',
+              'M_REALLY_LEAVE'       => 'Your session will be deleted, you\'ll need to login anew. Proceed?',
+              'M_LEAVE'              => 'Log out',
               );
 
 ?>

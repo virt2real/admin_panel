@@ -10,7 +10,7 @@
 $lang = array(// common items
               'M_DESC'               => 'Leap Motion',
               // module-specific
-              'M_DETECTED'           => 'Вижу пальцев',
+              'M_DETECTED'           => 'Fingers detected',
               );
 
 ?>

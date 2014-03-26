@@ -8,12 +8,12 @@
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'               => 'Медиаустройства',
+              'M_DESC'               => 'Media devices',
               // module-specific
-              'M_MBYTE'              => 'Мбайт',
-              'M_VIEW_PHOTOS'        => 'Просмотр фотографий на USB медиаустройствах',
-              'M_MOUNT_DEV'          => 'подключить накопитель',
-              'M_UMOUNT_DEV'         => 'отключить накопитель',
+              'M_MBYTE'              => 'Mbyte',
+              'M_VIEW_PHOTOS'        => 'Viewing images on USB media devices',
+              'M_MOUNT_DEV'          => 'connect storage device',
+              'M_UMOUNT_DEV'         => 'disconnect storage device',
               );
 
 ?>

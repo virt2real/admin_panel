@@ -8,9 +8,9 @@
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'               => 'Сообщения системы',
+              'M_DESC'               => 'System messages',
               // module-specific
-              'M_SYSTEM_MONITORING'  => 'Мониторинг сообщений',
+              'M_SYSTEM_MONITORING'  => 'System message monitoring',
               );
 
 ?>

@@ -10,15 +10,15 @@
 $lang = array(// common items
               'M_DESC'                    => '3G',
               // module-specific
-              'M_INTERFACE'               => 'интерфейс',
-              'M_DEVICE'                  => 'устройство',
-              'M_SPEED'                   => 'скорость',
-              'M_LOCAL_IP'                => 'локальный ip',
-              'M_REMOTE_IP'               => 'удалённый ip',
-              'M_CARRIER'                 => 'оператор',
-              'M_TOGGLE_CONNECTION'      => 'Подключение и отключение связи через 3G USB модем',
-              'M_SETUP_MODEM_FIRST'       => 'Предварительно необходимо настроить подключение через USB 3G модем',
-              'M_WAIT_20_SECONDS'         => 'Процесс подключения может занимать 10-20 секунд',
+              'M_INTERFACE'               => 'interface',
+              'M_DEVICE'                  => 'device',
+              'M_SPEED'                   => 'speed',
+              'M_LOCAL_IP'                => 'local ip',
+              'M_REMOTE_IP'               => 'remote ip',
+              'M_CARRIER'                 => 'carrier',
+              'M_TOGGLE_CONNECTION'       => 'Toggle 3G USB modem connection',
+              'M_SETUP_MODEM_FIRST'       => 'You need to set up the USB 3G modem first',
+              'M_WAIT_20_SECONDS'         => 'Connecting can take about 10-20 seconds',
               );
 
 ?>
