@@ -8,11 +8,11 @@
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'               => 'Motor Shield',
+              'M_DESC'               => 'Motor-Shield',
               // module-specific
               'M_V'                  => 'V',
               'M_MOTOR_J'            => 'Motor J',
-              'M_BOARD_LAYOUT'       => 'Motor Shield-Layout',
+              'M_BOARD_LAYOUT'       => 'Layout des Motor-Shield',
               'M_BIPOLAR_OUT'        => 'Bipolare Ausgänge',
               'M_UNIPOLAR_OUT'       => 'Unipolare Ausgänge',
               'M_DIRECTION'          => 'Richtung',

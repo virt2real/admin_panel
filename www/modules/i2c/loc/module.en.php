@@ -10,14 +10,14 @@
 $lang = array(// common items
               'M_DESC'               => 'I2C',
               // module-specific
-              'M_REG_CHANGES'        => 'Изменение регистров I2C',
-              'M_REG'                => 'Регистр',
-              'M_BASE'               => 'база',
-              'M_PARAM'              => 'параметр',
-              'M_VALUE'              => 'Значение',
+              'M_REG_CHANGES'        => 'Change I2C registers',
+              'M_REG'                => 'Register',
+              'M_BASE'               => 'base',
+              'M_PARAM'              => 'parameter',
+              'M_VALUE'              => 'value',
               'M_HEX'                => 'hex',
               'M_BIN'                => 'bin',
-              'M_READ'               => 'Прочитать',
+              'M_READ'               => 'Read',
               );
 
 ?>

@@ -11,11 +11,11 @@ $lang = array(// common items
               'M_DESC'               => 'OV2643',
               // module-specific
               'M_SUCCESSFULLY_SAVED' => 'saved',
-              'M_CAM_REGISTRY_CONFIG'=> 'Настройки регистров камеры OV2643',
-              'M_CONTRAST'           => 'Контраст',
-              'M_BRIGHTNESS'         => 'Яркость',
-              'M_SATURATION_SAT_U'   => 'Насыщенность SAT_U',
-              'M_SATURATION_SAT_V'   => 'Насыщенность SAT_V',
+              'M_CAM_REGISTRY_CONFIG'=> 'OV2643 camera register settings',
+              'M_CONTRAST'           => 'Contrast',
+              'M_BRIGHTNESS'         => 'Brightness',
+              'M_SATURATION_SAT_U'   => 'Saturation SAT_U',
+              'M_SATURATION_SAT_V'   => 'Saturation SAT_V',
               'M_HUE_COS'            => 'HUE_COS',
               'M_HUE_SIN'            => 'HUE_SIN',
               'M_0X39'               => '0x39',
@@ -27,11 +27,11 @@ $lang = array(// common items
               'M_LENS_SHADING_0X4F'  => 'Lens shading 0x4f',
               'M_LENS_SHADING_0X50'  => 'Lens shading 0x50',
               'M_LENS_SHADING_0X57'  => 'Lens shading 0x57',
-              'M_SHARP_PIXEL_0XA6'   => 'Резкость? Пиксели? 0xa6',
-              'M_SHARP_PIXEL_0XA7'   => 'Резкость? Пиксели? 0xa7',
-              'M_SHARP_PIXEL_0XA8'   => 'Резкость? Пиксели? 0xa8',
-              'M_MORE_SHARP_0XA1'    => 'Ещё Резкость 0xa1',
-              'M_SMOOTHING_0XA9'     => 'Сглаживание 0xa9',
+              'M_SHARP_PIXEL_0XA6'   => 'Sharpness? Pixels? 0xa6',
+              'M_SHARP_PIXEL_0XA7'   => 'Sharpness? Pixels? 0xa7',
+              'M_SHARP_PIXEL_0XA8'   => 'Sharpness? Pixels? 0xa8',
+              'M_MORE_SHARP_0XA1'    => 'Also sharpness 0xa1',
+              'M_SMOOTHING_0XA9'     => 'Smoothing 0xa9',
               );
 
 ?>

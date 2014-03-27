@@ -8,12 +8,12 @@
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'               => 'Управление камерой 2',
+              'M_DESC'               => 'Camera control 2',
               // module-specific
               'M_ERR_NO_WEBSOCKET'   => 'Your browser does not support WebSockets. Try to use Chrome or Safari.',
               'M_CONNECTED'          => 'connected',
-              'M_FOUND'              => 'Найден',
-              'M_CAMERA_INFO'        => 'Информация о камере',
+              'M_FOUND'              => 'found',
+              'M_CAMERA_INFO'        => 'Camera information',
               );
 
 ?>

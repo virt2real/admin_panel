@@ -11,13 +11,13 @@ $lang = array(// common items
               'M_DESC'               => 'Arm Drive',
               // module-specific
               'M_ERR_NO_WEBSOCKET'   => 'Your browser does not support WebSockets. Try to use Chrome or Safari.',
-              'M_CONNECTED'          => 'подключено',
-              'M_DISCONNECTED'       => 'отключено',
-              'M_CONNECTION_STATUS'  => 'Подключение',
-              'M_VOLTAGE'            => 'Напряжение',
-              'M_SPEED'              => 'Скорость',
-              'M_LIGHT'              => 'Свет',
-              'M_DIRECTION'          => 'Направление',
+              'M_CONNECTED'          => 'connected',
+              'M_DISCONNECTED'       => 'disconnected',
+              'M_CONNECTION_STATUS'  => 'Connection status',
+              'M_VOLTAGE'            => 'Voltage',
+              'M_SPEED'              => 'Speed',
+              'M_LIGHT'              => 'Lights',
+              'M_DIRECTION'          => 'Direction',
               );
 
 ?>

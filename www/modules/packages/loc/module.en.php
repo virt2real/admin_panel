@@ -8,14 +8,14 @@
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'               => 'Пакеты',
+              'M_DESC'               => 'Packages',
               // module-specific
-              'M_NAME'               => 'Название',
-              'M_VERSION'            => 'Версия',
-              'M_DESCRIPTION'        => 'Описание',
-              'M_INSTALLED_VERSION'  => 'Установленная версия',
-              'M_INSTALL_PACKAGES'   => 'Установка пакетов',
-              'M_AVAILABLE_PACKAGES' => 'Список пакетов, доступных для установки',
+              'M_NAME'               => 'Name',
+              'M_VERSION'            => 'Version',
+              'M_DESCRIPTION'        => 'Description',
+              'M_INSTALLED_VERSION'  => 'Installed version',
+              'M_INSTALL_PACKAGES'   => 'Package installation',
+              'M_AVAILABLE_PACKAGES' => 'List of packages available for installation',
               );
 
 ?>

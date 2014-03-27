@@ -8,15 +8,15 @@
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'               => 'Мониторинг сети',
+              'M_DESC'               => 'Network monitoring',
               // module-specific
               'M_KBPS'               => 'KBytes/sec',
               'M_MBPS'               => 'MBytes/sec',
               'M_BPS'                => 'Bytes/sec',
-              'M_TX'                 => 'передача',
-              'M_RX'                 => 'приём',
-              'M_DESCRIPTION'        => 'Мониторинг сетевых интерфейсов',
-              'M_INACCURATE_INFO'    => 'Служит для примерной оценки загруженности интерфейсов, информация неточная',
+              'M_TX'                 => 'transmitted',
+              'M_RX'                 => 'received',
+              'M_DESCRIPTION'        => 'Network interface monitoring',
+              'M_INACCURATE_INFO'    => 'Serves as a guideline for interface load, the information is inaccurate',
               );
 
 ?>

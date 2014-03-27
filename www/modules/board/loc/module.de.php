@@ -8,7 +8,7 @@
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'               => 'Platinenlayout',
+              'M_DESC'               => 'Hauptplatine',
               );
 
 ?>

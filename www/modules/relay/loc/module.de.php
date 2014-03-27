@@ -8,11 +8,11 @@
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'               => 'Relaylayout',
+              'M_DESC'               => 'Relay-Shield',
               // module-specific
               'M_WRONG_STATE'        => 'Falscher Zustand',
               'M_WRONG_RELAY'        => 'Falsche Relaynummer',
-              'M_RELAY_LAYOUT'       => 'Relayplatinenlayout',
+              'M_RELAY_LAYOUT'       => 'Layout des Relay-Shields',
               'M_J1'                 => 'J1',
               'M_J2'                 => 'J2',
               'M_J3'                 => 'J3',

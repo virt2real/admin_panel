@@ -8,16 +8,16 @@
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'               => 'Wi-Fi',
+              'M_DESC'               => 'WiFi',
               // module-specific
               'M_ERR_NO_ACCESS'      => 'cannot access file',
               'M_ERR_NO_WRITE'       => 'can not write to',
               'M_SAVE_SUCCESS'       => 'settings saved',
-              'M_WLAN_SETTINGS'      => 'Настройка Wi-Fi',
-              'M_TURN_IT_ON_AND_OFF' => 'Подключение и отключение Wi-Fi',
-              'M_TURN_IT_ON'         => 'Подключить',
-              'M_TURN_IT_OFF'        => 'Отключить',
-              'M_WLAN_AP_SETTINGS'   => 'Настройки подключения Wi-Fi к точкам доступа',
+              'M_WLAN_SETTINGS'      => 'WiFi setup',
+              'M_TURN_IT_ON_AND_OFF' => 'Turn WiFi on and off',
+              'M_TURN_IT_ON'         => 'Turn on',
+              'M_TURN_IT_OFF'        => 'Turn off',
+              'M_WLAN_AP_SETTINGS'   => 'WiFi Access Point settings',
               );
 
 ?>

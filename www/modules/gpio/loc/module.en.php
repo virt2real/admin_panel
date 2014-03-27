@@ -8,18 +8,18 @@
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'               => 'GPIO и CON',
+              'M_DESC'               => 'GPIO and CON',
               // module-specific
-              'M_CON_PINS'           => 'Пины CON через драйвер /dev/v2r_pins',
-              'M_CON_SELECTED'       => 'Выбранные CON',
-              'M_UNSELECT'           => 'снять выделение',
-              'M_SET_DIR_OUTPUT'     => 'Установить направление как Output и значение',
-              'M_SET_DIR_INPUT'      => 'Установить направление как Input',
-              'M_CON_STATE_LOG'      => 'Лог изменений состояния пинов CON',
-              'M_GPIO_PINS'          => 'GPIO через драйвер /dev/v2r_gpio',
-              'M_GPIO_SELECTED'      => 'Выбранные GPIO',
-              'M_GPIO_STATE_LOG'     => 'Лог изменений состояния GPIO',
-              'M_GPIO_DEBUGFS'       => 'GPIO в debug_fs',
+              'M_CON_PINS'           => 'Access to CON pins through the /dev/v2r_pins driver',
+              'M_CON_SELECTED'       => 'Selected CON',
+              'M_UNSELECT'           => 'deselect',
+              'M_SET_DIR_OUTPUT'     => 'Set direction as Output with value',
+              'M_SET_DIR_INPUT'      => 'Set direction as Input',
+              'M_CON_STATE_LOG'      => 'CON pin status change log',
+              'M_GPIO_PINS'          => 'Access to GPIO pins through the /dev/v2r_gpio driver',
+              'M_GPIO_SELECTED'      => 'Selected GPIO',
+              'M_GPIO_STATE_LOG'     => 'GPIO pin status change log',
+              'M_GPIO_DEBUGFS'       => 'GPIO in debug_fs',
               );
 
 ?>

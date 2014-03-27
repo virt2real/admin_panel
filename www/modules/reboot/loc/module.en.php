@@ -8,12 +8,12 @@
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'               => 'System reboot',
+              'M_DESC'               => 'Reboot',
               // module-specific
-              'M_YES'                => 'Yeah',
-              'M_NO'                 => 'Nope',
+              'M_YES'                => 'Yes',
+              'M_NO'                 => 'I\'d rather not',
               'M_REBOOT'             => 'Reboot device?',
-              'M_REALLY_REBOOT'      => 'Device will be rebooted. Are you sure?',
+              'M_REALLY_REBOOT'      => 'The device will be rebooted. Proceed?',
               'M_DEVICE_CONTROL'     => 'Device control',
               'M_REBOOT_DEVICE'      => 'Reboot device',
               );

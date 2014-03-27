@@ -8,12 +8,12 @@
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'               => 'Сообщения ядра',
+              'M_DESC'               => 'Kernel messages',
               // module-specific
-              'M_KERNELMSG_MONITOR'  => 'Мониторинг сообщений ядра',
-              'M_SHOW_ALL_DMESG'     => 'показать весь вывод dmesg',
-              'M_SHOW_TIMINGS'       => 'показывать тайминги',
-              'M_DONT_SHOW_TIMINGS'  => 'не показывать тайминги',
+              'M_KERNELMSG_MONITOR'  => 'Kernel message monitoring',
+              'M_SHOW_ALL_DMESG'     => 'show all dmesg output',
+              'M_SHOW_TIMINGS'       => 'show timestamps',
+              'M_DONT_SHOW_TIMINGS'  => 'don\'t show timestamps',
               );
 
 ?>

@@ -8,11 +8,11 @@
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'               => 'Просмотр миниатюр',
+              'M_DESC'               => 'Thumbnail preview',
               // module-specific
-              'M_VIEW_PHOTOS'        => 'Просмотр фотографий на камере',
-              'M_LOAD_THUMBNAILS'    => 'загрузить превью',
-              'M_DELETE_THUMBNAILS'  => 'удалить все превью',
+              'M_VIEW_PHOTOS'        => 'View photos on the camera',
+              'M_LOAD_THUMBNAILS'    => 'load thumbnails',
+              'M_DELETE_THUMBNAILS'  => 'delete all thumbnails',
               );
 
 ?>

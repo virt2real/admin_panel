@@ -8,21 +8,21 @@
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'               => 'MJPEG udp',
+              'M_DESC'               => 'MJPEG UDP',
               // module-specific
-              'M_MJPEG_UDP_START'    => 'MJPEG udp started stream to %s:%d at %d fps %d%% quality',
-              'M_MJPEG_UDP_STOP'     => 'MJPEG udp stream stopped',
-              'M_HOST'               => 'хост',
-              'M_PORT'               => 'порт',
-              'M_QUALITY'            => 'качество',
-              'M_FPS'                => 'кадров в секунду',
-              'M_START_BROADCAST'    => 'запустить трансляцию',
-              'M_STOP_BROADCAST'     => 'остановить трансляцию',
-              'M_DESCRIPTION'        => 'Описание',
-              'M_START_MJPEGUDP_HERE'=> 'В этом разделе можно запустить трансляцию MJPEG с использованием UDP транспорта на указанный хост и порт.',
-              'M_READ_WIKI'          => 'Подробнее про передачу и приём видео можно прочитать в <a href="http://wiki.virt2real.ru/wiki/Примеры_цепочек_GStreamer" target="_blank">этом разделе Wiki</a>',
-              'M_BROADCAST_SCRIPT'   => 'Скрипт трансляции',
-              'M_LINE_WRAPPING'      => 'переносы строк',
+              'M_MJPEG_UDP_START'    => 'Started MJPEG UDP stream on %s:%d at %d fps %d%% quality',
+              'M_MJPEG_UDP_STOP'     => 'MJPEG UDP stream stopped',
+              'M_HOST'               => 'Host',
+              'M_PORT'               => 'Port',
+              'M_QUALITY'            => 'Quality',
+              'M_FPS'                => 'Frames per second',
+              'M_START_BROADCAST'    => 'Start broadcast',
+              'M_STOP_BROADCAST'     => 'Stop broadcast',
+              'M_DESCRIPTION'        => 'Description',
+              'M_START_MJPEGUDP_HERE'=> 'In this section you can start a MJPEG broadcast using UDP transport to the specified host and port.',
+              'M_READ_WIKI'          => 'More information about the transmission and reception of video can be found <a href="http://wiki.virt2real.ru/wiki/Примеры_цепочек_GStreamer" target="_blank">on this wiki page</a>',
+              'M_BROADCAST_SCRIPT'   => 'Broadcast script',
+              'M_LINE_WRAPPING'      => 'Line wrapping',
               );
 
 ?>

@@ -10,14 +10,14 @@
 $lang = array(// common items
               'M_DESC'               => 'NAND',
               // module-specific
-              'M_NO_NAND_BOOT'       => 'Прошивка NAND недоступна в режиме загрузки с NAND',
-              'M_DEV_PART_INFO'      => 'Информация о разделах и устройствах',
-              'M_NAND_FLASH'         => 'Прошивка NAND',
+              'M_NO_NAND_BOOT'       => 'NAND flashing is not available in NAND boot mode',
+              'M_DEV_PART_INFO'      => 'Information about partitions and devices',
+              'M_NAND_FLASH'         => 'NAND flashing',
               'M_UBI'                => 'UBI',
               'M_JFFS'               => 'JFFS',
-              'M_FLASH'              => 'Прошить',
-              'M_REC_FS_DEFAULT'     => 'Рекомендуемый тип файловой системы - UBI (выбран по умолчанию)',
-              'M_DC_DURING_FLASHING' => 'После нажатия кнопки "Прошить" возможно пропадание связи, по окончании процесса прошивки коннект восстановится',
+              'M_FLASH'              => 'Flash',
+              'M_REC_FS_DEFAULT'     => 'Recommended type of file system - UBI (selected by default)',
+              'M_DC_DURING_FLASHING' => 'The connection may be lost during flashing but will be restored on completion of the flashing process.',
               );
 
 ?>

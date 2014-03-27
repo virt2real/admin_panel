@@ -8,16 +8,16 @@
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'               => 'Автозапуск',
+              'M_DESC'               => 'Autostart',
               // module-specific
-              'M_BOOTSCRIPTS'        => 'Системные скрипты загрузки',
-              'M_ACTIVE_SCRIPTS'     => 'Активные скрипты',
-              'M_INACTIVE_SCRIPTS'   => 'Неактивные скрипты',
-              'M_LEFT_COLUMN'        => 'Левый столбец - активные скрипты в каталоге /etc/init.d, выполняются в алфавитном порядке при старте системы.',
-              'M_RIGHT_COLUMN'       => 'Правый столбец - неактивные скрипты в каталоге /etc/init.d.sample, при запуске системы НЕ выполняются, но хранятся на всякий случай.',
-              'M_MOVE_ITEMS'         => 'Путём перемещения файлов из одного списка в другой можно настраивать запуск нужных компонентов при загрузке системы.',
-              'M_V2R_AUTOSTART'      => 'Скрипт автозапуска virt2real',
-              'M_LINE_WRAPPING'      => 'переносы строк',
+              'M_BOOTSCRIPTS'        => 'Boot scripts',
+              'M_ACTIVE_SCRIPTS'     => 'Active scripts',
+              'M_INACTIVE_SCRIPTS'   => 'Inactive scripts',
+              'M_LEFT_COLUMN'        => 'The left column lists the active scripts from the /etc/init.d folder, they are executed in alphabetical order at boot.',
+              'M_RIGHT_COLUMN'       => 'The right column lists the inactive scripts from the /etc/init.d.sample folder, they are NOT executed but stored for later use.',
+              'M_MOVE_ITEMS'         => 'By moving files from one list to another, you can configure the start of the desired components at system boot.',
+              'M_V2R_AUTOSTART'      => 'virt2real autostart script',
+              'M_LINE_WRAPPING'      => 'Line wrapping',
               'M_ERR_NO_ACCESS'      => 'cannot access file',
               'M_ERR_NO_WRITE'       => 'cannot write to',
               'M_SAVE_SUCCESS'       => 'successfully saved',

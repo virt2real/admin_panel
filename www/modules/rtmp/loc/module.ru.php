@@ -13,6 +13,7 @@ $lang = array(// common items
               'M_RTMP_STREAM_STARTED'=> 'RTMP started stream to %s%s at %d kbps',
               'M_RTMP_STREAM_STOPPED'=> 'RTMP stopped',
               'M_URL'                => 'URL',
+              'M_STREAM'             => 'stream',
               'M_BITRATE'            => 'битрейт',
               'M_START_BROADCAST'    => 'запустить трансляцию',
               'M_STOP_BROADCAST'     => 'остановить трансляцию',
