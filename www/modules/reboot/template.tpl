@@ -14,7 +14,7 @@
 				modal: true,
 				buttons: {
 					"%M_YES%": function() {
-						reboot();
+						setTimeout("hard_reboot()", 100);
 						$( this ).dialog( "close" );
 					},
 					"%M_NO%": function() {
@@ -25,9 +25,9 @@
 		});
 	}
 
-	function reboot(){
+	function hard_reboot() {
 		$("#resetStatus").load("modules/{module_name}/reboot.php");
-		document.location.href = "/";
+		setTimeout('document.location.href = "/"', 1000);
 	}
 </script>
 
