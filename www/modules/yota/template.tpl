@@ -31,7 +31,7 @@
 
 			}
 			if (status == "error") {
-				$("#connection_status").html("%L_FAIL%");
+				$("#connection_status").html("%M_FAIL%");
 			}
 
 			// setTimeout("CheckYota()", 1000);
@@ -52,7 +52,7 @@
 
 	<h3><a href="#">%M_DESC%</a></h3>
 	<div>
-		<p>%M_TOGGLE_CONNECTION%</p>
+		<p>%M_TITLE%</p>
 
 		<p>&nbsp;</p>
 
