@@ -28,7 +28,7 @@ $module_content = lang_translate($module_content);
 
 /***************** module specific part **************/
 
-$rtsptemplate = file_get_contents('rtsp.sh');
+$rtsptemplate = file_get_contents('/etc/virt2real/rtsp_server.sh');
 $module_content = str_replace('{rtsptemplate}', $rtsptemplate, $module_content);
 
 echo $module_content;

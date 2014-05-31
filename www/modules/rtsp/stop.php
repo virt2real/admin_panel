@@ -12,8 +12,8 @@ include('../../parts/global.php');
 require_once('../../parts/language.php');
 lang_swapmod('rtsp');
 
-shell_exec("killall gst-launch-0.10");
-shell_exec("killall test-launch");
+shell_exec("/etc/virt2real/rtsp_server.sh stop");
+
 echo $language['M_RTSP_STREAM_STOPPED'];
 
 ?>

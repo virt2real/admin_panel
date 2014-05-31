@@ -10,8 +10,14 @@
 <script>
 	function rtsp_run(){
 		var bitrate = $("#bitrate").val();
+		var port = $("#port").val();
+		var path = $("#path").val();
+		var type = $("#type").val();
+
+		$("#rtsp_link").html('<a href="rtsp://{deviceHost}:' + port + path + '">rtsp://{deviceHost}:' + port + path + '</a>');
+
 		$("#rtsp_status").html('<img src="/imgs/loader.gif">');
-		$.post("modules/{module_name}/run.php?rnd=" + Math.random(), {bitrate: bitrate}, function(response, status, xhr) {
+		$.post("modules/{module_name}/run.php?rnd=" + Math.random(), {port:port,path:path,type:type,bitrate:bitrate}, function(response, status, xhr) {
 			if (status == "success") {
 				$("#rtsp_status").html(response);
 			}
@@ -58,13 +64,28 @@
 
 	<table width="100%">
 	<tr valign="top">
-	<td width="700">
+	<td width="500">
 
 	<p class="bluetitle">%L_SETTINGS%</p>
 	<p></p>
 
-	<p class="graytext">%M_SERVERLINK% <a href="rtsp://{deviceHost}:8554/test">rtsp://{deviceHost}:8554/test</a></p>
+	<p class="graytext">%M_SERVERLINK% <span id="rtsp_link"><a href="rtsp://{deviceHost}:554/test">rtsp://{deviceHost}:554/test</a></span></p>
 
+	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_PORT%</div>
+	<div style="display:inline;">
+		<input type="text" id="port" value="554" style="width:200px;">
+	</div>
+	<p></p>
+	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_PATH%</div>
+	<div style="display:inline;">
+		<input type="text" id="path" value="/video" style="width:200px;">
+	</div>
+	<p></p>
+	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_TYPE%</div>
+	<div style="display:inline;">
+		<input type="text" id="type" value="1" style="width:200px;">
+	</div>
+	<p></p>
 	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_BITRATE%</div>
 	<div style="display:inline;">
 		<input type="text" id="bitrate" value="600000" style="width:200px;">
