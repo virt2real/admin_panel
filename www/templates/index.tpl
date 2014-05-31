@@ -94,6 +94,13 @@
 				$("#mobile_status").css("display", "none");
 			}
 
+			// show on air status
+			if (status_json.onair) {
+				$("#onair_params").html("on air<br>" + status_json.onair);
+				$("#onair_status").css("display", "block");
+			} else {
+				$("#onair_status").css("display", "none");
+			}
 
 		} catch (e) {
 		}
@@ -130,14 +137,20 @@
 						<tr valign="top">
 							<td>&nbsp;</td>
 							<td width="90" align="center">&nbsp;
+								<div id="onair_status">
+									<img src="/imgs/onair-icon.png" height=30>
+									<div id="onair_params">on air<br>Invideon</div>
+								</div>
+							</td>
+							<td width="90" align="center">&nbsp;
 								<div id="mobile_status">
-									<a href="?3g"><img src="/imgs/3g.png"></a>
+									<a href="?3g"><img src="/imgs/3g-icon.png" height=30></a>
 									<div id="mobile_params"></div>
 								</div>
 							</td>
 							<td width="130" align="center">&nbsp;
 								<div id="wifistatus">
-									<a href="?wlan"><img src="/imgs/wifi.png"></a>
+									<a href="?wlan"><img src="/imgs/wifi-icon.png" height=30></a>
 									<div id="linkstatus"></div>
 								</div>
 							</td>

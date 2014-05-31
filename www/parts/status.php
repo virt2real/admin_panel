@@ -31,6 +31,10 @@ $systemmessage = $systemmessages[sizeof($systemmessages)-1];
 $ssid = @file_get_contents("/tmp/ssid");
 $ssid = str_replace("\n", "", $ssid);
 
+$onair = @file_get_contents("/tmp/onair");
+$onair = str_replace("\n", "", $onair);
+
+
 foreach ($wlanstatusfile as $key => $value){
 
 	// remove many spaces
@@ -57,6 +61,8 @@ foreach ($wlanstatusfile as $key => $value){
 $status["message"] = "&nbsp;".$systemmessage;
 $status["ssid"] = $ssid;
 $status["mobile_status"] = $mobile_status;
+
+$status["onair"] = $onair;
 
 $json = json_encode($status);
 echo $json;
