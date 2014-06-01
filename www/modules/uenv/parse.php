@@ -43,6 +43,16 @@ function ParseParams($cmdline, $template){
 				$template = str_replace('{lanselected1}', $option1, $template);
 				$template = str_replace('{lanselected2}', $option2, $template);
 			break;
+			case "lan1":
+				if ($element[1] == "on") $option1 = "checked"; else $option2 = "checked";
+				$template = str_replace('{lan1selected1}', $option1, $template);
+				$template = str_replace('{lan1selected2}', $option2, $template);
+			break;
+			case "lan1hwaddr": 
+				$tmp = explode(',',$element[1]);	
+				$template = str_replace('{lan1mac}', $tmp[0], $template);
+			break;
+
 			case "pwrled":
 				if ($element[1] == "on") $option1 = "checked"; else $option2 = "checked";
 				$template = str_replace('{blueselected1}', $option1, $template);
@@ -168,6 +178,8 @@ function ParseParams($cmdline, $template){
 
 	}
 
+	/* clear unsetted fields */
+	$template = str_replace('{lan1mac}', "", $template);
 
 	return $template.$params;
 

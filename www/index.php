@@ -64,8 +64,9 @@ foreach ($module_list as $key=>$value) {
 // load menu description
 require("parts/menu.php");
 
-foreach ($main_menu as $key => $value) {
-	$menulist .= '<h3><a href="#">' . $value . '</a></h3><div>'.$menu[$key].'<br></div>';
+// show sorted menu
+for ($i = 0; $i < count($sort_menu); $i++) {
+	$menulist .= '<h3><a href="#">' . $main_menu[$sort_menu[$i]] . '</a></h3><div>'.$menu[$sort_menu[$i]].'<br></div>';
 }
 
 

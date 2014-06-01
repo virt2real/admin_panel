@@ -49,6 +49,16 @@ body {
   padding-top:0px;
 }
 
+#onair_status {
+  display:none;
+}
+#onair_params {
+  color: #ffffff;
+  font-size: 0.8em;
+  padding:10px;
+  padding-top:0px;
+}
+
 #menu {
   font-size:14px;
 }

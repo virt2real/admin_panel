@@ -28,6 +28,7 @@ $lang = array(// common items
               'L_ADMINISTRATION'     => 'Administration',
               'L_EXPERIMENTS'        => 'Experimente',
               'L_LEARN'              => 'Lernmaterial',
+              'L_RC'              	 => 'RC',
               // templates/error*.tpl
               'L_ERROR'              => 'Fehler',
               'L_DEP_ERROR'          => 'Fehler der Abhängigkeiten',

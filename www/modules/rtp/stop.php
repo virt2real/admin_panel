@@ -13,6 +13,7 @@ require_once('../../parts/language.php');
 lang_swapmod('rtp');
 
 shell_exec("killall gst-launch-0.10");
+@file_put_contents("/tmp/onair", "");
 echo $language['M_RTP_STREAM_STOPPED'];
 
 ?>

@@ -16,6 +16,7 @@ $port = $_POST['port'];
 $quality = $_POST['quality'];
 
 shell_exec("./mjpeg.sh $port $quality");
+@file_put_contents("/tmp/onair", "MJPEG");
 echo $language['M_MJPEG_STARTED'];
 
 ?>

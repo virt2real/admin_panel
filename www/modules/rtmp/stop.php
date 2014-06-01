@@ -13,6 +13,7 @@ include('../../parts/language.php');
 lang_swapmod('rtmp');
 
 shell_exec("killall gst-launch-0.10");
+@file_put_contents("/tmp/onair", "");
 echo $language['M_RTMP_STREAM_STOPPED'];
 
 ?>

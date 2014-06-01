@@ -13,6 +13,7 @@
     $( "#btn11" ).buttonset();
     $( "#btn12" ).buttonset();
     $( "#btn14" ).buttonset();
+    $( "#btn15" ).buttonset();
   });
 </script>
 
@@ -74,6 +75,15 @@
 		if( $("#btn3v1").attr("checked") == "checked") result += "lan0=on";
 		if( $("#btn3v2").attr("checked") == "checked") result += "lan0=off";
 		result += " ";
+		if( $("#btn15v1").attr("checked") == "checked") result += "lan1=on";
+		if( $("#btn15v2").attr("checked") == "checked") result += "lan1=off";
+		result += " ";
+
+		if ($("#lan1mac").val()) {
+			result += "lan1hwaddr=" + $("#lan1mac").val().replace(/:/g,"");
+			result += " ";
+		}
+
 		result += "1wire=" + $("#w1val1").val();
 		result += " ";
 		result += "1wirepullup=" + $("#w1val2").val();
@@ -137,6 +147,18 @@
 	    <input type="radio" id="btn3v1" name="btn3" {lanselected1}><label for="btn3v1">%L_ON%</label>
 	    <input type="radio" id="btn3v2" name="btn3" {lanselected2}><label for="btn3v2">%L_OFF%</label>
 	</div>
+	<p></p>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_LAN1%</div>
+	<div id="btn15" style="display:inline;">
+	    <input type="radio" id="btn15v1" name="btn15" {lan1selected1}><label for="btn15v1">%L_ON%</label>
+	    <input type="radio" id="btn15v2" name="btn15" {lan1selected2}><label for="btn15v2">%L_OFF%</label>
+	</div>
+	<p></p>
+	<div style="display:inline-block; padding-left:100px; min-width:150px;">%M_LAN1MAC%</div>
+	<div style="display:inline;">
+		<input type="text" id="lan1mac" value="{lan1mac}" style="width:100px;" maxlength=17>
+	</div>
+	<p></p>
 
 </div>
 

@@ -17,7 +17,7 @@ $playpath = $_POST['playpath'];
 $bitrate = $_POST['bitrate'];
 
 shell_exec("./rtmp.sh $location $playpath $bitrate");
-
+@file_put_contents("/tmp/onair", "RTMP");
 printf($language['M_RTMP_STREAM_STARTED'], $location, $playpath, $bitrate);
 
 ?>

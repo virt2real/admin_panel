@@ -17,6 +17,7 @@ $port = $_POST['port'];
 $bitrate = $_POST['bitrate'];
 
 shell_exec("./rtp.sh $host $port $bitrate");
+@file_put_contents("/tmp/onair", "RTP");
 
 printf($language['M_RTP_STREAM_STARTED']);
 

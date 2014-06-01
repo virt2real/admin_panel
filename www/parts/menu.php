@@ -19,5 +19,21 @@ $main_menu [8] = '%L_AUDIO%';
 $main_menu [9] = '%L_ADMINISTRATION%';
 $main_menu [10] = '%L_EXPERIMENTS%';
 $main_menu [11] = '%L_LEARN%';
+$main_menu [12] = '%L_RC%';
+
+$sort_menu [0] = 0;
+$sort_menu [1] = 12;
+$sort_menu [2] = 1;
+$sort_menu [3] = 2;
+$sort_menu [4] = 3;
+$sort_menu [5] = 4;
+$sort_menu [6] = 5;
+$sort_menu [7] = 6;
+$sort_menu [8] = 7;
+$sort_menu [9] = 8;
+$sort_menu [10] = 9;
+$sort_menu [11] = 10;
+$sort_menu [12] = 11;
+
 
 ?>

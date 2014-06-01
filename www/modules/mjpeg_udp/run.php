@@ -18,7 +18,7 @@ $quality = $_POST['quality'];
 $fps = $_POST['fps'];
 
 shell_exec("./mjpeg_udp.sh $host $port $quality $fps");
-
+@file_put_contents("/tmp/onair", "MJPEG");
 printf($language['M_JPEG_UDP_START'], $host, $port, $fps, $quality);
 
 ?>
