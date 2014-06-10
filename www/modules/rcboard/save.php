@@ -28,16 +28,11 @@ if ($autorun) {
 /* parse other params */
 
 $config = $_POST['config'];
-$host = $_POST['host'];
-$port = intval($_POST['port']);
-$bitrate = intval($_POST['bitrate']);
-$maxbitrate = intval($_POST['maxbitrate']);
-$mtu = intval($_POST['mtu']);
 $user = intval($_POST['user']);
 $hash = $_POST['hash'];
 $address = $_POST['address'];
 
-$text = "CONFIG=$config\nHOST=$host\nPORT=$port\nBITRATE=$bitrate\nMAXBITRATE=$maxbitrate\nMTU=$mtu\nUSER=$user\nHASH=$hash\nADDRESS=$address\n";
+$text = "CONFIG=$config\nUSER=$user\nHASH=$hash\nADDRESS=$address\n";
 
 $filename = '/opt/rcboard/config.sh';
 $success = true;

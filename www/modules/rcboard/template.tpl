@@ -13,18 +13,13 @@
 	function SaveRCboardSettings(){
 		var autorun = ($("#inautorun").attr("checked") == "checked") ? 1 : 0;
 		var config = ($("#radio2").attr("checked") == "checked") ? "remote" : "local";
-		var host = $("#host").val();
-		var port = $("#port").val();
-		var bitrate = $("#bitrate").val();
-		var maxbitrate = $("#maxbitrate").val();
-		var mtu = $("#mtu").val();
 		var user = $("#userid").val();
 		var hash = $("#hash").val();
 		var address = $("#address").val();
 
 		$(".rcboardsavestatus").html('<img src="/imgs/loader.gif">');
 		$.post("modules/{module_name}/save.php?rnd=" + Math.random(), {
-			autorun:autorun,config:config,host:host,port:port,bitrate:bitrate,maxbitrate:maxbitrate,mtu:mtu,user:user,hash:hash,address:address
+			autorun:autorun,config:config,user:user,hash:hash,address:address
 			}, function(response, status, xhr) {
 			if (status == "success") {
 				$(".rcboardsavestatus").html(response);
@@ -98,42 +93,14 @@
 
 					<p>&nbsp;</p>
 
-					<p class="bluetitle">Общие параметры запуска</p>
-
-					<div style="min-width:200px;">%M_HOST%</div>
-					<div style="display:inline;">
-						<input type="text" id="host" value="{host}" style="width:300px;">
-					</div>
-					<p></p>
-					<div style="min-width:200px;">%M_PORT%</div>
-					<div style="display:inline;">
-						<input type="text" id="port" value="{port}" style="width:300px;">
-					</div>
-					<p></p>
-					<div style="min-width:200px;">%M_BITRATE%</div>
-					<div style="display:inline;">
-						<input type="text" id="bitrate" value="{bitrate}" style="width:300px;">
-					</div>
-					<p></p>
-					<div style="min-width:200px;">%M_MAXBITRATE%</div>
-					<div style="display:inline;">
-						<input type="text" id="maxbitrate" value="{maxbitrate}" style="width:300px;">
-					</div>
-					<p></p>
-					<div style="min-width:200px;">%M_MTU%</div>
-					<div style="display:inline;">
-						<input type="text" id="mtu" value="{mtu}" style="width:300px;">
-					</div>
-					<p></p>
-
 					<p>
-						<p style="float:right;"><a class="buttonlink" href="#" onclick="SaveRCboardSettings(); return false;">[ %L_SAVE% ]</a></p>
-						<span class="rcboardsavestatus"></span>
+						<p><a class="buttonlink" href="#" onclick="SaveRCboardSettings(); return false;">[ %L_SAVE% ]</a></p>
 					</p>
+					<p class="rcboardsavestatus"></p>
 
 				</td>
 				<td>
-					<p class="graytext"><span class="bluetitle">Запускать при включении питания</span><br> значит поместить скрипт запуска в автозагрузку </p> <p class="graytext"><span class="bluetitle">Хост видеотрансляции</span> <br> ip (или имя) хоста, на который начать трансляцию сразу после запуска</p> <p class="graytext"><span class="bluetitle">Порт</span> <br> порт, на который начать трансляцию сразу после запуска </p> <p class="graytext"><span class="bluetitle">Стартовый битрейт</span> <br> битрейт, который будет установлен сразу после запуска </p> <p class="graytext"><span class="bluetitle">Максимальный битрейт</span> <br> максимальное значение битрейта, которое можно будет установить удалённо во время трансляции  </p>
+					<p class="graytext"><span class="bluetitle">Запускать при включении питания</span><br> значит поместить скрипт запуска в автозагрузку </p> 
 				</td>
 			</tr>
 		</table>
