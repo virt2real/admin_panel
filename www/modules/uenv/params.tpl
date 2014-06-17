@@ -101,6 +101,7 @@
 		result += " ";
 		if( $("#btn7v1").attr("checked") == "checked") result += "camera=off";
 		if( $("#btn7v2").attr("checked") == "checked") result += "camera=ov2643";
+		if( $("#btn7v3").attr("checked") == "checked") result += "camera=ov5642";
 
 		result += "\n";
 		result += "uenvcmd=echo Running uenvcmd ...; run loaduimage;bootm 0x82000000";
@@ -289,6 +290,7 @@
 	<div id="btn7" style="display:inline;">
 	    <input type="radio" id="btn7v1" name="btn7" {cameraselected1}><label for="btn7v1">%L_OFF%</label>
 	    <input type="radio" id="btn7v2" name="btn7" {cameraselected2}><label for="btn7v2">%M_OV2643%</label>
+	    <input type="radio" id="btn7v3" name="btn7" {cameraselected3}><label for="btn7v3">%M_OV5642%</label>
 	</div>
 
 	<p></p>

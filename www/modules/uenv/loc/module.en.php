@@ -47,6 +47,7 @@ $lang = array(// common items
               'M_BOOT_TIMEOUT'       => 'Boot timeout',
               'M_FS_TYPE'            => 'FS type',
               'M_OV2643'             => 'OV2643',
+              'M_OV5642'             => 'OV5642',
               'M_VIDEO_OUT'          => 'Video out',
               'M_COMPOSITE'          => 'Composite',
               'M_LCD'                => 'LCD',

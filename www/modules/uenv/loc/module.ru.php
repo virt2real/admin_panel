@@ -47,6 +47,7 @@ $lang = array(// common items
               'M_BOOT_TIMEOUT'       => 'Пауза загрузки',
               'M_FS_TYPE'            => 'Тип фс',
               'M_OV2643'             => 'OV2643',
+              'M_OV5642'             => 'OV5642',
               'M_VIDEO_OUT'          => 'Видеовыход',
               'M_COMPOSITE'          => 'Композит',
               'M_LCD'                => 'LCD',
