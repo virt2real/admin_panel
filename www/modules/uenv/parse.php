@@ -38,6 +38,12 @@ function ParseParams($cmdline, $template){
 				$template = str_replace('{apselected1}', $option1, $template);
 				$template = str_replace('{apselected2}', $option2, $template);
 			break;
+			case "wifi_ssid": 
+				$template = str_replace('{wifi_ssid}', $element[1], $template);
+			break;
+			case "wifi_pass": 
+				$template = str_replace('{wifi_pass}', $element[1], $template);
+			break;
 			case "lan0":
 				if ($element[1] == "on") $option1 = "checked"; else $option2 = "checked";
 				$template = str_replace('{lanselected1}', $option1, $template);

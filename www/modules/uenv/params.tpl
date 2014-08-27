@@ -72,6 +72,10 @@
 		if( $("#btn14v1").attr("checked") == "checked") result += "usbwifi=on";
 		if( $("#btn14v2").attr("checked") == "checked") result += "usbwifi=off";
 		result += " ";
+		result += "wifi_ssid=" + $("#wifi_ssid").val();
+		result += " ";
+		result += "wifi_pass=" + $("#wifi_pass").val();
+		result += " ";
 		if( $("#btn3v1").attr("checked") == "checked") result += "lan0=on";
 		if( $("#btn3v2").attr("checked") == "checked") result += "lan0=off";
 		result += " ";
@@ -140,6 +144,20 @@
 	</div>
 	<p class="bluetitle" style="display: inline; padding-left: 20px;">
 	<p></p>
+
+
+	<p class="bluetitle">%M_WLAN_OVERRIDE%</p>
+
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_WLAN_SSID%</div>
+	<div style="display:inline;">
+		<input type="text" id="wifi_ssid" value="{wifi_ssid}" style="width:100px;">
+	</div>
+	<p></p>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_WLAN_PASS%</div>
+	<div style="display:inline;">
+		<input type="text" id="wifi_pass" value="{wifi_pass}" style="width:100px;">
+	</div>
+
 
 	<p class="bluetitle">%M_LOCAL_NET%</p>
 
@@ -346,5 +364,4 @@
 	<div style="display:inline;">
 		<input type="text" id="bufval3" value="{bufval3}" style="width:100px;">
 	</div>
-
 </div>

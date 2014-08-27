@@ -60,6 +60,9 @@ $lang = array(// common items
               'M_CONTSIZE_BUFFER'    => 'Buffer cont_bufsize',
               'M_CONTSIZE_BUFFER_2'  => 'Buffer cont2_bufsize',
               'M_BUFF_OFFSET'        => 'bufoffset',
+              'M_WLAN_OVERRIDE'      => 'Wi-Fi settings override',
+              'M_WLAN_SSID'          => 'Network name (SSID)',
+              'M_WLAN_PASS'          => 'Network password',
               );
 
 ?>
