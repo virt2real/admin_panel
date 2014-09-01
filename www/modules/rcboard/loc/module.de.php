@@ -22,7 +22,10 @@ $lang = array(// common items
               'M_BITRATE'    		=> 'Start bitrate',
               'M_MAXBITRATE'    		=> 'Maximal bitrate',
               'M_MTU'    		=> 'MTU',
-			  'M_LINE_WRAPPING'      => 'lines wrapping'
+			  'M_LINE_WRAPPING'      => 'lines wrapping',
+			  'M_MODULESTITLE'  => 'Additional modules',
+              'M_ACTIVE_SCRIPTS'     => 'Active modules',
+              'M_INACTIVE_SCRIPTS'   => 'Inactive modules'
               );
 
 ?>

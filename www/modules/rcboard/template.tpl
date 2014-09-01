@@ -1,7 +1,71 @@
 <script>
 	$(function() {
-		$( "#accordion" ).accordion({ fillSpace: false, autoHeight: false, navigation: false});
+		$( "#accordion" ).accordion({ fillSpace: false, autoHeight: false, navigation: false, create: function( event, ui ) {init{module_name}();} });
 	});
+
+	function init{module_name}(){
+		LoadAutostartScripts();
+	}
+
+	function LoadAutostartScripts(){
+		$("#loadautostartscriptstatus").html('<img src="/imgs/loader.gif">');
+		$.post("modules/{module_name}/load.php?rnd=" + Math.random(), {}, function(response, status, xhr) {
+			$("#loadautostartscriptstatus").empty();
+			if (status == "success") {
+
+				var json;
+
+				try {
+					json = JSON.parse(response);
+
+					var result = "";
+					for (var i in json.active) {
+						result += json.active[i] + ' <a href="#" onclick=\'MoveFiles("' + json.active[i] + '", 1); return false;\'><img src="modules/{module_name}/imgs/arrow_right.png"></a>' + '<br>';
+					}
+
+					$("#list").html(result);
+
+					result = "";
+					for (var i in json.inactive) {
+						result += ' <a href="#" onclick=\'MoveFiles("' + json.inactive[i] + '", 2); return false;\'><img src="modules/{module_name}/imgs/arrow_left.png"></a> ' + json.inactive[i] + '<br>';
+					}
+
+					$("#list2").html(result);
+
+				} catch (err) {}
+
+			}
+			if (savestatus == "error") {
+				$("#autostartscriptlist").html("%L_FAIL%");
+			}
+		});
+
+	}
+
+
+	function MoveFiles(filename, action){
+		$("#loadautostartscriptstatus").html('<img src="/imgs/loader.gif">');
+		$.post("modules/{module_name}/move.php?rnd=" + Math.random(), {filename:filename, action:action}, function(response, status, xhr) {
+			$("#loadautostartscriptstatus").empty();
+			LoadAutostartScripts();
+		});
+
+	}
+
+
+	function SaveAutostartScript(text){
+		$("#saveautostartscriptstatus").html('<img src="/imgs/loader.gif">');
+		$.post("modules/{module_name}/save.php?rnd=" + Math.random(), {text: text}, function(response, status, xhr) {
+			if (status == "success") {
+				$("#saveautostartscriptstatus").html(response);
+			}
+			if (savestatus == "error") {
+				$("#saveautostartscriptstatus").html("%L_FAIL%");
+			}
+		});
+
+	}
+
 </script>
 
 <script>
@@ -58,6 +122,15 @@
 
 </script>
 
+<style>
+
+#list, #list2 {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size:1.4em;
+}
+
+</style>
+
 <div id="accordion" style="margin:0; padding:0;">
 
 	<h3><a href="#">%M_TITLE%</a></h3>
@@ -107,6 +180,39 @@
 
 	</div>
 
+	<h3><a href="#">%M_MODULESTITLE%</a></h3>
+	<div>
+		<div id="loadautostartscriptstatus" style="height:20px;"></div>
+
+		<table width="100%">
+			<tr valign=top>
+				<td width=200><p class="bluetitle">%M_ACTIVE_SCRIPTS%</p></td>
+				<td width=200><p class="bluetitle">%M_INACTIVE_SCRIPTS%</p></td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr valign=top>
+				<td><div id="list"></div></td>
+				<td><div id="list2"></div></td>
+			</tr>
+		</table>
+	</div>
+
+	<h3><a href="#">%M_LOCALCONFIGTITLE%</a></h3>
+	<div>
+		<p>
+			<textarea id="localconfigfile">{localconfigfile}</textarea>
+
+			<p style="float:right;"><a href="#" onclick="noWrap($('#localconfigfile')); return false;">%M_LINE_WRAPPING%</a></p>
+			<p>
+				<p><a class="buttonlink" href="#" onclick="var text = $('#localconfigfile').val(); SaveRCboardLocalConfig(text); return false;">[ %L_SAVE% ]</a></p>
+				<span id="rcboardsavelocalconfig"></span>
+			</p>
+		</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+	</div>
+
 	<h3><a href="#">%M_REMOTECONFIGTITLE%</a></h3>
 	<div>
 		<table>
@@ -141,22 +247,6 @@
 			</tr>
 		</table>
 		
-	</div>
-
-	<h3><a href="#">%M_LOCALCONFIGTITLE%</a></h3>
-	<div>
-		<p>
-			<textarea id="localconfigfile">{localconfigfile}</textarea>
-
-			<p style="float:right;"><a href="#" onclick="noWrap($('#localconfigfile')); return false;">%M_LINE_WRAPPING%</a></p>
-			<p>
-				<p><a class="buttonlink" href="#" onclick="var text = $('#localconfigfile').val(); SaveRCboardLocalConfig(text); return false;">[ %L_SAVE% ]</a></p>
-				<span id="rcboardsavelocalconfig"></span>
-			</p>
-		</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
 	</div>
 
 
