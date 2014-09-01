@@ -200,10 +200,14 @@
 
 	function position_to_duty (pwmid, position) {
 		var tic = 1000000 / 24000000;
-		var minpos = 500 / tic;
-		var maxpos = 2450 / tic;
+		var minpos_ms = parseInt($("#ppm_min_ms" + pwmid).val());
+		var minpos = minpos_ms / tic;
+		var maxpos_ms = parseInt($("#ppm_max_ms" + pwmid).val());
+		var maxpos = maxpos_ms / tic;
 		var scale = (maxpos - minpos) / 180;
+		var scale_ms = (maxpos_ms - minpos_ms) / 180;
 		var period = 20000 / tic;
+		//$("#ppm_current_ms" + pwmid).text(parseInt(minpos_ms + scale_ms * position) + " mcs");
 
 		set_pwm(pwmid, parseInt(minpos + scale * position), parseInt(period));
 	}
@@ -211,10 +215,16 @@
 
 	function duty_to_position (pwmid, duty) {
 		var tic = 1000000 / 24000000;
-		var minpos = 500 / tic;
-		var maxpos = 2450 / tic;
+		var minpos_ms = parseInt($("#ppm_min_ms" + pwmid).val());
+		var minpos = minpos_ms / tic;
+		var maxpos_ms = parseInt($("#ppm_max_ms" + pwmid).val());
+		var maxpos = maxpos_ms / tic;
 		var scale = (maxpos - minpos) / 180;
+		var scale_ms = (maxpos_ms - minpos_ms) / 180;
 		var position = parseInt((duty - minpos) / scale);
+		var position_ms = parseInt((duty - minpos_ms) * tic);
+
+		$("#ppm_current_ms" + pwmid).text(position_ms + " mcs");
 		$("#position" + pwmid).html(position);
 		$("#sliderppm" + pwmid).slider("option", "value", position);
 	}
@@ -241,12 +251,16 @@
 		position_to_duty (pwmid, position);
 	});
 
-/*	$(".ppmsliders").on("slide", function( event, ui ) {
+	$(".ppmsliders").on("slide", function( event, ui ) {
 		var pwmid = parseInt($(this).attr("pwmid"));
 		var position = $(this).slider("option", "value");
-		position_to_duty (pwmid, position);
+
+		var minpos_ms = parseInt($("#ppm_min_ms" + pwmid).val());
+		var maxpos_ms = parseInt($("#ppm_max_ms" + pwmid).val());
+		var scale_ms = (maxpos_ms - minpos_ms) / 180;
+		$("#ppm_current_ms" + pwmid).text(parseInt(minpos_ms + scale_ms * position) + " mcs");
 	});
-*/
+
 
 </script>
 
