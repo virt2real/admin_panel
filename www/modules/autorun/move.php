@@ -30,7 +30,6 @@ switch ($_POST['action']) {
 		break;
 
 	case 2:
-echo 'mode ' . $INACTIVE_PATH . '/' . $_POST['filename'] . ' into '.$ACTIVE_PATH . '/' . $_POST['filename'];
 		rename($INACTIVE_PATH . '/' . $_POST['filename'], $ACTIVE_PATH . '/' . $_POST['filename']);
 		break;
 
