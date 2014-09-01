@@ -11,7 +11,7 @@
 include('../../parts/global.php');
 
 $text = $_POST['text'];
-$filename = '/opt/rcboard/rcboard.conf';
+$filename = '/opt/rcboard/rcboard.conf.local';
 
 $success = true;
 

@@ -33,7 +33,7 @@ $module_content = lang_translate($module_content);
 
 /***************** module specific part **************/
 
-$localconfigfile = file_get_contents("/opt/rcboard/rcboard.conf");
+$localconfigfile = file_get_contents("/opt/rcboard/rcboard.conf.local");
 $module_content = str_replace('{localconfigfile}', $localconfigfile, $module_content);
 
 
