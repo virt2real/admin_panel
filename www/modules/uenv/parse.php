@@ -190,6 +190,8 @@ function ParseParams($cmdline, $template){
 
 	/* clear unsetted fields */
 	$template = str_replace('{lan1mac}', "", $template);
+	$template = str_replace('{wifi_ssid}', "", $template);
+	$template = str_replace('{wifi_pass}', "", $template);
 
 	return $template.$params;
 
