@@ -25,7 +25,10 @@ $lang = array(// common items
 			  'M_LINE_WRAPPING'      => 'переносы строк',
 			  'M_MODULESTITLE'  => 'Дополнительные модули',
               'M_ACTIVE_SCRIPTS'     => 'Активные модули',
-              'M_INACTIVE_SCRIPTS'   => 'Неактивные модули'
+              'M_INACTIVE_SCRIPTS'   => 'Неактивные модули',
+              'M_EXPORTTITLE'    => 'Экспорт/импорт',
+              'L_EXPORT'    => 'Экспорт',
+              'L_IMPORT'    => 'Импорт'
               );
 
 ?>

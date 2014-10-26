@@ -1,3 +1,5 @@
+<script type="text/javascript" src="js/ajaxupload.js"></script>
+
 <script>
 	$(function() {
 		$( "#accordion" ).accordion({ fillSpace: false, autoHeight: false, navigation: false, create: function( event, ui ) {init{module_name}();} });
@@ -66,10 +68,6 @@
 
 	}
 
-</script>
-
-<script>
-
 	$(function() {
 		$( "#configtypeselect" ).buttonset();
 	});
@@ -117,7 +115,40 @@
 				$("#actionstatus").html("%L_FAIL%");
 			}
 		});
+	}
 
+	function RCboardExport(){
+		$("#exportstatus").html('<img src="/imgs/loader.gif">');
+		$.post("modules/{module_name}/export.php?rnd=" + Math.random(), null, function(response, status, xhr) {
+			if (status == "success") {
+				$("#exportstatus").html(response);
+
+				$("#exportstatus").html('<a href="modules/{module_name}/exportpage.php"><img src="modules/{module_name}/imgs/download.png" width=50></a>');
+			}
+			if (savestatus == "error") {
+				$("#exportstatus").html("%L_FAIL%");
+			}
+
+		});
+	}
+
+	function ActivateImport() {
+		$.ajax_upload($('#uploadButton'), {
+			action : 'modules/{module_name}/upload.php',
+			name : 'myfile',
+			onSubmit : function(file, ext) {
+				RCboardStart(0);
+				$("img#load").css("width", "126");
+				$("img#load").attr("src", "/imgs/loader.gif");
+				this.disable();
+			},
+			onComplete : function(file, response) {
+				$("img#load").css("width", "50");
+				$("img#load").attr("src", "modules/{module_name}/imgs/upload.png");
+				this.enable();
+				$("#importstatus").html("Загрузка завершена");
+			}
+		});
 	}
 
 </script>
@@ -249,5 +280,22 @@
 		
 	</div>
 
+	<h3 onClick="ActivateImport();"><a href="#">%M_EXPORTTITLE%</a></h3>
+	<div>
+		<p class="bluetitle">Полный экспорт rcboard (сохранение архива)</p>
+		<p><a class="buttonlink" href="#" onclick="RCboardExport(); return false;">[ %L_EXPORT% ]</a></p>
+		<div id="exportstatus"></div>
+
+		<p>&nbsp;</p>
+
+		<p class="bluetitle">Полный импорт rcboard (загрузить архив)</p>
+
+        <div id="uploadButton" class="button">
+            <img id="load" src="modules/{module_name}/imgs/upload.png" width=50>
+        </div>
+
+		<div id="importstatus"></div>
+
+	</div>
 
 </div>
