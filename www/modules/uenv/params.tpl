@@ -101,8 +101,7 @@
 		if( $("#btn12v1").attr("checked") == "checked") result += "uart1=on";
 		if( $("#btn12v2").attr("checked") == "checked") result += "uart1=off";
 		result += " ";
-		if( $("#btn9v2").attr("checked") == "checked") result += "quiet";
-		result += " ";
+		if( $("#btn9v2").attr("checked") == "checked") result += "quiet ";
 		if( $("#btn7v1").attr("checked") == "checked") result += "camera=off";
 		if( $("#btn7v2").attr("checked") == "checked") result += "camera=ov2643";
 		if( $("#btn7v3").attr("checked") == "checked") result += "camera=ov5642";
