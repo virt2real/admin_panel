@@ -142,6 +142,16 @@ foreach ($ifaces as $k=>$v) {
 
 	$tpl = $ifacetpl;
 
+	// dirty hack to hide autostart for wlan0
+	if ($v['name'] == "wlan0") {
+		$tpl = str_replace('{is_hidden}', 'display:none;', $tpl);
+		$tpl = str_replace('{additional_message}', '%L_MESSAGE_AUTOWLAN0%', $tpl);
+	}
+	else {
+		$tpl = str_replace('{is_hidden}', '', $tpl);
+		$tpl = str_replace('{additional_message}', '', $tpl);
+	}
+
 	$tpl = str_replace('{autochecked}', isset($v['auto'])?$v['auto']:"", $tpl);
 	$tpl = str_replace('{name}', isset($v['name'])?$v['name']:"", $tpl);
 	$tpl = str_replace('{address}', isset($v['address'])?$v['address']:"", $tpl);

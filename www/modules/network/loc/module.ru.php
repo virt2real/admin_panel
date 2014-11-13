@@ -40,6 +40,8 @@ $lang = array(// common items
               'M_DNS_SERVER_LIST'    => 'Список серверов DNS',
               'M_ACTIVE_INTERFACES'  => 'Активные интерфейсы',
               'M_CURRENTLY_ACTIVE'   => 'Активные сетевые интерфейсы',
+
+			  'L_MESSAGE_AUTOWLAN0'   => 'Этот интерфейс всегда поднимается автоматически!',
               );
 
 ?>

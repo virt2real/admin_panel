@@ -40,6 +40,8 @@ $lang = array(// common items
               'M_DNS_SERVER_LIST'    => 'DNS-Server-Liste',
               'M_ACTIVE_INTERFACES'  => 'Aktive Interfaces',
               'M_CURRENTLY_ACTIVE'   => 'Aktive Netzwerkinterfaces',
+
+			  'L_MESSAGE_AUTOWLAN0'   => 'This interface is always autostarted!',
               );
 
 ?>
