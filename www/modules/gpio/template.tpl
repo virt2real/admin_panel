@@ -349,7 +349,7 @@
 			<a href="" class="buttonlink" onclick='gpio_run3 = 1; if (!gpio_timer3) gpio_timer3 = setTimeout("update_con()", 1); return false;'>[ %L_START_QUERY% ]</a>
 			<a href="" class="buttonlink" onclick='gpio_run3 = 0; clearTimeout(gpio_timer3); gpio_timer3 = false; $("#gpioloader3").css("display","none"); return false;'>[ %L_STOP_QUERY% ]</a>
 
-			<p style="height:20px;"><img id="gpioloader3" src="/imgs/loader.gif" style="display: none;"></p>
+			<p style="height:20px;"><img id="gpioloader3" src="imgs/loader.gif" style="display: none;"></p>
 		</p>
 
 		<div id="currentconstate">
@@ -383,7 +383,7 @@
 			<a href="" class="buttonlink" onclick='gpio_run2 = 1; if (!gpio_timer2) gpio_timer2 = setTimeout("update_gpio2()", 1); return false;'>[ %L_START_QUERY% ]</a>
 			<a href="" class="buttonlink" onclick='gpio_run2 = 0; clearTimeout(gpio_timer2); gpio_timer2 = false; $("#gpioloader2").css("display","none"); return false;'>[ %L_STOP_QUERY% ]</a>
 
-			<p style="height:20px;"><img id="gpioloader2" src="/imgs/loader.gif" style="display: none;"></p>
+			<p style="height:20px;"><img id="gpioloader2" src="imgs/loader.gif" style="display: none;"></p>
 		</p>
 
 		<div id="currentgpiostate2">
@@ -418,7 +418,7 @@
 			<a href="" class="buttonlink" onclick='gpio_run1 = 1; if (!gpio_timer) gpio_timer = setTimeout("update_gpio()", 1); return false;'>[ %L_START_QUERY% ]</a>
 			<a href="" class="buttonlink" onclick='gpio_run1 = 1; clearTimeout(gpio_timer); gpio_timer = false; $("#gpioloader").css("display","none"); return false;'>[ %L_STOP_QUERY% ]</a>
 
-			<p style="height:20px;"><img id="gpioloader" src="/imgs/loader.gif" style="display: none;"></p>
+			<p style="height:20px;"><img id="gpioloader" src="imgs/loader.gif" style="display: none;"></p>
 
 		</p>
 

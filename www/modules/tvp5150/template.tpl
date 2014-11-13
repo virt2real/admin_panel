@@ -14,7 +14,7 @@
 
 	function SetInput(input){
 
-		$("#inputstatus").html('<img src="/imgs/loader.gif">');
+		$("#inputstatus").html('<img src="imgs/loader.gif">');
 
 		$.post("modules/{module_name}/set.php?rnd=" + Math.random(), {input: input}, function(response, status, xhr) {
 			if (status == "success") {

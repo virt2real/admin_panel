@@ -35,7 +35,7 @@
 
 		valueStr = "0x" + valueStr;
 
-		$("#updateresult").html('<img src="/imgs/loader.gif">');
+		$("#updateresult").html('<img src="imgs/loader.gif">');
 		$("#updateresult").load("modules/{module_name}/set.php?base=" + encodeURIComponent(base) + "&reg=" + encodeURIComponent(reg) + "&value=" + encodeURIComponent(valueStr),
 			function(response, status, xhr) {
 			if (status == "success") {
@@ -56,7 +56,7 @@
 		reg = "0x" + regInt.toString(16);
 
 
-		$("#updateresult").html('<img src="/imgs/loader.gif">');
+		$("#updateresult").html('<img src="imgs/loader.gif">');
 		$("#updateresult").load("modules/{module_name}/get.php?base=" + encodeURIComponent(base) + "&reg=" + encodeURIComponent(reg), function(response, status, xhr) {
 			if (status == "success") {
 				$("#regvalhex").val(response);
@@ -71,7 +71,7 @@
 
 	function Scan(){
 
-		$("#scanresult").html('<img src="/imgs/loader.gif">');
+		$("#scanresult").html('<img src="imgs/loader.gif">');
 		$("#scanresult").load("modules/{module_name}/scan.php", function(response, status, xhr) {
 			if (status == "success") {
 				$("#scanresult").html(response);

@@ -7,7 +7,7 @@
 	}
 </script>
 
-<script type="text/javascript" src="/js/swfobject.js"></script>
+<script type="text/javascript" src="js/swfobject.js"></script>
 <script type="text/javascript">
 	var swfVersionStr = "11.1.0";
 	var xiSwfUrlStr = "playerProductInstall.swf";
@@ -62,7 +62,7 @@
 	}
 
 	function SaveRTMPSettings(text){
-		$("#rtmpsavestatus").html('<img src="/imgs/loader.gif">');
+		$("#rtmpsavestatus").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/save.php?rnd=" + Math.random(), {text: text}, function(response, status, xhr) {
 			if (status == "success") {
 				$("#rtmpsavestatus").html(response);

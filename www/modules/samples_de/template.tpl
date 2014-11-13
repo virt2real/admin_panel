@@ -26,7 +26,7 @@
 		<!-- ERSTES CODEBEISPIEL - START EINES SKRIPTS MIT EINEM LINK -->
 		<p>
 			<p class="bluetitle">Erstes Beispiel</p>
-			<a href="/modules/{module_name}/simplerun.php" target="_blank">Starte test.sh-Skript</a>
+			<a href="modules/{module_name}/simplerun.php" target="_blank">Starte test.sh-Skript</a>
 		</p>
 		<!-- Ende des ersten Beispiels-->
 
@@ -34,7 +34,7 @@
 
 
 		<!-- ZWEITES CODEBEISPIEL - STARTEN EINES SKRIPTS MIT PARAMETERN -->
-		<form action="/modules/{module_name}/run.php" method="post" target="_blank">
+		<form action="modules/{module_name}/run.php" method="post" target="_blank">
 			<p class="bluetitle">Skript starten</p>
 			<p> <input type="text" name="path" value="./test.sh"> Pfad zum auszuführenden Skript </p>
 			<p> <input type="submit"> </p>
@@ -44,7 +44,7 @@
 		<br><br>
 
 		<!-- DRITTES CODEBEISPIEL - TREIBERZUGRIFF -->
-		<form action="/modules/{module_name}/setgpio.php" target="_blank">
+		<form action="modules/{module_name}/setgpio.php" target="_blank">
 			<p class="bluetitle">GPIO-Wert setzen</p>
 			<p> <input type="text" name="num" value="73"> Nummer des GPIO </p>
 			<p> <input type="text" name="dir" value="output"> Arbeitsrichtung: output oder input (Ausgabe oder Eingabe) </p>

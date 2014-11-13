@@ -9,7 +9,7 @@
 
 	function gphoto_preview(cmd){
 
-		$("#gphotoviewstatus").html('<img src="/imgs/loader.gif">');
+		$("#gphotoviewstatus").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/preview.php?rnd=" + Math.random(), {cmd: cmd}, function(response, status, xhr) {
 			if (status == "success") {
 
@@ -29,7 +29,7 @@
 
 
 	function LoadDir(dir, parent){
-		$("#gphotoviewstatus").html('<img src="/imgs/loader.gif">');
+		$("#gphotoviewstatus").html('<img src="imgs/loader.gif">');
 		$("#gphotoviewfilelist").load("modules/{module_name}/load.php?rnd=" + Math.random() + "&dir=" + encodeURIComponent(dir) + "&parent=" + encodeURIComponent(parent), function(response, status, xhr) {
 			if (status == "success") {
 				$("#gphotoviewstatus").html("");

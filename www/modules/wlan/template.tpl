@@ -11,7 +11,7 @@
 <script>
 	function SaveSettings(text){
 
-		$("#wpa_status").html('<img src="/imgs/loader.gif">');
+		$("#wpa_status").html('<img src="imgs/loader.gif">');
 
 		$.post("modules/{module_name}/save.php?rnd=" + Math.random(), {text: text}, function(response, status, xhr) {
 			if (status == "success") {
@@ -25,7 +25,7 @@
 
 	function RunConnect(state, iface) {
 
-		$("#connect_status").html('<img src="/imgs/loader.gif">');
+		$("#connect_status").html('<img src="imgs/loader.gif">');
 
 		$.post("modules/{module_name}/connect.php?rnd=" + Math.random(), {state: state, iface:iface}, function(response, status, xhr) {
 			if (status == "success") {

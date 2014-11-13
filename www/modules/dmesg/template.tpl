@@ -54,7 +54,7 @@
 
 			<p class="gray_titles"><a href="" class="buttonlink" onclick='SetTimings(1); load_dmesg(20); return false;'>[ %M_SHOW_TIMINGS% ]</a> <a href="" class="buttonlink" onclick='SetTimings(0); load_dmesg(20); return false;'>[ %M_DONT_SHOW_TIMINGS% ]</a></p>
 
-			<p style="height:20px;"><img id="dmesgloader" src="/imgs/loader.gif" style="display: none;"></p>
+			<p style="height:20px;"><img id="dmesgloader" src="imgs/loader.gif" style="display: none;"></p>
 
 			</p>
 		</div>

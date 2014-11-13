@@ -10,7 +10,7 @@
 	}
 
 	function LoadAutostartScripts(){
-		$("#loadautostartscriptstatus").html('<img src="/imgs/loader.gif">');
+		$("#loadautostartscriptstatus").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/load.php?rnd=" + Math.random(), {}, function(response, status, xhr) {
 			$("#loadautostartscriptstatus").empty();
 			if (status == "success") {
@@ -46,7 +46,7 @@
 
 
 	function MoveFiles(filename, action){
-		$("#loadautostartscriptstatus").html('<img src="/imgs/loader.gif">');
+		$("#loadautostartscriptstatus").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/move.php?rnd=" + Math.random(), {filename:filename, action:action}, function(response, status, xhr) {
 			$("#loadautostartscriptstatus").empty();
 			LoadAutostartScripts();
@@ -56,7 +56,7 @@
 
 
 	function SaveAutostartScript(text){
-		$("#saveautostartscriptstatus").html('<img src="/imgs/loader.gif">');
+		$("#saveautostartscriptstatus").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/save.php?rnd=" + Math.random(), {text: text}, function(response, status, xhr) {
 			if (status == "success") {
 				$("#saveautostartscriptstatus").html(response);
@@ -79,7 +79,7 @@
 		var hash = $("#hash").val();
 		var address = $("#address").val();
 
-		$(".rcboardsavestatus").html('<img src="/imgs/loader.gif">');
+		$(".rcboardsavestatus").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/save.php?rnd=" + Math.random(), {
 			autorun:autorun,config:config,user:user,hash:hash,address:address
 			}, function(response, status, xhr) {
@@ -93,7 +93,7 @@
 	}
 
 	function SaveRCboardLocalConfig(text) {
-		$("#rcboardsavelocalconfig").html('<img src="/imgs/loader.gif">');
+		$("#rcboardsavelocalconfig").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/savelocal.php?rnd=" + Math.random(), {text: text}, function(response, status, xhr) {
 			if (status == "success") {
 				$("#rcboardsavelocalconfig").html(response);
@@ -106,7 +106,7 @@
 
 	function RCboardStart(action) {
 
-		$("#actionstatus").html('<img src="/imgs/loader.gif">');
+		$("#actionstatus").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/run.php?rnd=" + Math.random(), {action:action}, function(response, status, xhr) {
 			if (status == "success") {
 				$("#actionstatus").html(response);
@@ -118,7 +118,7 @@
 	}
 
 	function RCboardExport(){
-		$("#exportstatus").html('<img src="/imgs/loader.gif">');
+		$("#exportstatus").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/export.php?rnd=" + Math.random(), null, function(response, status, xhr) {
 			if (status == "success") {
 				$("#exportstatus").html(response);
@@ -139,7 +139,7 @@
 			onSubmit : function(file, ext) {
 				RCboardStart(0);
 				$("img#load").css("width", "126");
-				$("img#load").attr("src", "/imgs/loader.gif");
+				$("img#load").attr("src", "imgs/loader.gif");
 				this.disable();
 			},
 			onComplete : function(file, response) {

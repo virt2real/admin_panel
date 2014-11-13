@@ -27,7 +27,7 @@
 
 	function hard_reboot() {
 		$("#resetStatus").load("modules/{module_name}/reboot.php");
-		setTimeout('document.location.href = "/"', 1000);
+		setTimeout('document.location.href = "./"', 1000);
 	}
 </script>
 

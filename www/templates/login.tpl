@@ -7,6 +7,14 @@
     <link rel="shortcut icon" href="imgs/favicon.png" />
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<title>%L_ADMIN_INTERFACE% {deviceID} {boottype}</title>
+
+	<style>
+		  body {
+			background: url("imgs/v2r_back.png"); 
+		  	background-position: top center;
+          }
+	</style>
+
 </head>
 <body onload='$("#username").focus();'>
 	<script>
@@ -21,15 +29,15 @@
 
 		function CheckPassword(){
 
-			$("#enterimg").html('<img src="/imgs/loader.gif">');
+			$("#enterimg").html('<img src="imgs/loader.gif">');
 			$("#status").html("");
-			$.get("/parts/checklogin.php?" + Math.random() + "&username=" + $("#username").val() + "&password=" + $("#password").val(), function(response, status, xhr) {
+			$.get("parts/checklogin.php?" + Math.random() + "&username=" + $("#username").val() + "&password=" + $("#password").val(), function(response, status, xhr) {
 				if (status == "success") {
 					$("#enterimg").html($("#reserv").html());
 					$("#enterimg").css("display","none");
 
 					if (response == "ok") {
-                            location.replace("/");
+                            location.replace("./");
 					} else {
 						$("#status").html("%L_FAIL%");
 						$("#enterimg").html($("#reserv").html());
@@ -77,7 +85,7 @@
 		<table width="100%">
 			<tr valign=top>
 				<td width=100>
-					<a href="/"><img src="imgs/logo.png"></a>
+					<a href=""><img src="imgs/logo.png"></a>
 				</td>
 				<td align="left">
 					<h1> <img src="imgs/logo2.png"></h1>
@@ -109,7 +117,7 @@
 								<input type="password" name="password" id="password" placeholder="%L_LOGIN_PASS%" style="width: 300px;  background-color:#ffffff; color:#000000;">
 								<p style="text-align: right;"><div id="enterimg" style="text-align:right;"> <a href="#" onclick="Enter(); return false;" style="color:#ffffff; text-decoration:none;">[ %L_LOGIN_BUTTONTEXT% ]</a> </div></p>
 								<div id="reserv" style="display:none;"> <a href="#" onclick="Enter(); return false;" style="color:#ffffff; text-decoration:none;">[ %L_LOGIN_BUTTONTEXT% ]</a> </div>
-								<input type="image" src="/imgs/transparency.png" style="border:none;">
+								<input type="image" src="imgs/transparency.png" style="border:none;">
 								<div id="status" style="color: #ff0000; height: 50px;"></div>
 							</p>
 							</form>

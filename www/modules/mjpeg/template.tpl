@@ -7,7 +7,7 @@
 	}
 </script>
 
-<script type="text/javascript" src="/js/swfobject.js"></script>
+<script type="text/javascript" src="js/swfobject.js"></script>
 <script type="text/javascript">
 	var swfVersionStr = "9.0.0";
 	var flashvars = {};
@@ -56,7 +56,7 @@
 	}
 
 	function SaveMJPEGSettings(text){
-		$("#mjpegsavestatus").html('<img src="/imgs/loader.gif">');
+		$("#mjpegsavestatus").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/save.php?rnd=" + Math.random(), {text: text}, function(response, status, xhr) {
 			if (status == "success") {
 				$("#mjpegsavestatus").html(response);

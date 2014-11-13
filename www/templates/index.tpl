@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 
-	<link rel="stylesheet" href="/js/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="js/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
 	<link type="text/css" href="css/vader/jquery-ui-1.8.21.custom.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	<link rel="shortcut icon" href="imgs/favicon.png" />
@@ -13,11 +13,18 @@
 	<script type="text/javascript" src="js/jQueryRotate.js"></script>
 	<script type="text/javascript" src="js/rocknroll.js"></script>
 
-	<script type="text/javascript" src="/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-	<script type="text/javascript" src="/js/fancybox/jquery.easing-1.3.pack.js"></script>
-	<script type="text/javascript" src="/js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+	<script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<script type="text/javascript" src="js/fancybox/jquery.easing-1.3.pack.js"></script>
+	<script type="text/javascript" src="js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
 
-	<script type="text/javascript" src="/js/global.js"></script>
+	<script type="text/javascript" src="js/global.js"></script>
+
+	<style>
+		  body {
+			background: url("imgs/v2r_back.png"); 
+		  	background-position: top center;
+          }
+	</style>
 
 	<title>{deviceID} {boottype}</title>
 
@@ -80,7 +87,7 @@
 			if (parseInt(status_json.wificonnected)) {
 				var ssid = "";
 				if (status_json.ssid) ssid = status_json.ssid + " ";
-				$("#linkstatus").html(ssid + '<br>' + status_json.wifilink + "/70 " + status_json.wifilevel + " dBm");
+				$("#linkstatus").html(ssid + '<br>' + status_json.wifilink + "/100 " + status_json.wifilevel + " dBm");
 				$("#wifistatus").css("display", "block");
 			} else {
 				$("#wifistatus").css("display", "none");
@@ -121,7 +128,7 @@
 		<table width="100%" cellspacing="0" cellpadding="0" border="0">
 			<tr valign="top">
 				<td width="50%">
-					<a href="/"><img id="logo" src="imgs/logo.png" width="100" style="float: left; clear: left;"></a>
+					<a href=""><img id="logo" src="imgs/logo.png" width="100" style="float: left; clear: left;"></a>
 
 					<h1><img id="logo2" src="imgs/logo2.png" width="200"></h1>
 					<br>
@@ -138,19 +145,19 @@
 							<td>&nbsp;</td>
 							<td width="90" align="center">&nbsp;
 								<div id="onair_status">
-									<img src="/imgs/onair-icon.png" height=30>
+									<img src="imgs/onair-icon.png" height=30>
 									<div id="onair_params">on air<br>Invideon</div>
 								</div>
 							</td>
 							<td width="90" align="center">&nbsp;
 								<div id="mobile_status">
-									<a href="?3g"><img src="/imgs/3g-icon.png" height=30></a>
+									<a href="?3g"><img src="imgs/3g-icon.png" height=30></a>
 									<div id="mobile_params"></div>
 								</div>
 							</td>
-							<td width="130" align="center">&nbsp;
+							<td width="150" align="center">&nbsp;
 								<div id="wifistatus">
-									<a href="?wlan"><img src="/imgs/wifi-icon.png" height=30></a>
+									<a href="?wlan"><img src="imgs/wifi-icon.png" height=30></a>
 									<div id="linkstatus"></div>
 								</div>
 							</td>

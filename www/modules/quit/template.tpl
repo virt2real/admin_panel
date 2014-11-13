@@ -26,7 +26,7 @@
 
 	function quit(){
 		$("#resetStatus").load("modules/{module_name}/quit.php", function(response, status, xhr) {
-			location.replace("/");
+			location.replace("./");
 		});
 	}
 </script>

@@ -40,7 +40,7 @@
 			<a href="" class="buttonlink" onclick='if (!w1_timer) w1_timer = setTimeout("update_w1()", 1); return false;'>[ %L_START_QUERY% ]</a>
 			<a href="" class="buttonlink" onclick='clearTimeout(w1_timer); w1_timer = false; $("#w1loader").css("display","none"); return false;'>[ %L_STOP_QUERY% ]</a>
 
-			<p style="height:20px;"><img id="w1loader" src="/imgs/loader.gif" style="display: none;"></p>
+			<p style="height:20px;"><img id="w1loader" src="imgs/loader.gif" style="display: none;"></p>
 
 		</p>
 

@@ -15,7 +15,6 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"]!==1) {
 	die;
 }
 
-
 // Change next variables as you need.
 
 // Digest HTTP Authentication
@@ -489,7 +488,7 @@ $autocomplete = array(
         }
     </style>
 <?php } ?>
-<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/admin/js/jquery.js"></script>
 <script type="text/javascript">
     /**
      *  History of commands.

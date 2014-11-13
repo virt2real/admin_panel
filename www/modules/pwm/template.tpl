@@ -336,7 +336,7 @@
 		<p>
 			<a href="" class="buttonlink" style="color:#ffffff;" onclick='pwm_run = 1; if (!pwm_timer) pwm_timer = setTimeout("update_pwm()", 1); return false;'>[ %L_START_QUERY% ]</a>
 			<a href="" class="buttonlink" onclick='pwm_run = 0; clearTimeout(pwm_timer); pwm_timer = false; $(".pwmloader").css("display","none"); return false;'>[ %L_STOP_QUERY% ]</a>
-			<p style="height:20px;"><img class="pwmloader" src="/imgs/loader.gif" style="display: none;"></p>
+			<p style="height:20px;"><img class="pwmloader" src="imgs/loader.gif" style="display: none;"></p>
 		</p>
 
 		<div>
@@ -352,7 +352,7 @@
 		<p>
 			<a href="" class="buttonlink" onclick='pwm_run = 1; if (!pwm_timer) pwm_timer = setTimeout("update_pwm()", 1); return false;'>[ %L_START_QUERY% ]</a>
 			<a href="" class="buttonlink" onclick='pwm_run = 0; clearTimeout(pwm_timer); pwm_timer = false; $(".pwmloader").css("display","none"); return false;'>[ %L_STOP_QUERY% ]</a>
-			<p style="height:20px;"><img class="pwmloader" src="/imgs/loader.gif" style="display: none;"></p>
+			<p style="height:20px;"><img class="pwmloader" src="imgs/loader.gif" style="display: none;"></p>
 		</p>
 
 		<div>

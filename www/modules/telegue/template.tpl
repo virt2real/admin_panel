@@ -4,7 +4,7 @@
 	});
 </script>
 
-<script type="text/javascript" src="/js/swfobject.js"></script>
+<script type="text/javascript" src="js/swfobject.js"></script>
 <script type="text/javascript">
 	var swfVersionStr = "9.0.0";
 	var flashvars = {};
@@ -256,7 +256,7 @@
 	function ParseCmd(cmd) {
 		var json = JSON.parse(cmd);
 		$("#voltage").html(json.vol);
-		$("#wifi").html(json.lnk + "/70 " + json.lev + " dBm");
+		$("#wifi").html(json.lnk + "/100 " + json.lev + " dBm");
 	}
 
 

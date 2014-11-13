@@ -8,7 +8,7 @@
 	}
 
 	function LoadDir(dir, parent){
-		$("#status").html('<img src="/imgs/loader.gif">');
+		$("#status").html('<img src="imgs/loader.gif">');
 		$("#filelist").load("modules/{module_name}/load.php?rnd=" + Math.random() + "&dir=" + encodeURIComponent(dir) + "&parent=" + encodeURIComponent(parent), function(response, status, xhr) {
 			if (status == "success") {
 				$("#status").html("");
@@ -20,7 +20,7 @@
 	}
 
 	function EditFile(dir, parent){
-		$("#status").html('<img src="/imgs/loader.gif">');
+		$("#status").html('<img src="imgs/loader.gif">');
 		$("#fileedit").load("modules/{module_name}/edit.php?rnd=" + Math.random() + "&dir=" + encodeURIComponent(dir) + "&parent=" + encodeURIComponent(parent), function(response, status, xhr) {
 			if (status == "success") {
 				$("#status").html("");
@@ -36,7 +36,7 @@
 	}
 
 	function SaveFile(file, text){
-		$("#savestatus").html('<img src="/imgs/loader.gif">');
+		$("#savestatus").html('<img src="imgs/loader.gif">');
 
 		$.post("modules/{module_name}/save.php?rnd=" + Math.random(), {file: file, text: text}, function(response, status, xhr) {
 			if (status == "success") {

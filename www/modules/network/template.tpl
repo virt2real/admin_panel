@@ -68,7 +68,7 @@
 			if (ns) nslist += "nameserver " + ns + "\n";
 		});
 
-		$("#saveinterfaces").html('<img src="/imgs/loader.gif">');
+		$("#saveinterfaces").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/saveinterfaces.php?rnd=" + Math.random(), {ifacelist: ifacelist, nslist: nslist}, function(response, status, xhr) {
 			if (status == "success") {
 				$("#saveinterfaces").html(response);

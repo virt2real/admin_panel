@@ -23,7 +23,7 @@
 
 	function Connect(state){
 
-		$("#connection_status").html('<img src="/imgs/loader.gif">');
+		$("#connection_status").html('<img src="imgs/loader.gif">');
 
 		$.post("modules/{module_name}/connect.php?rnd=" + Math.random(), {state: state}, function(response, status, xhr) {
 			if (status == "success") {

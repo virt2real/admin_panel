@@ -4,7 +4,7 @@
 	});
 
 	function init{module_name}(){
-		$("#updatestatus").html('<p class="bluetitle">%M_CHECKING_UPDATES%</p><p><img src="/imgs/loader.gif"></p>');
+		$("#updatestatus").html('<p class="bluetitle">%M_CHECKING_UPDATES%</p><p><img src="imgs/loader.gif"></p>');
 		$.get("modules/{module_name}/check.php?rnd=" + Math.random(), function(response, status, xhr) {
 			if (status == "success") {
 				var json = JSON.parse(response);
@@ -31,7 +31,7 @@
 
 	function RunUpdate(type){
 
-		$("#updatestatus").html('<p class="bluetitle">%M_UPDATING%</p><p><img src="/imgs/loader.gif"></p>');
+		$("#updatestatus").html('<p class="bluetitle">%M_UPDATING%</p><p><img src="imgs/loader.gif"></p>');
 		$("#updatebutton").css("display", "none");
 		$.get("modules/{module_name}/update.php?rnd=" + Math.random() + "&type=" + type, function(response, status, xhr) {
 			if (status == "success") {

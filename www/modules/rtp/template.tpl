@@ -12,7 +12,7 @@
 		var host = $("#host").val();
 		var port = $("#port").val();
 		var bitrate = $("#bitrate").val();
-		$("#rtp_status").html('<img src="/imgs/loader.gif">');
+		$("#rtp_status").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/run.php?rnd=" + Math.random(), {host: host, port: port, bitrate: bitrate}, function(response, status, xhr) {
 			if (status == "success") {
 				$("#rtp_status").html(response);
@@ -26,7 +26,7 @@
 
 
 	function rtp_stop(){
-		$("#rtp_status").html('<img src="/imgs/loader.gif">');
+		$("#rtp_status").html('<img src="imgs/loader.gif">');
 		$.get("modules/{module_name}/stop.php?" + Math.random(), function(response, status, xhr) {
 			if (status == "success") {
 				$("#rtp_status").html(response);
@@ -39,7 +39,7 @@
 
 
 	function SaveRTPSettings(text){
-		$("#rtpsavestatus").html('<img src="/imgs/loader.gif">');
+		$("#rtpsavestatus").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/save.php?rnd=" + Math.random(), {text: text}, function(response, status, xhr) {
 			if (status == "success") {
 				$("#rtpsavestatus").html(response);

@@ -8,7 +8,7 @@
 </script>
 <script>
 	function SaveSettings(){
-		$("#softap_status").html('<img src="/imgs/loader.gif">');
+		$("#softap_status").html('<img src="imgs/loader.gif">');
 
 		var ssid = $("#ssid_value").val();
 		var passphrase = $("#passphrase_value").val();
@@ -25,7 +25,7 @@
 
 	function SaveSettings2(text){
 
-		$("#softap_status2").html('<img src="/imgs/loader.gif">');
+		$("#softap_status2").html('<img src="imgs/loader.gif">');
 
 		$.post("modules/{module_name}/save2.php?rnd=" + Math.random(), {text: text}, function(response, status, xhr) {
 			if (status == "success") {

@@ -43,7 +43,7 @@
 			<a href="" class="buttonlink" onclick='if (!messages_timer) messages_timer = setTimeout("update_messages()", 1); return false;'>[ %L_START_QUERY% ]</a>
 			<a href="" class="buttonlink" onclick='clearInterval(messages_timer); messages_timer = false; $("#messagesloader").css("display","none"); return false;'>[ %L_STOP_QUERY% ]</a>
 
-			<p style="height:20px;"><img id="messagesloader" src="/imgs/loader.gif" style="display: none;"></p>
+			<p style="height:20px;"><img id="messagesloader" src="imgs/loader.gif" style="display: none;"></p>
 
 			</p>
 		</div>

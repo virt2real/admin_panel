@@ -28,7 +28,7 @@
 
 		var fs;
 
-		$("#nandwritestatus").html('<img src="/imgs/loader.gif">');
+		$("#nandwritestatus").html('<img src="imgs/loader.gif">');
 
 		if ($("#nand_ubi").attr("checked") == "checked") fs = 0;
 		if ($("#nand_jffs").attr("checked") == "checked") fs = 1;

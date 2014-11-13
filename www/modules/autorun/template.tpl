@@ -11,7 +11,7 @@
 
 
 	function LoadAutostartScripts(){
-		$("#loadautostartscriptstatus").html('<img src="/imgs/loader.gif">');
+		$("#loadautostartscriptstatus").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/load.php?rnd=" + Math.random(), {}, function(response, status, xhr) {
 			$("#loadautostartscriptstatus").empty();
 			if (status == "success") {
@@ -47,7 +47,7 @@
 
 
 	function MoveFiles(filename, action){
-		$("#loadautostartscriptstatus").html('<img src="/imgs/loader.gif">');
+		$("#loadautostartscriptstatus").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/move.php?rnd=" + Math.random(), {filename:filename, action:action}, function(response, status, xhr) {
 			$("#loadautostartscriptstatus").empty();
 			LoadAutostartScripts();
@@ -57,7 +57,7 @@
 
 
 	function SaveAutostartScript(text){
-		$("#saveautostartscriptstatus").html('<img src="/imgs/loader.gif">');
+		$("#saveautostartscriptstatus").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/save.php?rnd=" + Math.random(), {text: text}, function(response, status, xhr) {
 			if (status == "success") {
 				$("#saveautostartscriptstatus").html(response);

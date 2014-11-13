@@ -16,7 +16,7 @@
 
 		$("#rtsp_link").html('<a href="rtsp://{deviceHost}:' + port + path + '">rtsp://{deviceHost}:' + port + path + '</a>');
 
-		$("#rtsp_status").html('<img src="/imgs/loader.gif">');
+		$("#rtsp_status").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/run.php?rnd=" + Math.random(), {port:port,path:path,type:type,bitrate:bitrate}, function(response, status, xhr) {
 			if (status == "success") {
 				$("#rtsp_status").html(response);
@@ -30,7 +30,7 @@
 
 
 	function rtsp_stop(){
-		$("#rtsp_status").html('<img src="/imgs/loader.gif">');
+		$("#rtsp_status").html('<img src="imgs/loader.gif">');
 		$.get("modules/{module_name}/stop.php?" + Math.random(), function(response, status, xhr) {
 			if (status == "success") {
 				$("#rtsp_status").html(response);
@@ -43,7 +43,7 @@
 
 
 	function SaveRTSPSettings(text){
-		$("#rtspsavestatus").html('<img src="/imgs/loader.gif">');
+		$("#rtspsavestatus").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/save.php?rnd=" + Math.random(), {text: text}, function(response, status, xhr) {
 			if (status == "success") {
 				$("#rtspsavestatus").html(response);

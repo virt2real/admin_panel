@@ -26,7 +26,7 @@
 		<!-- ПЕРВЫЙ ПРИМЕР КОДА - ЗАПУСКАЕМ СКРИПТ ССЫЛКОЙ -->
 		<p>
 			<p class="bluetitle">Первый пример</p>
-			<a href="/modules/{module_name}/simplerun.php" target="_blank">Start test.sh script</a>
+			<a href="modules/{module_name}/simplerun.php" target="_blank">Start test.sh script</a>
 		</p>
 		<!-- окончание первого примера-->
 
@@ -34,7 +34,7 @@
 
 
 		<!-- ВТОРОЙ ПРИМЕР КОДА - ЗАПУСКАЕМ СКРИПТ С ПАРАМЕТРАМИ -->
-		<form action="/modules/{module_name}/run.php" method="post" target="_blank">
+		<form action="modules/{module_name}/run.php" method="post" target="_blank">
 			<p class="bluetitle">Запустить скрипт</p>
 			<p> <input type="text" name="path" value="./test.sh"> Путь к исполняемому скрипту </p>
 			<p> <input type="submit"> </p>
@@ -44,7 +44,7 @@
 		<br><br>
 
 		<!-- ТРЕТИЙ ПРИМЕР КОДА - ДОСТУП К ДРАЙВЕРУ -->
-		<form action="/modules/{module_name}/setgpio.php" target="_blank">
+		<form action="modules/{module_name}/setgpio.php" target="_blank">
 			<p class="bluetitle">Установить значение GPIO</p>
 			<p> <input type="text" name="num" value="73"> GPIO number (номер GPIO) </p>
 			<p> <input type="text" name="dir" value="output"> Направление работы: output или input (вывод или ввод) </p>

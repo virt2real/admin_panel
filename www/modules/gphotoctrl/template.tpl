@@ -8,7 +8,7 @@
 	}
 
 	function gphoto_get_cmd(obj, cmd, id, value){
-		$("#" + obj).html('<img src="/imgs/loader.gif">');
+		$("#" + obj).html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/get.php?rnd=" + Math.random(), {obj: obj, cmd: cmd, id: id, value: value}, function(response, status, xhr) {
 
 			$("#" + obj).html('');
@@ -25,7 +25,7 @@
 	}
 
 	function gphoto_shoot(obj, cmd){
-		$("#" + obj).html('<img src="/imgs/loader.gif">');
+		$("#" + obj).html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/shoot.php?rnd=" + Math.random(), {obj: obj, cmd: cmd}, function(response, status, xhr) {
 
 			$("#" + obj).html('');
@@ -44,7 +44,7 @@
 
 
 	function gphoto_get_config(){
-		$("#gphotoscanresult").html('<img src="/imgs/loader.gif">');
+		$("#gphotoscanresult").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/parse.php?rnd=" + Math.random(), {}, function(response, status, xhr) {
 
 			var json = JSON.parse(response);
@@ -247,7 +247,7 @@
 		<table width=100% align=left>
 			<tr valign=top>
 				<td width=200>&nbsp;
-					<img src="/" width=160>
+					<img src="" width=160>
 				</td>
 				<td>
 					<p><a href="#" class="buttonlink" onclick="gphoto_shoot('gphotoresultconfig', 1); return false;">[ %M_PREVIEW% ]</a></p>

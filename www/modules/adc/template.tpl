@@ -105,7 +105,7 @@
 			<p>
 				<a href="" class="buttonlink" onclick='adc_run = 1; if (!adc_timer) adc_timer = setTimeout("update_adc()", 1); return false;'>[ %L_START_QUERY% ]</a>
 				<a href="" class="buttonlink" onclick='adc_run = 0; clearTimeout(adc_timer); adc_timer = false; $("#adcloader").css("display","none"); return false;'>[ %L_STOP_QUERY% ]</a>
-				<p style="height:20px;"><img id="adcloader" src="/imgs/loader.gif" style="display: none;"></p>
+				<p style="height:20px;"><img id="adcloader" src="imgs/loader.gif" style="display: none;"></p>
 			</p>
 
 			</p>

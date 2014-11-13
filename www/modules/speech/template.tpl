@@ -23,7 +23,7 @@
 		if ($("#engine_0").attr("checked") == "checked") engine = 0;
 		if ($("#engine_1").attr("checked") == "checked") engine = 1;
 
-		$("#speech_status").html('<img src="/imgs/loader.gif">');
+		$("#speech_status").html('<img src="imgs/loader.gif">');
 
 		$.post("modules/{module_name}/speak.php?rnd=" + Math.random(), {text: text, lang: lang, engine: engine}, function(response, status, xhr) {
 			if (status == "success") {
@@ -44,7 +44,7 @@
 		if ($("#engine_0").attr("checked") == "checked") engine = 0;
 		if ($("#engine_1").attr("checked") == "checked") engine = 1;
 
-		$("#recognition_status").html('<img src="/imgs/loader.gif">');
+		$("#recognition_status").html('<img src="imgs/loader.gif">');
 
 		$.post("modules/{module_name}/run.php?rnd=" + Math.random(), {lang: lang, engine: engine}, function(response, status, xhr) {
 			if (status == "success") {
@@ -91,7 +91,7 @@ $("#recognition_status").html(response);
 		if ($("#engine_0").attr("checked") == "checked") engine = 0;
 		if ($("#engine_1").attr("checked") == "checked") engine = 1;
 
-		$("#save_status").html('<img src="/imgs/loader.gif">');
+		$("#save_status").html('<img src="imgs/loader.gif">');
 
 		$.post("modules/{module_name}/save.php?rnd=" + Math.random(), {lang: lang, engine: engine}, function(response, status, xhr) {
 			if (status == "success") {

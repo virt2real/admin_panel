@@ -6,7 +6,7 @@
 
 <script>
 	function SaveSettings(text){
-		$(".uenv_status").html('<img src="/imgs/loader.gif">');
+		$(".uenv_status").html('<img src="imgs/loader.gif">');
 
 		$.post("modules/{module_name}/save.php?rnd=" + Math.random(), {text: text}, function(response, status, xhr) {
 			if (status == "success") {

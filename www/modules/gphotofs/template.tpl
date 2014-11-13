@@ -11,7 +11,7 @@
 
 	function gphoto_mount(cmd){
 
-		$("#gphotofsstatus").html('<img src="/imgs/loader.gif">');
+		$("#gphotofsstatus").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/mount.php?rnd=" + Math.random(), {cmd: cmd}, function(response, status, xhr) {
 
 			$("#gphotofsstatus").html("");
@@ -28,7 +28,7 @@
 
 
 	function LoadDir(dir, parent){
-		$("#gphotofsstatus").html('<img src="/imgs/loader.gif">');
+		$("#gphotofsstatus").html('<img src="imgs/loader.gif">');
 		$("#gphotofsfilelist").load("modules/{module_name}/load.php?rnd=" + Math.random() + "&dir=" + encodeURIComponent(dir) + "&parent=" + encodeURIComponent(parent), function(response, status, xhr) {
 			if (status == "success") {
 				$("#gphotofsstatus").html("");

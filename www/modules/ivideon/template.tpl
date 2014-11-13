@@ -12,7 +12,7 @@
 	var jsonconfig;
 
 	function loadconfig(){
-		$("#ivideon_load_status").html('<img src="/imgs/loader.gif">');
+		$("#ivideon_load_status").html('<img src="imgs/loader.gif">');
 		$.get("modules/{module_name}/loadconfig.php?" + Math.random(), function(response, status, xhr) {
 			if (status == "success") {
 				$("#ivideon_load_status").html('');
@@ -40,7 +40,7 @@
 
 	function save_config(text) {
 
-		$("#ivideon_load_status").html('<img src="/imgs/loader.gif">');
+		$("#ivideon_load_status").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/saveconfig.php?rnd=" + Math.random(), {text:text}, function(response, status, xhr) {
 			if (status == "success") {
 				$("#ivideon_load_status").html('%M_SETTINGSSAVED%');
@@ -54,7 +54,7 @@
 
 	function save_common_settings() {
 		var autorun = ($("#inautorun").attr("checked") == "checked") ? 1 : 0;
-		$("#ivideon_load_status").html('<img src="/imgs/loader.gif">');
+		$("#ivideon_load_status").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/saveparams.php?rnd=" + Math.random(), {autorun:autorun}, function(response, status, xhr) {
 			if (status == "success") {
 				$("#ivideon_load_status").html('%M_SETTINGSSAVED%');
@@ -100,7 +100,7 @@
 		$("#errormessage").html("");
 
 
-		$("#ivideon_load_status").html('<img src="/imgs/loader.gif">');
+		$("#ivideon_load_status").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/attach.php?rnd=" + Math.random(), {acc:acc, cameraname:cameraname}, function(response, status, xhr) {
 			if (status == "success") {
 
@@ -181,7 +181,7 @@
 	}
 
 	function IvideonStart(action) {
-		$("#ivideon_load_status").html('<img src="/imgs/loader.gif">');
+		$("#ivideon_load_status").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/run.php?rnd=" + Math.random(), {action:action}, function(response, status, xhr) {
 			if (status == "success") {
 				$("#ivideon_load_status").html("");

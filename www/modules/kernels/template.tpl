@@ -6,7 +6,7 @@
 
 <script>
 	function SaveSettings(text){
-		$("#kernels_status").html('<img src="/imgs/loader.gif">');
+		$("#kernels_status").html('<img src="imgs/loader.gif">');
 
 		$.post("modules/{module_name}/save.php?rnd=" + Math.random(), {text: text}, function(response, status, xhr) {
 			if (status == "success") {

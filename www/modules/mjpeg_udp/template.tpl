@@ -13,7 +13,7 @@
 		var port = $("#port").val();
 		var quality = $("#quality").val();
 		var fps = $("#fps").val();
-		$("#mjpeg_udp_status").html('<img src="/imgs/loader.gif">');
+		$("#mjpeg_udp_status").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/run.php?rnd=" + Math.random(), {host: host, port: port, quality: quality, fps:fps}, function(response, status, xhr) {
 			if (status == "success") {
 				$("#mjpeg_udp_status").html(response);
@@ -27,7 +27,7 @@
 
 
 	function mjpeg_udp_stop(){
-		$("#mjpeg_udp_status").html('<img src="/imgs/loader.gif">');
+		$("#mjpeg_udp_status").html('<img src="imgs/loader.gif">');
 		$.get("modules/{module_name}/stop.php?" + Math.random(), function(response, status, xhr) {
 			if (status == "success") {
 				$("#mjpeg_udp_status").html(response);
@@ -40,7 +40,7 @@
 
 
 	function SaveMJPEG_UDPSettings(text){
-		$("#mjpeg_udp_savestatus").html('<img src="/imgs/loader.gif">');
+		$("#mjpeg_udp_savestatus").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/save.php?rnd=" + Math.random(), {text: text}, function(response, status, xhr) {
 			if (status == "success") {
 				$("#mjpeg_udp_savestatus").html(response);

@@ -8,7 +8,7 @@
 	}
 
 	function scan_usb(){
-		$("#scan_result").html('<img src="/imgs/loader.gif">');
+		$("#scan_result").html('<img src="imgs/loader.gif">');
 		$.get("modules/{module_name}/scan.php?" + Math.random(), function(response, status, xhr) {
 			if (status == "success") {
 				$("#scan_result").html(response);
