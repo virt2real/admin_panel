@@ -14,10 +14,11 @@ $lang = array(// common items
               'M_ERR_NO_WRITE'       => 'can not write to',
               'M_SAVE_SUCCESS'       => 'settings saved',
               'M_WLAN_SETTINGS'      => 'WiFi setup',
-              'M_TURN_IT_ON_AND_OFF' => 'Turn WiFi on and off',
+              'M_TURN_IT_ON_AND_OFF' => 'Turn WiFi interface on and off',
               'M_TURN_IT_ON'         => 'Turn on',
               'M_TURN_IT_OFF'        => 'Turn off',
               'M_WLAN_AP_SETTINGS'   => 'WiFi Access Point settings',
+			  'M_RECONNECT'			 => 'Reconnect Wi-Fi with saved config',
               );
 
 ?>

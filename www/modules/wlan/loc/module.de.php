@@ -18,6 +18,7 @@ $lang = array(// common items
               'M_TURN_IT_ON'         => 'Einschalten',
               'M_TURN_IT_OFF'        => 'Ausschalten',
               'M_WLAN_AP_SETTINGS'   => 'WLAN Access Point-Einstellungen',
+			  'M_RECONNECT'			 => 'Reconnect Wi-Fi with saved config',
               );
 
 ?>

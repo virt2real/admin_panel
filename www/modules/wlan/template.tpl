@@ -47,15 +47,21 @@
 
 		<p class="bluetitle">%M_TURN_IT_ON_AND_OFF%</p>
 		<p>
-		        <p><input type="text" value="wlan0" id="wlan_iface"></p>
+	        <p><input type="text" value="wlan0" id="wlan_iface"></p>
 
 			<a class="buttonlink" href="#" onclick="var iface = $('#wlan_iface').val(); RunConnect(1, iface); return false;">[ %M_TURN_IT_ON% ]</a>
 			<a class="buttonlink" href="#" onclick="var iface = $('#wlan_iface').val(); RunConnect(0, iface); return false;">[ %M_TURN_IT_OFF% ]</a>
-			<span id="connect_status"></span>
 		</p>
 
+		<div id="connect_status"></div>
+
 		<p>&nbsp;</p>
+
 		<p class="bluetitle">%M_WLAN_AP_SETTINGS%</p>
+
+		<p>
+			<a class="buttonlink" href="#" onclick="var iface = $('#wlan_iface').val(); RunConnect(2, iface); return false;">[ %M_RECONNECT% ]</a>
+		</p>
 
 		<p><textarea id="wpa_config" style="width: 90%; height: 400px;">{wpa_config}</textarea></p>
 		<p></p>
