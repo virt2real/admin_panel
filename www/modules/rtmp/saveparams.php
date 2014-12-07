@@ -1,8 +1,8 @@
 ﻿<?php
 
 /*****************************************************
-* modules/ivideon/saveparams.php
-* save common params for Ivideon start scripts
+* modules/rtmp/saveparams.php
+* save autostart params for RTPM client
 * (c)virt2real.ru 2014
 * draft, by Gol
 /*****************************************************/
@@ -10,11 +10,10 @@
 // common include
 include('../../parts/global.php');
 require_once('../../parts/language.php');
-lang_swapmod('ivideon');
+lang_swapmod('rtp');
 
 if (!isset($_POST['autorun']))
 	die("empty autorun");
-
 
 /* check autorun setting */
 $autorun = intval($_POST['autorun']);
@@ -32,11 +31,7 @@ if ($autorun) {
 	$to = '/etc/init.d.sample';
 }
 
-/* move autorun script */
-@rename($from.'/S95ivideon', $to.'/S95ivideon');
-
-/* move autorun script for RTSP server */
-@rename($from.'/S92rtspserver', $to.'/S92rtspserver');
-
+/* move autorun script for RTMP server */
+@rename($from.'/S92rtmpclient', $to.'/S92rtmpclient');
 
 ?>

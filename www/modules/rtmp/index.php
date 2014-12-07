@@ -28,8 +28,36 @@ $module_content = lang_translate($module_content);
 
 /***************** module specific part **************/
 
-$rtmptemplate = file_get_contents('rtmp.sh');
+$location = "";
+$bitrate = file_get_contents("/etc/virt2real/video.bitrate");
+
+// parse config
+$config = file("/etc/virt2real/rtmp_client.conf");
+foreach ($config as $k => $v) {
+	$tmp = explode('=', $v);
+	switch ($tmp[0]) {
+		case "LOCATION":
+			$location = str_replace("\n", "", $tmp[1]);
+		break;
+		case "BITRATE":
+			$bitrate = str_replace("\n", "", $tmp[1]);
+		break;
+	}
+}
+
+$rtmptemplate = file_get_contents('/etc/virt2real/rtmp_client.sh');
 $module_content = str_replace('{rtmptemplate}', $rtmptemplate, $module_content);
+
+$module_content = str_replace('{location}', $location, $module_content);
+$module_content = str_replace('{bitrate}', $bitrate, $module_content);
+
+$path1 = '/etc/init.d/S92rtmpclient';
+if (file_exists($path1))
+	$inautorun = "checked";
+else
+	$inautorun = "";
+
+$module_content = str_replace('{inautorun}', $inautorun, $module_content);
 
 echo $module_content;
 

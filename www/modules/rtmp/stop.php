@@ -12,8 +12,8 @@ include('../../parts/global.php');
 include('../../parts/language.php');
 lang_swapmod('rtmp');
 
-shell_exec("killall gst-launch-0.10");
-@file_put_contents("/tmp/onair", "");
+shell_exec("/etc/virt2real/rtmp_client.sh stop");
+
 echo $language['M_RTMP_STREAM_STOPPED'];
 
 ?>

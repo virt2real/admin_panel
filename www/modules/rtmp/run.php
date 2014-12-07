@@ -13,11 +13,13 @@ include('../../parts/language.php');
 lang_swapmod('rtmp');
 
 $location = $_POST['location'];
-$playpath = $_POST['playpath'];
 $bitrate = $_POST['bitrate'];
 
-shell_exec("./rtmp.sh $location $playpath $bitrate");
-@file_put_contents("/tmp/onair", "RTMP");
+$params = "LOCATION=$location\nBITRATE=$bitrate\n";
+file_put_contents("/etc/virt2real/rtmp_client.conf", $params);
+
+shell_exec("/etc/virt2real/rtmp_client.sh start");
+
 printf($language['M_RTMP_STREAM_STARTED'], $location, $playpath, $bitrate);
 
 ?>

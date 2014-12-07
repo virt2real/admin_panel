@@ -25,6 +25,8 @@ $lang = array(// common items
               'M_WHY_LAGGING'        => 'Die Wiedergabe kann unregelmässig sein, da der Flash-Player Frames droppt.',
               'M_SERVER_SCRIPT'      => 'Server-Skript',
               'M_LINE_WRAPPING'      => 'Zeilenumbruch',
+			  'M_AUTORUN'			 => 'Autostart at power on',
+			  'M_SETTINGSSAVED'		 => 'Settings saved',
               );
 
 ?>

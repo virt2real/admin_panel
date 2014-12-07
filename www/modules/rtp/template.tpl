@@ -5,15 +5,21 @@
 
 	function init{module_name}(){
 	}
-</script>
 
-<script>
+	$(function() {
+		$( "#inputselect" ).buttonset();
+	});
+
 	function rtp_run(){
-		var host = $("#host").val();
-		var port = $("#port").val();
+		var clients = $("#clients").val();
 		var bitrate = $("#bitrate").val();
+		var type = "GST";
+		if ($("#type1").attr("checked") == "checked") type = "GST";
+		if ($("#type2").attr("checked") == "checked") type = "ANDROID";
+		if ($("#type3").attr("checked") == "checked") type = "IOS";
+
 		$("#rtp_status").html('<img src="imgs/loader.gif">');
-		$.post("modules/{module_name}/run.php?rnd=" + Math.random(), {host: host, port: port, bitrate: bitrate}, function(response, status, xhr) {
+		$.post("modules/{module_name}/run.php?rnd=" + Math.random(), {clients: clients, bitrate: bitrate, type: type}, function(response, status, xhr) {
 			if (status == "success") {
 				$("#rtp_status").html(response);
 			}
@@ -21,9 +27,7 @@
 				$("#rtp_status").html("%L_FAIL%");
 			}
 		});
-
 	}
-
 
 	function rtp_stop(){
 		$("#rtp_status").html('<img src="imgs/loader.gif">');
@@ -50,6 +54,19 @@
 		});
 	}
 
+	function rtp_save_common_settings() {
+		var autorun = ($("#inautorun").attr("checked") == "checked") ? 1 : 0;
+		$("#rtp_status").html('<img src="imgs/loader.gif">');
+		$.post("modules/{module_name}/saveparams.php?rnd=" + Math.random(), {autorun:autorun}, function(response, status, xhr) {
+			if (status == "success") {
+				$("#rtp_status").html('%M_SETTINGSSAVED%');
+			}
+			if (savestatus == "error") {
+				$("#rtp_status").html("%L_FAIL%");
+			}
+		});
+	}
+
 </script>
 
 
@@ -59,42 +76,50 @@
 	<div>
 
 	<table width="100%">
-	<tr valign="top">
-	<td width="700">
+		<tr valign="top">
+		<td width="450">
 
-	<p class="bluetitle">%L_SETTINGS%</p>
-	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_HOST%</div>
-	<div style="display:inline;">
-		<input type="text" id="host" value="{host}" style="width:200px;">
-	</div>
-	<p></p>
-	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_PORT%</div>
-	<div style="display:inline;">
-		<input type="text" id="port" value="3000" style="width:200px;">
-	</div>
-	<p></p>
-	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_BITRATE%</div>
-	<div style="display:inline;">
-		<input type="text" id="bitrate" value="600000" style="width:200px;">
-	</div>
-	<p></p>
+			<p class="bluetitle">%L_SETTINGS%</p>
+			<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_HOST%</div>
+			<div style="display:inline;">
+				<input type="text" id="clients" value="{clients}" style="width:200px;">
+			</div>
+			<p></p>
+			<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_BITRATE%</div>
+			<div style="display:inline;">
+				<input type="text" id="bitrate" value="{bitrate}" style="width:200px;">
+			</div>
+			<p></p>
 
+			<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_TYPE%</div>
+			<p></p>
+			<div style="width:100%; text-align:center;">
+				<div id="inputselect">
+					<input type="radio" id="type1" name="radio" {type1}><label for="type1">%M_INPUT1%</label>
+					<input type="radio" id="type2" name="radio" {type2}><label for="type2">%M_INPUT2%</label>
+					<input type="radio" id="type3" name="radio" {type3}><label for="type3">%M_INPUT3%</label>
+				</div>
+			</div>
 
-		<div>
-			<a href="" class="buttonlink" onclick='rtp_run(); return false;'>[ %M_START_BROADCAST% ]</a>
-			<a href="" class="buttonlink" onclick='rtp_stop(); return false;'>[ %M_STOP_BROADCAST% ]</a>
-		</div>
-		<p></p>
+			<p>&nbsp;</p>
+			<p><input type="checkbox" id="inautorun" {inautorun} onclick="rtp_save_common_settings();"><label for="inautorun" class="graytext">%M_AUTORUN%</label></p>
+			<p>&nbsp;</p>
+
+			<div>
+				<a href="" class="buttonlink" onclick='rtp_run(); return false;'>[ %M_START_BROADCAST% ]</a>
+				<a href="" class="buttonlink" onclick='rtp_stop(); return false;'>[ %M_STOP_BROADCAST% ]</a>
+			</div>
+			<p></p>
       		<div id="rtp_status"></div>
 
-	</td>
-	<td>
-		<p class="bluetitle">%M_DESCRIPTION%</p>
-		<p class="graytext">%M_START_RDP_UDP%</p>
-		<p>&nbsp;</p>
-		<p>%M_READWIKI%</p>
-	</td>
-	</tr>
+		</td>
+		<td>
+			<p class="bluetitle">%M_DESCRIPTION%</p>
+			<p class="graytext">%M_START_RDP_UDP%</p>
+			<p>&nbsp;</p>
+			<p>%M_READWIKI%</p>
+		</td>
+		</tr>
 	</table>
 
 

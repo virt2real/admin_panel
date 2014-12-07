@@ -1,9 +1,9 @@
 <?php
 
 /*****************************************************
-* modules/rtmp/save.php
-* rtmp settings save file
-*(c)virt2real.ru 2013
+* modules/mpegts/save.php
+* mpegts settings save file
+* (c)virt2real.ru 2014
 * draft, by Gol
 /*****************************************************/
 
@@ -11,7 +11,7 @@
 include('../../parts/global.php');
 
 $text = $_POST['text'];
-$filename = '/etc/virt2real/rtmp_client.sh';
+$filename = '/etc/virt2real/mpegts_server.sh';
 
 $success = true;
 

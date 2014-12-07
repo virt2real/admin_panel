@@ -20,6 +20,8 @@ $lang = array(// common items
               'M_NO_FLASH'           => 'To view this page ensure that Adobe Flash Player version 11.1.0 or greater is installed.',
               'M_BROADCAST_SCRIPT'   => 'Broadcast script',
               'M_LINE_WRAPPING'      => 'Line wrapping',
+			  'M_AUTORUN'			 => 'Autostart at power on',
+			  'M_SETTINGSSAVED'		 => 'Settings saved',
               );
 
 ?>

@@ -24,6 +24,8 @@ $lang = array(// common items
               'M_READWIKI'           => 'Weiterführende Informationen über Videoübertragung und -empfang stehen <a href="http://wiki.virt2real.ru/wiki/RTSP_сервер" target="_blank">in unserem Wiki</a>.',
               'M_BROADCAST_SCRIPT'   => 'Broadcast-Skript',
               'M_LINE_WRAPPING'      => 'Zeilenumbruch',
+			  'M_AUTORUN'			 => 'Autostart at power on',
+			  'M_SETTINGSSAVED'		 => 'Settings saved',
               );
 
 ?>

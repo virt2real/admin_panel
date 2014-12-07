@@ -25,6 +25,8 @@ $lang = array(// common items
               'M_WHY_LAGGING'        => 'Картинка может дёргаться, т.к. flash-плеер может пропускать кадры.',
               'M_SERVER_SCRIPT'      => 'Скрипт сервера',
               'M_LINE_WRAPPING'      => 'переносы строк',
+			  'M_AUTORUN'			 => 'Запускать при включении питания',
+			  'M_SETTINGSSAVED'		 => 'настройки сохранены',
               );
 
 ?>

@@ -17,7 +17,11 @@ $port = intval($_POST['port']);
 $type = intval($_POST['type']);
 $path = $_POST['path'];
 
-shell_exec("/etc/virt2real/rtsp_server.sh start $port $path $bitrate $type > /dev/null &");
+$params = "PORT=$port\nBITRATE=$bitrate\nPATH=$path\nVERSION=$type\n";
+file_put_contents("/etc/virt2real/rtsp_server.conf", $params);
+
+shell_exec("/etc/virt2real/rtsp_server.sh start");
+
 printf($language['M_RTSP_STREAM_STARTED']);
 
 ?>

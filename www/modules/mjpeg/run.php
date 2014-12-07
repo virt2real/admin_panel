@@ -12,11 +12,14 @@ include('../../parts/global.php');
 require_once('../../parts/language.php');
 lang_swapmod('mjpeg');
 
-$port = $_POST['port'];
-$quality = $_POST['quality'];
+$quality = intval($_POST['quality']);
+$port = intval($_POST['port']);
 
-shell_exec("./mjpeg.sh $port $quality");
-@file_put_contents("/tmp/onair", "MJPEG");
+$params = "PORT=$port\nQUALITY=$quality\n";
+file_put_contents("/etc/virt2real/mjpeg_server.conf", $params);
+
+shell_exec("/etc/virt2real/mjpeg_server.sh start");
+
 echo $language['M_MJPEG_STARTED'];
 
 ?>

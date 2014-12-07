@@ -16,6 +16,7 @@ $lang = array(// common items
               'M_USEINPUT1'        => 'Use input 1',
               'M_USEINPUT2'        => 'Use input 2',			
               'M_ERRORUSEINPUT'    => 'Can\'t get current input',
+			  'M_NOTFOUND'		   => 'TVP5150 not detected'
               );
 
 ?>

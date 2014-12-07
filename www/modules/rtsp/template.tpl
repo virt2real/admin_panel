@@ -54,6 +54,19 @@
 		});
 	}
 
+	function rtsp_save_common_settings() {
+		var autorun = ($("#inautorun").attr("checked") == "checked") ? 1 : 0;
+		$("#rtsp_status").html('<img src="imgs/loader.gif">');
+		$.post("modules/{module_name}/saveparams.php?rnd=" + Math.random(), {autorun:autorun}, function(response, status, xhr) {
+			if (status == "success") {
+				$("#rtsp_status").html('%M_SETTINGSSAVED%');
+			}
+			if (savestatus == "error") {
+				$("#rtsp_status").html("%L_FAIL%");
+			}
+		});
+	}
+
 </script>
 
 
@@ -69,28 +82,32 @@
 	<p class="bluetitle">%L_SETTINGS%</p>
 	<p></p>
 
-	<p class="graytext">%M_SERVERLINK% <span id="rtsp_link"><a href="rtsp://{deviceHost}:554/test">rtsp://{deviceHost}:554/test</a></span></p>
+	<p class="graytext">%M_SERVERLINK% <span id="rtsp_link"><a href="rtsp://{deviceHost}:{port}{path}">rtsp://{deviceHost}:{port}{path}</a></span></p>
 
 	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_PORT%</div>
 	<div style="display:inline;">
-		<input type="text" id="port" value="554" style="width:200px;">
+		<input type="text" id="port" value="{port}" style="width:200px;">
 	</div>
 	<p></p>
 	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_PATH%</div>
 	<div style="display:inline;">
-		<input type="text" id="path" value="/video" style="width:200px;">
-	</div>
-	<p></p>
-	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_TYPE%</div>
-	<div style="display:inline;">
-		<input type="text" id="type" value="1" style="width:200px;">
+		<input type="text" id="path" value="{path}" style="width:200px;">
 	</div>
 	<p></p>
 	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_BITRATE%</div>
 	<div style="display:inline;">
-		<input type="text" id="bitrate" value="600000" style="width:200px;">
+		<input type="text" id="bitrate" value="{bitrate}" style="width:200px;">
 	</div>
 	<p></p>
+	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_TYPE%</div>
+	<div style="display:inline;">
+		<input type="text" id="type" value="{type}" style="width:200px;">
+	</div>
+	<p></p>
+
+	<p>&nbsp;</p>
+	<p><input type="checkbox" id="inautorun" {inautorun} onclick="rtsp_save_common_settings();"><label for="inautorun" class="graytext">%M_AUTORUN%</label></p>
+	<p>&nbsp;</p>
 
 		<div>
 			<a href="" class="buttonlink" onclick='rtsp_run(); return false;'>[ %M_START_BROADCAST% ]</a>
@@ -118,7 +135,7 @@
 		<p style="float:right;"><a href="#" onclick="noWrap($('#rtsptemplate')); return false;">%M_LINE_WRAPPING%</a></p>
 		<p>
 			<p><a class="buttonlink" href="#" onclick="var text = $('#rtsptemplate').val(); SaveRTSPSettings(text); return false;">[ %L_SAVE% ]</a></p>
-			<span id="rtspsavestatus"></span>
+			<div id="rtspsavestatus"></div>
 		</p>
 	</div>
 

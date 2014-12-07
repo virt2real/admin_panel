@@ -24,6 +24,8 @@ $lang = array(// common items
               'M_READWIKI'           => 'Подробнее про RTSP сервер можно прочитать в <a href="http://wiki.virt2real.ru/wiki/RTSP_сервер" target="_blank">этом разделе Wiki</a>',
               'M_BROADCAST_SCRIPT'   => 'Скрипт трансляции',
               'M_LINE_WRAPPING'      => 'переносы строк',
+			  'M_AUTORUN'			 => 'Запускать при включении питания',
+			  'M_SETTINGSSAVED'		 => 'настройки сохранены',
               );
 
 ?>

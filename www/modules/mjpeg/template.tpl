@@ -67,6 +67,18 @@
 		});
 	}
 
+	function mjpeg_save_common_settings() {
+		var autorun = ($("#inautorun").attr("checked") == "checked") ? 1 : 0;
+		$("#mjpeg_status").html('<img src="imgs/loader.gif">');
+		$.post("modules/{module_name}/saveparams.php?rnd=" + Math.random(), {autorun:autorun}, function(response, status, xhr) {
+			if (status == "success") {
+				$("#mjpeg_status").html('%M_SETTINGSSAVED%');
+			}
+			if (savestatus == "error") {
+				$("#mjpeg_status").html("%L_FAIL%");
+			}
+		});
+	}
 
 </script>
 
@@ -83,21 +95,25 @@
 	<p class="bluetitle">%L_SETTINGS%</p>
 	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_PORT%</div>
 	<div style="display:inline;">
-		<input type="text" id="port" value="8888" style="width:100px;">
+		<input type="text" id="port" value="{mjpeg_port}" style="width:100px;">
 	</div>
 	<p></p>
 	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_QUALITY%</div>
 	<div style="display:inline;">
-		<input type="text" id="quality" value="40" style="width:100px;">
+		<input type="text" id="quality" value="{mjpeg_quality}" style="width:100px;">
 	</div>
 	<p></p>
 
+	<p><input type="checkbox" id="inautorun" {inautorun} onclick="mjpeg_save_common_settings();"><label for="inautorun" class="graytext">%M_AUTORUN%</label></p>
 
 		<div>
 			<a href="" class="buttonlink" onclick='mjpeg_run(); return false;'>[ %M_START_SERVER% ]</a>
 			<a href="" class="buttonlink" onclick='mjpeg_stop(); return false;'>[ %M_STOP_SERVER% ]</a>
 		</div>
 		<p></p>
+
+      	<div id="mjpeg_status"></div>
+
 		<p class="graytext">%M_REFRESH_PAGE%</p>
 		<p></p>
 	        <div id="flashContent">
@@ -106,7 +122,6 @@
         	    </p>
 	        </div>
 		<p></p>
-      		<div id="mjpeg_status"></div>
 
 	</td>
 	<td>

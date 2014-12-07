@@ -16,6 +16,7 @@ $lang = array(// common items
               'M_USEINPUT1'        => 'Используем вход 1',
               'M_USEINPUT2'        => 'Используем вход 2',			
               'M_ERRORUSEINPUT'    => 'Не могу определить используемый вход',
+			  'M_NOTFOUND'		   => 'Модуль TVP5150 не обнаружен'
               );
 
 ?>

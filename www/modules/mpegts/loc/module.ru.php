@@ -1,17 +1,17 @@
 <?php
 
 /*****************************************************
-* modules/rtp/loc/module.ru.php
+* modules/mpegts/loc/module.ru.php
 * module russian locale file
-*(c)virt2real.de 2014
+* (c)virt2real.de 2014
 * draft, by keios
 /*****************************************************/
 
 $lang = array(// common items
-              'M_DESC'               => 'RTP',
+              'M_DESC'               => 'MPEG-TS',
               // module-specific
-              'M_RTP_STREAM_STARTED' => 'RTP started stream to %s:%d at %d kbps',
-              'M_RTP_STREAM_STOPPED' => 'RTP stopped',
+              'M_MPEGTS_STREAM_STARTED' => 'MPEGTS started',
+              'M_MPEGTS_STREAM_STOPPED' => 'MPEGTS stopped',
               'M_HOST'               => 'клиенты',
               'M_BITRATE'            => 'битрейт',
               'M_TYPE'            	 => 'тип',
@@ -21,7 +21,7 @@ $lang = array(// common items
               'M_START_BROADCAST'    => 'запустить трансляцию',
               'M_STOP_BROADCAST'     => 'остановить трансляцию',
               'M_DESCRIPTION'        => 'Описание',
-              'M_START_RDP_UDP'      => 'В этом разделе можно запустить трансляцию RTP с использованием UDP транспорта на указанный хост и порт.',
+              'M_START_RDP_UDP'      => 'В этом разделе можно запустить трансляцию MPEGTS с использованием UDP транспорта на указанный хост и порт.',
               'M_READWIKI'           => 'Клиенты - несколько пар host:port через запятую',
               'M_BROADCAST_SCRIPT'   => 'Скрипт трансляции',
               'M_LINE_WRAPPING'      => 'переносы строк',

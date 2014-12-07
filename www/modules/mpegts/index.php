@@ -1,8 +1,8 @@
 <?php
 
 /*****************************************************
-* modules/rtsp/index.php
-* rtsp index file
+* modules/mpegts/index.php
+* mpegts index file
 * (c)virt2real.ru 2014
 * draft, by Gol
 /*****************************************************/
@@ -28,40 +28,30 @@ $module_content = lang_translate($module_content);
 
 /***************** module specific part **************/
 
-$port = "";
+$clients = "";
 $bitrate = file_get_contents("/etc/virt2real/video.bitrate");
-$type = "";
-$path = "";
 
 // parse config
-$config = file("/etc/virt2real/rtsp_server.conf");
+$config = file("/etc/virt2real/mpegts_server.conf");
 foreach ($config as $k => $v) {
 	$tmp = explode('=', $v);
 	switch ($tmp[0]) {
-		case "PORT":
-			$port = str_replace("\n", "", $tmp[1]);
+		case "CLIENTS":
+			$clients = str_replace("\n", "", $tmp[1]);
 		break;
 		case "BITRATE":
 			$bitrate = str_replace("\n", "", $tmp[1]);
 		break;
-		case "VERSION":
-			$type = str_replace("\n", "", $tmp[1]);
-		break;
-		case "PATH":
-			$path = str_replace("\n", "", $tmp[1]);
-		break;
 	}
 }
 
-$rtsptemplate = file_get_contents('/etc/virt2real/rtsp_server.sh');
-$module_content = str_replace('{rtsptemplate}', $rtsptemplate, $module_content);
+$mpegtstemplate = file_get_contents('/etc/virt2real/mpegts_server.sh');
+$module_content = str_replace('{mpegtstemplate}', $mpegtstemplate, $module_content);
 
+$module_content = str_replace('{clients}', $clients, $module_content);
 $module_content = str_replace('{bitrate}', $bitrate, $module_content);
-$module_content = str_replace('{port}', $port, $module_content);
-$module_content = str_replace('{type}', $type, $module_content);
-$module_content = str_replace('{path}', $path, $module_content);
 
-$path1 = '/etc/init.d/S92rtspserver';
+$path1 = '/etc/init.d/S92mpegtsserver';
 if (file_exists($path1))
 	$inautorun = "checked";
 else

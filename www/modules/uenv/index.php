@@ -33,6 +33,7 @@ $module_content = lang_translate($module_content);
 if ($globalVars['intboottype'] == 2) {
 	$error_content = file_get_contents("../../templates/error.tpl");
 	$error_content = str_replace("{text}", $language['M_ERR_NO_EDIT_UENV'], $error_content);
+	$error_content = lang_translate($error_content);
 	die ($error_content);
 }
 

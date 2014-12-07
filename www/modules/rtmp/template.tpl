@@ -36,10 +36,9 @@
 <script>
 	function rtmp_run(){
 		var location = $("#location").val();
-		var playpath = $("#playpath").val();
 		var bitrate = $("#bitrate").val();
 
-		$.post("modules/{module_name}/run.php?rnd=" + Math.random(), {location: location, playpath: playpath, bitrate: bitrate}, function(response, status, xhr) {
+		$.post("modules/{module_name}/run.php?rnd=" + Math.random(), {location: location, bitrate: bitrate}, function(response, status, xhr) {
 			if (status == "success") {
 				$("#rtmp_status").html(response);
 			}
@@ -73,6 +72,18 @@
 		});
 	}
 
+	function rtmp_save_common_settings() {
+		var autorun = ($("#inautorun").attr("checked") == "checked") ? 1 : 0;
+		$("#rtmp_status").html('<img src="imgs/loader.gif">');
+		$.post("modules/{module_name}/saveparams.php?rnd=" + Math.random(), {autorun:autorun}, function(response, status, xhr) {
+			if (status == "success") {
+				$("#rtmp_status").html('%M_SETTINGSSAVED%');
+			}
+			if (savestatus == "error") {
+				$("#rtmp_status").html("%L_FAIL%");
+			}
+		});
+	}
 
 </script>
 
@@ -85,20 +96,17 @@
 	<p class="bluetitle">%L_SETTINGS%</p>
 	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_URL%</div>
 	<div style="display:inline;">
-		<input type="text" id="location" value="rtmp://localhost/live/" style="width:200px;">
-	</div>
-	<p></p>
-	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_STREAM%</div>
-	<div style="display:inline;">
-		<input type="text" id="playpath" value="v2r" style="width:200px;">
+		<input type="text" id="location" value="{location}" style="width:200px;">
 	</div>
 	<p></p>
 	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_BITRATE%</div>
 	<div style="display:inline;">
-		<input type="text" id="bitrate" value="600000" style="width:200px;">
+		<input type="text" id="bitrate" value="{bitrate}" style="width:200px;">
 	</div>
-	<p></p>
 
+	<p>&nbsp;</p>
+	<p><input type="checkbox" id="inautorun" {inautorun} onclick="rtmp_save_common_settings();"><label for="inautorun" class="graytext">%M_AUTORUN%</label></p>
+	<p>&nbsp;</p>
 
 		<div>
 			<a href="" class="buttonlink" onclick='rtmp_run(); return false;'>[ %M_START_BROADCAST% ]</a>

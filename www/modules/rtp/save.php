@@ -11,7 +11,7 @@
 include('../../parts/global.php');
 
 $text = $_POST['text'];
-$filename = 'rtp.sh';
+$filename = '/etc/virt2real/rtp_server.sh';
 
 $success = true;
 

@@ -25,6 +25,8 @@ $lang = array(// common items
               'M_WHY_LAGGING'        => 'The stream might lag because the flash player is known to drop frames.',
               'M_SERVER_SCRIPT'      => 'Server script',
               'M_LINE_WRAPPING'      => 'Line wrapping',
+			  'M_AUTORUN'			 => 'Autostart at power on',
+			  'M_SETTINGSSAVED'		 => 'Settings saved',
               );
 
 ?>

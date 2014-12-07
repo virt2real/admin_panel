@@ -20,6 +20,8 @@ $lang = array(// common items
               'M_NO_FLASH'           => 'To view this page ensure that Adobe Flash Player version 11.1.0 or greater is installed.',
               'M_BROADCAST_SCRIPT'   => 'Скрипт трансляции',
               'M_LINE_WRAPPING'      => 'переносы строк',
+			  'M_AUTORUN'			 => 'Запускать при включении питания',
+			  'M_SETTINGSSAVED'		 => 'настройки сохранены',
               );
 
 ?>
