@@ -19,6 +19,10 @@ $lang = array(// common items
               'M_TURN_IT_OFF'        => 'Отключить',
               'M_WLAN_AP_SETTINGS'   => 'Настройки подключения Wi-Fi к точкам доступа',
 			  'M_RECONNECT'			 => 'Переподключить Wi-Fi с указанным конфигом',
+              'M_WLAN_SCAN'          => 'Сканирование Wi-Fi сетей',
+              'M_CURRENT_STATUS'     => 'Текущее состояние подключения',
+              'M_UPDATE'             => 'обновить',
+              'M_FOUND_PILE_OF_WLANS'=> 'Найденные беспроводные сети',
               );
 
 ?>

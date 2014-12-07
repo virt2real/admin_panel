@@ -19,6 +19,10 @@ $lang = array(// common items
               'M_TURN_IT_OFF'        => 'Turn off',
               'M_WLAN_AP_SETTINGS'   => 'WiFi Access Point settings',
 			  'M_RECONNECT'			 => 'Reconnect Wi-Fi with saved config',
+              'M_WLAN_SCAN'          => 'WiFi network scan',
+              'M_CURRENT_STATUS'     => 'Current connection status',
+              'M_UPDATE'             => 'update',
+              'M_FOUND_PILE_OF_WLANS'=> 'Discovered WiFi networks',
               );
 
 ?>

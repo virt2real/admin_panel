@@ -14,5 +14,4 @@ $content = shell_exec ("iwlist wlan0 scan");
 
 echo '<pre>' . $content . '</pre>';
 
-
 ?>
