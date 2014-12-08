@@ -35,6 +35,9 @@ file_put_contents("/mnt/kernels.list", $newkernellist);
 
 shell_exec("umount /mnt");
 
+// save kernel name
+file_put_contents("/etc/virt2real/video.kernel", $kernelname);
+
 // make video params for every kernel type
 switch ($kernelname) {
 	case "uImage.master":
