@@ -26,9 +26,19 @@
 	}
 
 	function hard_reboot() {
-		$("#resetStatus").load("modules/{module_name}/reboot.php");
-		setTimeout('document.location.href = "./"', 1000);
+		$.ajax({
+			url: "modules/{module_name}/reboot.php?rnd=" + Math.random(),
+			type: 'GET',
+			timeout: 1000,
+			success: function(data){
+				setTimeout('document.location.href = "/admin"', 1000);
+			},
+			error: function(data, err){
+				setTimeout('document.location.href = "/admin"', 1000);
+			}
+		});
 	}
+
 </script>
 
 <!-- Dialog -->
