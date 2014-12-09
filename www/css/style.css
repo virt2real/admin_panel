@@ -242,6 +242,11 @@ select {
 .graytext {
  color: #7c7c7c;
 }
+
+.redtitle {
+ color: #ff0000;
+}
+
 .gphotoctrl .bluetitle {
   color: #0380ea;
   display: none;
