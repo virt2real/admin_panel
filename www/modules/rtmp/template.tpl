@@ -37,8 +37,9 @@
 	function rtmp_run(){
 		var location = $("#location").val();
 		var bitrate = $("#bitrate").val();
+		var enablesound = $("#enablesound").attr("checked") == "checked" ? 1 : 0;
 
-		$.post("modules/{module_name}/run.php?rnd=" + Math.random(), {location: location, bitrate: bitrate}, function(response, status, xhr) {
+		$.post("modules/{module_name}/run.php?rnd=" + Math.random(), {location: location, bitrate: bitrate, enablesound: enablesound}, function(response, status, xhr) {
 			if (status == "success") {
 				$("#rtmp_status").html(response);
 			}
@@ -103,8 +104,10 @@
 	<div style="display:inline;">
 		<input type="text" id="bitrate" value="{bitrate}" style="width:200px;">
 	</div>
+	<p></p>
+	<div style="display:inline-block; padding-left:40px; min-width:100px;">%M_SOUND%</div>
+	<input type="checkbox" id="enablesound"><label for="enablesound" class="graytext">%M_SOUND2%</label>
 
-	<p>&nbsp;</p>
 	<p><input type="checkbox" id="inautorun" {inautorun} onclick="rtmp_save_common_settings();"><label for="inautorun" class="graytext">%M_AUTORUN%</label></p>
 	<p>&nbsp;</p>
 

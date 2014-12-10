@@ -22,6 +22,8 @@ $lang = array(// common items
               'M_LINE_WRAPPING'      => 'Line wrapping',
 			  'M_AUTORUN'			 => 'Autostart at power on',
 			  'M_SETTINGSSAVED'		 => 'Settings saved',
+			  'M_SOUND'				 => 'Sound',
+			  'M_SOUND2'			 => 'use sound',
               );
 
 ?>

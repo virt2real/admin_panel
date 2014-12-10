@@ -14,8 +14,9 @@ lang_swapmod('rtmp');
 
 $location = $_POST['location'];
 $bitrate = $_POST['bitrate'];
+$enablesound = $_POST['enablesound'];
 
-$params = "LOCATION=$location\nBITRATE=$bitrate\n";
+$params = "LOCATION=$location\nBITRATE=$bitrate\nSOUND=$enablesound\n";
 file_put_contents("/etc/virt2real/rtmp_client.conf", $params);
 
 shell_exec("/etc/virt2real/rtmp_client.sh start");

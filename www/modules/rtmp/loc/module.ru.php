@@ -22,6 +22,8 @@ $lang = array(// common items
               'M_LINE_WRAPPING'      => 'переносы строк',
 			  'M_AUTORUN'			 => 'Запускать при включении питания',
 			  'M_SETTINGSSAVED'		 => 'настройки сохранены',
+			  'M_SOUND'				 => 'Звук',
+			  'M_SOUND2'			 => 'транслировать со звуком',
               );
 
 ?>
