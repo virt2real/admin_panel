@@ -63,6 +63,8 @@ $lang = array(// common items
               'M_WLAN_OVERRIDE'      => 'Принудительные установки для Wi-Fi',
               'M_WLAN_SSID'          => 'Название сети (SSID)',
               'M_WLAN_PASS'          => 'Пароль от сети',
+              'M_WATCHDOG'	         => 'Сторожевой таймер',
+			  'M_WDTTIMEOUT'		 => 'Таймаут',
               );
 
 ?>

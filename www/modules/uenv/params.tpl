@@ -102,6 +102,11 @@
 		if( $("#btn12v2").attr("checked") == "checked") result += "uart1=off";
 		result += " ";
 		if( $("#btn9v2").attr("checked") == "checked") result += "quiet ";
+
+		var wdtval1 = parseInt($("#wdtval1").val());
+		if (!wdtval1) wdtval1 = 60;
+		result += "davinci_wdt.heartbeat=" + wdtval1 + " ";
+
 		if( $("#btn7v1").attr("checked") == "checked") result += "camera=off";
 		if( $("#btn7v2").attr("checked") == "checked") result += "camera=ov2643";
 		if( $("#btn7v3").attr("checked") == "checked") result += "camera=ov5642";
@@ -257,6 +262,13 @@
 	<div style="display:inline;">
 		<input type="text" id="w1val2" value="{w1val2}" style="width:100px;">
 	</div>
+
+	<p class="bluetitle">%M_WATCHDOG%</p>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_WDTTIMEOUT%</div>
+	<div style="display:inline;">
+		<input type="text" id="wdtval1" value="{wdtval1}" style="width:100px;">
+	</div>
+	<p></p>
 
 </div>
 

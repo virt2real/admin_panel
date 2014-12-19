@@ -63,6 +63,8 @@ $lang = array(// common items
               'M_WLAN_OVERRIDE'      => 'Wi-Fi settings override',
               'M_WLAN_SSID'          => 'Network name (SSID)',
               'M_WLAN_PASS'          => 'Network password',
+              'M_WATCHDOG'	         => 'Watchdog',
+			  'M_WDTTIMEOUT'		 => 'Timeout',
               );
 
 ?>

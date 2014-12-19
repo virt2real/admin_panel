@@ -121,6 +121,10 @@ function ParseParams($cmdline, $template){
 				$template = str_replace('{conval1}', $tmp[0], $template);
 				$template = str_replace('{conval2}', $tmp[1], $template);
 			break;
+			case "davinci_wdt.heartbeat": 
+				$tmp = explode(',',$element[1]);	
+				$template = str_replace('{wdtval1}', $tmp[0], $template);
+			break;
 			case "quiet":
 				$option2 = "checked";
 
