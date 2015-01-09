@@ -26,7 +26,7 @@ if (file_exists($filename)) {
 	// check if discover already active
 	$count = shell_exec ("ps | grep -c discover/discover.js");
 	if (intval($count) < 3)
-		shell_exec("node discover/discover.js SonyImagingDevice /tmp/sonyssdpdiscovery > /dev/null &");
+		shell_exec("node discover/discover.js 20 SonyImagingDevice /tmp/sonyssdpdiscovery > /dev/null &");
 }
 
 if ($success)

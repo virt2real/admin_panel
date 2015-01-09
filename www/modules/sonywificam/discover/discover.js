@@ -4,20 +4,29 @@ var url = require('url');
 var ssdp = require("./peer-ssdp");
 var peer = ssdp.createPeer();
 
-var deviceFilter = "";
 var deviceInstance = new Object();
-
 var saveFile = "";
 
 /* parse cmd line params */
-deviceFilter = process.argv[2]; // ssdp device filter
-saveFile = process.argv[3]; // save output to file
+var scanTimelimit = process.argv[2]; // time limit for scan (seconds)
+var deviceFilter = process.argv[3]; // ssdp device filter
+saveFile = process.argv[4]; // save output to file
+
+function stopScan () {
+    peer.close();
+}
+
+var limitTimer;
+if (scanTimelimit > 0)
+    limitTimer = setTimeout(stopScan, scanTimelimit * 1000);
+
 
 peer.on("ready", function () {
     onReady();
 });
 
 peer.on("close", function () {
+    clearTimeout(limitTimer);
 });
 
 peer.on("notify", function (headers, address) {
@@ -83,8 +92,8 @@ function deviceInfoParse (str) {
 		//sendCommand("actTakePicture", [], deviceInstance["actionUrl"]);
 
 	} else {
-		console.log("action URL not found, search again");
-		peer.start();
+		//console.log("action URL not found, search again");
+		//peer.start();
 	}
 }
 
