@@ -177,7 +177,7 @@
 							{menu}
 					</div>
 
-					<p style="text-align: center;"><a href="http://virt2real.ru" target="_blank" style="font-size: 14px; color:#000; text-decoration: none;">&copy; virt2real.ru 2014</a></p>
+					<p style="text-align: center;"><a href="http://virt2real.ru" target="_blank" style="font-size: 14px; color:#000; text-decoration: none;">&copy; virt2real.ru 2015</a></p>
 
 				</td>
 				<td>
