@@ -128,13 +128,11 @@
 		<table width="100%" cellspacing="0" cellpadding="0" border="0">
 			<tr valign="top">
 				<td width="50%">
-					<a href=""><img id="logo" src="imgs/logo.png" width="100" style="float: left; clear: left;"></a>
+					<a href=""><img id="logo" src="imgs/logo.png" width="100" style="float: left; clear: left;"/></a>
 
-					<h1><img id="logo2" src="imgs/logo2.png" width="200"></h1>
-					<br>
-					<br>
-
-					<div id="systemmessages" style="width: 400px; height: 15px; white-space: nowrap; overflow: hidden; clear: right; float: left; padding-bottom: 0px; min-width:100px; max-width: 100%;"></div>
+					<h1><img id="logo2" src="imgs/logo2.png" width="200"/></h1>
+					<br/>
+					<br/>
 
 				</td>
 				<td width="50%" align="right">
@@ -145,19 +143,19 @@
 							<td>&nbsp;</td>
 							<td width="90" align="center">&nbsp;
 								<div id="onair_status">
-									<img src="imgs/onair-icon.png" height=30>
-									<div id="onair_params">on air<br>Invideon</div>
+									<img src="imgs/onair-icon.png" height="30"/>
+									<div id="onair_params">on air<br/>Invideon</div>
 								</div>
 							</td>
 							<td width="90" align="center">&nbsp;
 								<div id="mobile_status">
-									<a href="?3g"><img src="imgs/3g-icon.png" height=30></a>
+									<a href="?3g"><img src="imgs/3g-icon.png" height="30"/></a>
 									<div id="mobile_params"></div>
 								</div>
 							</td>
 							<td width="150" align="center">&nbsp;
 								<div id="wifistatus">
-									<a href="?wlan"><img src="imgs/wifi-icon.png" height=30></a>
+									<a href="?wlan"><img src="imgs/wifi-icon.png" height="30"/></a>
 									<div id="linkstatus"></div>
 								</div>
 							</td>
@@ -167,9 +165,15 @@
 				</td>
 			</tr>
 		</table>
-		<table width=100% cellspacing="0" cellpadding="5" border="0">
+		<table width="100%">
+			<tr>
+				<td width="50%"><div id="systemmessages" style="height: 15px; padding-bottom: 0px;"></div></td>
+				<td width="50%">&nbsp;</td>
+			</tr>
+		</table>
+		<table width="100%" cellspacing="0" cellpadding="5" border="0">
 			<tr valign="top">
-				<td width=230>
+				<td width="230">
 					<div id="menu" style="margin:0; padding:0;">
 							{menu}
 					</div>
