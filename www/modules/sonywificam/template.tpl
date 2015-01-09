@@ -250,6 +250,14 @@
 								<a href="#" onclick='send_request("setPostviewImageSize", ["Original"], null); return false;'>Original</a>
 							</p>
 
+							<p>
+								<span class="graytext">Режим экспозиции</span><br>
+								<a href="#" onclick='send_request("setExposureMode", ["Intelligent Auto"], null); return false;'>Intelligent Auto</a>
+								<a href="#" onclick='send_request("setExposureMode", ["Superior Auto"], null); return false;'>Superior Auto</a>
+								<a href="#" onclick='send_request("setExposureMode", ["Program Auto"], null); return false;'>Program Auto</a>
+								<a href="#" onclick='send_request("setExposureMode", ["Aperture"], null); return false;'>Aperture</a>
+								<a href="#" onclick='send_request("setExposureMode", ["Shutter"], null); return false;'>Shutter</a>
+							</p>
 						</div>
 
 						<div id="movieblock">
