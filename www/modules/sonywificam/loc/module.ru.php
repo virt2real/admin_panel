@@ -1,0 +1,46 @@
+<?php
+
+/*****************************************************
+* modules/sonywificam/loc/module.ru.php
+* module russian locale file
+* (c) virt2real 2015
+* draft, by Gol
+/*****************************************************/
+
+$lang = array(// common items
+              'M_DESC'               => 'SONY Wi-Fi',
+              // module-specific
+			  'M_CAMERA_CONTROL'	 => 'Управление камерами Sony',
+			  'M_CAMERA_IMAGES'	 	 => 'Локальные снимки',
+
+              'M_MANUFACTURER'       => 'Производитель',
+              'M_MODEL'              => 'Модель',
+              'M_SERIAL_NUMBER'      => 'Серийный номер',
+              'M_DEV_VERSION'        => 'Версия устройства',
+              'M_SHUTTER_COUNTER'    => 'Срабатываний затвора',
+              'M_BATTERY_LEVEL'      => 'Заряд батареи',
+              'M_DATE_TIME'          => 'Дата и время',
+              'M_LENS_NAME'          => 'Оптика',
+              'M_EOS_SERIAL_NUMBER'  => 'Серийный номер EOS',
+              'M_SHOTS_AVAIL'        => 'Ещё влезет снимков',
+              'M_OWNER'              => 'Владелец',
+              'M_AUTHOR'             => 'Автор',
+              'M_COPYRIGHT'          => 'Копирайт',
+              'M_PREVIEW'            => 'предпросмотр',
+              'M_TAKE_PIC'           => 'сфотать',
+              'M_EXPOSURE'           => 'Выдержка',
+              'M_DIAPHRAGM'          => 'Диафрагма',
+              'M_ISO'                => 'ISO',
+              'M_FOCUS_MODE'         => 'Режим фокусировки',
+              'M_WHITE_BALANCE'      => 'Баланс белого',
+              'M_PIC_STYLE'          => 'Стиль изображения',
+              'M_METERING_MODE'      => 'Тип замера',
+              'M_DRIVE_MODE'         => 'Режим привода',
+              'M_AUTO_EXP_MODE'      => 'Текущий режим экспозиции',
+              'M_EXP_BRACKETING'     => 'Брэкетинг экспозиции',
+              'M_OTHER_SETTINGS'     => 'Остальные настройки',
+              'M_OTHER_CONTROLS'     => 'Другие настройки',
+              'M_SHOW_FULL_CONFIG'   => 'показать полный конфиг медиаустройства',
+              );
+
+?>
