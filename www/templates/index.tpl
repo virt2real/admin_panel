@@ -167,8 +167,7 @@
 		</table>
 		<table width="100%">
 			<tr>
-				<td width="50%"><div id="systemmessages" style="height: 15px; padding-bottom: 0px;"></div></td>
-				<td width="50%">&nbsp;</td>
+				<td width="90%"><div id="systemmessages" style="height: 15px; padding-bottom: 0px; white-space: nowrap; overflow: hidden; "></div></td>
 			</tr>
 		</table>
 		<table width="100%" cellspacing="0" cellpadding="5" border="0">
