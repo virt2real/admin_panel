@@ -66,6 +66,13 @@ if ($configarr["config"] == "local") {
 $module_content = str_replace('{config_selected1}', $config_selected1, $module_content);
 $module_content = str_replace('{config_selected2}', $config_selected2, $module_content);
 
+if ($configarr["checkupdates"] == "1") {
+	$checkupdates = "checked";
+} else {
+	$checkupdates = "";
+}
+
+$module_content = str_replace('{checkupdates}', $checkupdates, $module_content);
 
 $path1 = '/etc/init.d/S98rcboard';
 $path2 = '/etc/init.d.sample/S98rcboard';

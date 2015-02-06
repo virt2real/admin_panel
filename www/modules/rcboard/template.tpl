@@ -74,6 +74,7 @@
 
 	function SaveRCboardSettings(){
 		var autorun = ($("#inautorun").attr("checked") == "checked") ? 1 : 0;
+		var checkupdates = ($("#checkupdates").attr("checked") == "checked") ? 1 : 0;
 		var config = ($("#radio2").attr("checked") == "checked") ? "remote" : "local";
 		var user = $("#userid").val();
 		var hash = $("#hash").val();
@@ -81,7 +82,7 @@
 
 		$(".rcboardsavestatus").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/save.php?rnd=" + Math.random(), {
-			autorun:autorun,config:config,user:user,hash:hash,address:address
+			autorun:autorun,checkupdates:checkupdates,config:config,user:user,hash:hash,address:address
 			}, function(response, status, xhr) {
 			if (status == "success") {
 				$(".rcboardsavestatus").html(response);
@@ -189,6 +190,9 @@
 					<p><input type="checkbox" id="inautorun" {inautorun}><label for="inautorun">Запускать при включении питания</label></p>
 					<p>&nbsp;</p>
 
+					<p><input type="checkbox" id="checkupdates" {checkupdates}><label for="checkupdates">Проверять обновления при запуске</label></p>
+					<p>&nbsp;</p>
+
 					<p>Использовать</p>
 					<div id="configtypeselect">
 						<input type="radio" id="radio1" name="radio" {config_selected1}><label for="radio1">Локальный конфиг</label>
@@ -204,7 +208,8 @@
 
 				</td>
 				<td>
-					<p class="graytext"><span class="bluetitle">Запускать при включении питания</span><br> значит поместить скрипт запуска в автозагрузку </p> 
+					<p class="graytext"><span class="bluetitle">Запускать при включении питания</span><br> значит поместить скрипт запуска в автозагрузку </p>
+					<p class="graytext"><span class="bluetitle">Проверять обновления при запуске</span><br> при старте проверять текущую версию с версией приложения на сервере и скачивать если версия устарела (только при наличии выхода в Интернет)</p>
 				</td>
 			</tr>
 		</table>
