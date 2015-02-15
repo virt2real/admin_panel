@@ -21,7 +21,7 @@
 		$("#pininfo").html(text);
 		$("#title" + row + "_" + col).addClass("blueback");
 		$("#title" + row + "_" + col).addClass("whitetext");
-		$(this).css("background-image","url('/imgs/pinarea.png')");
+		$(this).css("background-image","url('imgs/pinarea.png')");
 	});
 
 	$(".pinbox").mouseout(function(){
@@ -36,14 +36,14 @@
 	$(".pintitle").click(function(){
 		var row = $(this).attr("row");
 		var col = $(this).attr("col");
-		$("#pin"+row+"_"+col).css("background-image","url('/imgs/pinarea.png')");
+		$("#pin"+row+"_"+col).css("background-image","url('imgs/pinarea.png')");
 		$("#pininfo").html($(this).text());
 	});
 
 	$(".pintitle").mouseover(function(){
 		var row = $(this).attr("row");
 		var col = $(this).attr("col");
-		$("#pin"+row+"_"+col).css("background-image","url('/imgs/pinarea.png')");
+		$("#pin"+row+"_"+col).css("background-image","url('imgs/pinarea.png')");
 		$(this).addClass("whitetext");
 		var text = "&nbsp;";
 		if ($(this).text())  text = $(this).text();
