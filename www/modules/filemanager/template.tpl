@@ -1,3 +1,5 @@
+<script type="text/javascript" src="js/ajaxupload.js"></script>
+
 <script>
 	$(function() {
 		$( "#accordion" ).accordion({ fillSpace: false, autoHeight: false, navigation: false, create: function( event, ui ) {init{module_name}();} });
@@ -5,9 +7,36 @@
 
 	function init{module_name}(){
 		LoadDir("", "/");
+		ActivateUpload();
 	}
 
+	var currentDir;
+	var currentParent;
+
+	function ActivateUpload() {
+		$.ajax_upload($('#uploadButton'), {
+			action : 'modules/{module_name}/upload.php',
+			name : 'myfile',
+			type: "POST",
+			onSubmit : function(file, ext) {
+				$("img#load").css("width", "126");
+				$("img#load").attr("src", "imgs/loader.gif");
+				this.settings.data = {"dir":currentDir, "parent":currentParent};
+				this.disable();
+			},
+			onComplete : function(file, response) {
+				$("img#load").css("width", "30");
+				$("img#load").attr("src", "modules/{module_name}/imgs/upload.png");
+				this.enable();
+				LoadDir(currentDir, currentParent); // renew current dir
+			}
+		});
+	}
+
+
 	function LoadDir(dir, parent){
+		currentDir = dir;
+		currentParent = parent;
 		$("#status").html('<img src="imgs/loader.gif">');
 		$("#filelist").load("modules/{module_name}/load.php?rnd=" + Math.random() + "&dir=" + encodeURIComponent(dir) + "&parent=" + encodeURIComponent(parent), function(response, status, xhr) {
 			if (status == "success") {
@@ -61,6 +90,11 @@
 	<h3><a href="#">%M_FILE_MANAGE_EDIT%</a></h3>
 	<div>
 		<div id="status" style="height: 26px; text-align: right; width: 100%;"></div>
+
+        <div id="uploadButton" class="button">
+            <img id="load" src="modules/{module_name}/imgs/upload.png" width=30>
+        </div>
+
 
 		<div id="editfileblock" style="display: none; height: auto;">
 			<p><a href="#" onclick='$("#editfileblock").css("display", "none"); $("#filelist").css("display", "block"); return false;'>[ %M_BACK% ]</a></p>
