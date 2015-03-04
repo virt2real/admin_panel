@@ -7,7 +7,7 @@
 
 	function init{module_name}(){
 		LoadDir("", "/");
-		ActivateUpload();
+		//ActivateUpload();
 	}
 
 	var currentDir;
@@ -107,7 +107,7 @@
 	<div>
 		<div id="status" style="height: 26px; text-align: right; width: 100%;"></div>
 
-        <div id="uploadButton" class="button">
+        <div id="uploadButton" class="button" onclick="ActivateUpload(); return false;">
             <img id="load" src="modules/{module_name}/imgs/upload.png" width=30>
         </div>
 
