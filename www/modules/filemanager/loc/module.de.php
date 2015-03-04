@@ -18,6 +18,7 @@ $lang = array(// common items
               'M_ERR_NO_ACCESS'     => 'Kein Zugriff auf',
               'M_ERR_NO_WRITE'      => 'Kein Schreibzugriff auf',
               'M_SAVE_SUCCESS'      => 'Speichern erfolgreich',
+			  'M_REMOVE_ALERT'		=> 'Remove',
               );
 
 ?>

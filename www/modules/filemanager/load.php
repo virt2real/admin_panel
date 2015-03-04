@@ -80,7 +80,7 @@ for ($i=0; $i<$lines; $i++) {
 	$size = $ARR[$i]["name"][2];
 	$dir_parent = $ARR[$i]["name"][3];
 	if (substr($dir_parent, -1) != "/") $dir_parent .= "/";
-	$file_list .= '<tr><td class="col1"><a href="#" title="'.$dir_parent.$file_name.'" onclick="EditFile(\''.$file_name.'\', \''.$dir_parent.'\'); return false;">'.$file_name.'</a>&nbsp;</td><td class="col2">'.$date.'&nbsp;</td><td class="col3">'.$size .'&nbsp;</td></tr>';
+	$file_list .= '<tr><td class="col1"><a href="#" title="'.$dir_parent.$file_name.'" onclick="EditFile(\''.$file_name.'\', \''.$dir_parent.'\'); return false;">'.$file_name.'</a>&nbsp;</td><td class="col2">'.$date.'&nbsp;</td><td class="col3">'.$size .'&nbsp;</td><td class="col4"><a href="#" onclick="RmDir(\''.$file_name.'\', \''.$dir_parent.'\'); return false;">[x]</a></td></tr>';
 }
 
 $lines = count ($ARR2);
@@ -89,7 +89,7 @@ for ($i=0; $i<$lines; $i++) {
 	$file_name = $ARR2[$i]["name"][0];
 	$dir_parent = $ARR2[$i]["name"][1];
 	if (substr($dir_parent, -1) != "/") $dir_parent .= "/";
-	$dir_list .= '<tr><td class="col1" onclick="LoadDir(\''.$file_name.'\', \''.$dir_parent.'\'); return false;"><a href="#" style="color:#0380ea;" title="'.$dir_parent.$file_name.'" onclick="LoadDir(\''.$file_name.'\', \''.$dir_parent.'\'); return false;">[ '.$file_name.' ]</a>&nbsp;</td><td class="col2">&nbsp;</td><td class="col3">&nbsp;</td></tr>';
+	$dir_list .= '<tr><td class="col1" onclick="LoadDir(\''.$file_name.'\', \''.$dir_parent.'\'); return false;"><a href="#" style="color:#0380ea;" title="'.$dir_parent.$file_name.'" onclick="LoadDir(\''.$file_name.'\', \''.$dir_parent.'\'); return false;">[ '.$file_name.' ]</a>&nbsp;</td><td class="col2">&nbsp;</td><td class="col3">&nbsp;</td><td class="col4"><a href="#" onclick="RmDir(\''.$file_name.'\', \''.$dir_parent.'\'); return false;">[x]</a></td></tr>';
 }
 
 $content .= $dir_list . $file_list;

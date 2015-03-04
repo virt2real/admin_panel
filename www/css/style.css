@@ -158,6 +158,16 @@ input {
   width: 80px;
 }
 
+#filemanager .col4 {
+  background-color: #202020;
+  text-align: right;
+  width: 20px;
+}
+
+#filemanager .col4 a {
+  color: #7c7c7c;
+}
+
 #fmcurrentdir {
   width: 100%;
   text-align: right;

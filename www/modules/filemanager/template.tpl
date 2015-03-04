@@ -83,6 +83,22 @@
 		$("#savestatus").html("");
 	}
 
+	function RmDir(dir, parent) {
+		var isAdmin = confirm("%M_REMOVE_ALERT% " + parent + dir + " ?");
+		if (!isAdmin) return;
+
+		$("#status").html('<img src="imgs/loader.gif">');
+		$.post("modules/{module_name}/remove.php?rnd=" + Math.random(), {dir: encodeURIComponent(dir), parent: encodeURIComponent(parent)}, function(response, status, xhr) {
+			if (status == "success") {
+				$("#status").html("");
+			}
+			if (status == "error") {
+				$("#status").html("%L_FAIL%");
+			}
+			LoadDir(currentDir, currentParent); // renew current dir
+		});
+	}
+
 </script>
 
 <div id="accordion" style="margin:0; padding:0;">
