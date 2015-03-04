@@ -98,11 +98,14 @@ function ParseParams($cmdline, $template){
 				if ($element[1] == "ov2643") $option2 = "checked"; 
 				else
 				if ($element[1] == "ov5642") $option3 = "checked"; 
+				else
+				if ($element[1] == "ov5640") $option4 = "checked"; 
 				else $option1 = "checked";
 
 				$template = str_replace('{cameraselected1}', $option1, $template);
 				$template = str_replace('{cameraselected2}', $option2, $template);
 				$template = str_replace('{cameraselected3}', $option3, $template);
+				$template = str_replace('{cameraselected4}', $option4, $template);
 			break;
 			case "spi0": 
 				if ($element[1] == "on") $option1 = "checked"; else $option2 = "checked";

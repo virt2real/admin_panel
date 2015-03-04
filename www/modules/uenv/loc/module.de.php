@@ -48,6 +48,7 @@ $lang = array(// common items
               'M_FS_TYPE'            => 'Art des Dateisystems',
               'M_OV2643'             => 'OV2643',
               'M_OV5642'             => 'OV5642',
+              'M_OV5640'             => 'OV5640',
               'M_VIDEO_OUT'          => 'Videoausgang',
               'M_COMPOSITE'          => 'Komposit',
               'M_LCD'                => 'LCD',
