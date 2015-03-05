@@ -79,7 +79,7 @@
 			return;
 		}
 
-		if (newsize < partition2size) {
+		if (newsize < (partition2size / 1000000)) {
 			$("#fs_resize_status").html("Новый размер не должен быть меньше текущего");
 			return;
 		}
