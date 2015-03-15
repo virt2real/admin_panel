@@ -64,6 +64,12 @@ switch ($kernelname) {
 		$fps = "30"; // default value
 		$pitch = ""; // default value
 	break;
+	case "uImage.hdmi1080p":
+		$width = "1920"; // default value
+		$height = "1088"; // default value
+		$fps = "30"; // default value
+		$pitch = ""; // default value
+	break;
 }
 
 // write video params to config files
