@@ -22,6 +22,7 @@ $lang = array(// common items
               'M_LOCAL_NET'          => 'Lokales Netz',
               'M_LAN'                => 'LAN',
               'M_LAN1'                => 'LAN1 (EMAC)',
+			  'M_LAN0MAC'			  => 'LAN0 MAC-address',
 			  'M_LAN1MAC'			  => 'LAN1 MAC-address',
               'M_LEDS'               => 'LEDs',
               'M_BLUE'               => 'Blau',
@@ -66,6 +67,10 @@ $lang = array(// common items
               'M_WLAN_PASS'          => 'Network password',
               'M_WATCHDOG'	         => 'Watchdog',
 			  'M_WDTTIMEOUT'		 => 'Timeout',
+			  'M_GHID_TITLE'		 => 'HID emulation',
+			  'M_GHID'		 		 => 'Emulate devices',
+			  'M_HDMI'		 		 => 'HDMI',
+			  'M_HDMI_VOFFSET' 		 => 'Vertical offset',
               );
 
 ?>

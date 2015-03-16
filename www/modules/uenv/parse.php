@@ -51,6 +51,10 @@ function ParseParams($cmdline, $template){
 				$template = str_replace('{lanselected1}', $option1, $template);
 				$template = str_replace('{lanselected2}', $option2, $template);
 			break;
+			case "ks8851.hwaddr": 
+				$tmp = explode(',',$element[1]);	
+				$template = str_replace('{lan0mac}', $tmp[0], $template);
+			break;
 			case "lan1":
 				if ($element[1] == "on") $option1 = "checked"; else $option2 = "checked";
 				$template = str_replace('{lan1selected1}', $option1, $template);
@@ -128,6 +132,14 @@ function ParseParams($cmdline, $template){
 				$tmp = explode(',',$element[1]);	
 				$template = str_replace('{wdtval1}', $tmp[0], $template);
 			break;
+			case "dm365_ccdc.top_offset": 
+				$tmp = explode(',',$element[1]);	
+				$template = str_replace('{hdmi_voffset}', $tmp[0], $template);
+			break;
+			case "ghid": 
+				$tmp = explode(',',$element[1]);	
+				$template = str_replace('{ghidval}', $tmp[0], $template);
+			break;
 			case "quiet":
 				$option2 = "checked";
 
@@ -198,6 +210,9 @@ function ParseParams($cmdline, $template){
 	}
 
 	/* clear unsetted fields */
+	$template = str_replace('{hdmi_voffset}', "", $template);
+	$template = str_replace('{ghidval}', "", $template);
+	$template = str_replace('{lan0mac}', "", $template);
 	$template = str_replace('{lan1mac}', "", $template);
 	$template = str_replace('{wifi_ssid}', "", $template);
 	$template = str_replace('{wifi_pass}', "", $template);

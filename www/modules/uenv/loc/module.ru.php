@@ -22,6 +22,7 @@ $lang = array(// common items
               'M_LOCAL_NET'          => 'Локальная сеть',
               'M_LAN'                => 'LAN0',
               'M_LAN1'                => 'LAN1 (EMAC)',
+			  'M_LAN0MAC'			  => 'LAN0 MAC-адрес',
 			  'M_LAN1MAC'			  => 'LAN1 MAC-адрес',
               'M_LEDS'               => 'Светодиоды',
               'M_BLUE'               => 'Синий',
@@ -66,6 +67,10 @@ $lang = array(// common items
               'M_WLAN_PASS'          => 'Пароль от сети',
               'M_WATCHDOG'	         => 'Сторожевой таймер',
 			  'M_WDTTIMEOUT'		 => 'Таймаут',
+			  'M_GHID_TITLE'		 => 'HID эмуляция',
+			  'M_GHID'		 		 => 'Эмулировать устройства',
+			  'M_HDMI'		 		 => 'HDMI',
+			  'M_HDMI_VOFFSET' 		 => 'Вертикальное смещение',
               );
 
 ?>

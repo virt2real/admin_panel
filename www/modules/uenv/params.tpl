@@ -79,6 +79,12 @@
 		if( $("#btn3v1").attr("checked") == "checked") result += "lan0=on";
 		if( $("#btn3v2").attr("checked") == "checked") result += "lan0=off";
 		result += " ";
+
+		if ($("#lan0mac").val()) {
+			result += "ks8851.hwaddr=" + $("#lan0mac").val().replace(/:/g,"");
+			result += " ";
+		}
+
 		if( $("#btn15v1").attr("checked") == "checked") result += "lan1=on";
 		if( $("#btn15v2").attr("checked") == "checked") result += "lan1=off";
 		result += " ";
@@ -106,6 +112,14 @@
 		var wdtval1 = parseInt($("#wdtval1").val());
 		if (!wdtval1) wdtval1 = 60;
 		result += "davinci_wdt.heartbeat=" + wdtval1 + " ";
+
+		var ghidval = $("#ghidval").val();
+		result += "ghid=" + ghidval + " ";
+
+		if ($("#hdmi_voffset").val()) {
+			result += "dm365_ccdc.top_offset=" + $("#hdmi_voffset").val().replace(/:/g,"");
+			result += " ";
+		}
 
 		if( $("#btn7v1").attr("checked") == "checked") result += "camera=off";
 		if( $("#btn7v2").attr("checked") == "checked") result += "camera=ov2643";
@@ -171,6 +185,12 @@
 	    <input type="radio" id="btn3v1" name="btn3" {lanselected1}><label for="btn3v1">%L_ON%</label>
 	    <input type="radio" id="btn3v2" name="btn3" {lanselected2}><label for="btn3v2">%L_OFF%</label>
 	</div>
+	<p></p>
+	<div style="display:inline-block; padding-left:100px; min-width:150px;">%M_LAN0MAC%</div>
+	<div style="display:inline;">
+		<input type="text" id="lan0mac" value="{lan0mac}" style="width:100px;" maxlength=17>
+	</div>
+
 	<p></p>
 	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_LAN1%</div>
 	<div id="btn15" style="display:inline;">
@@ -268,6 +288,13 @@
 	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_WDTTIMEOUT%</div>
 	<div style="display:inline;">
 		<input type="text" id="wdtval1" value="{wdtval1}" style="width:100px;">
+	</div>
+	<p></p>
+
+	<p class="bluetitle">%M_GHID_TITLE%</p>
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_GHID%</div>
+	<div style="display:inline;">
+		<input type="text" id="ghidval" value="{ghidval}" style="width:100px;">
 	</div>
 	<p></p>
 
@@ -377,4 +404,12 @@
 	<div style="display:inline;">
 		<input type="text" id="bufval3" value="{bufval3}" style="width:100px;">
 	</div>
+
+	<p class="bluetitle">%M_HDMI%</p>
+
+	<div style="display:inline-block; padding-left:40px; min-width:150px;">%M_HDMI_VOFFSET%</div>
+	<div style="display:inline;">
+		<input type="text" id="hdmi_voffset" value="{hdmi_voffset}" style="width:100px;">
+	</div>
+
 </div>
