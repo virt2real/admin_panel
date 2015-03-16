@@ -27,6 +27,14 @@
 <div style="float:both; clear: both;"></div>
 <p><a href="#" onclick='ToggleExtended("{name}"); return false;'>%M_ADVANCED_CONFIG%</a></p>
 <div id="{name}_extended" style="display: none;">
+
+<div>
+	<div style="width:100px; float: left;">%M_HWADDRESS%</div>
+	<div style="float: left;"><input type="text" id="{name}_hwaddress" value="{hwaddress}"></div>
+</div>
+<div style="float:both; clear: both;"></div>
+
+
 <div>
 	<div style="width:100px; float: left;">%M_PRE_UP%</div>
 	<div style="float: left;"><input type="text" id="{name}_preup" value="{pre-up}"></div>

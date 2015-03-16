@@ -2,7 +2,7 @@
 /*****************************************************
 * modules/network/saveinterfaces.php
 * network interfaces save file
-*(c)virt2real.ru 2013
+* (c)virt2real.ru 2015
 * draft, by Gol
 /*****************************************************/
 

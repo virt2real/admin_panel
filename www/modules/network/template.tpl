@@ -38,6 +38,7 @@
 			var address = $("#" + ifacename + "_address").val();
 			var netmask = $("#" + ifacename + "_netmask").val();
 			var gateway = $("#" + ifacename + "_gateway").val();
+			var hwaddress = $("#" + ifacename + "_hwaddress").val();
 			var preup = $("#" + ifacename + "_preup").val();
 			var up = $("#" + ifacename + "_up").val();
 			var postup = $("#" + ifacename + "_postup").val();
@@ -51,6 +52,7 @@
 			if (address) tmp += "  address " + address + "\n";
 			if (netmask) tmp += "  netmask " + netmask + "\n";
 			if (gateway) tmp += "  gateway " + gateway + "\n";
+			if (hwaddress) tmp += "  hwaddress ether " + hwaddress + "\n";
 			if (preup) tmp += "  pre-up " + preup + "\n";
 			if (up) tmp += "  up " + up + "\n";
 			if (postup) tmp += "  post-up " + postup + "\n";

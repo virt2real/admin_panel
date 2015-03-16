@@ -3,7 +3,7 @@
 /*****************************************************
 * modules/network/index.php
 * network module index file
-*(c)virt2real.ru 2013
+* (c)virt2real.ru 2015
 * draft, by Gol
 /*****************************************************/
 
@@ -66,6 +66,14 @@ foreach ($rawlist as $k => $v) {
 
 	if ($arr[0] == "gateway") {
 		$ifaces[$current_iface]['gateway'] = $arr[1];
+	}
+
+	if ($arr[0] == "hwaddress") {
+		$tmp = "";
+		for ($i = 2; $i < sizeof($arr); $i++) {
+			$tmp .= $arr[$i] . " ";
+		}
+		$ifaces[$current_iface]['hwaddress'] = $tmp;
 	}
 
 	if ($arr[0] == "pre-up") {
@@ -157,6 +165,7 @@ foreach ($ifaces as $k=>$v) {
 	$tpl = str_replace('{address}', isset($v['address'])?$v['address']:"", $tpl);
 	$tpl = str_replace('{netmask}', isset($v['netmask'])?$v['netmask']:"", $tpl);
 	$tpl = str_replace('{gateway}', isset($v['gateway'])?$v['gateway']:"", $tpl);
+	$tpl = str_replace('{hwaddress}', isset($v['hwaddress'])?$v['hwaddress']:"", $tpl);
 	$tpl = str_replace('{pre-up}', isset($v['pre-up'])?$v['pre-up']:"", $tpl);
 	$tpl = str_replace('{up}', isset($v['up'])?$v['up']:"", $tpl);
 	$tpl = str_replace('{post-up}', isset($v['post-up'])?$v['post-up']:"", $tpl);

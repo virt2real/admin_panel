@@ -40,6 +40,7 @@ $lang = array(// common items
               'M_DNS_SERVER_LIST'    => 'DNS server list',
               'M_ACTIVE_INTERFACES'  => 'Active interfaces',
               'M_CURRENTLY_ACTIVE'   => 'Active network interfaces',
+			  'M_HWADDRESS'			 => 'MAC-address',
 
 			  'L_MESSAGE_AUTOWLAN0'   => 'This interface is always autostarted!',
               );
