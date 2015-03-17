@@ -28,6 +28,9 @@ if ($autorun) {
 /* check checkupdates */
 $checkupdates = intval($_POST['checkupdates']);
 
+/* check checkupdates */
+$redirectoutput = intval($_POST['redirectoutput']);
+
 /* parse other params */
 
 $config = $_POST['config'];
@@ -35,7 +38,7 @@ $user = intval($_POST['user']);
 $hash = $_POST['hash'];
 $address = $_POST['address'];
 
-$text = "CHECKUPDATES=$checkupdates\nCONFIG=$config\nUSER=$user\nHASH=$hash\nADDRESS=$address\n";
+$text = "CHECKUPDATES=$checkupdates\nREDIRECTOUTPUT=$redirectoutput\nCONFIG=$config\nUSER=$user\nHASH=$hash\nADDRESS=$address\n";
 
 $filename = '/opt/rcboard/config.sh';
 $success = true;

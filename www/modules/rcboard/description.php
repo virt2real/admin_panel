@@ -1,7 +1,7 @@
 <?php
 
 /*****************************************************
-* modules/fpv/description.php
+* modules/rcboard/description.php
 * module description file
 * (c)virt2real.ru 2014
 * draft, by Gol

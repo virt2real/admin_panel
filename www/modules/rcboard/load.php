@@ -1,7 +1,7 @@
 <?php
 
 /*****************************************************
-* modules/autorun/load.php
+* modules/rcboard/load.php
 * load list from /etc/init.d
 * (c)virt2real.ru 2014
 * draft, by Gol

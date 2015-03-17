@@ -26,6 +26,10 @@ $lang = array(// common items
 			  'M_MODULESTITLE'  => 'Additional modules',
               'M_ACTIVE_SCRIPTS'     => 'Active modules',
               'M_INACTIVE_SCRIPTS'   => 'Inactive modules'
+              'M_EXPORTTITLE'    => 'Export/import',
+              'M_OUTPUTTITLE'    => 'Text output',
+              'L_EXPORT'    => 'Export',
+              'L_IMPORT'    => 'Import'
               );
 
 ?>

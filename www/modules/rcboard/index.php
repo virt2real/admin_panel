@@ -1,9 +1,9 @@
 <?php
 
 /*****************************************************
-* modules/quit/index.php
-* quit index file
-*(c)virt2real.ru 2013
+* modules/rcboard/index.php
+* rcboard index file
+* (c)virt2real.ru 2015
 * draft, by Gol
 /*****************************************************/
 
@@ -73,6 +73,14 @@ if ($configarr["checkupdates"] == "1") {
 }
 
 $module_content = str_replace('{checkupdates}', $checkupdates, $module_content);
+
+if ($configarr["redirectoutput"] == "1") {
+	$redirectoutput = "checked";
+} else {
+	$redirectoutput = "";
+}
+
+$module_content = str_replace('{redirectoutput}', $redirectoutput, $module_content);
 
 $path1 = '/etc/init.d/S98rcboard';
 $path2 = '/etc/init.d.sample/S98rcboard';

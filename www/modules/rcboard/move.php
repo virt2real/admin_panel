@@ -1,7 +1,7 @@
 <?php
 
 /*****************************************************
-* modules/autorun/move.php
+* modules/rcboard/move.php
 * move files from /etc/init.d to /etc/init.d.sample and vice versa
 * (c)virt2real.ru 2014
 * draft, by Gol

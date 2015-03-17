@@ -5,6 +5,8 @@
 		$( "#accordion" ).accordion({ fillSpace: false, autoHeight: false, navigation: false, create: function( event, ui ) {init{module_name}();} });
 	});
 
+	var output_timer = null;
+
 	function init{module_name}(){
 		LoadAutostartScripts();
 	}
@@ -75,6 +77,7 @@
 	function SaveRCboardSettings(){
 		var autorun = ($("#inautorun").attr("checked") == "checked") ? 1 : 0;
 		var checkupdates = ($("#checkupdates").attr("checked") == "checked") ? 1 : 0;
+		var redirectoutput = ($("#redirectoutput").attr("checked") == "checked") ? 1 : 0;
 		var config = ($("#radio2").attr("checked") == "checked") ? "remote" : "local";
 		var user = $("#userid").val();
 		var hash = $("#hash").val();
@@ -82,7 +85,7 @@
 
 		$(".rcboardsavestatus").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/save.php?rnd=" + Math.random(), {
-			autorun:autorun,checkupdates:checkupdates,config:config,user:user,hash:hash,address:address
+			autorun:autorun,checkupdates:checkupdates,redirectoutput:redirectoutput,config:config,user:user,hash:hash,address:address
 			}, function(response, status, xhr) {
 			if (status == "success") {
 				$(".rcboardsavestatus").html(response);
@@ -129,7 +132,6 @@
 			if (savestatus == "error") {
 				$("#exportstatus").html("%L_FAIL%");
 			}
-
 		});
 	}
 
@@ -150,6 +152,19 @@
 				$("#importstatus").html("Загрузка завершена");
 			}
 		});
+	}
+
+	function update_output() {
+		$.post("modules/{module_name}/loadoutput.php?rnd=" + Math.random(), null, function(response, status, xhr) {
+			if (status == "success") {
+				$("#rcboardoutput").html("<pre>" + response + "</pre>");
+				$("#rcboardoutput").prop({ scrollTop: $("#rcboardoutput").prop("scrollHeight") });
+			}
+			if (savestatus == "error") {
+				$("#rcboardoutput").html("");
+			}
+		});
+		output_timer = setTimeout("update_output()", 1000);
 	}
 
 </script>
@@ -191,6 +206,9 @@
 					<p>&nbsp;</p>
 
 					<p><input type="checkbox" id="checkupdates" {checkupdates}><label for="checkupdates">Проверять обновления при запуске</label></p>
+					<p>&nbsp;</p>
+
+					<p><input type="checkbox" id="redirectoutput" {redirectoutput}><label for="redirectoutput">Переназначить текстовый вывод</label></p>
 					<p>&nbsp;</p>
 
 					<p>Использовать</p>
@@ -303,4 +321,16 @@
 
 	</div>
 
+	<h3><a href="#">%M_OUTPUTTITLE%</a></h3>
+	<div>
+
+		<p class="bluetitle">%M_OUTPUTMESAGE%</p>
+
+		<a href="" class="buttonlink" onclick='if (!output_timer) output_timer = setTimeout("update_output()", 1); $("#outputloader").css("display","block"); return false;'>[ %L_START_QUERY% ]</a>
+		<a href="" class="buttonlink" onclick='clearTimeout(output_timer); output_timer = false; $("#outputloader").css("display","none"); return false;'>[ %L_STOP_QUERY% ]</a>
+
+		<p style="height:20px;"><img id="outputloader" src="imgs/loader.gif" style="display: none;"></p>
+
+		<div id="rcboardoutput" style="height:400px; width:100%; overflow-y: scroll;"></div>
+	</div>
 </div>
