@@ -16,6 +16,8 @@ $lang = array(// common items
               'M_UBI'                => 'UBI',
               'M_JFFS'               => 'JFFS',
               'M_FLASH'              => 'Flashen',
+              'M_CMDLINE'              => 'Write cmdline to NAND',
+              'M_CMDLINETITLE'              => 'Cmdline content',
               'M_REC_FS_DEFAULT'     => 'Empfohlener Dateisystem-Typ - UBI (Defaulteinstellung)',
               'M_DC_DURING_FLASHING' => 'Beim Flashen kann ein Verbindungsverlust auftreten, die Verbindung baut sich nach dem Ende des Flash-Prozesses wieder auf.',
               );

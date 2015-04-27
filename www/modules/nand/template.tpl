@@ -20,7 +20,6 @@
 	}
 
 	function NandWrite () {
-
 		if ("{intboottype}" == 2) {
 			$("#nandwritestatus").html('%M_ERR_NO_NAND_BOOT%');
 			return;
@@ -44,7 +43,21 @@
 				$("#nandwritestatus").html('');
 			}
 		});
+	}
 
+	function CmdlineWrite () {
+		var fs;
+		var text = $("#newcmdline").text();
+		alert(text);
+		$("#cmdlinewritestatus").html('<img src="imgs/loader.gif">');
+		$.post("modules/{module_name}/cmdlinewrite.php?rnd=" + Math.random(), {text: text}, function(response, status, xhr) {
+			if (status == "success") {
+				$("#cmdlinewritestatus").html(response);
+			}
+			if (savestatus == "error") {
+				$("#cmdlinewritestatus").html("%L_FAIL%");
+			}
+		});
 	}
 
 </script>
@@ -76,4 +89,14 @@
 
 	</div>
 
+	<h3><a href="#">%M_CMDLINE%</a></h3>
+	<div>
+		<p class="bluetitle">%M_CMDLINETITLE%</p>
+		<p><textarea type="text" id="newcmdline" style="width:90%;height:200px;">{cmdlinevalue}</textarea></p>
+
+		<p style="display:inline;"><a href="#" class="buttonlink" onclick="CmdlineWrite(); return false;" style="padding-left:20px;">[ %M_FLASH% ]</a></p>
+
+		<p id="cmdlinewritestatus"></p>
+
+	</div>
 </div>
