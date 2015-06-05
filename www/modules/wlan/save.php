@@ -15,6 +15,9 @@ lang_swapmod('wlan');
 if (!isset($_POST['text'])) die ();
 
 $text = $_POST['text'];
+
+if (strlen($text) < 1) die($language['M_ERR_NO_WRITE']);
+
 $filename = "/etc/wpa_supplicant.conf";
 if (!$handle = fopen($filename, 'w+')) {
 	die($language['M_ERR_NO_ACCESS'] . "$filename");

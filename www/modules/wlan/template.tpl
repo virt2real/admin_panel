@@ -5,7 +5,7 @@
 
 	function init{module_name}(){
 		check_wlan();
-		scan_wlan();
+		//scan_wlan();
 	}
 
 
