@@ -11,7 +11,8 @@
 include('../../parts/global.php');
 
 $base = $_GET['base'];
-$reg = $_GET['reg'];
+//$reg = $_GET['reg'];
+$reg = intval($_GET['reg'], 16);
 $value = $_GET['value'];
 
 if (isset($_GET['mask'])) {	$mask = intval($_GET['mask']);
@@ -25,7 +26,16 @@ if (isset($_GET['mask'])) {	$mask = intval($_GET['mask']);
 	$value = '0x'.dechex($value_dec_masked);
 }
 
-$content = shell_exec ("i2cset -f -y 1 $base $reg $value");
+if ($reg > 0xff) {
+	// two byte address
+	$reg_low = $reg & 0xff;
+	$reg_high = ($reg >> 8) & 0xff;
+	$content = shell_exec ("i2cset -f -y 1 $base $reg_high $reg_low $value i");
+} else {
+	// single byte address
+	$content = shell_exec ("i2cset -f -y 1 $base $reg $value");
+}
+
 
 /*	echo 'mask='.$mask.'<br>';
 echo 'old_value_hex='.$old_value_hex.'<br>';
