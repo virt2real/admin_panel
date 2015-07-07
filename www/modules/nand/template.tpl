@@ -47,7 +47,7 @@
 
 	function CmdlineWrite () {
 		var fs;
-		var text = $("#newcmdline").text();
+		var text = $("#newcmdline").val();
 		$("#cmdlinewritestatus").html('<img src="imgs/loader.gif">');
 		$.post("modules/{module_name}/cmdlinewrite.php?rnd=" + Math.random(), {text: text}, function(response, status, xhr) {
 			if (status == "success") {
