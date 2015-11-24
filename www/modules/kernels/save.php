@@ -33,6 +33,7 @@ foreach ($kerneldescrfile as $k => $v) {
 // write new kernels list
 file_put_contents("/mnt/kernels.list", $newkernellist);
 
+shell_exec("sync");
 shell_exec("umount /mnt");
 
 // save kernel name
