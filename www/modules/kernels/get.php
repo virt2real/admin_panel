@@ -15,6 +15,9 @@ $res['height'] 	= str_replace("\n", "", file_get_contents("/etc/virt2real/video.
 $res['fps'] 	= str_replace("\n", "", file_get_contents("/etc/virt2real/video.fps"	));
 $res['pitch'] 	= str_replace("\n", "", file_get_contents("/etc/virt2real/video.pitch"	));
 
+$res['buf'] = $res['width'] * $res['height'] * 3 * 2 * 2;
+$res['mem'] = intval(102 - ($res['buf'] / 1048576));
+
 $json = json_encode($res, false);
 echo $json;
 

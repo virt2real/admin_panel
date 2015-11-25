@@ -33,6 +33,8 @@
 				if (json.height) res += '<p> <span class="graytext">Высота</span> ' + json.height + ' px</p>' + "\n";
 				if (json.fps) res += '<p> <span class="graytext">FPS</span> ' + json.fps + '</p>' + "\n";
 				if (json.pitch) res += '<p> <span class="graytext">pitch</span> ' + json.pitch + ' px</p>' + "\n";
+				if (json.buf) res += '<p> <span class="graytext">cont_bufsize</span> ' + json.buf + ' bytes</p>' + "\n";
+				if (json.mem) res += '<p> <span class="graytext">mem</span> ' + json.mem + ' M</p>' + "\n";
 				$("#videoparams").html(res);
 			}
 			if (status == "error") {
