@@ -114,7 +114,7 @@
 		result += "davinci_wdt.heartbeat=" + wdtval1 + " ";
 
 		var ghidval = $("#ghidval").val();
-		result += "ghid=" + ghidval + " ";
+		if (ghidval != "") result += "ghid=" + ghidval + " ";
 
 		if ($("#hdmi_voffset").val()) {
 			result += "dm365_ccdc.top_offset=" + $("#hdmi_voffset").val().replace(/:/g,"");
