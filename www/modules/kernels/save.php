@@ -73,7 +73,13 @@ file_put_contents("/mnt/kernels.list", $newkernellist);
 $uenvfile = file("/mnt/uenv.txt");
 $uenvparams = $uenvfile[0];
 
-$newmembuf = $width * $height * 3 * 2 * 2; // video memory value
+// for uImage.tvp5150 another memory calculate formula
+if ($kernelname == "uImage.tvp5150") {
+	$newmembuf = $width * $height * 3 * 2 * 2 * 2; // video memory value
+} else {
+	$newmembuf = $width * $height * 3 * 2 * 2; // video memory value
+}
+
 $newmem = intval(102 - ($newmembuf / 1048576)); // mem value
 
 $uenvparams = preg_replace("/mem=([0-9]{1,})/", "mem=".$newmem, $uenvparams);
@@ -98,6 +104,6 @@ file_put_contents("/etc/virt2real/video.height", $height);
 file_put_contents("/etc/virt2real/video.fps", $fps);
 file_put_contents("/etc/virt2real/video.pitch", $pitch);
 
-echo $language['M_KERNELCHANGED1'] . ' ' . $kernelname . '<br>' . $language['M_KERNELCHANGED2'];
+echo 'fuck'.$language['M_KERNELCHANGED1'] . ' ' . $kernelname . '<br>' . $language['M_KERNELCHANGED2'];
 
 ?>
