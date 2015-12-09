@@ -19,14 +19,8 @@ $maxsize = intval($_POST['maxsize'])  * 1024; // in kBytes
 
 $partition = "/dev/mmcblk0";
 
-if ($size == $maxsize) {
-	// fill all card
-	$cmd = 'echo -e "1,5,0xC,*\n6,,L" | sfdisk ' . $partition . ' -q -D -H255 -S63 --force';
-} else {
-	// fixed size
-	$sectors = intval($size / 8520); // hren znaet chto tut dolzhno byt'
-	$cmd = 'echo -e "1,5,0xC,*\n6,' . $sectors . ',L" | sfdisk ' . $partition . ' -q -D -H255 -S63 --force';
-}
+// fill all card
+$cmd = 'echo -e "1,48,0xC,*\n,,,-" | sfdisk --in-order --Linux --unit M ' . $partition . ' --force';
 
 $result = shell_exec($cmd);
 echo '<pre>' . $result . '</pre>';

@@ -123,7 +123,8 @@
 		<p><span class="graytext">Текущий размер файловой системы</span> <span id="currentaprtitionsize"></span></p>
 		<p><span class="graytext">Максимально возможный размер файловой системы</span> <span id="availablesize"></span></p>
 
-		<p>Новый размер файловой системы <input type="text" id="newfssize" style="width:60px; text-align:right;"> Mb</p>
+		<p>Новый размер файловой системы <input type="text" id="newfssize" style="width:60px; text-align:right;" disabled> Mb</p>
+		<p>Произвольный размер не поддерживается, только расширение на полный доступный объём</p>
 
 		<p><a href="#" class="buttonlink" onclick="var newsize=$('#newfssize').val(); DoResize(newsize); return false;" style="padding-left:20px;">[ %M_DORESIZE% ]</a></p>
 
