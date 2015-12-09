@@ -19,7 +19,7 @@
 
 <script>
 	function SaveChanges() {
-		var result = "bootargs= ";
+		var result = "bootargs=";
 
 		if( $("#btn10v1").attr("checked") == "checked") result += "davinci_enc_mngr.ch0_output=COMPOSITE";
 		if( $("#btn10v2").attr("checked") == "checked") result += "davinci_enc_mngr.ch0_output=LCD";
@@ -72,10 +72,14 @@
 		if( $("#btn14v1").attr("checked") == "checked") result += "usbwifi=on";
 		if( $("#btn14v2").attr("checked") == "checked") result += "usbwifi=off";
 		result += " ";
-		result += "wifi_ssid=" + $("#wifi_ssid").val() + " ";
-		result += " ";
-		result += "wifi_pass=" + $("#wifi_pass").val() + " ";
-		result += " ";
+		if ($("#wifi_ssid").val() != "") {
+			result += "wifi_ssid=" + $("#wifi_ssid").val();
+			result += " ";
+		}
+		if ($("#wifi_pass").val() != "") {
+			result += "wifi_pass=" + $("#wifi_pass").val();
+			result += " ";
+		}
 		if( $("#btn3v1").attr("checked") == "checked") result += "lan0=on";
 		if( $("#btn3v2").attr("checked") == "checked") result += "lan0=off";
 		result += " ";
