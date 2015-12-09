@@ -104,6 +104,6 @@ file_put_contents("/etc/virt2real/video.height", $height);
 file_put_contents("/etc/virt2real/video.fps", $fps);
 file_put_contents("/etc/virt2real/video.pitch", $pitch);
 
-echo 'fuck'.$language['M_KERNELCHANGED1'] . ' ' . $kernelname . '<br>' . $language['M_KERNELCHANGED2'];
+echo $language['M_KERNELCHANGED1'] . ' ' . $kernelname . '<br>' . $language['M_KERNELCHANGED2'];
 
 ?>
