@@ -34,6 +34,7 @@ if (is_writable($filename)) {
 	echo $language['M_ERR_NO_ACCESS'];
 }
 
+shell_exec("sync");
 shell_exec("umount /mnt");
 
 ?>
