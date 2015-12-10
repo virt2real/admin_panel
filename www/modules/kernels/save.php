@@ -85,6 +85,18 @@ $newmem = intval(102 - ($newmembuf / 1048576)); // mem value
 $uenvparams = preg_replace("/mem=([0-9]{1,})/", "mem=".$newmem, $uenvparams);
 $uenvparams = preg_replace("/vpfe_capture.cont_bufsize=([0-9]{1,})/", "vpfe_capture.cont_bufsize=$newmembuf", $uenvparams);
 
+// make clean bootargs string
+$cleanuenv = $uenvparams;
+$cleanuenv = str_replace("\n", "", $cleanuenv);
+$cleanuenv = str_replace("\r", "", $cleanuenv);
+$cleanuenv = trim($cleanuenv);
+
+if ((strlen($cleanuenv) % 8) == 2)
+	$uenvparams = $cleanuenv . " ";
+else
+	$uenvparams = $cleanuenv;
+
+$uenvparams .= "\n";
 $uenvfile[0] = $uenvparams;
 if (strlen($uenvparams) > 1) {
 	file_put_contents("/mnt/uenv.txt", $uenvfile);

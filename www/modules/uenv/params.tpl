@@ -20,6 +20,7 @@
 <script>
 	function SaveChanges() {
 		var result = "bootargs=";
+		var strend = "uenvcmd=echo Running uenvcmd ...; run loaduimage;bootm 0x82000000";
 
 		if( $("#btn10v1").attr("checked") == "checked") result += "davinci_enc_mngr.ch0_output=COMPOSITE";
 		if( $("#btn10v2").attr("checked") == "checked") result += "davinci_enc_mngr.ch0_output=LCD";
@@ -130,10 +131,16 @@
 		if( $("#btn7v3").attr("checked") == "checked") result += "camera=ov5642";
 		if( $("#btn7v4").attr("checked") == "checked") result += "camera=ov5640";
 
-		result += "\n";
-		result += "uenvcmd=echo Running uenvcmd ...; run loaduimage;bootm 0x82000000";
-		SaveSettings(result);
+		// check bootarg parameter length
+		var len = result.length;
+		var div = len % 8;
 
+		// very stupid, but it save my brain!
+		if (div == 2) result += " ";
+
+		result = result + "\n" + strend;
+
+		SaveSettings(result);
 	}
 </script>
 
